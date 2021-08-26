@@ -4,7 +4,7 @@
 Plugin Name: Wit Digital Landing Pages
 Plugin URI: https://witdelivers.com
 Description: Provides pages templates and building blocks for landing pages.
-Version: 0.0.1
+Version: 0.0.2
 Author: @WitDigital
 Text Domain: witlandingpages
 */
@@ -12,7 +12,7 @@ Text Domain: witlandingpages
 /*  ==========================================================================
 	Check for composer and load it or disable the plugin
 	========================================================================== */
-
+namespace witlandingpages;
 if (file_exists(plugin_dir_path(__FILE__).'/vendor/autoload.php')) {
 	require plugin_dir_path(__FILE__).'/vendor/autoload.php';
 } else {
@@ -29,7 +29,7 @@ if (file_exists(plugin_dir_path(__FILE__).'/vendor/autoload.php')) {
 
 
 	}
-	add_action( 'admin_init', 'deactivate_plugin_conditional' );
+	add_action( 'admin_init', 'witlandingpages\deactivate_plugin_conditional' );
 
 }
 
@@ -45,7 +45,7 @@ endif;
    Plugin Updater
    ========================================================================== */
 
-$MyUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+$MyUpdateChecker = \Puc_v4_Factory::buildUpdateChecker(
 	'https://plugins.witdigital.com/wp-update-server/?action=get_metadata&slug=witdigital-landing-pages', //Metadata URL.
 	__FILE__, //Full path to the main plugin file.
 	'witdigital-landing-pages' //Plugin slug. Usually it's the same as the name of the directory.
@@ -54,7 +54,7 @@ $MyUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 
 
 /* ==========================================================================
-   Bring in Blocks
+   Bring in Setup
    ========================================================================== */
 if( file_exists(plugin_dir_path(__FILE__) . 'app/setup.php') ) {
 	include plugin_dir_path(__FILE__) . 'app/setup.php';
@@ -75,9 +75,9 @@ if( file_exists(plugin_dir_path(__FILE__) . 'app/acf-blocks/acf_blocks.php') ) {
    Bring in Page Templates
    ========================================================================== */
 
-//if( file_exists(plugin_dir_path(__FILE__) . 'app/include-page-templates.php') ) {
+if( file_exists(plugin_dir_path(__FILE__) . 'app/include-page-templates.php') ) {
 	include plugin_dir_path(__FILE__) . 'app/include-page-templates.php';
-//}
+}
 
 
 

@@ -14,5 +14,8 @@ Provides page templates and building blocks for landing pages.
 
 == Changelog ==
 
+= 0.0.2 =
+added php namespaces
+
 = 0.0.1 =
 Let there be light

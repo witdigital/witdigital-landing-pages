@@ -5,7 +5,7 @@
  * Description: Register the Wit ACF Starter Block Block
  * Author: @witdelivers
  */
-
+namespace witlandingpages;
 // Load the ACF Fields for this block
 include_once 'lib/acf-fields.php';
 
@@ -43,4 +43,4 @@ function wit_acf_starter_block_register_blocks() {
 	) );
 }
 
-add_action( 'acf/init', 'wit_acf_starter_block_register_blocks' );
+add_action( 'acf/init', 'witlandingpages\wit_acf_starter_block_register_blocks' );

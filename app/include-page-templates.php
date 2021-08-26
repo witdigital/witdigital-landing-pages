@@ -5,7 +5,7 @@
  * Description:
  * Author:  Ryan E. Mitchell
  */
-
+namespace witlandingpages;
 class PageTemplater {
 
 	/**
@@ -163,4 +163,4 @@ class PageTemplater {
 	}
 
 }
-add_action( 'plugins_loaded', array( 'PageTemplater', 'get_instance' ) );
+add_action( 'plugins_loaded', array( 'witlandingpages\PageTemplater', 'get_instance' ) );
