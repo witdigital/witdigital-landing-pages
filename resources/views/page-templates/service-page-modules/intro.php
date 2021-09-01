@@ -1,11 +1,5 @@
 <!-- declare variables -->
 <?php
-if( get_field('use_image_or_video_embed') ) {
-    $use_image_or_video_embed = get_field('use_image_or_video_embed');
-} else {
-    $use_image_or_video_embed = '';
-}
-
 if( get_field('intro_embed') ) {
     $intro_embed = get_field('intro_embed');
 } else {
