@@ -1,9 +1,28 @@
+<?php
+
+$guarantees_title = (get_field('guarantees_title')) ? get_field('guarantees_title') : '' ;
+$guarantees_text = (get_field('guarantees_text')) ? get_field('guarantees_text') : '' ;
+$guarantees_section_image = (get_field('guarantees_section_image')) ? get_field('guarantees_section_image')['url'] : '' ;
+// Guarantee One
+$g_name_one = (get_field('g_name_one')) ? get_field('g_name_one') : '' ;
+$g_icon_one = (get_field('g_icon_one')) ? get_field('g_icon_one')['url'] : '' ;
+$g_content_one = (get_field('g_content_one')) ? get_field('g_content_one') : '' ;
+// Guarantee Two
+$g_name_two = (get_field('g_name_two')) ? get_field('g_name_two') : '' ;
+$g_icon_two = (get_field('g_icon_two')) ? get_field('g_icon_two')['url'] : '' ;
+$g_content_two = (get_field('g_content_two')) ? get_field('g_content_two') : '' ;
+// Guarantee Three
+$g_name_three = (get_field('g_name_three')) ? get_field('g_name_three') : '' ;
+$g_icon_three = (get_field('g_icon_three')) ? get_field('g_icon_three')['url'] : '' ;
+$g_content_three = (get_field('g_content_three')) ? get_field('g_content_three') : '' ;
+
+?>
+
 <div class="guaranteesInner laptop:my-20">
 	<div class="guaranteesLeft maxw1440 mx-auto z-10">
-		<div class="guaranteesMobileImage mobileOnky" style="background: url(<?php echo get_field('guarantees_mobile_image', 'option')['url']; ?>) center / cover;"></div>
 		<div class="guaranteesLeftInner maxw900 laptop:ml-10 text-center">
-			<h2 class="guaranteesTitle pt-8 laptop:pt-0"><?php the_field('guarantees_title', 'option'); ?></h2>
-			<div class="guaranteesText mb-10 laptop:text-20"><?php the_field('guarantees_text', 'option'); ?></div>
+			<h2 class="guaranteesTitle pt-8 laptop:pt-0"><?php echo $guarantees_title; ?></h2>
+			<div class="guaranteesText mb-10 laptop:text-20"><?php the_field('guarantees_text'); ?></div>
 			<div class="guaranteesItems laptop:flex flex-wrap justify-between laptop:mb-10">
 				<?php
 				$args = array(
