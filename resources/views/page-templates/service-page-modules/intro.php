@@ -24,6 +24,18 @@ if( get_field('intro_text') ) {
     $intro_text = '';
 }
 
+if( get_field('request_url') ) {
+    $request_url = get_field('request_url');
+} else {
+    $request_url = '';
+}
+
+if( get_field('request_display') ) {
+    $request_display = get_field('request_display');
+} else {
+    $request_display = '';
+}
+
  ?>
 
 <div class="servicesIntro my-5 laptop:mt-12 laptop:mb-16">
@@ -40,7 +52,9 @@ if( get_field('intro_text') ) {
         <div class="servicesIntroContent maxw500 mt-3 laptop:mt-0">
             <h1 class="servicesIntroTitle text-32 laptop:text-42 mb-3"><?php echo $intro_title ?></h1>
             <div class="servicesIntroText mb-6"><?php echo $intro_text ?></div>
-            <?php echo do_shortcode ('[request_btn class="phoneBtn"]'); ?>
+            <div class="requestButton">
+                <a href="<?php echo $request_url ?>"><?php echo $request_display ?></a>
+            </div>
         </div>
     </div>
 </div>
