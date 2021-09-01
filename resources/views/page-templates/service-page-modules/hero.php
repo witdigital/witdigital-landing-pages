@@ -10,7 +10,7 @@ foreach ($parentFields as $field) {
 <?php if( get_field('hero_title') ) {
 			$hero_title = get_field('hero_title');
 		} else {
-			$hero_title = 'where`s the beef?';
+			$hero_title = '';
 		}
 ?>
 
