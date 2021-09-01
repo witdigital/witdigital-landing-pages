@@ -1,11 +1,11 @@
 
-<?php $current = $post->ID;
+<!-- <?php $current = $post->ID;
 $parent = $post->post_parent; ?>
 <?php $parentFields = array('hero_background_image', 'hero_subtitle');
 foreach ($parentFields as $field) {
 	$$field = get_field($field) ? get_field($field) : get_field($field, $parent);
 }
-?>
+?> -->
 <!-- declare variables -->
 <?php if( get_field('hero_title') ) {
 			$hero_title = get_field('hero_title');
