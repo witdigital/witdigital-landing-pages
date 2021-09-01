@@ -7,7 +7,7 @@ if( get_field('intro_embed') ) {
 }
 
 if( get_field('intro_image') ) {
-    $intro_image = get_field('intro_image');
+    $intro_image = get_field('intro_image')['url'];
 } else {
     $intro_image = '';
 }
@@ -34,7 +34,7 @@ if( get_field('intro_text') ) {
                     <?php echo $intro_embed; ?>
                 </div>
             <?php } else { ?>
-                <div class="servicesIntroImage rounded-2xl" style="background: url(<?php echo $intro_image['url']; ?>) center / cover;"></div>
+                <div class="servicesIntroImage rounded-2xl" style="background: url(<?php echo $intro_image; ?>) center / cover;"></div>
             <?php } ?>
         </div>
         <div class="servicesIntroContent maxw500 mt-3 laptop:mt-0">
