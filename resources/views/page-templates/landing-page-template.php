@@ -22,6 +22,7 @@ get_header(); ?>
 
 <?php include_once('service-page-modules/hero.php') ?>
 <?php include_once('service-page-modules/intro.php') ?>
+<?php include_once('service-page-modules/about.php') ?>
    
 
 </div> <!-- End of .wit-landing-page -->
