@@ -6,14 +6,17 @@ $guarantees_section_image = (get_field('guarantees_section_image')) ? get_field(
 // Guarantee One
 $g_name_one = (get_field('g_name_one')) ? get_field('g_name_one') : '' ;
 $g_icon_one = (get_field('g_icon_one')) ? get_field('g_icon_one')['url'] : '' ;
+$g_icon_one_alt = (get_field('g_icon_one')) ? get_field('g_icon_one')['alt'] : '' ;
 $g_content_one = (get_field('g_content_one')) ? get_field('g_content_one') : '' ;
 // Guarantee Two
 $g_name_two = (get_field('g_name_two')) ? get_field('g_name_two') : '' ;
 $g_icon_two = (get_field('g_icon_two')) ? get_field('g_icon_two')['url'] : '' ;
+$g_icon_two_alt = (get_field('g_icon_two')) ? get_field('g_icon_two')['alt'] : '' ;
 $g_content_two = (get_field('g_content_two')) ? get_field('g_content_two') : '' ;
 // Guarantee Three
 $g_name_three = (get_field('g_name_three')) ? get_field('g_name_three') : '' ;
 $g_icon_three = (get_field('g_icon_three')) ? get_field('g_icon_three')['url'] : '' ;
+$g_icon_three_alt = (get_field('g_icon_three')) ? get_field('g_icon_three')['alt'] : '' ;
 $g_content_three = (get_field('g_content_three')) ? get_field('g_content_three') : '' ;
 
 ?>
@@ -22,7 +25,7 @@ $g_content_three = (get_field('g_content_three')) ? get_field('g_content_three')
 	<div class="guaranteesLeft maxw1440 mx-auto z-10">
 		<div class="guaranteesLeftInner maxw900 laptop:ml-10 text-center">
 			<h2 class="guaranteesTitle pt-8 laptop:pt-0"><?php echo $guarantees_title; ?></h2>
-			<div class="guaranteesText mb-10 laptop:text-20"><?php the_field('guarantees_text'); ?></div>
+			<div class="guaranteesText mb-10 laptop:text-20"><?php echo $guarantees_text; ?></div>
 			<div class="guaranteesItems laptop:flex flex-wrap justify-between laptop:mb-10">
 				<?php
 				$args = array(
@@ -50,9 +53,11 @@ $g_content_three = (get_field('g_content_three')) ? get_field('g_content_three')
 				?>
 			</div>
 			<div class="mb-3 laptop:mb-0">
-				<?php echo do_shortcode ('[phone_button_alt class=""]'); ?>
+            <div class="heroPhone">
+				<a href="tel:1<?php echo $phone_number_tel ?>"><?php echo $phone_number_display ?></a>
+			</div>
 			</div>
 		</div>
 	</div>
-	<div class="guaranteesRight desktopOnly" style="background: url(<?php echo get_field('guarantees_section_image', 'option')['url']; ?>) center / cover;"></div>
+	<div class="guaranteesRight" style="background: url(<?php echo $guarantees_section_image; ?>) center / cover;"></div>
 </div>
