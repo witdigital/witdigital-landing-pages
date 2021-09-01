@@ -1,11 +1,11 @@
 
-<?php $current = $post->ID;
+<!-- <?php $current = $post->ID;
 $parent = $post->post_parent; ?>
 <?php $parentFields = array('services_about_right_title', 'services_about_right_subtitle', 'services_about_right_content');
 foreach ($parentFields as $field) {
 	$$field = get_field($field) ? get_field($field) : get_field($field, $parent);
 }
-?>
+?> -->
 <div class="servicesAbout my-6 laptop:my-12">
     <div class="servicesAboutInner maxw1300 mx-auto laptop:px-4 flex flex-wrap justify-between">
         <div class="servicesAboutLeft flex-1 maxw650 px-4 laptop:px-0">
