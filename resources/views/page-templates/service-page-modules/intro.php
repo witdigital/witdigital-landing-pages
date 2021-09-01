@@ -31,15 +31,15 @@ if( get_field('intro_text') ) {
         <div class="servicesIntroImageContainer maxw400 laptop:pr-10">
             <?php if(get_field('use_image_or_video_embed') == 'Embed') { ?>
                 <div class="introEmbed">
-                    <?php echo get_field('intro_embed'); ?>
+                    <?php echo $intro_embed; ?>
                 </div>
             <?php } else { ?>
-                <div class="servicesIntroImage rounded-2xl" style="background: url(<?php echo get_field('intro_image')['url']; ?>) center / cover;"></div>
+                <div class="servicesIntroImage rounded-2xl" style="background: url(<?php echo $intro_image['url']; ?>) center / cover;"></div>
             <?php } ?>
         </div>
         <div class="servicesIntroContent maxw500 mt-3 laptop:mt-0">
-            <h1 class="servicesIntroTitle text-32 laptop:text-42 mb-3"><?php the_field('intro_title'); ?></h1>
-            <div class="servicesIntroText mb-6"><?php the_field('intro_text'); ?></div>
+            <h1 class="servicesIntroTitle text-32 laptop:text-42 mb-3"><?php echo $intro_title ?></h1>
+            <div class="servicesIntroText mb-6"><?php echo $intro_text ?></div>
             <?php echo do_shortcode ('[request_btn class="phoneBtn"]'); ?>
         </div>
     </div>
