@@ -1,3 +1,37 @@
+<!-- declare variables -->
+<?php
+if( get_field('use_image_or_video_embed') ) {
+    $use_image_or_video_embed = get_field('use_image_or_video_embed');
+} else {
+    $use_image_or_video_embed = '';
+}
+
+if( get_field('intro_embed') ) {
+    $intro_embed = get_field('intro_embed');
+} else {
+    $intro_embed = '';
+}
+
+if( get_field('intro_image') ) {
+    $intro_image = get_field('intro_image');
+} else {
+    $intro_image = '';
+}
+
+if( get_field('intro_title') ) {
+    $intro_title = get_field('intro_title');
+} else {
+    $intro_title = '';
+}
+
+if( get_field('intro_text') ) {
+    $intro_text = get_field('intro_text');
+} else {
+    $intro_text = '';
+}
+
+ ?>
+
 <div class="servicesIntro my-5 laptop:mt-12 laptop:mb-16">
     <div class="servicesIntroInner mx-auto px-4 flex flex-wrap justify-between items-center <?php echo get_field('use_image_or_video_embed') == 'Embed' ? 'embed' : 'image'; ?>">
         <div class="servicesIntroImageContainer maxw400 laptop:pr-10">
