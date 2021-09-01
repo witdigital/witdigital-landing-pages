@@ -21,6 +21,7 @@ get_header(); ?>
 <div class="wit-landing-page container mx-auto p-4"> <!-- Start of .wit-landing-page -->
 
 <?php include_once('service-page-modules/hero.php') ?>
+<?php include_once('service-page-modules/intro.php') ?>
    
 
 </div> <!-- End of .wit-landing-page -->
