@@ -1,10 +1,37 @@
 
-<?php $current = $post->ID;
+<!-- <?php $current = $post->ID;
 $parent = $post->post_parent; ?>
 <?php $parentFields = array('services_cta_image', 'services_cta_title', 'services_cta_text');
 foreach ($parentFields as $field) {
 	$$field = get_field($field) ? get_field($field) : get_field($field, $parent);
 }
+?> -->
+<?php 
+
+if ( get_field('services_cta_image') ) {
+    $services_cta_image = get_field('services_cta_image')['url'];
+} else {
+    $services_cta_image = '';
+}
+
+if ( get_field('services_cta_image') ) {
+    $services_cta_image_alt = get_field('services_cta_image')['alt'];
+} else {
+    $services_cta_image_alt = '';
+}
+
+if ( get_field('services_cta_title') ) {
+    $services_cta_title = get_field('services_cta_title');
+} else {
+    $services_cta_title = '';
+}
+
+if ( get_field('services_cta_text') ) {
+    $services_cta_text = get_field('services_cta_text');
+} else {
+    $services_cta_text = '';
+}
+
 ?>
 <div class="servicesCTA bg-grey">
     <div class="servicesCTAInner maxw1300 px-4 mx-auto py-8 laptop:flex flex-wrap justify-between ">
