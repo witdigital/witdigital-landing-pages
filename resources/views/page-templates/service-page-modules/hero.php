@@ -18,7 +18,7 @@ foreach ($parentFields as $field) {
 	<div class="altOverlay overlay"></div>
 	<div class="servicesHeroInner maxw1000 laptop:pb-16 laptop:py-0 text-center mx-auto laptop:pt-6">
 		<div class="servicesHeroSubtitle maxw450 laptop:px-3 mx-auto laptop:mb-3 text-20 laptop:text-20 text-green"><?php echo $hero_subtitle; ?></div>
-		<h2 class="servicesHeroTitle text-black text-34 laptop:text-52 leading-tight laptop:leading-none text-white"><?php echo $hero_title ?></h2>
+		<div class="servicesHeroTitle text-black text-34 laptop:text-52 leading-tight laptop:leading-none text-white"><?php echo $hero_title ?></div>
 		<div class="servicesHeroCall mt-3 laptop:mt-6 text-center text-white">
 			<?php echo do_shortcode ('[phone_button_alt class=""]'); ?>
 		</div>
