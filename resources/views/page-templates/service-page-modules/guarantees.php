@@ -27,51 +27,33 @@ $g_content_three = (get_field('g_content_three')) ? get_field('g_content_three')
 			<h2 class="guaranteesTitle pt-8 laptop:pt-0"><?php echo $guarantees_title; ?></h2>
 			<div class="guaranteesText mb-10 laptop:text-20"><?php echo $guarantees_text; ?></div>
 			<div class="guaranteesItems laptop:flex flex-wrap justify-between laptop:mb-10">
-				<!-- <?php
-				$args = array(
-				    'post_type' => 'witcom_guarantees',
-				    'posts_per_page' => 3,
-				);
-				$the_query = new WP_Query( $args );
-				if ( $the_query->have_posts() ) {
-					$i = 0;
-				    while ( $the_query->have_posts() ) {
-						$i++;
-				        $the_query->the_post(); ?> -->
-
-				        <!-- <div class="guaranteeItem px-4 flex-1" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="<?php echo $i*300; ?>"> -->
-				        <div class="guaranteeItem px-4 flex-1">
-					        <div class="guaranteeItemInner bg-blue py-4 laptop:pt-6 laptop:pb-8 px-3 text-center rounded-xl add-box-shadow mb-4 laptop:mb-0">
-								<img class="mx-auto mb-3" src="<?php echo $g_icon_one; ?>" alt="<?php echo $g_icon_one_alt; ?>" />
-								<h4 class="guaranteeItemTitle text-white mb-2 laptop:mb-4"><?php echo $g_name_one; ?></h4>
-								<div class="guaranteeItemText text-white">
-									<?php echo $g_content_one; ?>
-								</div>
-							</div>
+				<div class="guaranteeItem px-4 flex-1">
+					<div class="guaranteeItemInner bg-blue py-4 laptop:pt-6 laptop:pb-8 px-3 text-center rounded-xl add-box-shadow mb-4 laptop:mb-0">
+						<img class="mx-auto mb-3" src="<?php echo $g_icon_one; ?>" alt="<?php echo $g_icon_one_alt; ?>" />
+						<h4 class="guaranteeItemTitle text-white mb-2 laptop:mb-4"><?php echo $g_name_one; ?></h4>
+						<div class="guaranteeItemText text-white">
+							<?php echo $g_content_one; ?>
 						</div>
-				        <div class="guaranteeItem px-4 flex-1">
-					        <div class="guaranteeItemInner bg-blue py-4 laptop:pt-6 laptop:pb-8 px-3 text-center rounded-xl add-box-shadow mb-4 laptop:mb-0">
-								<img class="mx-auto mb-3" src="<?php echo $g_icon_two; ?>" alt="<?php echo $g_icon_two_alt; ?>" />
-								<h4 class="guaranteeItemTitle text-white mb-2 laptop:mb-4"><?php echo $g_name_two; ?></h4>
-								<div class="guaranteeItemText text-white">
-									<?php echo $g_content_two; ?>
-								</div>
-							</div>
+					</div>
+				</div>
+				<div class="guaranteeItem px-4 flex-1">
+					<div class="guaranteeItemInner bg-blue py-4 laptop:pt-6 laptop:pb-8 px-3 text-center rounded-xl add-box-shadow mb-4 laptop:mb-0">
+						<img class="mx-auto mb-3" src="<?php echo $g_icon_two; ?>" alt="<?php echo $g_icon_two_alt; ?>" />
+						<h4 class="guaranteeItemTitle text-white mb-2 laptop:mb-4"><?php echo $g_name_two; ?></h4>
+						<div class="guaranteeItemText text-white">
+							<?php echo $g_content_two; ?>
 						</div>
-				        <div class="guaranteeItem px-4 flex-1">
-					        <div class="guaranteeItemInner bg-blue py-4 laptop:pt-6 laptop:pb-8 px-3 text-center rounded-xl add-box-shadow mb-4 laptop:mb-0">
-								<img class="mx-auto mb-3" src="<?php echo $g_icon_three; ?>" alt="<?php echo $g_icon_three_alt; ?>" />
-								<h4 class="guaranteeItemTitle text-white mb-2 laptop:mb-4"><?php echo $g_name_three; ?></h4>
-								<div class="guaranteeItemText text-white">
-									<?php echo $g_content_three; ?>
-								</div>
-							</div>
+					</div>
+				</div>
+				<div class="guaranteeItem px-4 flex-1">
+					<div class="guaranteeItemInner bg-blue py-4 laptop:pt-6 laptop:pb-8 px-3 text-center rounded-xl add-box-shadow mb-4 laptop:mb-0">
+						<img class="mx-auto mb-3" src="<?php echo $g_icon_three; ?>" alt="<?php echo $g_icon_three_alt; ?>" />
+						<h4 class="guaranteeItemTitle text-white mb-2 laptop:mb-4"><?php echo $g_name_three; ?></h4>
+						<div class="guaranteeItemText text-white">
+							<?php echo $g_content_three; ?>
 						</div>
-
-				    <!-- <?php }
-				}
-				wp_reset_postdata();
-				?> -->
+					</div>
+				</div>
 			</div>
 			<div class="mb-3 laptop:mb-0">
             <div class="heroPhone">
