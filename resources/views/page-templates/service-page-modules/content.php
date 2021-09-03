@@ -7,8 +7,8 @@ foreach ($parentFields as $field) {
 }
 ?>
 <?php 
-    $section_title = (the_sub_field('section_title')) ? the_sub_field('section_title') : '' ;
-    $section_content = (the_sub_field('section_content')) ? the_sub_field('section_content') : '' ;
+    // $section_title = (the_sub_field('section_title')) ? the_sub_field('section_title') : '' ;
+    // $section_content = (the_sub_field('section_content')) ? the_sub_field('section_content') : '' ;
     $map_icon = '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/map-marker-alt-solid.svg" /';
 ?>
 <div class="servicesContent">
@@ -19,8 +19,8 @@ foreach ($parentFields as $field) {
                 $i == 0;
                 while(have_rows('services_left_content')):the_row(); $i++; ?>
                     <div class="servicesContentItem accordionitem <?php echo $i < 2 ? 'desktopNoAccordion' : ''; ?>">
-                        <h2 class="servicesContentTitle accordionTitle"><?php $section_title; ?></h2>
-                        <div class="servicesContentText accordionContent"><?php $section_content; ?></div>
+                        <h2 class="servicesContentTitle accordionTitle"><?php the_sub_field('section_title') ?></h2>
+                        <div class="servicesContentText accordionContent"><?php the_sub_field('section_content') ?></div>
                     </div>
                 <?php endwhile;
             endif;
