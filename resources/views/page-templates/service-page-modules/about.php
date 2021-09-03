@@ -1,11 +1,11 @@
 
-<!-- <?php $current = $post->ID;
+<?php $current = $post->ID;
 $parent = $post->post_parent; ?>
 <?php $parentFields = array('services_about_right_title', 'services_about_right_subtitle', 'services_about_right_content');
 foreach ($parentFields as $field) {
 	$$field = get_field($field) ? get_field($field) : get_field($field, $parent);
 }
-?> -->
+?>
 
 <?php 
 
