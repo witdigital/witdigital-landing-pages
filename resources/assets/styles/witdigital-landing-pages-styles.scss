@@ -36,5 +36,31 @@ background-color: none;
         }
     }
 }
+.servicesAbout {
+  .servicesAboutLeft {
+      h3, h4, h5, a {
+          color: lightblue;
+      }
+  } 
+  .servicesRightContentText {
+      li {
+          color: white;
+          line-height: 19px;
+          margin-bottom: 11px;
+          a {
+              color: white;
+              font-weight: bold;
+              &:hover {
+                  color: green;
+              }
+          }
+      }
+  }
+  @media screen and (min-width: 1024px) {
+      ul {
+          column-count: 2;
+      }
+  }
+}
 
 } /* End of .wit-landing-page */
