@@ -9,7 +9,7 @@ foreach ($parentFields as $field) {
 <?php 
     $section_title = (the_sub_field('section_title')) ? the_sub_field('section_title') : '' ;
     $section_content = (the_sub_field('section_content')) ? the_sub_field('section_content') : '' ;
-    $location = (the_sub_field('location')) ? the_sub_field('location') : '' ;
+    $map_icon = '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/map-marker-alt-solid.svg" /';
 ?>
 <div class="servicesContent">
     <div class="servicesContentInner max-w-1150 px-2 mx-auto flex flex-wrap justify-between">
@@ -19,8 +19,8 @@ foreach ($parentFields as $field) {
                 $i == 0;
                 while(have_rows('services_left_content')):the_row(); $i++; ?>
                     <div class="servicesContentItem accordionitem <?php echo $i < 2 ? 'desktopNoAccordion' : ''; ?>">
-                        <h2 class="servicesContentTitle accordionTitle"><?php the_sub_field('section_title'); ?></h2>
-                        <div class="servicesContentText accordionContent"><?php the_sub_field('section_content'); ?></div>
+                        <h2 class="servicesContentTitle accordionTitle"><?php $section_title; ?></h2>
+                        <div class="servicesContentText accordionContent"><?php $section_content; ?></div>
                     </div>
                 <?php endwhile;
             endif;
@@ -52,13 +52,13 @@ foreach ($parentFields as $field) {
                             if(have_rows('services_sidebar_location_items')):
                                 while(have_rows('services_sidebar_location_items')):the_row(); ?>
                                     <div class="locationItem text-white">
-                                       <img class="iconImage" src="/wp-content/themes/witsage10-qualityfirst/resources/assets/images/site-specific/footer_icon_pin.svg" /> <?php the_sub_field('location'); ?>
+                                       <img class="iconImage" src=<?php echo $map_icon ?> /> <?php the_sub_field('location') ?>
                                     </div>
                                 <?php endwhile;
                             elseif(have_rows('services_sidebar_location_items', $parent)):
                                 while(have_rows('services_sidebar_location_items', $parent)):the_row(); ?>
                                     <div class="locationItem text-white">
-                                       <img class="iconImage" src="/wp-content/themes/witsage10-qualityfirst/resources/assets/images/site-specific/footer_icon_pin.svg" /> <?php the_sub_field('location'); ?>
+                                       <img class="iconImage" src=<?php echo $map_icon ?> /> <?php the_sub_field('location') ?>
                                     </div>
                                 <?php endwhile;
                             endif;
