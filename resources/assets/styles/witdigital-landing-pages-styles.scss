@@ -133,6 +133,9 @@ background-color: none;
  
     .sidebar {
         .sidebarCouponSection {
+          .sidebarCouponSectionInner {
+            border-radius: 10px;
+          }
             .couponSidebarTop {
                 height: 190px;
                 border-radius: 16px 16px 0 0;
@@ -144,6 +147,10 @@ background-color: none;
                 width: 95%;
                 height: 95%;
                 border: 1px dashed white;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 10px;
             }
         }
         .serviceAreaSection {
@@ -152,6 +159,16 @@ background-color: none;
                 width: 100%;
                 flex: 1 100%;
                 margin-bottom: 8px;
+
+                img.iconImage {
+                  
+                    display: inline-block;
+	                  margin-right: 4px;
+	                  vertical-align: middle;
+                    width: 12px;
+                    filter: invert(89%) sepia(72%) saturate(1055%) hue-rotate(80deg) brightness(92%) contrast(80%);
+                  
+                }
             }
         }
     }

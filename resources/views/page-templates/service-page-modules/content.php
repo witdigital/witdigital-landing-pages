@@ -30,7 +30,7 @@ foreach ($parentFields as $field) {
             <div class="servicesContentRightInner sidebar mb-4">
                 <div class="servicesContentSidebarSection sidebarCouponSection mb-5">
                     <div class="sidebarCouponSectionInner sidebarSectionInner text-center bg-blue rounded-2xl">
-                        <div class="couponBorder absolute center-xy z-10 rounded-2xl"></div>
+                        <div class="couponBorder absolute z-10"></div>
                         <div class="couponSidebarTop" style="background: url(<?php echo $services_sidebar_coupon_image['url']; ?>) center / cover;"></div>
                         <div class="couponSidebarBottom z-20 p-4">
                             <h3 class="couponSidebarTitle text-white"><?php echo $services_sidebar_coupon_title; ?></h3>
