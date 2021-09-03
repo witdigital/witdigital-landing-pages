@@ -41,6 +41,11 @@ background-color: none;
       h3, h4, h5, a {
           color: lightblue;
       }
+  }
+  .servicesAboutRight {
+    .add-box-shadow {
+      box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.2);
+    }
   } 
   .servicesRightContentText {
       li {
