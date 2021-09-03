@@ -25,6 +25,7 @@ get_header(); ?>
 <?php include_once('service-page-modules/about.php') ?>
 <?php include_once('service-page-modules/cta.php') ?>
 <?php include_once('service-page-modules/guarantees.php') ?>
+<?php include_once('service-page-modules/content.php') ?>
    
 
 </div> <!-- End of .wit-landing-page -->
