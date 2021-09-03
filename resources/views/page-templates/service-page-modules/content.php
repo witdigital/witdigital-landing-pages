@@ -7,8 +7,8 @@ foreach ($parentFields as $field) {
 }
 ?>
 <div class="servicesContent">
-    <div class="servicesContentInner maxw1150 px-2 mx-auto flex flex-wrap justify-between">
-        <div class="servicesContentLeft flex-1 maxw650 laptop:pb-10">
+    <div class="servicesContentInner max-w-1150 px-2 mx-auto flex flex-wrap justify-between">
+        <div class="servicesContentLeft flex-1 max-w-650 laptop:pb-10">
             <?php
             if(have_rows('services_left_content')):
                 $i == 0;
@@ -21,7 +21,7 @@ foreach ($parentFields as $field) {
             endif;
             ?>
         </div>
-        <div class="servicesContentRight maxw400 laptop:pl-6 flex-1 laptop:pb-10">
+        <div class="servicesContentRight max-w-400 laptop:pl-6 flex-1 laptop:pb-10">
             <div class="servicesContentRightInner sidebar mb-4">
                 <div class="servicesContentSidebarSection sidebarCouponSection mb-5">
                     <div class="sidebarCouponSectionInner sidebarSectionInner text-center bg-blue rounded-2xl">

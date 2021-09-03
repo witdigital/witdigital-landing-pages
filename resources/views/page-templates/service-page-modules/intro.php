@@ -49,7 +49,7 @@ if( get_field('request_display') ) {
                 <div class="servicesIntroImage rounded-2xl" style="background: url(<?php echo $intro_image ?>) center / cover;"></div>
             <?php } ?>
         </div>
-        <div class="servicesIntroContent maxw500 max-w-500 mt-3 laptop:mt-0">
+        <div class="servicesIntroContent max-w-500 mt-3 laptop:mt-0">
             <h1 class="servicesIntroTitle text-32 laptop:text-42 mb-3"><?php echo $intro_title ?></h1>
             <div class="servicesIntroText mb-6"><?php echo $intro_text ?></div>
             <div class="requestButton">

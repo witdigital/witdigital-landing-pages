@@ -22,8 +22,8 @@ $g_content_three = (get_field('g_content_three')) ? get_field('g_content_three')
 ?>
 
 <div class="guaranteesInner laptop:my-20">
-	<div class="guaranteesLeft maxw1440 mx-auto z-10">
-		<div class="guaranteesLeftInner maxw900 laptop:ml-10 text-center">
+	<div class="guaranteesLeft max-w-1440 mx-auto z-10">
+		<div class="guaranteesLeftInner max-w-900 laptop:ml-10 text-center">
 			<h2 class="guaranteesTitle pt-8 laptop:pt-0"><?php echo $guarantees_title; ?></h2>
 			<div class="guaranteesText mb-10 laptop:text-20"><?php echo $guarantees_text; ?></div>
 			<div class="guaranteesItems laptop:flex flex-wrap justify-between laptop:mb-10">
