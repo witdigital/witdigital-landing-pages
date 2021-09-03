@@ -25,7 +25,22 @@ $services_about_right_content = (get_field('services_about_right_content')) ? ge
                 <h3 class="servicesRightLargeText text-white mb-6"><?php echo $services_about_right_subtitle; ?></h3>
 
                 <ul class="servicesRightContentText">
-					<?php echo $services_about_right_content ?>
+                <?php
+
+global $post;
+
+if ( is_page() && $post->post_parent ) {
+    wp_list_pages(array(
+      'child_of' => $parent,
+      'title_li' => ''
+  ));
+} else {
+    wp_list_pages(array(
+      'child_of' => $post->ID,
+      'title_li' => ''
+  ));
+}
+?>
 				</ul>
             </div>
         </div>
