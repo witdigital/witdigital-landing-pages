@@ -6,6 +6,17 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    colors: {
+      black: '#000',
+      white: '#fff',
+      blue: '#00295d',
+      darkblue: '#00295d',
+      lightblue: '#00aeef',
+      green: '#20d59e',
+      grey: '#ededed',
+      smoke: '#f8f8f8',
+      none: 'transparent',
+  },
     fontSize: {
       '20': '20px',
       '26': '26px',
