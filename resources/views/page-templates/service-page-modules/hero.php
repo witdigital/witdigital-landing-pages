@@ -7,23 +7,10 @@ foreach ($parentFields as $field) {
 }
 ?>
 <!-- declare variables -->
-<?php if( get_field('hero_title') ) {
-			$hero_title = get_field('hero_title');
-		} else {
-			$hero_title = '';
-		}
-
-		if( get_field('phone_number_tel') ) {
-			$phone_number_tel = get_field('phone_number_tel');
-		} else {
-			$phone_number_tel = '';
-		}
-
-		if( get_field('phone_number_display') ) {
-			$phone_number_display = get_field('phone_number_display');
-		} else {
-			$phone_number_display = '';
-		}
+<?php 
+$hero_title = (get_field('hero_title')) ? get_field('hero_title') : '' ;
+$phone_number_tel = (get_field('phone_number_tel')) ? get_field('phone_number_tel') : '' ;
+$phone_number_display = (get_field('phone_number_display')) ? get_field('phone_number_display') : '' ;
 ?>
 
 <div class="servicesHero hero pt-32 py-10 px-4 laptop:pt-40 laptop:pb-24" style="background: url( <?php echo $hero_background_image['url']; ?>) 100% 20% / cover;">
