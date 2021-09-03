@@ -18,7 +18,7 @@ get_header(); ?>
     <?php the_content() ?>
 	<?php endwhile;  ?> -->
 
-<div class="wit-landing-page container mx-auto p-4"> <!-- Start of .wit-landing-page -->
+<div class="wit-landing-page container max-w-full mx-auto py-4"> <!-- Start of .wit-landing-page -->
 
 <?php include_once('service-page-modules/hero.php') ?>
 <?php include_once('service-page-modules/intro.php') ?>
