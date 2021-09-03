@@ -6,6 +6,11 @@ foreach ($parentFields as $field) {
 	$$field = get_field($field) ? get_field($field) : get_field($field, $parent);
 }
 ?>
+<?php 
+    $section_title = (the_sub_field('section_title')) ? the_sub_field('section_title') : '' ;
+    $section_content = (the_sub_field('section_content')) ? the_sub_field('section_content') : '' ;
+    $location = (the_sub_field('location')) ? the_sub_field('location') : '' ;
+?>
 <div class="servicesContent">
     <div class="servicesContentInner max-w-1150 px-2 mx-auto flex flex-wrap justify-between">
         <div class="servicesContentLeft flex-1 max-w-650 laptop:pb-10">
@@ -32,12 +37,8 @@ foreach ($parentFields as $field) {
                             <div class="couponSidebarText text-white"><?php echo $services_sidebar_coupon_subtitle; ?></div>
                             <div class="couponSidebarPhoneNumbers">
                                 <div class="couponSidebarPhoneNumber">
-                                    <span class="locationText text-green rucksack text-20 font-bold uppercase"><?php echo get_field('phone_1_location', 'option'); ?>: </span>
-                                    <a class="text-white rucksack text-20 font-bold uppercase" href="tel:<?php echo get_field('phone_1_href', 'option'); ?>"><?php echo get_field('phone_1_display', 'option'); ?></a>
-                                </div>
-                                <div class="couponSidebarPhoneNumber">
-                                    <span class="locationText text-green rucksack text-20 font-bold uppercase"><?php echo get_field('phone_2_location', 'option'); ?>: </span>
-                                    <a class="text-white rucksack text-20 font-bold uppercase" href="tel:<?php echo get_field('phone_2_href', 'option'); ?>"><?php echo get_field('phone_2_display', 'option'); ?></a>
+                                    <!-- <span class="locationText text-green rucksack text-20 font-bold uppercase"><?php echo get_field('phone_1_location', 'option'); ?>: </span> -->
+                                    <a class="text-white rucksack text-20 font-bold uppercase" href="tel:<?php echo $phone_number_tel ?>"><?php echo $phone_number_display ?></a>
                                 </div>
                             </div>
                         </div>
