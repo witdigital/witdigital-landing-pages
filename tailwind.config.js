@@ -31,6 +31,12 @@ module.exports = {
       'laptop': '1024px',
       'desktop': '1280px',
     },
+    container: {
+      center: true,
+      padding: {
+        default: '15px',
+      },
+    },
     extend: {
       maxWidth: {
         '400': '400px',
