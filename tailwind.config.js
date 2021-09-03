@@ -6,6 +6,15 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    fontSize: {
+      '20': '20px',
+      '26': '26px',
+      '30': '30px',
+      '32': '32px',
+      '34': '34px',
+      '42': '42px',
+      '52': '52px',
+    },
     screens: {
       'tablet': '640px',
       'laptop': '1024px',
