@@ -17,6 +17,6 @@ $testimonials_section_title = (get_field('testimonials_section_title')) ? get_fi
 			}
 			 ?>
 		</div>
-		<a class="ghostBtn btn centerBtn" href="/testimonials">READ REVIEWS</a>
+		<a class="btn my-0 mx-auto block text-white border-white border rounded-2xl text-center" href="/testimonials">READ REVIEWS</a>
 	</div>
 </div>
