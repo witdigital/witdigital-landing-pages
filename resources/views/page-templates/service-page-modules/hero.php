@@ -30,7 +30,7 @@ $call_button_icon = (get_field('call_button_icon')) ? get_field('call_button_ico
 			<div class="phoneBtns">
 				<div class="phoneBtnItem">
 					<span class="phoneBtnItemLocation"><?php echo $phone_1_location?></span>
-					<a href="tel:<?php echo $phone_1_href?>" class="phoneBtn btn"><img class="iconImage phoneBtnImage align-middle" src="<?php echo $call_button_icon?>" /> <span class=""><?php echo $phone_1_display ?></span></a>
+					<a href="tel:<?php echo $phone_1_href?>" class="phoneBtn btn bg-white rounded-md"><img class="iconImage phoneBtnImage align-middle" src="<?php echo $call_button_icon?>" /> <span class=""><?php echo $phone_1_display ?></span></a>
 				</div>
 				<!-- Uncomment the below if a second number is used: -->
 				<!-- <div class="phoneBtnItem">
