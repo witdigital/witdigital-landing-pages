@@ -38,7 +38,7 @@ foreach ($parentFields as $field) {
                             <div class="couponSidebarPhoneNumbers">
                                 <div class="couponSidebarPhoneNumber">
                                     <!-- <span class="locationText text-green rucksack text-20 font-bold uppercase"><?php echo get_field('phone_1_location', 'option'); ?>: </span> -->
-                                    <a class="text-white rucksack text-20 font-bold uppercase" href="tel:<?php echo $phone_number_tel ?>"><?php echo $phone_number_display ?></a>
+                                    <a class="text-white rucksack text-20 font-bold uppercase" href="tel:<?php echo $phone_1_href ?>"><?php echo $phone_1_display ?></a>
                                 </div>
                             </div>
                         </div>
