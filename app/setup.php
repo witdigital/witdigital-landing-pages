@@ -41,7 +41,6 @@ if ( $template_path = 'landing-page-template.php' ) {
 
 
 /* Shortcode for Phone Number: */
-add_shortcode('witlandingpages_phone_button', 'witlandingpages_phone_button');
 
 function witlandingpages_phone_button($atts) {
 	extract(shortcode_atts(array(
@@ -71,3 +70,4 @@ function witlandingpages_phone_button($atts) {
 	</div>';
 	return $phoneDisplay;
 }
+add_shortcode('witlandingpages_phone_button', 'witlandingpages_phone_button');
