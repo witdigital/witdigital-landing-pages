@@ -61,12 +61,12 @@ function witlandingpages_phone_button($atts) {
 	$phoneDisplay = '
 	<div class="phoneBtns">
 		<div class="phoneBtnItem">
-			<span class="phoneBtnItemLocation desktopOnly">' . $location1 . '</span>
-			<a href="tel:' . $href1 . '" class="phoneBtn btn ' . $class . ' ' . $classes . '"><img class="iconImage phoneBtnImage align-middle" src="' . $icon . '" /> <span class="desktopOnly text-blue">' . $display1 . '</span><span class="mobileOnly">' . $location1 . '</span></a>
+			<span class="phoneBtnItemLocation">' . $location1 . '</span>
+			<a href="tel:' . $href1 . '" class="phoneBtn btn ' . $class . ' ' . $classes . '"><img class="iconImage phoneBtnImage align-middle" src="' . $icon . '" /> <span class= text-blue">' . $display1 . '</span><span class="mobileOnly">' . $location1 . '</span></a>
 		</div>
 		<div class="phoneBtnItem">
-			<span class="phoneBtnItemLocation desktopOnly">' . $location2 . '</span>
-			<a href="tel:' . $href2 . '" class="phoneBtn btn ' . $class . ' ' . $classes . '"><img class="iconImage phoneBtnImage align-middle" src="' . $icon . '" /> <span class="desktopOnly text-blue">' . $display2 . '</span><span class="mobileOnly">' . $location2 . '</span></a>
+			<span class="phoneBtnItemLocation">' . $location2 . '</span>
+			<a href="tel:' . $href2 . '" class="phoneBtn btn ' . $class . ' ' . $classes . '"><img class="iconImage phoneBtnImage align-middle" src="' . $icon . '" /> <span class= text-blue">' . $display2 . '</span><span class="mobileOnly">' . $location2 . '</span></a>
 		</div>
 	</div>';
 	return $phoneDisplay;

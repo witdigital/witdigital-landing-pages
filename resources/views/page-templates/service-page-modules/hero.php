@@ -21,6 +21,7 @@ $phone_number_display = (get_field('phone_number_display')) ? get_field('phone_n
 		<div class="servicesHeroCall mt-3 laptop:mt-6 text-center text-white">
 			<div class="heroPhone">
 				<a href="tel:1<?php echo $phone_number_tel ?>"><?php echo $phone_number_display ?></a>
+				<?php echo do_shortcode('[witlandingpages_phone_button class=""]'); ?>
 			</div>
 		</div>
 	</div>
