@@ -13,6 +13,43 @@ background-color: none;
   div {
     position: relative;
   }
+  .phoneBtns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 340px;
+    margin: 0 auto;
+    .phoneBtnItemLocation {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: bold;
+    }
+}
+.btn {
+    font-size: 16px;
+    padding: 10px 8px;
+    max-width: 170px;
+    &.phoneBtn {
+        span {
+            color: blue;
+        }
+        &.blueBtn {
+            span {
+                color: white !important;
+            }
+        }
+    }
+}
+.phoneBtnItem {
+    flex: 1 100%;
+    margin-bottom: 10px;
+}
+img.iconImage {
+	display: inline-block;
+	margin-right: 4px;
+	vertical-align: middle;
+}
 
   .servicesHero {
     .overlay {
@@ -161,10 +198,6 @@ background-color: none;
                 margin-bottom: 8px;
 
                 img.iconImage {
-                  
-                    display: inline-block;
-	                  margin-right: 4px;
-	                  vertical-align: middle;
                     width: 12px;
                     filter: invert(89%) sepia(72%) saturate(1055%) hue-rotate(80deg) brightness(92%) contrast(80%);
                   

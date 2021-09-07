@@ -9,8 +9,6 @@ foreach ($parentFields as $field) {
 <!-- declare variables -->
 <?php 
 $hero_title = (get_field('hero_title')) ? get_field('hero_title') : '' ;
-$phone_number_tel = (get_field('phone_number_tel')) ? get_field('phone_number_tel') : '' ;
-$phone_number_display = (get_field('phone_number_display')) ? get_field('phone_number_display') : '' ;
 
 $phone_1_href = (get_field('phone_1_href')) ? get_field('phone_1_href') : '' ;
 $phone_2_href = (get_field('phone_2_href')) ? get_field('phone_2_href') : '' ;
@@ -28,10 +26,6 @@ $call_button_icon = (get_field('call_button_icon')) ? get_field('call_button_ico
 		<div class="servicesHeroSubtitle max-w-450 laptop:px-3 mx-auto laptop:mb-3 text-20 laptop:text-20 text-green"><?php echo $hero_subtitle; ?></div>
 		<div class="servicesHeroTitle text-black text-34 laptop:text-52 leading-tight laptop:leading-none text-white"><?php echo $hero_title ?></div>
 		<div class="servicesHeroCall mt-3 laptop:mt-6 text-center text-white">
-			<div class="heroPhone">
-				<a href="tel:1<?php echo $phone_number_tel ?>"><?php echo $phone_number_display ?></a>
-				<!-- <?php echo do_shortcode('[witlandingpages_phone_button]'); ?> -->
-			</div>
 
 			<div class="phoneBtns">
 				<div class="phoneBtnItem">
@@ -43,7 +37,8 @@ $call_button_icon = (get_field('call_button_icon')) ? get_field('call_button_ico
 					<span class="phoneBtnItemLocation"><?php echo $phone_2_location?></span>
 					<a href="tel:<?php echo $phone_2_href?>" class="phoneBtn btn"><img class="iconImage phoneBtnImage align-middle" src="<?php echo $call_button_icon?>" /> <span class=""><?php echo $phone_2_display ?></span></a>
 				</div> -->
-			</div>
+			</div> <!-- end .phoneBtns -->
+
 		</div>
 	</div>
 </div>
