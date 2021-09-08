@@ -36,5 +36,5 @@ $template_slug = get_page_template_slug();
 if ( $template_path = 'landing-page-template.php' ) {
 
 	add_action( 'wp_enqueue_scripts', 'witlandingpages\custom_style_adding_function' );
-	add_action( 'admin_enqueue_scripts', 'witlandingpages\wit_landing_pages_enqueue_script' );
+	add_action( 'wp_enqueue_scripts', 'witlandingpages\wit_landing_pages_enqueue_script' );
 }
