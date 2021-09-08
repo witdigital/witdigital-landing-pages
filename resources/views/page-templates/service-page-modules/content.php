@@ -18,9 +18,9 @@ foreach ($parentFields as $field) {
             if(have_rows('services_left_content')):
                 $i == 0;
                 while(have_rows('services_left_content')):the_row(); $i++; ?>
-                    <div class="servicesContentItem accordionitem <?php echo $i < 2 ? 'desktopNoAccordion' : ''; ?>">
+                    <div class="servicesContentItem accordionitem text-base mb-4 <?php echo $i < 2 ? 'desktopNoAccordion' : ''; ?>">
                         <h2 class="servicesContentTitle accordionTitle"><?php the_sub_field('section_title') ?></h2>
-                        <div class="servicesContentText accordionContent"><?php the_sub_field('section_content') ?></div>
+                        <div class="servicesContentText accordionContent m-2"><?php the_sub_field('section_content') ?></div>
                     </div>
                 <?php endwhile;
             endif;
@@ -52,7 +52,7 @@ foreach ($parentFields as $field) {
                             <?php
                             if(have_rows('services_sidebar_location_items')):
                                 while(have_rows('services_sidebar_location_items')):the_row(); ?>
-                                    <div class="locationItem text-white text-base">
+                                    <div class="locationItem text-white text-sm tracking-wide">
                                        <img class="iconImage" src=<?php echo $map_icon ?> /> <?php the_sub_field('location') ?>
                                     </div>
                                 <?php endwhile;
