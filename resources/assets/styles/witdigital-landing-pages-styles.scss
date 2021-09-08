@@ -170,9 +170,9 @@ img.iconImage {
  
     .sidebar {
         .sidebarCouponSection {
-          .sidebarCouponSectionInner {
-            border-radius: 10px;
-          }
+        //   .sidebarCouponSectionInner {
+        //     border-radius: 10px;
+        //   }
             .couponSidebarTop {
                 height: 190px;
                 border-radius: 16px 16px 0 0;
@@ -188,6 +188,7 @@ img.iconImage {
                 left: 50%;
                 transform: translate(-50%, -50%);
                 border-radius: 10px;
+                position: absolute;
             }
         }
         .serviceAreaSection {

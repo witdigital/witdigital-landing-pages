@@ -30,18 +30,19 @@ foreach ($parentFields as $field) {
             <div class="servicesContentRightInner sidebar mb-4">
                 <div class="servicesContentSidebarSection sidebarCouponSection mb-5">
                     <div class="sidebarCouponSectionInner sidebarSectionInner text-center bg-blue rounded-2xl">
-                        <div class="couponBorder absolute z-10"></div>
-                        <div class="couponSidebarTop" style="background: url(<?php echo $services_sidebar_coupon_image['url']; ?>) center / cover;"></div>
-                        <div class="couponSidebarBottom z-20 p-4">
-                            <h3 class="couponSidebarTitle text-white"><?php echo $services_sidebar_coupon_title; ?></h3>
-                            <div class="couponSidebarText text-white"><?php echo $services_sidebar_coupon_subtitle; ?></div>
-                            <div class="couponSidebarPhoneNumbers">
-                                <div class="couponSidebarPhoneNumber">
-                                    <!-- <span class="locationText text-green rucksack text-20 font-bold uppercase"><?php echo get_field('phone_1_location', 'option'); ?>: </span> -->
-                                    <a class="text-white rucksack text-20 font-bold uppercase" href="tel:<?php echo $phone_1_href ?>"><?php echo $phone_1_display ?></a>
+                        <div class="couponBorder absolute z-10 rounded-2xl"></div>
+                            <div class="couponSidebarTop" style="background: url(<?php echo $services_sidebar_coupon_image['url']; ?>) center / cover;"></div>
+                            <div class="couponSidebarBottom z-20 p-4">
+                                <h3 class="couponSidebarTitle text-white"><?php echo $services_sidebar_coupon_title; ?></h3>
+                                <div class="couponSidebarText text-white"><?php echo $services_sidebar_coupon_subtitle; ?></div>
+                                <div class="couponSidebarPhoneNumbers">
+                                    <div class="couponSidebarPhoneNumber">
+                                        <!-- <span class="locationText text-green rucksack text-20 font-bold uppercase"><?php echo get_field('phone_1_location', 'option'); ?>: </span> -->
+                                        <a class="text-white rucksack text-20 font-bold uppercase" href="tel:<?php echo $phone_1_href ?>"><?php echo $phone_1_display ?></a>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
+                            </div> <!-- end .couponSidebarBottom -->
+                        
                     </div>
                 </div>
                 <div class="servicesContentSidebarSection serviceAreaSection">
