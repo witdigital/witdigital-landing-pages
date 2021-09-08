@@ -18,6 +18,7 @@ module.exports = {
       none: 'transparent',
   },
     fontSize: {
+      'base': '1rem',
       '20': '20px',
       '26': '26px',
       '30': '30px',
