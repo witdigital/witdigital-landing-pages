@@ -112,13 +112,15 @@ img.iconImage {
               }
           }
       }
-  }
-  @media screen and (min-width: 1024px) {
-      ul {
-          column-count: 2;
-      }
-  }
-}
+      @media screen and (min-width: 1024px) {
+        ul {
+            column-count: 2;
+        }
+    }
+  } // end .servicesRightContentText
+
+} // end .servicesAbout
+
   .guaranteesRight {
     position: absolute;
     height: 500px;
@@ -209,7 +211,7 @@ img.iconImage {
             column-count: 2;
         }
     }
-}
+} // end .servicesContent
 
 
 
