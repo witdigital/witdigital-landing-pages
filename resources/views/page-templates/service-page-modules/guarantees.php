@@ -3,6 +3,7 @@
 $guarantees_title = (get_field('guarantees_title')) ? get_field('guarantees_title') : '' ;
 $guarantees_text = (get_field('guarantees_text')) ? get_field('guarantees_text') : '' ;
 $guarantees_section_image = (get_field('guarantees_section_image')) ? get_field('guarantees_section_image')['url'] : '' ;
+$guarantees_mobile_image = (get_field('guarantees_mobile_image')) ? get_field('guarantees_mobile_image')['url'] : '' ;
 // Guarantee One
 $g_name_one = (get_field('g_name_one')) ? get_field('g_name_one') : '' ;
 $g_icon_one = (get_field('g_icon_one')) ? get_field('g_icon_one')['url'] : '' ;
@@ -23,6 +24,7 @@ $g_content_three = (get_field('g_content_three')) ? get_field('g_content_three')
 
 <div class="guaranteesInner laptop:my-20">
 	<div class="guaranteesLeft max-w-1440 w-full mx-auto z-10">
+	<div class="guaranteesMobileImage mobileOnly" style="background: url(<?php echo $guarantees_mobile_image; ?>) center / cover;"></div>
 		<div class="guaranteesLeftInner max-w-900 w-full laptop:ml-10 text-center">
 			<h2 class="guaranteesTitle pt-8 laptop:pt-0"><?php echo $guarantees_title; ?></h2>
 			<div class="guaranteesText mb-10 laptop:text-20"><?php echo $guarantees_text; ?></div>
