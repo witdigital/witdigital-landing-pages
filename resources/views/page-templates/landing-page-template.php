@@ -25,8 +25,16 @@ get_header(); ?>
 <?php include_once('service-page-modules/about.php') ?>
 <?php include_once('service-page-modules/cta.php') ?>
 <?php include_once('service-page-modules/guarantees.php') ?>
+
+<div class="servicesTestimonials mobileOnly">
+    <?php include_once('service-page-modules/testimonials.php') ?>
+</div>
+
 <?php include_once('service-page-modules/content.php') ?>
-<?php include_once('service-page-modules/testimonials.php') ?>
+<div class="servicesTestimonials desktopOnly">
+    <?php include_once('service-page-modules/testimonials.php') ?>      
+</div>
+
    
 
 </div> <!-- End of .wit-landing-page -->
