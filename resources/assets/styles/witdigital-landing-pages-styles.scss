@@ -149,14 +149,12 @@ img.iconImage {
               content: "";
               background: url('/wp-content/plugins/witdigital-landing-pages/resources/assets/images/plus-circle-solid.svg') center / cover;
               position: absolute;
-              top: 50%;
+              top: 43%;
               transform: translateY(-50%);
-              font-size: 26px;
-              font-weight: bold;
               right: 15px;
-              color: white;
               width: 24px;
               height: 24px;
+              filter: invert(70%) sepia(41%) saturate(7359%) hue-rotate(160deg) brightness(95%) contrast(103%);
           }
       }
       .accordionContent {
