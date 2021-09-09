@@ -52,7 +52,7 @@ foreach ($parentFields as $field) {
                             <?php
                             if(have_rows('services_sidebar_location_items')):
                                 while(have_rows('services_sidebar_location_items')):the_row(); ?>
-                                    <div class="locationItem text-white text-sm tracking-wide">
+                                    <div class="locationItem text-white text-base tracking-wide">
                                        <img class="iconImage" src=<?php echo $map_icon ?> /> <?php the_sub_field('location') ?>
                                     </div>
                                 <?php endwhile;
