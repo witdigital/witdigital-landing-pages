@@ -10,7 +10,7 @@ $request_display = (get_field('request_display')) ? get_field('request_display')
 
 <div class="servicesIntro my-5 laptop:mt-12 laptop:mb-16">
     <div class="servicesIntroInner mx-auto px-4 flex flex-wrap justify-between items-center <?php echo get_field('use_image_or_video_embed') == 'Embed' ? 'embed' : 'image'; ?>">
-        <div class="servicesIntroImageContainer max-w-400 w-full laptop:pr-10">
+        <div class="servicesIntroImageContainer laptop:max-w-400 w-full laptop:pr-10">
             <?php if(get_field('use_image_or_video_embed') == 'Embed') { ?>
                 <div class="introEmbed">
                     <?php echo $intro_embed; ?>

@@ -71,6 +71,12 @@ img.iconImage {
         max-width: 950px;
         .servicesIntroImage {
             height: 270px;
+
+            @media screen and (max-width: 1024px) {
+                max-height: 165px;
+                max-width: 215px;
+                margin: 0 auto;
+            }
         }
         &.embed {
             max-width: 1160px !important;
