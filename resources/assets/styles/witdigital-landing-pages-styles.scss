@@ -197,12 +197,11 @@ img.iconImage {
                 width: 100%;
                 flex: 1 100%;
                 margin-bottom: 8px;
-
-                img.iconImage {
-                    width: 12px;
-                    filter: invert(89%) sepia(72%) saturate(1055%) hue-rotate(80deg) brightness(92%) contrast(80%);
-                  
-                }
+            }
+            img.iconImage {
+                width: 12px;
+                filter: invert(89%) sepia(72%) saturate(1055%) hue-rotate(80deg) brightness(92%) contrast(80%);
+              
             }
         }
     }
