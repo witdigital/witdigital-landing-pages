@@ -9,7 +9,8 @@ foreach ($parentFields as $field) {
 <?php 
     // $section_title = (the_sub_field('section_title')) ? the_sub_field('section_title') : '' ;
     // $section_content = (the_sub_field('section_content')) ? the_sub_field('section_content') : '' ;
-    $map_icon = '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/map-marker-alt-solid.svg" /';
+    // $map_icon = '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/map-marker-alt-solid.svg" /';
+    $map_icon = (get_field('services_sidebar_pin_image')) ? get_field('services_sidebar_pin_image')['url'] : '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/map-marker-alt-solid.svg" /';
 ?>
 <div class="servicesContent">
     <div class="servicesContentInner max-w-1150 px-2 mx-auto flex flex-wrap justify-between">
