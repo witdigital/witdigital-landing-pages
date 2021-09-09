@@ -12,10 +12,10 @@ $services_cta_image_alt = (get_field('services_cta_image')) ? get_field('service
 $services_cta_title = (get_field('services_cta_title')) ? get_field('services_cta_title') : '' ;
 $services_cta_text = (get_field('services_cta_text')) ? get_field('services_cta_text') : '' ;
 ?>
-<div class="servicesCTA bg-grey">
+<div class="servicesCTA bg-grey mt-24 laptop:mt-auto">
     <div class="servicesCTAInner max-w-1300 w-full px-4 mx-auto py-8 laptop:flex flex-wrap justify-between ">
         <div class="servicesCTALeft flex-1 max-w-600 w-full laptop:pr-5">
-            <img src="<?php echo $services_cta_image; ?>" alt="<?php echo $services_cta_image_alt; ?>" />
+            <img class="max-w-full" src="<?php echo $services_cta_image; ?>" alt="<?php echo $services_cta_image_alt; ?>" />
         </div>
         <div class="servicesCTARight text-center max-w-650 w-full laptop:pl-1">
             <h3 class="servicesCTATitle"><?php echo $services_cta_title; ?></h3>

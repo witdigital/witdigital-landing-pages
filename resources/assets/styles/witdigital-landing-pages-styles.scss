@@ -4,6 +4,16 @@
 
 .wit-landing-page {
 background-color: none;
+@media screen and (min-width: 1024px) {
+    .mobileOnly {
+        display: none;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .desktopOnly {
+        display: none;;
+    }
+}
 
   .section-name {
 	background-color: cadetblue;
@@ -127,6 +137,15 @@ img.iconImage {
   } // end .servicesRightContentText
 
 } // end .servicesAbout
+
+    .servicesCTA {
+        .servicesCTALeft {
+            @media screen and (max-width: 1024px) {
+                margin: -90px auto 0;
+                max-width: 300px;
+            }
+        }
+    }
 
   .guaranteesRight {
     position: absolute;
