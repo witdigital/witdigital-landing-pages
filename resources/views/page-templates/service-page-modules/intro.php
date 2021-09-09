@@ -23,7 +23,7 @@ $request_display = (get_field('request_display')) ? get_field('request_display')
             <h1 class="servicesIntroTitle text-32 laptop:text-42 mb-3"><?php echo $intro_title ?></h1>
             <div class="servicesIntroText mb-6"><?php echo $intro_text ?></div>
             <div class="requestButton">
-                <a class="phoneBtn btn bg-white rounded-md" href="<?php echo $request_url ?>"><?php echo $request_display ?></a>
+                <a class="phoneBtn btn bg-white rounded-md py-2 px-3 text-base" href="<?php echo $request_url ?>"><?php echo $request_display ?></a>
             </div>
         </div>
     </div>
