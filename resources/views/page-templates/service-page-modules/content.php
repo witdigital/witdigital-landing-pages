@@ -65,7 +65,7 @@ foreach ($parentFields as $field) {
                             endif;
                             ?>
                         </div>
-                        <a class="btn my-0 mx-auto block text-white border-white border rounded-2xl text-center moreLocations" href="<?php echo $services_sidebar_locations_button_url; ?>"><img class="iconImage" src=<?php echo $map_icon ?> /><?php echo $services_sidebar_locations_button_text; ?></a>
+                        <a class="btn my-0 mx-auto block text-white border-white border rounded-md text-center moreLocations" href="<?php echo $services_sidebar_locations_button_url; ?>"><img class="iconImage" src=<?php echo $map_icon ?> /><?php echo $services_sidebar_locations_button_text; ?></a>
                     </div>
                 </div>
             </div>
