@@ -75,5 +75,5 @@ $g_content_three = (get_field('g_content_three')) ? get_field('g_content_three')
 			</div>
 		</div>
 	</div>
-	<div class="guaranteesRight" style="background: url(<?php echo $guarantees_section_image; ?>) center / cover;"></div>
+	<div class="guaranteesRight desktopOnly" style="background: url(<?php echo $guarantees_section_image; ?>) center / cover;"></div>
 </div>
