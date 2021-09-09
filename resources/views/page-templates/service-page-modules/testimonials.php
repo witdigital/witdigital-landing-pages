@@ -17,6 +17,6 @@ $testimonials_section_title = (get_field('testimonials_section_title')) ? get_fi
 			}
 			 ?>
 		</div>
-		<a class="btn py-2 px-3 my-0 mx-auto block text-white border-white border rounded-md text-center uppercase font-bold leading-none" href="/testimonials">READ REVIEWS</a>
+		<a class="btn py-2 px-3 my-0 mx-auto block text-white border-white border rounded-md text-center text-base uppercase font-bold leading-none" href="/testimonials">READ REVIEWS</a>
 	</div>
 </div>
