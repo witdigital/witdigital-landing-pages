@@ -101,6 +101,9 @@ img.iconImage {
           line-height: 19px;
           margin-bottom: 11px;
           letter-spacing: 0.02em;
+          &::marker {
+              color: lightcoral;
+          }
           a {
               color: white;
               font-weight: bold;
