@@ -61,12 +61,12 @@ $g_content_three = (get_field('g_content_three')) ? get_field('g_content_three')
 			<div class="phoneBtns">
 				<div class="phoneBtnItem">
 					<span class="phoneBtnItemLocation"><?php echo $phone_1_location?></span>
-					<a href="tel:<?php echo $phone_1_href?>" class="phoneBtn btn bg-white rounded-md"><img class="iconImage phoneBtnImage align-middle" src="<?php echo $call_button_icon?>" /> <span class=""><?php echo $phone_1_display ?></span></a>
+					<a href="tel:<?php echo $phone_1_href?>" class="phoneBtn btn bg-white rounded-md py-2 px-3 text-base"><img class="iconImage phoneBtnImage align-middle" src="<?php echo $call_button_icon?>" /> <span class=""><?php echo $phone_1_display ?></span></a>
 				</div>
 				<!-- Uncomment the below if a second number is used: -->
 				<!-- <div class="phoneBtnItem">
 					<span class="phoneBtnItemLocation"><?php echo $phone_2_location?></span>
-					<a href="tel:<?php echo $phone_2_href?>" class="phoneBtn btn bg-white rounded-md"><img class="iconImage phoneBtnImage align-middle" src="<?php echo $call_button_icon?>" /> <span class=""><?php echo $phone_2_display ?></span></a>
+					<a href="tel:<?php echo $phone_2_href?>" class="phoneBtn btn bg-white rounded-md py-2 px-3 text-base"><img class="iconImage phoneBtnImage align-middle" src="<?php echo $call_button_icon?>" /> <span class=""><?php echo $phone_2_display ?></span></a>
 				</div> -->
 			</div> <!-- end .phoneBtns -->
 
