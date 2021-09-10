@@ -51,7 +51,10 @@ $MyUpdateChecker = \Puc_v4_Factory::buildUpdateChecker(
 	'witdigital-landing-pages' //Plugin slug. Usually it's the same as the name of the directory.
 );
 
-
+// pull in ACF JSON
+if( file_exists(plugin_dir_path(__FILE__) . 'app/acf_json.php') ) {
+	include plugin_dir_path(__FILE__) . 'app/acf_json.php';
+}
 
 /* ==========================================================================
    Bring in Setup
@@ -59,6 +62,7 @@ $MyUpdateChecker = \Puc_v4_Factory::buildUpdateChecker(
 if( file_exists(plugin_dir_path(__FILE__) . 'app/setup.php') ) {
 	include plugin_dir_path(__FILE__) . 'app/setup.php';
 }
+
 
 
 
