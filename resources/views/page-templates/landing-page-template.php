@@ -26,10 +26,6 @@ get_header(); ?>
 <?php include_once('service-page-modules/cta.php') ?>
 <?php include_once('service-page-modules/guarantees.php') ?>
 
-<div class="servicesTestimonials mobileOnly">
-    <?php include('service-page-modules/testimonials.php') ?>
-</div>
-
 <?php include_once('service-page-modules/content.php') ?>
 
 <div class="servicesTestimonials desktopOnly">
