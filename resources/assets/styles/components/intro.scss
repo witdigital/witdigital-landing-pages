@@ -1,0 +1,46 @@
+.servicesIntro {
+    .servicesIntroInner {
+        max-width: 950px;
+        .servicesIntroImage {
+            height: 270px;
+
+            @media screen and (max-width: 1024px) {
+                max-height: 165px;
+                max-width: 215px;
+                margin: 0 auto;
+            }
+        }
+        &.embed {
+            max-width: 1160px !important;
+            .servicesIntroImageContainer {
+                max-width: 610px;
+                @media screen and (min-width: 1000px) and (max-width: 1140px) {
+                    max-width: 470px;
+                }
+            }
+            .introEmbed {
+                iframe {
+                    max-width: 100%;
+                    width: 100%;
+                }
+            }
+        }
+
+        .requestButton {
+            .btn {
+                max-width: 170px;
+            
+                &.phoneBtn {
+                    span {
+                        color: blue;
+                    }
+                    &.blueBtn {
+                        span {
+                            color: white !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+} // end .servicesIntro
