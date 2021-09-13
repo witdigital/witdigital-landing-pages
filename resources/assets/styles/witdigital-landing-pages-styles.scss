@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "components/hero.scss";
+
 .wit-landing-page {
 background-color: none;
 @media screen and (min-width: 1024px) {
