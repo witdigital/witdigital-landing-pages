@@ -41,23 +41,7 @@ background-color: none;
 
 
 
-.guaranteesInner {
-    .guaranteesRight {
-        position: absolute;
-        height: 500px;
-        width: 580px;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        border-radius: 10px 0 0px 10px;
-      }
-    
-      @media screen and (max-width: 1024px) {
-        .guaranteesMobileImage {
-            height: 200px;
-        }
-      }
-} // end .guaranteesInner
+
 
 
   .servicesContent {
