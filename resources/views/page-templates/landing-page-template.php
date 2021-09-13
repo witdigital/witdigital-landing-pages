@@ -28,9 +28,9 @@ get_header(); ?>
 
 <?php include_once('service-page-modules/content.php') ?>
 
-<div class="servicesTestimonials desktopOnly">
-    <?php include('service-page-modules/testimonials.php') ?>      
-</div>
+
+<?php include('service-page-modules/testimonials.php') ?>      
+
 
    
 
