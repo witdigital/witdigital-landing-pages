@@ -24,58 +24,17 @@ background-color: none;
     position: relative;
   }
 
-  .overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-      background: linear-gradient(-108deg, rgba(0, 41, 93, .84) 0%, rgba(0, 174, 239, .84) 100%);
-    top: 0;
-    left: 0;
-      &.altOverlay {
-          background: linear-gradient(-114deg, rgba(0, 41, 93, .84) 0%, rgba(0, 153, 215, .84) 91%, rgba(0, 46, 98, .84) 100%);
-      }
-  }
 
-  .phoneBtns {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 340px;
-    margin: 0 auto;
-    .phoneBtnItemLocation {
-        display: block;
-        margin-bottom: 6px;
-        font-weight: bold;
-    }
-}
-.btn {
-    max-width: 170px;
 
-    &.phoneBtn {
-        span {
-            color: blue;
-        }
-        &.blueBtn {
-            span {
-                color: white !important;
-            }
-        }
-    }
-}
-.phoneBtnItem {
-    flex: 1 100%;
-    margin-bottom: 10px;
-}
+
+
+
 img.iconImage {
 	display: inline-block;
 	margin-right: 4px;
 	vertical-align: middle;
 }
 
-  .servicesHero {
-
-  }
   .servicesIntro {
     .servicesIntroInner {
         max-width: 950px;
