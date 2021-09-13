@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import "components/hero.scss";
+@import "components/intro.scss";
 
 .wit-landing-page {
 background-color: none;
@@ -18,20 +19,20 @@ background-color: none;
 }
 
   /* start field template styling: */
-  div {
-    position: relative;
-  }
+//   div {
+//     position: relative;
+//   }
 
 
 
 
 
 
-img.iconImage {
-	display: inline-block;
-	margin-right: 4px;
-	vertical-align: middle;
-}
+// img.iconImage {
+// 	display: inline-block;
+// 	margin-right: 4px;
+// 	vertical-align: middle;
+// }
 
 
 .servicesAbout {
