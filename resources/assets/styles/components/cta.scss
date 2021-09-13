@@ -1,0 +1,8 @@
+.servicesCTA {
+    .servicesCTALeft {
+        @media screen and (max-width: 1024px) {
+            margin: -90px auto 0;
+            max-width: 300px;
+        }
+    }
+} // end .servicesCTA
