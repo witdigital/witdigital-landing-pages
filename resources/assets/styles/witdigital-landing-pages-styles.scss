@@ -35,38 +35,7 @@ background-color: none;
 // }
 
 
-.servicesAbout {
-  .servicesAboutRight {
-    .add-box-shadow {
-      box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.2);
-    }
-  } 
-  .servicesRightContentText {
-      li {
-          color: white;
-          line-height: 19px;
-          margin-bottom: 11px;
-          letter-spacing: 0.02em;
-          font-size: 16px;
-          &::marker {
-              color: lightcoral;
-          }
-          a {
-              color: white;
-              font-weight: bold;
-              &:hover {
-                  color: green;
-              }
-          }
-      }
-      @media screen and (min-width: 1024px) {
-        ul {
-            column-count: 2;
-        }
-    }
-  } // end .servicesRightContentText
 
-} // end .servicesAbout
 
     .servicesCTA {
         .servicesCTALeft {
