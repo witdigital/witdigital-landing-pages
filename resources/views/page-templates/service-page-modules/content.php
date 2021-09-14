@@ -12,7 +12,7 @@ foreach ($parentFields as $field) {
     // $map_icon = '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/map-marker-alt-solid.svg" /';
     $map_icon = (get_field('services_sidebar_pin_image')) ? get_field('services_sidebar_pin_image')['url'] : '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/map-marker-alt-solid.svg" /';
 ?>
-<div class="servicesContent">
+<div class="servicesContent relative">
     <div class="servicesContentInner max-w-1150 px-2 mx-auto flex flex-wrap justify-between">
         <div class="servicesContentLeft flex-grow laptop:flex-1 max-w-650 pt-0 laptop:pt-0 px-2 laptop:px-0 pb-1 laptop:pb-10 order-2 laptop:order-none">
             <?php
@@ -20,16 +20,16 @@ foreach ($parentFields as $field) {
                 $i == 0;
                 while(have_rows('services_left_content')):the_row(); $i++; ?>
                     <div class="servicesContentItem accordionitem text-base mb-4 <?php echo $i < 2 ? 'desktopNoAccordion' : ''; ?>">
-                        <h2 class="servicesContentTitle accordionTitle"><?php the_sub_field('section_title') ?></h2>
+                        <h2 class="servicesContentTitle accordionTitle relative"><?php the_sub_field('section_title') ?></h2>
                         <div class="servicesContentText accordionContent m-2"><?php the_sub_field('section_content') ?></div>
                     </div>
                 <?php endwhile;
             endif;
             ?>
         </div>
-        <div class="servicesContentRight max-w-400 px-0 py-2 laptop:pl-6 flex-1 laptop:pb-10 order-1 laptop:order-none mt-5 laptop:mt-auto">
+        <div class="servicesContentRight laptop:absolute laptop:right-60 max-w-400 px-0 py-2 laptop:pl-6 flex-1 laptop:pb-10 order-1 laptop:order-none mt-5 laptop:mt-auto">
             <div class="servicesContentRightInner sidebar mb-4">
-                <div class="servicesContentSidebarSection sidebarCouponSection mb-5">
+                <div class="servicesContentSidebarSection sidebarCouponSection mb-5 relative">
                     <div class="sidebarCouponSectionInner sidebarSectionInner text-center bg-blue rounded-2xl">
                         <div class="couponBorder absolute z-10 rounded-2xl"></div>
                             <div class="couponSidebarTop" style="background: url(<?php echo $services_sidebar_coupon_image['url']; ?>) center / cover;"></div>
