@@ -1,0 +1,81 @@
+{
+    "key": "group_614102a41794f",
+    "title": "LP Contact Info",
+    "fields": [
+        {
+            "key": "field_614102b870cd8",
+            "label": "Phone Link",
+            "name": "witlandingpages_phone_link",
+            "type": "text",
+            "instructions": "Enter as one string with no spaces. Ex: 9995551212",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6141035470cd9",
+            "label": "Phone Number Format",
+            "name": "witlandingpages_phone_format",
+            "type": "text",
+            "instructions": "Ex: (999) 555-1212 or 999-555-1212",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_614103b870cda",
+            "label": "Location (optional)",
+            "name": "witlandingpages_phone_location",
+            "type": "text",
+            "instructions": "Use if client has multiple phone numbers.\r\nEx: Denver",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "landing-page-template.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1631650859
+}
