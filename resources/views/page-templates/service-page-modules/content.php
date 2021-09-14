@@ -27,7 +27,7 @@ foreach ($parentFields as $field) {
             endif;
             ?>
         </div>
-        <div class="servicesContentRight laptop:absolute laptop:right-60 max-w-400 px-0 py-2 laptop:pl-6 flex-1 laptop:pb-10 order-1 laptop:order-none mt-5 laptop:mt-auto">
+        <div class="servicesContentRight laptop:absolute laptop:right-32 max-w-400 px-0 py-2 laptop:pl-6 flex-1 laptop:pb-10 order-1 laptop:order-none mt-5 laptop:mt-auto">
             <div class="servicesContentRightInner sidebar mb-4">
                 <div class="servicesContentSidebarSection sidebarCouponSection mb-5 relative">
                     <div class="sidebarCouponSectionInner sidebarSectionInner text-center bg-blue rounded-2xl">
