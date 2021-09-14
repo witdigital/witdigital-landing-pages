@@ -5,7 +5,7 @@ $testimonials_section_title = (get_field('testimonials_section_title')) ? get_fi
 
 ?>
 
-<div class="testimonialsInner py-12" style="background: url(<?php echo $testimonials_background_image ?>) center / cover;">
+<div class="testimonialsInner py-12 laptop:mt-48" style="background: url(<?php echo $testimonials_background_image ?>) center / cover;">
 	<div class="overlay altOverlay"></div>
 	<div class="testimonialContent max-w-1150 mx-auto px-4">
 		<h2 class="testimonialsTitle text-white text-center"><?php echo $testimonials_section_title ?></h2>

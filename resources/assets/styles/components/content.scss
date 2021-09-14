@@ -29,6 +29,12 @@
           opacity: 1;
       }
   }
+
+    .servicesContentRight {
+        @media screen and (min-width: 1024px) {
+            position: absolute !important;
+        }
+    }
  
     .sidebar {
         .sidebarCouponSection {
