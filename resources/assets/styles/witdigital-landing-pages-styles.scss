@@ -12,6 +12,10 @@
 
 .wit-landing-page {
 
+div {
+    position: relative;
+}
+
 @media screen and (min-width: 1024px) {
     .mobileOnly {
         display: none;
