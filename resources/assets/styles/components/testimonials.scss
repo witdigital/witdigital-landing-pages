@@ -1,0 +1,13 @@
+.testimonialsInner {
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(-108deg, rgba(0, 41, 93, .84) 0%, rgba(0, 174, 239, .84) 100%);
+        top: 0;
+        left: 0;
+            &.altOverlay {
+            background: linear-gradient(-114deg, rgba(0, 41, 93, .84) 0%, rgba(0, 153, 215, .84) 91%, rgba(0, 46, 98, .84) 100%);
+        }
+    }
+}
