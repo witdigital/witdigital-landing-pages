@@ -58,6 +58,103 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_614119f21723f",
+            "label": "Phone Icon",
+            "name": "witlandingpages_phone_icon",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_614119c91723e",
+            "label": "Second Phone Number (optional)",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_61411a5f17241",
+            "label": "Phone Link",
+            "name": "witlandingpages_phone_2_link",
+            "type": "text",
+            "instructions": "Enter as one string with no spaces. Ex: 9995551212",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61411a8217242",
+            "label": "Phone Number Format",
+            "name": "witlandingpages_phone_2_format",
+            "type": "text",
+            "instructions": "Ex: (999) 555-1212 or 999-555-1212",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61411a9817243",
+            "label": "Location (optional)",
+            "name": "witlandingpages_phone_2_location",
+            "type": "text",
+            "instructions": "Use if client has multiple phone numbers.\r\nEx: Denver",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -77,5 +174,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631650859
+    "modified": 1631656624
 }
