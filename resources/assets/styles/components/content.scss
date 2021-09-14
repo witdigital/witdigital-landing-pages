@@ -1,4 +1,6 @@
 .servicesContent {
+    position: relative;
+
     .accordionitem:not(:first-of-type) {
       .accordionTitle {
           background: lightgray;
@@ -58,10 +60,14 @@
                 margin-bottom: 8px;
             }
             img.iconImage {
+                display: inline-block;
+                margin-right: 4px;
+                vertical-align: middle;
                 width: 12px;
                 filter: invert(89%) sepia(72%) saturate(1055%) hue-rotate(80deg) brightness(92%) contrast(80%);
               
             }
+
         }
     }
     @media screen and (min-width: 1024px) {
