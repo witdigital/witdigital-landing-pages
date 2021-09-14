@@ -45,78 +45,7 @@ background-color: none;
 
 
 
-  .servicesContent {
-    .accordionitem:not(:first-of-type) {
-      .accordionTitle {
-          background: lightgray;
-          border-radius: 16px;
-          padding: 16px 30px;
-          font-size: 24px;
-          cursor: pointer;
-          &:after {
-              content: "";
-              background: url('/wp-content/plugins/witdigital-landing-pages/resources/assets/images/plus-circle-solid.svg') center / cover;
-              position: absolute;
-              top: 43%;
-              transform: translateY(-50%);
-              right: 15px;
-              width: 24px;
-              height: 24px;
-              filter: invert(70%) sepia(41%) saturate(7359%) hue-rotate(160deg) brightness(95%) contrast(103%);
-          }
-      }
-      .accordionContent {
-          max-height: 0;
-          opacity: 0;
-          overflow: hidden
-      }
-      &.active .accordionContent {
-          max-height: 1000px;
-          opacity: 1;
-      }
-  }
- 
-    .sidebar {
-        .sidebarCouponSection {
 
-            .couponSidebarTop {
-                height: 190px;
-                border-radius: 16px 16px 0 0;
-            }
-            .couponSidebarBottom {
-                border-radius: 0 0 16px 16px;
-            }
-            .couponBorder {
-                width: 95%;
-                height: 95%;
-                border: 1px dashed white;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                border-radius: 10px;
-                position: absolute;
-            }
-        }
-        .serviceAreaSection {
-            .locationItem {
-                max-width: 49%;
-                width: 100%;
-                flex: 1 100%;
-                margin-bottom: 8px;
-            }
-            img.iconImage {
-                width: 12px;
-                filter: invert(89%) sepia(72%) saturate(1055%) hue-rotate(80deg) brightness(92%) contrast(80%);
-              
-            }
-        }
-    }
-    @media screen and (min-width: 1024px) {
-        ul {
-            column-count: 2;
-        }
-    }
-} // end .servicesContent
 
 
 
