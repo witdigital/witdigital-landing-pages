@@ -13,33 +13,33 @@ foreach ($parentFields as $field) {
     $map_icon = (get_field('services_sidebar_pin_image')) ? get_field('services_sidebar_pin_image')['url'] : '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/map-marker-alt-solid.svg" /';
 ?>
 <div class="servicesContent">
-    <div class="servicesContentInner max-w-1150 px-2 mx-auto flex flex-wrap justify-between">
-        <div class="servicesContentLeft flex-grow laptop:flex-1 max-w-650 pt-0 laptop:pt-0 px-2 laptop:px-0 pb-1 laptop:pb-10 order-2 laptop:order-none">
+    <div class="flex flex-wrap justify-between px-2 mx-auto servicesContentInner max-w-1150">
+        <div class="flex-grow order-2 px-2 pt-0 pb-1 servicesContentLeft laptop:flex-1 max-w-650 laptop:pt-0 laptop:px-0 laptop:pb-10 laptop:order-none">
             <?php
             if(have_rows('services_left_content')):
                 $i == 0;
                 while(have_rows('services_left_content')):the_row(); $i++; ?>
                     <div class="servicesContentItem accordionitem text-base mb-4 <?php echo $i < 2 ? 'desktopNoAccordion' : ''; ?>">
-                        <h2 class="servicesContentTitle accordionTitle relative"><?php the_sub_field('section_title') ?></h2>
-                        <div class="servicesContentText accordionContent m-2"><?php the_sub_field('section_content') ?></div>
+                        <h2 class="relative servicesContentTitle accordionTitle"><?php the_sub_field('section_title') ?></h2>
+                        <div class="m-2 servicesContentText accordionContent"><?php the_sub_field('section_content') ?></div>
                     </div>
                 <?php endwhile;
             endif;
             ?>
         </div>
-        <div class="servicesContentRight laptop:-right-8 max-w-400 px-0 py-2 laptop:pl-6 flex-1 laptop:pb-10 order-1 laptop:order-none mt-5 laptop:mt-auto">
-            <div class="servicesContentRightInner sidebar mb-4">
-                <div class="servicesContentSidebarSection sidebarCouponSection mb-5">
-                    <div class="sidebarCouponSectionInner sidebarSectionInner text-center bg-blue rounded-2xl">
-                        <div class="couponBorder absolute z-10 rounded-2xl"></div>
+        <div class="flex-1 order-1 px-0 py-2 mt-5 servicesContentRight laptop:-right-8 max-w-400 laptop:pl-6 laptop:pb-10 laptop:order-none laptop:mt-auto">
+            <div class="mb-4 servicesContentRightInner sidebar">
+                <div class="mb-5 servicesContentSidebarSection sidebarCouponSection">
+                    <div class="text-center sidebarCouponSectionInner sidebarSectionInner bg-blue rounded-2xl">
+                        <div class="absolute z-10 couponBorder rounded-2xl"></div>
                             <div class="couponSidebarTop" style="background: url(<?php echo $services_sidebar_coupon_image['url']; ?>) center / cover;"></div>
-                            <div class="couponSidebarBottom z-20 p-4">
-                                <h3 class="couponSidebarTitle text-white"><?php echo $services_sidebar_coupon_title; ?></h3>
-                                <div class="couponSidebarText text-white"><?php echo $services_sidebar_coupon_subtitle; ?></div>
+                            <div class="z-20 p-4 couponSidebarBottom">
+                                <h3 class="text-white couponSidebarTitle"><?php echo $services_sidebar_coupon_title; ?></h3>
+                                <div class="text-white couponSidebarText"><?php echo $services_sidebar_coupon_subtitle; ?></div>
                                 <div class="couponSidebarPhoneNumbers">
                                     <div class="couponSidebarPhoneNumber">
-                                        <!-- <span class="locationText text-green rucksack text-20 font-bold uppercase"><?php echo get_field('phone_1_location', 'option'); ?>: </span> -->
-                                        <a class="text-white rucksack text-20 font-bold uppercase" href="tel:<?php echo $phone_1_href ?>"><?php echo $phone_1_display ?></a>
+                                        <!-- <span class="font-bold uppercase locationText text-green rucksack text-20"><?php echo get_field('phone_1_location', 'option'); ?>: </span> -->
+                                        <a class="font-bold text-white uppercase rucksack text-20" href="tel:<?php echo $phone_1_href ?>"><?php echo $phone_1_display ?></a>
                                     </div>
                                 </div>
                             </div> <!-- end .couponSidebarBottom -->
@@ -47,26 +47,26 @@ foreach ($parentFields as $field) {
                     </div>
                 </div>
                 <div class="servicesContentSidebarSection serviceAreaSection">
-                    <div class="serviceAreaSectionInner sidebarSectionInner bg-blue rounded-2xl p-5">
-                        <h3 class="couponSidebarTitle text-white text-center text-26 laptop:text-30"><?php echo $services_sidebar_locations_title; ?></h3>
-                        <div class="couponSidebarLocations flex flex-wrap justify-between items-center mb-4 px-3">
+                    <div class="p-5 serviceAreaSectionInner sidebarSectionInner bg-blue rounded-2xl">
+                        <h3 class="text-center text-white couponSidebarTitle text-26 laptop:text-30"><?php echo $services_sidebar_locations_title; ?></h3>
+                        <div class="flex flex-wrap items-center justify-between px-3 mb-4 couponSidebarLocations">
                             <?php
                             if(have_rows('services_sidebar_location_items')):
                                 while(have_rows('services_sidebar_location_items')):the_row(); ?>
-                                    <div class="locationItem text-white text-base tracking-wide">
+                                    <div class="text-base tracking-wide text-white locationItem">
                                        <img class="iconImage" src=<?php echo $map_icon ?> /> <?php the_sub_field('location') ?>
                                     </div>
                                 <?php endwhile;
                             elseif(have_rows('services_sidebar_location_items', $parent)):
                                 while(have_rows('services_sidebar_location_items', $parent)):the_row(); ?>
-                                    <div class="locationItem text-white">
+                                    <div class="text-white locationItem">
                                        <img class="iconImage" src=<?php echo $map_icon ?> /> <?php the_sub_field('location') ?>
                                     </div>
                                 <?php endwhile;
                             endif;
                             ?>
                         </div>
-                        <a class="btn py-2 px-3 my-0 mx-auto block text-white border-white border rounded-md text-center moreLocations uppercase font-bold text-base" href="<?php echo $services_sidebar_locations_button_url; ?>"><img class="iconImage" src=<?php echo $map_icon ?> /><?php echo $services_sidebar_locations_button_text; ?></a>
+                        <a class="block px-3 py-2 mx-auto my-0 text-base font-bold text-center text-white uppercase border border-white rounded-md btn moreLocations" href="<?php echo $services_sidebar_locations_button_url; ?>"><img class="iconImage" src=<?php echo $map_icon ?> /><?php echo $services_sidebar_locations_button_text; ?></a>
                     </div>
                 </div>
             </div>
