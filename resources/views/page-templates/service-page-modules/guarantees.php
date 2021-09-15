@@ -60,16 +60,19 @@ $g_content_three = (get_field('g_content_three')) ? get_field('g_content_three')
 			<div class="mb-3 laptop:mb-0">
 
 
-			<div class="phoneBtns">
-				<div class="phoneBtnItem">
-					<span class="phoneBtnItemLocation"><?php echo $phone_1_location?></span>
+			<div class="phoneBtns flex flex-nowrap justify-between items-center my-0 mx-auto max-w-340">
+				<div class="phoneBtnItem mb-2.5">
+					<span class="phoneBtnItemLocation block mb-1.5 font-bold"><?php echo $phone_1_location?></span>
 					<a href="tel:<?php echo $phone_1_href?>" class="phoneBtn btn bg-white rounded-md py-2 px-3 text-base font-bold"><img class="iconImage phoneBtnImage align-middle" src="<?php echo $call_button_icon?>" /> <span class=""><?php echo $phone_1_display ?></span></a>
 				</div>
-				<!-- Uncomment the below if a second number is used: -->
-				<!-- <div class="phoneBtnItem">
-					<span class="phoneBtnItemLocation"><?php echo $phone_2_location?></span>
+
+				<?php if( ($phone_2_href) && ($phone_2_display) ): ?>
+				<div class="phoneBtnItem mb-2.5">
+					<span class="phoneBtnItemLocation block mb-1.5 font-bold"><?php echo $phone_2_location?></span>
 					<a href="tel:<?php echo $phone_2_href?>" class="phoneBtn btn bg-white rounded-md py-2 px-3 text-base font-bold"><img class="iconImage phoneBtnImage align-middle" src="<?php echo $call_button_icon?>" /> <span class=""><?php echo $phone_2_display ?></span></a>
-				</div> -->
+				</div>
+				<?php endif; ?>
+
 			</div> <!-- end .phoneBtns -->
 
 			</div>
