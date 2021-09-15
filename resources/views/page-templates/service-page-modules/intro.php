@@ -1,17 +1,17 @@
 <!-- declare variables -->
 <?php
-$intro_embed = (get_field('intro_embed')) ? get_field('intro_embed') : '' ;
-$intro_image = (get_field('intro_image')) ? get_field('intro_image')['url'] : '' ;
-$intro_title = (get_field('intro_title')) ? get_field('intro_title') : '' ;
-$intro_text = (get_field('intro_text')) ? get_field('intro_text') : '' ;
-$request_url = (get_field('request_url')) ? get_field('request_url') : '' ;
-$request_display = (get_field('request_display')) ? get_field('request_display') : '' ;
+$intro_embed = (get_field('witlandingpages_intro_embed')) ? get_field('witlandingpages_intro_embed') : '' ;
+$intro_image = (get_field('witlandingpages_intro_image')) ? get_field('witlandingpages_intro_image')['url'] : '' ;
+$intro_title = (get_field('witlandingpages_intro_title')) ? get_field('witlandingpages_intro_title') : '' ;
+$intro_text = (get_field('witlandingpages_intro_text')) ? get_field('witlandingpages_intro_text') : '' ;
+$request_url = (get_field('witlandingpages_request_url')) ? get_field('witlandingpages_request_url') : '' ;
+$request_display = (get_field('witlandingpages_request_display')) ? get_field('witlandingpages_request_display') : '' ;
 ?>
 
 <div class="servicesIntro my-5 laptop:mt-12 laptop:mb-16">
-    <div class="servicesIntroInner mx-auto px-4 flex flex-wrap justify-between items-center <?php echo get_field('use_image_or_video_embed') == 'Embed' ? 'embed' : 'image'; ?>">
+    <div class="servicesIntroInner mx-auto px-4 flex flex-wrap justify-between items-center <?php echo get_field('witlandingpages_image_video') == 'Embed' ? 'embed' : 'image'; ?>">
         <div class="servicesIntroImageContainer laptop:max-w-400 w-full laptop:pr-10">
-            <?php if(get_field('use_image_or_video_embed') == 'Embed') { ?>
+            <?php if(get_field('witlandingpages_image_video') == 'Embed') { ?>
                 <div class="introEmbed">
                     <?php echo $intro_embed; ?>
                 </div>
