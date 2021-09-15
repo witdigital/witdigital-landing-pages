@@ -41,10 +41,24 @@ foreach ($parentFields as $field) {
                                 <div class="text-white couponSidebarText"><?php echo $wpl_coupon_subtitle; ?></div>
                                 <div class="couponSidebarPhoneNumbers">
                                     <div class="couponSidebarPhoneNumber">
-                                        <!-- <span class="font-bold uppercase locationText text-green rucksack text-20"><?php echo get_field('phone_1_location', 'option'); ?>: </span> -->
-                                        <a class="font-bold text-white uppercase rucksack text-20" href="tel:<?php echo $phone_1_href ?>"><?php echo $phone_1_display ?></a>
-                                    </div>
-                                </div>
+                                        <span class="font-bold uppercase locationText text-green text-20">
+                                            <?php if(($phone_1_location)) {
+                                                echo $phone_1_location . ':';
+                                            } ?> 
+                                        </span>
+                                        <a class="font-bold text-white uppercase text-20" href="tel:<?php echo $phone_1_href ?>"><?php echo $phone_1_display ?></a>
+                                    </div> 
+                                    <?php if( ($phone_2_href) && ($phone_2_display) ): ?>
+                                        <div class="couponSidebarPhoneNumber">
+                                        <span class="font-bold uppercase locationText text-green text-20">
+                                            <?php if(($phone_2_location)) {
+                                                echo $phone_2_location . ':';
+                                            } ?> 
+                                        </span>
+                                        <a class="font-bold text-white uppercase text-20" href="tel:<?php echo $phone_2_href ?>"><?php echo $phone_2_display ?></a>
+                                    </div> 
+                                    <?php endif; ?>
+                                </div> <!-- end .couponSidebarPhoneNumbers -->
                             </div> <!-- end .couponSidebarBottom -->
                         
                     </div>
