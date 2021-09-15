@@ -28,15 +28,15 @@ $call_button_icon = (get_field('call_button_icon')) ? get_field('call_button_ico
 		<div class="servicesHeroTitle text-34 laptop:text-52 leading-tight laptop:leading-none text-white"><?php echo $hero_title ?></div>
 		<div class="servicesHeroCall mt-3 laptop:mt-6 text-center text-white">
 
-			<div class="phoneBtns">
-				<div class="phoneBtnItem">
-					<span class="phoneBtnItemLocation"><?php echo $phone_1_location?></span>
+			<div class="phoneBtns flex flex-nowrap justify-between items-center my-0 mx-auto max-w-340">
+				<div class="phoneBtnItem mb-2.5">
+					<span class="phoneBtnItemLocation block mb-1.5 font-bold"><?php echo $phone_1_location?></span>
 					<a href="tel:<?php echo $phone_1_href?>" class="phoneBtn btn bg-white rounded-md py-2 px-3 text-base font-bold"><img class="iconImage phoneBtnImage align-middle" src="<?php echo $call_button_icon?>" /> <span class=""><?php echo $phone_1_display ?></span></a>
 				</div>
 
 				<?php if( ($phone_2_href) && ($phone_2_display) ): ?>
-				<div class="phoneBtnItem">
-					<span class="phoneBtnItemLocation"><?php echo $phone_2_location?></span>
+				<div class="phoneBtnItem mb-2.5">
+					<span class="phoneBtnItemLocation block mb-1.5 font-bold"><?php echo $phone_2_location?></span>
 					<a href="tel:<?php echo $phone_2_href?>" class="phoneBtn btn bg-white rounded-md py-2 px-3 text-base font-bold"><img class="iconImage phoneBtnImage align-middle" src="<?php echo $call_button_icon?>" /> <span class=""><?php echo $phone_2_display ?></span></a>
 				</div>
 				<?php endif; ?>
