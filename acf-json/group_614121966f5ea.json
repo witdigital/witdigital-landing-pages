@@ -7,7 +7,7 @@
             "label": "Image",
             "name": "witlandingpages_cta_image",
             "type": "image",
-            "instructions": "",
+            "instructions": "Will pull from parent if no image selected.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -31,7 +31,7 @@
             "label": "Title",
             "name": "witlandingpages_cta_title",
             "type": "text",
-            "instructions": "",
+            "instructions": "Will pull from parent if nothing is here.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -50,7 +50,7 @@
             "label": "Content",
             "name": "witlandingpages_cta_content",
             "type": "wysiwyg",
-            "instructions": "Do not add phone number buttons. They will come in automatically.",
+            "instructions": "Will pull from parent if nothing is here.\r\nDo not add phone number buttons. They will come in automatically.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -82,5 +82,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631658543
+    "modified": 1631739051
 }

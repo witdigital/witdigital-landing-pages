@@ -26,7 +26,7 @@
             "label": "Right Sidebar Title",
             "name": "witlandingpages_about_title",
             "type": "text",
-            "instructions": "",
+            "instructions": "Will pull from parent if nothing is here.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -45,7 +45,7 @@
             "label": "Right Sidebar Subtitle",
             "name": "witlandingpages_about_subtitle",
             "type": "text",
-            "instructions": "",
+            "instructions": "Will pull from parent if nothing is here.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -72,7 +72,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "Will pull from parent if nothing is here.",
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 1,
@@ -96,5 +96,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Formerly 'About'",
-    "modified": 1631719170
+    "modified": 1631738992
 }
