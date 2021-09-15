@@ -18,7 +18,7 @@ $phone_1_display = (get_field('witlandingpages_phone_format')) ? get_field('witl
 $phone_2_display = (get_field('witlandingpages_phone_2_format')) ? get_field('witlandingpages_phone_2_format') : '' ;
 $phone_1_location = (get_field('witlandingpages_phone_location')) ? get_field('witlandingpages_phone_location') : '' ;
 $phone_2_location = (get_field('witlandingpages_phone_2_location')) ? get_field('witlandingpages_phone_2_location') : '' ;
-$call_button_icon = (get_field('call_button_icon')) ? get_field('call_button_icon')['url'] : '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/phone-alt-solid.svg" /' ;
+$call_button_icon = (get_field('witlandingpages_phone_icon')) ? get_field('witlandingpages_phone_icon')['url'] : '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/phone-alt-solid.svg" /' ;
 ?>
 
 <div class="px-4 py-10 pt-32 servicesHero hero laptop:pt-40 laptop:pb-24" style="background: url( <?php echo $witlandingpages_hero_image['url']; ?>) 100% 20% / cover;">
@@ -31,13 +31,13 @@ $call_button_icon = (get_field('call_button_icon')) ? get_field('call_button_ico
 			<div class="flex items-center justify-between mx-auto my-0 phoneBtns flex-nowrap max-w-340">
 				<div class="phoneBtnItem mb-2.5">
 					<span class="phoneBtnItemLocation block mb-1.5 font-bold"><?php echo $phone_1_location?></span>
-					<a href="tel:<?php echo $phone_1_href?>" class="px-3 py-2 text-base font-bold bg-white rounded-md phoneBtn btn"><img class="align-middle iconImage phoneBtnImage" src="<?php echo $call_button_icon?>" /> <span class=""><?php echo $phone_1_display ?></span></a>
+					<a href="tel:<?php echo $phone_1_href?>" class="px-3 py-2 text-base font-bold bg-white rounded-md phoneBtn btn"><img class="w-3.5 align-middle iconImage phoneBtnImage" src="<?php echo $call_button_icon?>" /> <span class=""><?php echo $phone_1_display ?></span></a>
 				</div>
 
 				<?php if( ($phone_2_href) && ($phone_2_display) ): ?>
 				<div class="phoneBtnItem mb-2.5">
 					<span class="phoneBtnItemLocation block mb-1.5 font-bold"><?php echo $phone_2_location?></span>
-					<a href="tel:<?php echo $phone_2_href?>" class="px-3 py-2 text-base font-bold bg-white rounded-md phoneBtn btn"><img class="align-middle iconImage phoneBtnImage" src="<?php echo $call_button_icon?>" /> <span class=""><?php echo $phone_2_display ?></span></a>
+					<a href="tel:<?php echo $phone_2_href?>" class="px-3 py-2 text-base font-bold bg-white rounded-md phoneBtn btn"><img class="w-3.5 align-middle iconImage phoneBtnImage" src="<?php echo $call_button_icon?>" /> <span class=""><?php echo $phone_2_display ?></span></a>
 				</div>
 				<?php endif; ?>
 
