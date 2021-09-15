@@ -17,17 +17,20 @@ $guarantees_mobile_image = (get_field('witlandingpages_p_mobile')) ? get_field('
 			<div class="mb-10 guaranteesText laptop:text-20"><?php echo $guarantees_text; ?></div>
 			<div class="flex-wrap justify-between guaranteesItems laptop:flex laptop:mb-10">
 				<?php if( have_rows('witlandingpages_panels') ):
-						while( have_rows('witlandingpages_panels') ): the_row(); ?>
+						while( have_rows('witlandingpages_panels') ): the_row(); 
+						?>
+
 							<div class="flex-1 px-4 guaranteeItem">
 
 								<div class="px-3 py-4 mb-4 text-center guaranteeItemInner bg-blue laptop:pt-6 laptop:pb-8 rounded-xl add-box-shadow laptop:mb-0">
-									<img class="mx-auto mb-3" src="<?php the_sub_field('witlandingpages_p_image')['url']; ?>" alt="<?php the_sub_field('witlandingpages_p_image')['alt']; ?>" />
+									<img class="mx-auto mb-3" src="<?php the_sub_field('witlandingpages_p_image')?>" />
 									<h4 class="mb-2 text-white guaranteeItemTitle laptop:mb-4"><?php the_sub_field('witlandingpages_p_title'); ?></h4>
 									<div class="text-white guaranteeItemText"><?php the_sub_field('witlandingpages_p_text'); ?></div>
 								</div>
 
 							</div>
 						<?php endwhile; 
+
 					endif;
 				?>
 			</div>
