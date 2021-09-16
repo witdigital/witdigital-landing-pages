@@ -22,9 +22,13 @@ foreach ($parentFields as $field) {
             if(have_rows('witlandingpages_accordion')):
                 $i == 0;
                 while(have_rows('witlandingpages_accordion')):the_row(); $i++; ?>
+                <?php 
+                $wlp_ac_title = (get_sub_field('witlandingpages_accordion_title')) ? get_sub_field('witlandingpages_accordion_title') : '' ; 
+                $wlp_ac_content = (get_sub_field('witlandingpages_accordion_content')) ? get_sub_field('witlandingpages_accordion_content') : '' ; ?>
+                
                     <div class="servicesContentItem accordionitem text-base mb-4 <?php echo $i < 2 ? 'desktopNoAccordion' : ''; ?>">
-                        <h2 class="relative servicesContentTitle accordionTitle"><?php the_sub_field('witlandingpages_accordion_title') ?></h2>
-                        <div class="m-2 servicesContentText accordionContent"><?php the_sub_field('witlandingpages_accordion_content') ?></div>
+                        <h2 class="relative servicesContentTitle accordionTitle"><?php echo $wlp_ac_title ?></h2>
+                        <div class="m-2 servicesContentText accordionContent"><?php echo $wlp_ac_content ?></div>
                     </div>
                 <?php endwhile;
             endif;
