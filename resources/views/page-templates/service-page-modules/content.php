@@ -71,23 +71,20 @@ foreach ($parentFields as $field) {
                             if(have_rows('witlandingpages_sidebar_locations')):
                                 while(have_rows('witlandingpages_sidebar_locations')):the_row(); ?>
                                     <div class="text-base tracking-wide text-white locationItem">
-                                        <img class="iconImage" src=<?php echo $map_icon ?> /> <span class="absolute"><?php the_sub_field('witlandingpages_location') ?></span>
+                                        <img class="inline-block w-3 mr-1 align-text-bottom iconImageFilter" src=<?php echo $map_icon ?> /> <span class="absolute"><?php the_sub_field('witlandingpages_location') ?></span>
                                        
                                     </div>
-                                    <!-- <div class="text-base tracking-wide text-white locationItem">
-                                       <img class="iconImage" src=<?php echo $map_icon ?> /> <?php the_sub_field('witlandingpages_location') ?>
-                                    </div> -->
                                 <?php endwhile;
                             elseif(have_rows('witlandingpages_sidebar_witlandingpages_location', $parent)):
                                 while(have_rows('witlandingpages_sidebar_locations', $parent)):the_row(); ?>
                                     <div class="text-white locationItem">
-                                       <img class="iconImage" src=<?php echo $map_icon ?> /> <?php the_sub_field('witlandingpages_location') ?>
+                                       <img class="inline-block w-3 mr-1 align-text-bottom iconImageFilter" src=<?php echo $map_icon ?> /> <?php the_sub_field('witlandingpages_location') ?>
                                     </div>
                                 <?php endwhile;
                             endif;
                             ?>
                         </div>
-                        <a class="block px-3 py-2 mx-auto my-0 text-base font-bold text-center text-white uppercase border border-white rounded-md btn moreLocations" href="<?php echo $wpl_locations_url; ?>"><img class="iconImage" src=<?php echo $map_icon ?> /><?php echo $wpl_locations_btn; ?></a>
+                        <a class="block px-3 py-2 mx-auto my-0 text-base font-bold text-center text-white uppercase border border-white rounded-md btn moreLocations" href="<?php echo $wpl_locations_url; ?>"><img class="inline-block w-3 mr-1 align-text-bottom iconImageFilter" src=<?php echo $map_icon ?> /><?php echo $wpl_locations_btn; ?></a>
                     </div>
                 </div>
             </div>
