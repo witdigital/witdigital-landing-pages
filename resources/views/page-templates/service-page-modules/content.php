@@ -84,7 +84,7 @@ foreach ($parentFields as $field) {
                             endif;
                             ?>
                         </div>
-                        <a class="block px-3 py-2 mx-auto my-0 text-base font-bold text-center text-white uppercase border border-white rounded-md btn moreLocations" href="<?php echo $wpl_locations_url; ?>"><img class="inline-block w-3 mr-1 align-text-bottom iconImageFilter" src=<?php echo $map_icon ?> /><?php echo $wpl_locations_btn; ?></a>
+                        <a class="block px-3 py-2 mx-auto my-0 text-base font-bold text-center text-white uppercase border border-white rounded-md focus:bg-darkblue focus:text-green btn moreLocations" href="<?php echo $wpl_locations_url; ?>"><img class="inline-block w-3 mr-1 align-text-bottom iconImageFilter" src=<?php echo $map_icon ?> /><?php echo $wpl_locations_btn; ?></a>
                     </div>
                 </div>
             </div>

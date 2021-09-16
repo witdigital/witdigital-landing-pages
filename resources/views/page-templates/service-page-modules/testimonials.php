@@ -19,6 +19,6 @@ $wpl_testBtn_text = (get_field('witlandingpages_testimonials_btn_text')) ? get_f
 			}
 			 ?>
 		</div>
-		<a class="block px-3 py-2 mx-auto my-0 text-base font-bold leading-none text-center text-white uppercase border border-white rounded-md btn" href="<?php echo $wpl_testBtn_href ?>"><?php echo $wpl_testBtn_text ?></a>
+		<a class="block px-3 py-2 mx-auto my-0 text-base font-bold leading-none text-center text-white uppercase border border-white rounded-md btn focus:bg-white focus:text-blue" href="<?php echo $wpl_testBtn_href ?>"><?php echo $wpl_testBtn_text ?></a>
 	</div>
 </div>
