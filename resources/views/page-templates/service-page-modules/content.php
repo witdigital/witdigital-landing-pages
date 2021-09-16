@@ -19,9 +19,9 @@ foreach ($parentFields as $field) {
     <div class="flex flex-wrap justify-between px-2 mx-auto servicesContentInner max-w-1150">
         <div class="flex-grow order-2 px-2 pt-0 pb-1 servicesContentLeft laptop:flex-1 max-w-650 laptop:pt-0 laptop:px-0 laptop:pb-10 laptop:order-none">
             <?php
-            if(have_rows('witlandingpages_accordion_content')):
+            if(have_rows('witlandingpages_accordion')):
                 $i == 0;
-                while(have_rows('witlandingpages_accordion_content')):the_row(); $i++; ?>
+                while(have_rows('witlandingpages_accordion')):the_row(); $i++; ?>
                     <div class="servicesContentItem accordionitem text-base mb-4 <?php echo $i < 2 ? 'desktopNoAccordion' : ''; ?>">
                         <h2 class="relative servicesContentTitle accordionTitle"><?php the_sub_field('witlandingpages_accordion_title') ?></h2>
                         <div class="m-2 servicesContentText accordionContent"><?php the_sub_field('witlandingpages_accordion_content') ?></div>
