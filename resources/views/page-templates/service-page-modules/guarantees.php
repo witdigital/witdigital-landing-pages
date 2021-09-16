@@ -18,14 +18,19 @@ $wlp_panels_mobile_img = (get_field('witlandingpages_p_mobile')) ? get_field('wi
 			<div class="flex-wrap justify-between guaranteesItems laptop:flex laptop:mb-10">
 				<?php if( have_rows('witlandingpages_panels') ):
 						while( have_rows('witlandingpages_panels') ): the_row(); 
+
+						$wlp_p_image = (get_sub_field('witlandingpages_p_image')) ? get_sub_field('witlandingpages_p_image') : '' ;
+						$wlp_p_title = (get_sub_field('witlandingpages_p_title')) ? get_sub_field('witlandingpages_p_title') : '' ;
+						$wlp_p_text = (get_sub_field('witlandingpages_p_text')) ? get_sub_field('witlandingpages_p_text') : '' ;
+
 						?>
 
 							<div class="flex-1 px-4 guaranteeItem">
 
 								<div class="px-3 py-4 mb-4 text-center guaranteeItemInner bg-blue laptop:pt-6 laptop:pb-8 rounded-xl add-box-shadow laptop:mb-0">
-									<img class="mx-auto mb-3" src="<?php the_sub_field('witlandingpages_p_image')?>" />
-									<h4 class="mb-2 text-white guaranteeItemTitle laptop:mb-4"><?php the_sub_field('witlandingpages_p_title'); ?></h4>
-									<div class="text-white guaranteeItemText"><?php the_sub_field('witlandingpages_p_text'); ?></div>
+									<img class="mx-auto mb-3" src="<?php echo $wlp_p_image ?>" />
+									<h4 class="mb-2 text-white guaranteeItemTitle laptop:mb-4"><?php echo $wlp_p_title ?></h4>
+									<div class="text-white guaranteeItemText"><?php echo $wlp_p_text ?></div>
 								</div>
 
 							</div>
