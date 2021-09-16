@@ -66,13 +66,17 @@ foreach ($parentFields as $field) {
                 <div class="servicesContentSidebarSection serviceAreaSection">
                     <div class="p-5 serviceAreaSectionInner sidebarSectionInner bg-blue rounded-2xl">
                         <h3 class="text-center text-white couponSidebarTitle text-26 laptop:text-30"><?php echo $wpl_location_title; ?></h3>
-                        <div class="flex flex-wrap items-center justify-between px-3 mb-4 couponSidebarLocations">
+                        <div class="flex flex-wrap items-center justify-between px-3 mt-4 mb-8 couponSidebarLocations">
                             <?php
                             if(have_rows('witlandingpages_sidebar_locations')):
                                 while(have_rows('witlandingpages_sidebar_locations')):the_row(); ?>
                                     <div class="text-base tracking-wide text-white locationItem">
-                                       <img class="iconImage" src=<?php echo $map_icon ?> /> <?php the_sub_field('witlandingpages_location') ?>
+                                        <img class="iconImage" src=<?php echo $map_icon ?> /> <span class="absolute"><?php the_sub_field('witlandingpages_location') ?></span>
+                                       
                                     </div>
+                                    <!-- <div class="text-base tracking-wide text-white locationItem">
+                                       <img class="iconImage" src=<?php echo $map_icon ?> /> <?php the_sub_field('witlandingpages_location') ?>
+                                    </div> -->
                                 <?php endwhile;
                             elseif(have_rows('witlandingpages_sidebar_witlandingpages_location', $parent)):
                                 while(have_rows('witlandingpages_sidebar_locations', $parent)):the_row(); ?>
