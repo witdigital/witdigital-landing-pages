@@ -7,7 +7,7 @@ $wpl_testBtn_text = (get_field('witlandingpages_testimonials_btn_text')) ? get_f
 
 ?>
 
-<div class="py-12 testimonialsInner laptop:mt-48" style="background: url(<?php echo $wpl_testimonials_img ?>) center / cover;">
+<div class="py-12 testimonialsInner laptop:mt-64" style="background: url(<?php echo $wpl_testimonials_img ?>) center / cover;">
 	<div class="overlay altOverlay"></div>
 	<div class="px-4 mx-auto testimonialContent max-w-1150">
 		<h2 class="text-center text-white testimonialsTitle"><?php echo $wpl_testimonials_title ?></h2>
