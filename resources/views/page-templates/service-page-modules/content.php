@@ -39,8 +39,8 @@ foreach ($parentFields as $field) {
                 <div class="mb-5 servicesContentSidebarSection sidebarCouponSection">
                     <div class="text-center sidebarCouponSectionInner sidebarSectionInner bg-blue rounded-2xl">
                         <div class="absolute z-10 couponBorder rounded-2xl"></div>
-                            <div class="couponSidebarTop" style="background: url(<?php echo $witlandingpages_coupon_image; ?>) center / cover;"></div>
-                            <div class="z-20 p-4 couponSidebarBottom">
+                            <div class="h-48 rounded-tr-2xl rounded-tl-2xl" style="background: url(<?php echo $witlandingpages_coupon_image; ?>) center / cover;"></div>
+                            <div class="z-20 p-4 rounded-br-2xl rounded-bl-2xl">
                                 <h3 class="text-white couponSidebarTitle"><?php echo $witlandingpages_coupon_title; ?></h3>
                                 <div class="text-white couponSidebarText"><?php echo $witlandingpages_coupon_subtitle; ?></div>
                                 <div class="couponSidebarPhoneNumbers">
