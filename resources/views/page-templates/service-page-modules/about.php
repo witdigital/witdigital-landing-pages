@@ -20,7 +20,7 @@ $witlandingpages_about_content = (get_field('witlandingpages_about_content')) ? 
             <?php echo $wlp_about_left ?>
         </div>
         <div class="w-full servicesAboutRight max-w-550 laptop:pl-5">
-            <div class="p-5 rounded-none servicesAboutRight bg-blue laptop:rounded-2xl add-box-shadow laptop:py-8 laptop:px-10">
+            <div class="p-5 rounded-none shadow-xl servicesAboutRight bg-blue laptop:rounded-2xl laptop:py-8 laptop:px-10">
                 <h5 class="mb-2 servicesRightSmallText text-lightblue laptop:mb-4"><?php echo $witlandingpages_about_title; ?></h5>
                 <h3 class="mb-6 text-white servicesRightLargeText"><?php echo $witlandingpages_about_subtitle; ?></h3>
 
