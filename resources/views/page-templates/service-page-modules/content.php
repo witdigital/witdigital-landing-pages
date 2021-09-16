@@ -7,13 +7,13 @@ foreach ($parentFields as $field) {
 }
 ?>
 <?php 
-    $wpl_coupon_title = (get_field('witlandingpages_coupon_title')) ? get_field('witlandingpages_coupon_title') : '' ;
-    $wpl_coupon_subtitle = (get_field('witlandingpages_coupon_subtitle')) ? get_field('witlandingpages_coupon_subtitle') : '' ;
-    $wpl_coupon_img = (get_field('witlandingpages_coupon_image')) ? get_field('witlandingpages_coupon_image')['url'] : '' ;
-    $wpl_location_title = (get_field('witlandingpages_locations_title')) ? get_field('witlandingpages_locations_title') : '' ;
+    $witlandingpages_coupon_title = (get_field('witlandingpages_coupon_title')) ? get_field('witlandingpages_coupon_title') : '' ;
+    $witlandingpages_coupon_subtitle = (get_field('witlandingpages_coupon_subtitle')) ? get_field('witlandingpages_coupon_subtitle') : '' ;
+    $witlandingpages_coupon_image = (get_field('witlandingpages_coupon_image')) ? get_field('witlandingpages_coupon_image')['url'] : '' ;
+    $wlp_location_title = (get_field('witlandingpages_locations_title')) ? get_field('witlandingpages_locations_title') : '' ;
     $map_icon = (get_field('services_sidebar_pin_image')) ? get_field('services_sidebar_pin_image')['url'] : '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/map-marker-alt-solid.svg" /';
-    $wpl_locations_url = (get_field('witlandingpages_locations_url')) ? get_field('witlandingpages_locations_url') : '' ;
-    $wpl_locations_btn = (get_field('witlandingpages_locations_button')) ? get_field('witlandingpages_locations_button') : '' ;
+    $witlandingpages_locations_url = (get_field('witlandingpages_locations_url')) ? get_field('witlandingpages_locations_url') : '' ;
+    $witlandingpages_locations_button = (get_field('witlandingpages_locations_button')) ? get_field('witlandingpages_locations_button') : '' ;
 ?>
 <div class="servicesContent">
     <div class="flex flex-wrap justify-between px-2 mx-auto servicesContentInner max-w-1150">
@@ -35,27 +35,27 @@ foreach ($parentFields as $field) {
                 <div class="mb-5 servicesContentSidebarSection sidebarCouponSection">
                     <div class="text-center sidebarCouponSectionInner sidebarSectionInner bg-blue rounded-2xl">
                         <div class="absolute z-10 couponBorder rounded-2xl"></div>
-                            <div class="couponSidebarTop" style="background: url(<?php echo $wpl_coupon_img; ?>) center / cover;"></div>
+                            <div class="couponSidebarTop" style="background: url(<?php echo $witlandingpages_coupon_image; ?>) center / cover;"></div>
                             <div class="z-20 p-4 couponSidebarBottom">
-                                <h3 class="text-white couponSidebarTitle"><?php echo $wpl_coupon_title; ?></h3>
-                                <div class="text-white couponSidebarText"><?php echo $wpl_coupon_subtitle; ?></div>
+                                <h3 class="text-white couponSidebarTitle"><?php echo $witlandingpages_coupon_title; ?></h3>
+                                <div class="text-white couponSidebarText"><?php echo $witlandingpages_coupon_subtitle; ?></div>
                                 <div class="couponSidebarPhoneNumbers">
                                     <div class="couponSidebarPhoneNumber">
                                         <span class="font-bold uppercase locationText text-green text-20">
-                                            <?php if(($phone_1_location)) {
-                                                echo $phone_1_location . ':';
+                                            <?php if(($wlp_phone_1_location)) {
+                                                echo $wlp_phone_1_location . ':';
                                             } ?> 
                                         </span>
-                                        <a class="font-bold text-white uppercase text-20" href="tel:<?php echo $phone_1_href ?>"><?php echo $phone_1_display ?></a>
+                                        <a class="font-bold text-white uppercase text-20" href="tel:<?php echo $wlp_phone_1_href ?>"><?php echo $wlp_phone_1_display ?></a>
                                     </div> 
-                                    <?php if( ($phone_2_href) && ($phone_2_display) ): ?>
+                                    <?php if( ($wlp_phone_2_href) && ($wlp_phone_2_display) ): ?>
                                         <div class="couponSidebarPhoneNumber">
                                         <span class="font-bold uppercase locationText text-green text-20">
-                                            <?php if(($phone_2_location)) {
-                                                echo $phone_2_location . ':';
+                                            <?php if(($wlp_phone_2_location)) {
+                                                echo $wlp_phone_2_location . ':';
                                             } ?> 
                                         </span>
-                                        <a class="font-bold text-white uppercase text-20" href="tel:<?php echo $phone_2_href ?>"><?php echo $phone_2_display ?></a>
+                                        <a class="font-bold text-white uppercase text-20" href="tel:<?php echo $wlp_phone_2_href ?>"><?php echo $wlp_phone_2_display ?></a>
                                     </div> 
                                     <?php endif; ?>
                                 </div> <!-- end .couponSidebarPhoneNumbers -->
@@ -65,7 +65,7 @@ foreach ($parentFields as $field) {
                 </div>
                 <div class="servicesContentSidebarSection serviceAreaSection">
                     <div class="p-5 serviceAreaSectionInner sidebarSectionInner bg-blue rounded-2xl">
-                        <h3 class="text-center text-white couponSidebarTitle text-26 laptop:text-30"><?php echo $wpl_location_title; ?></h3>
+                        <h3 class="text-center text-white couponSidebarTitle text-26 laptop:text-30"><?php echo $wlp_location_title; ?></h3>
                         <div class="flex flex-wrap items-center justify-between px-3 mt-4 mb-8 couponSidebarLocations">
                             <?php
                             if(have_rows('witlandingpages_sidebar_locations')):
@@ -84,7 +84,7 @@ foreach ($parentFields as $field) {
                             endif;
                             ?>
                         </div>
-                        <a class="block px-3 py-2 mx-auto my-0 text-base font-bold text-center text-white uppercase border border-white rounded-md focus:bg-darkblue focus:text-green btn moreLocations" href="<?php echo $wpl_locations_url; ?>"><img class="inline-block w-3 mr-1 align-text-bottom iconImageFilter" src=<?php echo $map_icon ?> /><?php echo $wpl_locations_btn; ?></a>
+                        <a class="block px-3 py-2 mx-auto my-0 text-base font-bold text-center text-white uppercase border border-white rounded-md focus:bg-darkblue focus:text-green btn moreLocations" href="<?php echo $witlandingpages_locations_url; ?>"><img class="inline-block w-3 mr-1 align-text-bottom iconImageFilter" src=<?php echo $map_icon ?> /><?php echo $witlandingpages_locations_button; ?></a>
                     </div>
                 </div>
             </div>
