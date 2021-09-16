@@ -20,11 +20,6 @@
             span {
                 color: blue;
             }
-            &.blueBtn {
-                span {
-                    color: white !important;
-                }
-            }
         }
     }
 
@@ -34,10 +29,8 @@
 
     // phone icon:
 
-    img.iconImage {
-	    display: inline-block;
-	    margin-right: 4px;
-	    vertical-align: middle;
+    img.iconImageFilter {
+
     }
 
 } // end .servicesHero
