@@ -78,7 +78,7 @@ foreach ($parentFields as $field) {
                             elseif(have_rows('witlandingpages_sidebar_witlandingpages_location', $parent)):
                                 while(have_rows('witlandingpages_sidebar_locations', $parent)):the_row(); ?>
                                     <div class="text-white locationItem">
-                                       <img class="inline-block w-3 mr-1 align-text-bottom iconImageFilter" src=<?php echo $map_icon ?> /> <?php the_sub_field('witlandingpages_location') ?>
+                                       <img class="inline-block w-3 mr-1 align-text-bottom iconImageFilter" src=<?php echo $map_icon ?> /> <span class="absolute"><?php the_sub_field('witlandingpages_location') ?></span>
                                     </div>
                                 <?php endwhile;
                             endif;
