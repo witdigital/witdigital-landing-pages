@@ -25,6 +25,39 @@ foreach ($parentFields as $field) {
                 <?php 
                 $wlp_ac_title = (get_sub_field('witlandingpages_accordion_title')) ? get_sub_field('witlandingpages_accordion_title') : '' ; 
                 $wlp_ac_content = (get_sub_field('witlandingpages_accordion_content')) ? get_sub_field('witlandingpages_accordion_content') : '' ; ?>
+
+                <style>
+                    .accordionitem:not(:first-of-type) .accordionTitle {
+                        background: lightgray;
+                        border-radius: 16px;
+                        padding: 16px 30px;
+                        font-size: 24px;
+                        cursor: pointer;
+                    }
+                    .accordionitem:not(:first-of-type) .accordionTitle::after {
+                        content: "";
+                        background: url('/wp-content/plugins/witdigital-landing-pages/resources/assets/images/plus-circle-solid.svg') center / cover;
+                        position: absolute;
+                        top: 43%;
+                        transform: translateY(-50%);
+                        right: 15px;
+                        width: 24px;
+                        height: 24px;
+                        filter: invert(70%) sepia(41%) saturate(7359%) hue-rotate(160deg) brightness(95%) contrast(103%);
+                    }
+                    .accordionitem:not(:first-of-type) .accordionContent {
+                        max-height: 0;
+                        opacity: 0;
+                        overflow: hidden
+                    }
+                    .active.accordionitem:not(:first-of-type) .accordionTitle::after {
+                        background: url('/wp-content/plugins/witdigital-landing-pages/resources/assets/images/minus-circle-solid.svg') center / cover;
+                    }
+                    .active.accordionitem:not(:first-of-type) .accordionContent {
+                        max-height: 1000px;
+                        opacity: 1;
+                    }
+                </style>
                 
                     <div class="servicesContentItem accordionitem text-base mb-4 <?php echo $i < 2 ? 'desktopNoAccordion' : ''; ?>">
                         <h2 class="relative servicesContentTitle accordionTitle"><?php echo $wlp_ac_title ?></h2>
