@@ -18,6 +18,7 @@ foreach ($parentFields as $field) {
     $wlp_minus_icon = (get_field('witlandingpages_accordion_minus')) ? get_field('witlandingpages_accordion_minus')['url'] : '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/minus-circle-solid.svg';
     $wlp_plus_style = 'background: url(' . $wlp_plus_icon . ') center / cover;';
     $wlp_minus_style = 'background: url(' . $wlp_minus_icon . ') center / cover;';
+    $wlp_show_coupon = (get_field('witlandingpages_show_coupon')) ? get_field('witlandingpages_show_coupon') : '' ;
 ?>
 <div class="servicesContent">
     <div class="flex flex-wrap justify-between px-2 mx-auto servicesContentInner max-w-1150">
@@ -71,8 +72,12 @@ foreach ($parentFields as $field) {
             endif;
             ?>
         </div>
+        
         <div class="flex-1 order-1 px-0 py-2 mt-5 servicesContentRight laptop:-right-8 max-w-400 laptop:pl-6 laptop:pb-10 laptop:order-none laptop:mt-auto">
             <div class="mb-4 servicesContentRightInner sidebar">
+
+            <?php if($wlp_show_coupon == '1'): ?>
+
                 <div class="mb-5 servicesContentSidebarSection sidebarCouponSection">
                     <div class="text-center sidebarCouponSectionInner sidebarSectionInner bg-blue rounded-2xl">
                         <div class="absolute z-10 couponBorder rounded-2xl"></div>
@@ -104,6 +109,8 @@ foreach ($parentFields as $field) {
                         
                     </div>
                 </div>
+                <?php endif; ?>
+
                 <div class="servicesContentSidebarSection serviceAreaSection">
                     <div class="p-5 serviceAreaSectionInner sidebarSectionInner bg-blue rounded-2xl">
                         <h3 class="text-center text-white couponSidebarTitle text-26 laptop:text-30"><?php echo $wlp_location_title; ?></h3>

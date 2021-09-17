@@ -142,6 +142,25 @@
             "endpoint": 0
         },
         {
+            "key": "field_61450ca91998a",
+            "label": "Show Coupon?",
+            "name": "witlandingpages_show_coupon",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_614123f9e8f32",
             "label": "Coupon Title",
             "name": "witlandingpages_coupon_title",
@@ -338,5 +357,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Formerly 'Content'",
-    "modified": 1631912263
+    "modified": 1631915611
 }
