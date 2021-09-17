@@ -11,9 +11,13 @@ foreach ($parentFields as $field) {
     $witlandingpages_coupon_subtitle = (get_field('witlandingpages_coupon_subtitle')) ? get_field('witlandingpages_coupon_subtitle') : '' ;
     $witlandingpages_coupon_image = (get_field('witlandingpages_coupon_image')) ? get_field('witlandingpages_coupon_image')['url'] : '' ;
     $wlp_location_title = (get_field('witlandingpages_locations_title')) ? get_field('witlandingpages_locations_title') : '' ;
-    $map_icon = (get_field('services_sidebar_pin_image')) ? get_field('services_sidebar_pin_image')['url'] : '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/map-marker-alt-solid.svg" /';
+    $map_icon = (get_field('services_sidebar_pin_image')) ? get_field('services_sidebar_pin_image')['url'] : '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/map-marker-alt-solid.svg';
     $witlandingpages_locations_url = (get_field('witlandingpages_locations_url')) ? get_field('witlandingpages_locations_url') : '' ;
     $witlandingpages_locations_button = (get_field('witlandingpages_locations_button')) ? get_field('witlandingpages_locations_button') : '' ;
+    $wlp_plus_icon = (get_field('witlandingpages_accordion_plus')) ? get_field('witlandingpages_accordion_plus')['url'] : '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/plus-circle-solid.svg';
+    $wlp_minus_icon = (get_field('witlandingpages_accordion_minus')) ? get_field('witlandingpages_accordion_minus')['url'] : '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/minus-circle-solid.svg';
+    $wlp_plus_style = 'background: url(' . $wlp_plus_icon . ') center / cover;';
+    $wlp_minus_style = 'background: url(' . $wlp_minus_icon . ') center / cover;';
 ?>
 <div class="servicesContent">
     <div class="flex flex-wrap justify-between px-2 mx-auto servicesContentInner max-w-1150">
@@ -36,7 +40,7 @@ foreach ($parentFields as $field) {
                     }
                     .accordionitem:not(:first-of-type) .accordionTitle::after {
                         content: "";
-                        background: url('/wp-content/plugins/witdigital-landing-pages/resources/assets/images/plus-circle-solid.svg') center / cover;
+                        <?php echo $wlp_plus_style ?>
                         position: absolute;
                         top: 43%;
                         transform: translateY(-50%);
@@ -51,7 +55,7 @@ foreach ($parentFields as $field) {
                         overflow: hidden
                     }
                     .active.accordionitem:not(:first-of-type) .accordionTitle::after {
-                        background: url('/wp-content/plugins/witdigital-landing-pages/resources/assets/images/minus-circle-solid.svg') center / cover;
+                        <?php echo $wlp_minus_style ?>
                     }
                     .active.accordionitem:not(:first-of-type) .accordionContent {
                         max-height: 1000px;

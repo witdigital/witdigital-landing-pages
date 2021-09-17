@@ -19,6 +19,54 @@
             "endpoint": 0
         },
         {
+            "key": "field_6145009eacd84",
+            "label": "Accordion Icon (Plus)",
+            "name": "witlandingpages_accordion_plus",
+            "type": "image",
+            "instructions": "Will use default icon if one is not supplied",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_6145012dacd85",
+            "label": "Accordion Icon (Minus)",
+            "name": "witlandingpages_accordion_minus",
+            "type": "image",
+            "instructions": "Will use default icon if one is not supplied",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_6141228ae8f2f",
             "label": "Accordion",
             "name": "witlandingpages_accordion",
@@ -290,5 +338,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Formerly 'Content'",
-    "modified": 1631826876
+    "modified": 1631912263
 }
