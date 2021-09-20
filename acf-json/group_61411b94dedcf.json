@@ -59,6 +59,34 @@
             "mime_types": ""
         },
         {
+            "key": "field_614909540b0a4",
+            "label": "Border Radius (Optional)",
+            "name": "witlandingpages_intro_border_rad",
+            "type": "number",
+            "instructions": "Value in rem. Use <a href=\"https:\/\/nekocalc.com\/px-to-rem-converter\" target=\"_blank\">this tool<\/a> to convert from pixels.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61411c5ffce29",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "rem",
+            "min": "",
+            "max": "",
+            "step": 1
+        },
+        {
             "key": "field_61411c9cfce2a",
             "label": "Intro Embed",
             "name": "witlandingpages_intro_embed",
@@ -175,5 +203,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631657496
+    "modified": 1632176638
 }
