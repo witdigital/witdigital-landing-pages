@@ -20,7 +20,7 @@ $wlp_request_display = (get_field('witlandingpages_request_display')) ? get_fiel
             <?php } ?>
         </div>
         <div class="w-full mt-3 text-center servicesIntroContent max-w-500 laptop:mt-0 laptop:text-left">
-            <h1 class="mb-3 servicesIntroTitle text-32 laptop:text-42"><?php echo $wlp_intro_title ?></h1>
+            <h2 class="mb-3 servicesIntroTitle text-32 laptop:text-42"><?php echo $wlp_intro_title ?></h2>
             <div class="mb-6 servicesIntroText"><?php echo $wlp_intro_text ?></div>
             <div class="requestButton">
                 <a class="px-3 py-2 text-base font-bold uppercase bg-white rounded-md phoneBtn btn" href="<?php echo $wlp_request_url ?>"><?php echo $wlp_request_display ?></a>
