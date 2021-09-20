@@ -27,6 +27,87 @@
             "mime_types": ""
         },
         {
+            "key": "field_6148f685b799c",
+            "label": "Is the overlay a color or a gradient?",
+            "name": "witlandingpages_overlay",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6140ffb5ac60c",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Color": "Color",
+                "Gradient": "Gradient"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_6148f0c4c4d7d",
+            "label": "Overlay Color",
+            "name": "witlandingpages_overlay_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6148f685b799c",
+                        "operator": "==",
+                        "value": "Color"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
+        },
+        {
+            "key": "field_6148f720b799d",
+            "label": "Overlay Gradient",
+            "name": "witlandingpages_overlay_gradient",
+            "type": "text",
+            "instructions": "Enter the entire string. Ex: 'linear-gradient(-108deg, rgba(0, 41, 93, .84) 0%, rgba(0, 174, 239, .84) 100%);'",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6148f685b799c",
+                        "operator": "==",
+                        "value": "Gradient"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_6141002615752",
             "label": "Hero Title",
             "name": "witlandingpages_hero_title",
@@ -44,28 +125,6 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
-        },
-        {
-            "key": "field_6148f0c4c4d7d",
-            "label": "Title Color (optional)",
-            "name": "witlandingpages_hero_title_color",
-            "type": "color_picker",
-            "instructions": "Will default to theme color for H1 if nothing selected.",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_6141002615752",
-                        "operator": "!=empty"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": ""
         },
         {
             "key": "field_6141006b15753",
@@ -180,5 +239,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632170890
+    "modified": 1632171929
 }
