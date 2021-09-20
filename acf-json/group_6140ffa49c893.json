@@ -30,7 +30,7 @@
             "key": "field_6141002615752",
             "label": "Hero Title",
             "name": "witlandingpages_hero_title",
-            "type": "wysiwyg",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -40,10 +40,32 @@
                 "id": ""
             },
             "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6148f0c4c4d7d",
+            "label": "Title Color (optional)",
+            "name": "witlandingpages_hero_title_color",
+            "type": "color_picker",
+            "instructions": "Will default to theme color for <h1> if nothing selected.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6141002615752",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
         },
         {
             "key": "field_6141006b15753",
@@ -63,6 +85,28 @@
             "toolbar": "full",
             "media_upload": 0,
             "delay": 0
+        },
+        {
+            "key": "field_6148f10ac4d7e",
+            "label": "Title Color (optional)",
+            "name": "witlandingpages_hero_subtitle_color",
+            "type": "color_picker",
+            "instructions": "Will default to theme color for <span> if nothing selected.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6141006b15753",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
         },
         {
             "key": "field_6148ed58272ca",
@@ -136,5 +180,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632169615
+    "modified": 1632170298
 }

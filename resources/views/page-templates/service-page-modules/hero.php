@@ -27,7 +27,7 @@ $wlp_call_button_icon = (get_field('witlandingpages_phone_icon')) ? get_field('w
 	<div class="altOverlay overlay"></div>
 	<div class="mx-auto text-center servicesHeroInner max-w-1000 laptop:pb-16 laptop:py-0 laptop:pt-6">
 		<div class="mx-auto servicesHeroSubtitle max-w-450 laptop:px-3 laptop:mb-3 text-20 laptop:text-20 text-green"><?php echo $witlandingpages_hero_subtitle; ?></div>
-		<div class="leading-tight text-white servicesHeroTitle text-34 laptop:text-52 laptop:leading-none"><?php echo $wlp_hero_title ?></div>
+		<h1 class="leading-tight text-white servicesHeroTitle text-34 laptop:text-52 laptop:leading-none"><?php echo $wlp_hero_title ?></h1>
 		<div class="mt-3 text-center text-white servicesHeroCall laptop:mt-6">
 
 			<div class="flex items-center justify-between mx-auto my-0 phoneBtns flex-nowrap max-w-340">
