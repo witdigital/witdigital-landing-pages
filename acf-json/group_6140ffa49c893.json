@@ -74,18 +74,47 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "default_value": ""
         },
         {
+            "key": "field_6148fdc0543b7",
+            "label": "Overlay Opacity",
+            "name": "witlandingpages_overlay_opacity",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6148f685b799c",
+                        "operator": "==",
+                        "value": "Color"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "%",
+            "min": "",
+            "max": "",
+            "step": 1
+        },
+        {
             "key": "field_6148f720b799d",
             "label": "Overlay Gradient",
             "name": "witlandingpages_overlay_gradient",
             "type": "text",
-            "instructions": "Enter the entire string. Ex: 'linear-gradient(-108deg, rgba(0, 41, 93, .84) 0%, rgba(0, 174, 239, .84) 100%);'",
+            "instructions": "Enter the entire string, except for the semicolon. Ex: 'linear-gradient(-108deg, rgba(0, 41, 93, .84) 0%, rgba(0, 174, 239, .84) 100%);'",
             "required": 0,
             "conditional_logic": [
                 [
@@ -239,5 +268,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632171929
+    "modified": 1632173565
 }

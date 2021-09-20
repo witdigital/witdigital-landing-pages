@@ -13,8 +13,15 @@ $witlandingpages_hero_subtitle = (get_field('witlandingpages_hero_subtitle')) ? 
 $witlandingpages_hero_image = (get_field('witlandingpages_hero_image')) ? get_field('witlandingpages_hero_image')['url'] : '' ;
 $wlp_hero_title_color = (get_field('witlandingpages_hero_title_color')) ? get_field('witlandingpages_hero_title_color') : '' ;
 $wlp_hero_subtitle_color = (get_field('witlandingpages_hero_subtitle_color')) ? get_field('witlandingpages_hero_subtitle_color') : '' ;
+$wlp_overlay_color = (get_field('witlandingpages_overlay_color')) ? get_field('witlandingpages_overlay_color') : '' ;
+$wlp_overlay_opacity = (get_field('witlandingpages_overlay_opacity')) ? get_field('witlandingpages_overlay_opacity') : '' ;
+$wlp_overlay_gradient = (get_field('witlandingpages_overlay_gradient')) ? get_field('witlandingpages_overlay_gradient') : '' ;
 $wlp_htc = "color: " . $wlp_hero_title_color .';';
 $wlp_hstc = "color: " . $wlp_hero_subtitle_color .';';
+$wlp_overlay = "background: " . $wlp_overlay_color . '!important;';
+$wlp_opacity = "opacity: " . $wlp_overlay_opacity . "%;";
+$wlp_gradient = "background: " . $wlp_overlay_gradient . '!important;';
+
 
 // declare phone button variables:
 
@@ -30,6 +37,11 @@ $wlp_call_button_icon = (get_field('witlandingpages_phone_icon')) ? get_field('w
 	<!-- optional page styling: -->
 
 		<style>
+			.overlay {
+				<?php echo $wlp_overlay ?>
+				<?php echo $wlp_opacity ?>
+				<?php echo $wlp_gradient ?>
+			}
 			.servicesHeroSubtitle {
 				<?php echo $wlp_hstc ?>
 			}
