@@ -13,14 +13,16 @@ $witlandingpages_hero_subtitle = (get_field('witlandingpages_hero_subtitle')) ? 
 $witlandingpages_hero_image = (get_field('witlandingpages_hero_image')) ? get_field('witlandingpages_hero_image')['url'] : '' ;
 $wlp_hero_title_color = (get_field('witlandingpages_hero_title_color')) ? get_field('witlandingpages_hero_title_color') : '' ;
 $wlp_hero_subtitle_color = (get_field('witlandingpages_hero_subtitle_color')) ? get_field('witlandingpages_hero_subtitle_color') : '' ;
+$wlp_overlay_class = (get_field('witlandingpages_overlay')) == 'Color' ? 'colorOverlay' : 'gradientOverlay' ;
 $wlp_overlay_color = (get_field('witlandingpages_overlay_color')) ? get_field('witlandingpages_overlay_color') : '' ;
 $wlp_overlay_opacity = (get_field('witlandingpages_overlay_opacity')) ? get_field('witlandingpages_overlay_opacity') : '' ;
 $wlp_overlay_gradient = (get_field('witlandingpages_overlay_gradient')) ? get_field('witlandingpages_overlay_gradient') : '' ;
 $wlp_htc = "color: " . $wlp_hero_title_color .';';
 $wlp_hstc = "color: " . $wlp_hero_subtitle_color .';';
-$wlp_overlay = "background: " . $wlp_overlay_color . '!important;';
+$wlp_over_color = "background: " . $wlp_overlay_color . '!important;';
 $wlp_opacity = "opacity: " . $wlp_overlay_opacity . "%;";
 $wlp_gradient = "background: " . $wlp_overlay_gradient . '!important;';
+
 
 
 // declare phone button variables:
@@ -37,9 +39,11 @@ $wlp_call_button_icon = (get_field('witlandingpages_phone_icon')) ? get_field('w
 	<!-- optional page styling: -->
 
 		<style>
-			.overlay {
-				<?php echo $wlp_overlay ?>
+			.colorOverlay {
+				<?php echo $wlp_over_color ?>
 				<?php echo $wlp_opacity ?>
+			}
+			.gradientOverlay {
 				<?php echo $wlp_gradient ?>
 			}
 			.servicesHeroSubtitle {
@@ -53,7 +57,7 @@ $wlp_call_button_icon = (get_field('witlandingpages_phone_icon')) ? get_field('w
 	<!-- optional page styling: -->
 
 <div class="px-4 py-10 pt-32 servicesHero hero laptop:pt-40 laptop:pb-24" style="background: url( <?php echo $witlandingpages_hero_image; ?>) 100% 20% / cover;">
-	<div class="altOverlay overlay"></div>
+	<div class="altOverlay overlay <?php echo $wlp_overlay_class ?>"></div>
 	<div class="mx-auto text-center servicesHeroInner max-w-1000 laptop:pb-16 laptop:py-0 laptop:pt-6">
 		<span class="mx-auto servicesHeroSubtitle max-w-450 laptop:px-3 laptop:mb-3 text-20 laptop:text-20 text-green"><?php echo $witlandingpages_hero_subtitle; ?></span>
 		<h1 class="leading-tight text-white servicesHeroTitle text-34 laptop:text-52 laptop:leading-none"><?php echo $wlp_hero_title ?></h1>
