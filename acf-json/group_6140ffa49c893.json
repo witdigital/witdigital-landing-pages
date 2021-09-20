@@ -50,7 +50,7 @@
             "label": "Title Color (optional)",
             "name": "witlandingpages_hero_title_color",
             "type": "color_picker",
-            "instructions": "Will default to theme color for <h1> if nothing selected.",
+            "instructions": "Will default to theme color for H1 if nothing selected.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -71,7 +71,7 @@
             "key": "field_6141006b15753",
             "label": "Hero Subtitle",
             "name": "witlandingpages_hero_subtitle",
-            "type": "wysiwyg",
+            "type": "text",
             "instructions": "Will pull from parent if not filled out.",
             "required": 0,
             "conditional_logic": 0,
@@ -81,17 +81,17 @@
                 "id": ""
             },
             "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_6148f10ac4d7e",
             "label": "Title Color (optional)",
             "name": "witlandingpages_hero_subtitle_color",
             "type": "color_picker",
-            "instructions": "Will default to theme color for <span> if nothing selected.",
+            "instructions": "Will default to theme color for span if nothing selected.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -180,5 +180,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632170298
+    "modified": 1632170890
 }
