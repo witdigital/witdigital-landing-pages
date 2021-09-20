@@ -63,6 +63,60 @@
             "toolbar": "full",
             "media_upload": 0,
             "delay": 0
+        },
+        {
+            "key": "field_6148ed58272ca",
+            "label": "Hero Height",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6148ed7e272cb",
+            "label": "Desktop Hero Height (optional)",
+            "name": "witlandingpages_desktop_height",
+            "type": "text",
+            "instructions": "Use this field to customize the height of the hero area on mobile devices.\r\nUse px, %, em, or rem (rem is encouraged, but not required)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6148ee35272cc",
+            "label": "Mobile Hero Height (optional)",
+            "name": "witlandingpages_mobile_height",
+            "type": "text",
+            "instructions": "Use this field to customize the height of the hero area on mobile devices.\r\nUse px, %, em, or rem (rem is encouraged, but not required)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -82,5 +136,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631738885
+    "modified": 1632169615
 }
