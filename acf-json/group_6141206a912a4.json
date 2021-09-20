@@ -41,23 +41,37 @@
             "maxlength": ""
         },
         {
-            "key": "field_614120f03a48d",
-            "label": "Right Sidebar Subtitle",
-            "name": "witlandingpages_about_subtitle",
-            "type": "text",
-            "instructions": "Will pull from parent if nothing is here.",
+            "key": "field_61490dfa639ed",
+            "label": "Title Alignment",
+            "name": "witlandingpages_right_title_alignment",
+            "type": "radio",
+            "instructions": "Select the title's alignment:",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_614120be3a48c",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
+            "choices": {
+                "Left": "Left",
+                "Center": "Center",
+                "Right": "Right",
+                "No Align": "No Align"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
             "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
         },
         {
             "key": "field_614121193a48e",
@@ -96,5 +110,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Formerly 'About'",
-    "modified": 1631738992
+    "modified": 1632178529
 }
