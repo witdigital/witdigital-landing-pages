@@ -27,6 +27,19 @@ $wlp_phone_2_location = (get_field('witlandingpages_phone_2_location')) ? get_fi
 $wlp_call_button_icon = (get_field('witlandingpages_phone_icon')) ? get_field('witlandingpages_phone_icon')['url'] : '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/phone-alt-solid.svg" /' ;
 ?>
 
+	<!-- optional page styling: -->
+
+		<style>
+			.servicesHeroSubtitle {
+				<?php echo $wlp_hstc ?>
+			}
+			.servicesHeroTitle {
+				<?php echo $wlp_htc ?>
+			}
+		</style>
+
+	<!-- optional page styling: -->
+
 <div class="px-4 py-10 pt-32 servicesHero hero laptop:pt-40 laptop:pb-24" style="background: url( <?php echo $witlandingpages_hero_image; ?>) 100% 20% / cover;">
 	<div class="altOverlay overlay"></div>
 	<div class="mx-auto text-center servicesHeroInner max-w-1000 laptop:pb-16 laptop:py-0 laptop:pt-6">
