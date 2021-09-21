@@ -3,6 +3,80 @@
     "title": "LP CTA",
     "fields": [
         {
+            "key": "field_614a400144c32",
+            "label": "Is the background a color or a gradient?",
+            "name": "witlandingpages_cta_background",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Color": "Color",
+                "Gradient": "Gradient"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_614a406f44c33",
+            "label": "Background Color",
+            "name": "witlandingpages_cta_background_color",
+            "type": "color_picker",
+            "instructions": "Background color will be light gray if nothing is selected.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_614a400144c32",
+                        "operator": "==",
+                        "value": "Color"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
+        },
+        {
+            "key": "field_614a40b844c34",
+            "label": "Background Gradient",
+            "name": "witlandingpages_cta_background_gradient",
+            "type": "text",
+            "instructions": "Enter the entire string, except for the semicolon. Ex: 'linear-gradient(-108deg, rgba(0, 41, 93, .84) 0%, rgba(0, 174, 239, .84) 100%);'",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_614a400144c32",
+                        "operator": "==",
+                        "value": "Gradient"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_614121a854ad4",
             "label": "Image",
             "name": "witlandingpages_cta_image",
@@ -30,7 +104,7 @@
             "key": "field_614121c854ad5",
             "label": "Title",
             "name": "witlandingpages_cta_title",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "Will pull from parent if nothing is here.",
             "required": 0,
             "conditional_logic": 0,
@@ -40,10 +114,10 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
         },
         {
             "key": "field_614121e154ad6",
@@ -61,7 +135,7 @@
             "default_value": "",
             "tabs": "all",
             "toolbar": "full",
-            "media_upload": 1,
+            "media_upload": 0,
             "delay": 0
         }
     ],
@@ -82,5 +156,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631739051
+    "modified": 1632256302
 }
