@@ -55,7 +55,7 @@ $wlp_styles_panel_body = "color: " . $wlp_panel_body_color . ";";
 							<div class="flex-1 px-4 guaranteeItem">
 
 								<div class="px-3 py-4 mb-4 text-center guaranteeItemInner bg-blue laptop:pt-6 laptop:pb-8 rounded-xl add-box-shadow laptop:mb-0">
-									<img class="mx-auto mb-3" src="<?php echo $wlp_p_image ?>" />
+									<img class="mx-auto mb-3 max-w-150 max-h-28" src="<?php echo $wlp_p_image ?>" />
 									<h4 class="mb-2 text-white guaranteeItemTitle laptop:mb-4"><?php echo $wlp_p_title ?></h4>
 									<div class="text-white guaranteeItemText"><?php echo $wlp_p_text ?></div>
 								</div>

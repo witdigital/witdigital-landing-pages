@@ -244,6 +244,34 @@
             "mime_types": ""
         },
         {
+            "key": "field_614a5693c3003",
+            "label": "Border Radius (optional)",
+            "name": "witlandingpages_pdesk_border_radius",
+            "type": "number",
+            "instructions": "Value in rems. Use <a href=\"https:\/\/nekocalc.com\/px-to-rem-converter\" target=\"_blank\">this tool<\/a> to convert from px to rem.\r\nNOTE: this only affects the desktop image.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_614127e34df23",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "rem",
+            "min": "",
+            "max": "",
+            "step": 1
+        },
+        {
             "key": "field_614128454df24",
             "label": "Mobile Image",
             "name": "witlandingpages_p_mobile",
@@ -285,5 +313,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Formerly 'Guarantees'",
-    "modified": 1632259603
+    "modified": 1632261891
 }
