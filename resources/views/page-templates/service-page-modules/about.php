@@ -22,7 +22,7 @@ if( have_rows('witlandingpages_about_sidebar_style') ):
 
     $wlp_sidebar_background = (get_sub_field('witlandingpages_abt_sidebar_background_color')) ? get_sub_field('witlandingpages_abt_sidebar_background_color') : '' ;
     $wlp_sidebar_border_radius = (get_sub_field('witlandingpages_abt_sidebar_border_radius')) ? get_sub_field('witlandingpages_abt_sidebar_border_radius') : '' ;
-    $wlp_sidebar_box_shadow = (get_sub_field('witlandingpages_abt_sidebar_box_shadow')) == '1' ? '0 25px 50px -12px rgba(0, 0, 0, 0.25)' : '' ;
+    $wlp_sidebar_box_shadow = (get_sub_field('witlandingpages_abt_sidebar_box_shadow')) == '0' ? 'none' : '' ;
 
     endwhile;
 endif;  
@@ -72,7 +72,7 @@ $wlp_li_color = "color: " . $wlp_marker . ";";
         </div>
 
         <div class="w-full servicesAboutRight max-w-550 laptop:pl-5">
-            <div class="p-5 rounded-none servicesAboutRightInner bg-blue laptop:rounded-2xl laptop:py-8 laptop:px-10">
+            <div class="p-5 rounded-none shadow-2xl servicesAboutRightInner bg-blue laptop:rounded-2xl laptop:py-8 laptop:px-10">
                 <h3 class="mb-6 text-white servicesRightTitle"><?php echo $witlandingpages_about_title; ?></h3>
 
                 <div class="servicesRightContentText">
