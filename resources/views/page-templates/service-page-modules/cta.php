@@ -1,7 +1,7 @@
 
 <?php $current = $post->ID;
 $parent = $post->post_parent; ?>
-<?php $parentFields = array('witlandingpages_cta_image', 'witlandingpages_cta_title', 'witlandingpages_cta_content');
+<?php $parentFields = array('witlandingpages_cta_image', 'witlandingpages_cta_title', 'witlandingpages_cta_content', 'witlandingpages_cta_background_color', 'witlandingpages_cta_background_gradient');
 foreach ($parentFields as $field) {
 	$$field = get_field($field) ? get_field($field) : get_field($field, $parent);
 }
