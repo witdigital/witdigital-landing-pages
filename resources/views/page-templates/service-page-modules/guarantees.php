@@ -1,7 +1,6 @@
 <?php
 
 $wlp_panels_title_main = (get_field('witlandingpages_panel_section_title')) ? get_field('witlandingpages_panel_section_title') : '' ;
-$wlp_panels_text_main = (get_field('witlandingpages_panel_section_text')) ? get_field('witlandingpages_panel_section_text') : '' ;
 $wlp_panels_section_img = (get_field('witlandingpages_p_desk')) ? get_field('witlandingpages_p_desk')['url'] : '' ;
 // if no mobile image selected, use desktop:
 $wlp_panels_mobile_img = (get_field('witlandingpages_p_mobile')) ? get_field('witlandingpages_p_mobile')['url'] : get_field('witlandingpages_p_desk')['url'] ;
@@ -14,7 +13,6 @@ $wlp_panels_mobile_img = (get_field('witlandingpages_p_mobile')) ? get_field('wi
 	<div class="guaranteesMobileImage mobileOnly" style="background: url(<?php echo $wlp_panels_mobile_img; ?>) center / cover;"></div>
 		<div class="w-full text-center guaranteesLeftInner max-w-900 laptop:ml-10">
 			<h2 class="pt-8 guaranteesTitle laptop:pt-0"><?php echo $wlp_panels_title_main; ?></h2>
-			<div class="mb-10 guaranteesText laptop:text-20"><?php echo $wlp_panels_text_main; ?></div>
 			<div class="flex-wrap justify-between guaranteesItems laptop:flex laptop:mb-10">
 				<?php if( have_rows('witlandingpages_panels') ):
 						while( have_rows('witlandingpages_panels') ): the_row(); 
