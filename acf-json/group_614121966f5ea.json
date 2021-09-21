@@ -31,7 +31,7 @@
             "label": "Background Color",
             "name": "witlandingpages_cta_background_color",
             "type": "color_picker",
-            "instructions": "Background color will be light gray if nothing is selected.",
+            "instructions": "Background color will pull from parent if nothing is selected.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -54,7 +54,7 @@
             "label": "Background Gradient",
             "name": "witlandingpages_cta_background_gradient",
             "type": "text",
-            "instructions": "Enter the entire string, except for the semicolon. Ex: 'linear-gradient(-108deg, rgba(0, 41, 93, .84) 0%, rgba(0, 174, 239, .84) 100%);'",
+            "instructions": "Enter the entire string, except for the semicolon. Ex: 'linear-gradient(-108deg, rgba(0, 41, 93, .84) 0%, rgba(0, 174, 239, .84) 100%);'\r\n\r\nWill pull from parent if nothing is entered.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -156,5 +156,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632256302
+    "modified": 1632256568
 }
