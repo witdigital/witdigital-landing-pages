@@ -5,6 +5,18 @@ $wlp_panels_section_img = (get_field('witlandingpages_p_desk')) ? get_field('wit
 // if no mobile image selected, use desktop:
 $wlp_panels_mobile_img = (get_field('witlandingpages_p_mobile')) ? get_field('witlandingpages_p_mobile')['url'] : get_field('witlandingpages_p_desk')['url'] ;
 
+if( have_rows('witlandingpages_panel_styles') ):
+    while( have_rows('witlandingpages_panel_styles') ): the_row();
+
+    $wlp_panel_background = (get_sub_field('witlandingpages_panel_background_color')) ? get_sub_field('witlandingpages_panel_background_color') : '' ;
+    $wlp_panel_border_radius = (get_sub_field('witlandingpages_panel_border_radius')) ? get_sub_field('witlandingpages_panel_border_radius') : '' ;
+
+    endwhile;
+endif;  
+
+$wlp_styles_panel_background = "background-color: " . $wlp_panel_background . ";";
+$wlp_styles_panel_border_radius = "border-radius: " . $wlp_panel_border_radius . "rem;";
+
 
 ?>
 
