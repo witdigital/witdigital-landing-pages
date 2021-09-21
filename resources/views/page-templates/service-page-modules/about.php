@@ -8,9 +8,12 @@ foreach ($parentFields as $field) {
 ?>
 
 <?php 
-$wlp_about_left = (get_field('witlandingpages_about_left')) ? get_field('witlandingpages_about_left') : '' ;
+$wlp_aleft_top = (get_field('witlandingpages_about_left_top')) ? get_field('witlandingpages_about_left_top') : '' ;
+$wlp_aleft_middle = (get_field('witlandingpages_about_left_middle')) ? get_field('witlandingpages_about_left_middle') : '' ;
+$wlp_aleft_bottom = (get_field('witlandingpages_about_left_bottom')) ? get_field('witlandingpages_about_left_bottom') : '' ;
 $witlandingpages_about_title = (get_field('witlandingpages_about_title')) ? get_field('witlandingpages_about_title') : '' ;
 $witlandingpages_about_content = (get_field('witlandingpages_about_content')) ? get_field('witlandingpages_about_content') : '' ;
+
 // declare alignment variable:
 if (get_field('witlandingpages_right_title_alignment') == 'Left') {
      $wlp_align = "text-align: left;";
@@ -33,9 +36,12 @@ if (get_field('witlandingpages_right_title_alignment') == 'Left') {
 
 <div class="my-6 servicesAbout laptop:my-12">
     <div class="flex flex-wrap justify-between w-full mx-auto servicesAboutInner max-w-1300 laptop:px-4">
-        <div class="flex-1 w-full px-4 mb-4 servicesAboutLeft max-w-650 laptop:px-0 laptop:mb-0">
-            <?php echo $wlp_about_left ?>
+        <div class="flex-1 w-full px-4 mb-4 servicesAboutLeft max-w-650 laptop:px-0 laptop:mb-0 ">
+            <div class="px-4 mb-4 servicesAboutLeft aboutLeftTop"><?php echo $wlp_aleft_top ?></div>
+            <div class="px-4 mb-4 servicesAboutLeft aboutLeftMiddle"><?php echo $wlp_aleft_middle ?></div>
+            <div class="px-4 mb-4 servicesAboutLeft aboutLeftBottom"><?php echo $wlp_aleft_bottom ?></div>
         </div>
+
         <div class="w-full servicesAboutRight max-w-550 laptop:pl-5">
             <div class="p-5 rounded-none shadow-xl servicesAboutRight bg-blue laptop:rounded-2xl laptop:py-8 laptop:px-10">
                 <h3 class="mb-6 text-white servicesRightTitle"><?php echo $witlandingpages_about_title; ?></h3>
