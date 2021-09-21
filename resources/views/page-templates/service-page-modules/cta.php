@@ -11,8 +11,14 @@ $witlandingpages_cta_image = (get_field('witlandingpages_cta_image')) ? get_fiel
 $services_cta_image_alt = (get_field('witlandingpages_cta_image')) ? get_field('witlandingpages_cta_image')['alt'] : '' ;
 $witlandingpages_cta_title = (get_field('witlandingpages_cta_title')) ? get_field('witlandingpages_cta_title') : '' ;
 $witlandingpages_cta_content = (get_field('witlandingpages_cta_content')) ? get_field('witlandingpages_cta_content') : '' ;
+
+$wlp_cta_background_class = (get_field('witlandingpages_cta_background')) == 'Color' ? 'colorOverlay' : 'gradientOverlay' ;
+$wlp_cta_background_color = (get_field('witlandingpages_background_color')) ? get_field('witlandingpages_background_color') : '' ;
+$wlp_background_gradient = (get_field('witlandingpages_background_gradient')) ? get_field('witlandingpages_background_gradient') : '' ;
+$wlp_cta_bkgnd_color = "background: " . $wlp_background_color . '!important;';
+$wlp_cta_gradient = "background: " . $wlp_background_gradient . '!important;';
 ?>
-<div class="mt-24 servicesCTA bg-grey laptop:mt-auto">
+<div class="mt-24 servicesCTA bg-grey laptop:mt-auto <?php echo $wlp_cta_background_class ?>">
     <div class="flex-wrap justify-between w-full px-4 py-8 mx-auto servicesCTAInner max-w-1300 laptop:flex ">
         <div class="flex-1 w-full servicesCTALeft max-w-600 laptop:pr-5">
             <img class="max-w-full" src="<?php echo $witlandingpages_cta_image; ?>" alt="<?php echo $services_cta_image_alt; ?>" />
