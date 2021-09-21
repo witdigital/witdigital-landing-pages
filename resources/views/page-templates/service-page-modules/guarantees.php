@@ -4,6 +4,7 @@ $wlp_panels_main_body = (get_field('witlandingpages_panel_section_main')) ? get_
 $wlp_panels_section_img = (get_field('witlandingpages_p_desk')) ? get_field('witlandingpages_p_desk')['url'] : '' ;
 // if no mobile image selected, use desktop:
 $wlp_panels_mobile_img = (get_field('witlandingpages_p_mobile')) ? get_field('witlandingpages_p_mobile')['url'] : get_field('witlandingpages_p_desk')['url'] ;
+$wlp_panels_rad_desk_img = (get_field('witlandingpages_pdesk_border_radius')) ? get_field('witlandingpages_pdesk_border_radius') : '' ;
 
 if( have_rows('witlandingpages_panel_styles') ):
     while( have_rows('witlandingpages_panel_styles') ): the_row();
@@ -20,6 +21,7 @@ $wlp_styles_panel_background = "background-color: " . $wlp_panel_background . ";
 $wlp_styles_panel_border_radius = "border-radius: " . $wlp_panel_border_radius . "rem;";
 $wlp_styles_panel_title = "color: " . $wlp_panel_title_color . ";";
 $wlp_styles_panel_body = "color: " . $wlp_panel_body_color . ";";
+$wlp_styles_rad_desk_img = "border-radius: " . $wlp_panels_rad_desk_img . "rem;";
 
 
 ?>
@@ -34,6 +36,9 @@ $wlp_styles_panel_body = "color: " . $wlp_panel_body_color . ";";
 	}
 	.guaranteeItemText {
 		<?php echo $wlp_styles_panel_body; ?>
+	}
+	.guaranteesInner .desktopOnly {
+		<?php echo $wlp_styles_rad_desk_img; ?>
 	}
 </style>
 
