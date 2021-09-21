@@ -10,15 +10,32 @@ if( have_rows('witlandingpages_panel_styles') ):
 
     $wlp_panel_background = (get_sub_field('witlandingpages_panel_background_color')) ? get_sub_field('witlandingpages_panel_background_color') : '' ;
     $wlp_panel_border_radius = (get_sub_field('witlandingpages_panel_border_radius')) ? get_sub_field('witlandingpages_panel_border_radius') : '' ;
+    $wlp_panel_title_color = (get_sub_field('witlandingpages_panel_title_color')) ? get_sub_field('witlandingpages_panel_title_color') : '' ;
+    $wlp_panel_body_color = (get_sub_field('witlandingpages_panel_body_color')) ? get_sub_field('witlandingpages_panel_body_color') : '' ;
 
     endwhile;
 endif;  
 
 $wlp_styles_panel_background = "background-color: " . $wlp_panel_background . ";";
 $wlp_styles_panel_border_radius = "border-radius: " . $wlp_panel_border_radius . "rem;";
+$wlp_styles_panel_title = "color: " . $wlp_panel_title_color . ";";
+$wlp_styles_panel_body = "color: " . $wlp_panel_body_color . ";";
 
 
 ?>
+
+<style>
+	.guaranteeItemInner {
+		<?php echo $wlp_styles_panel_background; ?>
+		<?php echo $wlp_styles_panel_border_radius; ?>
+	}
+	.guaranteeItemTitle {
+		<?php echo $wlp_styles_panel_title; ?>
+	}
+	.guaranteeItemText {
+		<?php echo $wlp_styles_panel_body; ?>
+	}
+</style>
 
 <div class="guaranteesInner laptop:my-20">
 	<div class="z-10 w-full mx-auto guaranteesLeft max-w-1440">
