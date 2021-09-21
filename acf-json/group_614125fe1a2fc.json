@@ -87,6 +87,36 @@
                     "min": "",
                     "max": "",
                     "step": 1
+                },
+                {
+                    "key": "field_614a4db55b22d",
+                    "label": "Title Color",
+                    "name": "witlandingpages_panel_title_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": ""
+                },
+                {
+                    "key": "field_614a4dfa5b22e",
+                    "label": "Body Color",
+                    "name": "witlandingpages_panel_body_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": ""
                 }
             ]
         },
@@ -255,5 +285,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Formerly 'Guarantees'",
-    "modified": 1632258803
+    "modified": 1632259603
 }
