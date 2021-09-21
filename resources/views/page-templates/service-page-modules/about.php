@@ -15,6 +15,9 @@ $wlp_aleft_bottom = (get_field('witlandingpages_about_left_bottom')) ? get_field
 // Right Side vars:
 $witlandingpages_about_title = (get_field('witlandingpages_about_title')) ? get_field('witlandingpages_about_title') : '' ;
 $witlandingpages_about_content = (get_field('witlandingpages_about_content')) ? get_field('witlandingpages_about_content') : '' ;
+$wlp_marker = (get_field('witlandingpages_marker_color')) ? get_field('witlandingpages_marker_color') : 'inherit' ;
+$wlp_li_color = "color: " . $wlp_marker . ";";
+
 
 // declare alignment variable:
 if (get_field('witlandingpages_right_title_alignment') == 'Left') {
@@ -33,6 +36,9 @@ if (get_field('witlandingpages_right_title_alignment') == 'Left') {
 <style>
     .servicesRightTitle {
         <?php echo $wlp_align; ?>
+    }
+    .servicesRightContentText ul li::marker {
+        <?php echo $wlp_li_color; ?>
     }
 </style>
 

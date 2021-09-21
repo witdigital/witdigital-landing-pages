@@ -178,6 +178,28 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
+        },
+        {
+            "key": "field_614a2aaeab5ef",
+            "label": "Marker Color (optional)",
+            "name": "witlandingpages_marker_color",
+            "type": "color_picker",
+            "instructions": "Sets color for the bullet points. If nothing selected, will inherit from the active theme.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_614121193a48e",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
         }
     ],
     "location": [
@@ -197,5 +219,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Formerly 'About'",
-    "modified": 1632245028
+    "modified": 1632251103
 }
