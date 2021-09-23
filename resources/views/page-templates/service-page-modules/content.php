@@ -19,6 +19,24 @@ foreach ($parentFields as $field) {
     $wlp_plus_style = 'background: url(' . $wlp_plus_icon . ') center / cover;';
     $wlp_minus_style = 'background: url(' . $wlp_minus_icon . ') center / cover;';
     $wlp_show_coupon = (get_field('witlandingpages_show_coupon')) ? get_field('witlandingpages_show_coupon') : '' ;
+
+    // Accordion Variables:
+    $if( have_rows('witlandingpages_accordion_styling') ):
+        while( have_rows('witlandingpages_accordion_styling') ): the_row();
+    
+        $wlp_ac_background = (get_sub_field('witlandingpages_accordion_background_color')) ? get_sub_field('witlandingpages_accordion_background_color') : '' ;
+        $wlp_ac_border_radius = (get_sub_field('witlandingpages_accordion_border_radius')) ? get_sub_field('witlandingpages_accordion_border_radius') : '' ;
+        $wlp_ac_if_custom = (get_sub_field('witlandingpages_accordion_custom_icon')) == '1' ? 'customIcon' : 'defaultIcon' ;
+        $wlp_ac_default_filter = (get_sub_field('witlandingpages_accordion_default_icon_filter')) ? get_sub_field('witlandingpages_accordion_default_icon_filter') : '' ;
+        $wlp_ac_png_svg = (get_sub_field('witlandingpages_accordion_png_svg')) == 'PNG' ? 'pngIcon' : 'svgIcon' ;
+        $wlp_plus_png = (get_sub_field('witlandingpages_accordion_plus_png')) ? get_sub_field('witlandingpages_accordion_plus_png') : '' ;
+        $wlp_minus_png = (get_sub_field('witlandingpages_accordion_minus_png')) ? get_sub_field('witlandingpages_accordion_minus_png') : '' ;
+        $wlp_ac_svg_filter = (get_sub_field('witlandingpages_accordion_svg_filter')) ? get_sub_field('witlandingpages_accordion_svg_filter') : '' ;
+        $wlp_plus_svg = (get_sub_field('witlandingpages_accordion_plus_svg')) ? get_sub_field('witlandingpages_accordion_plus_svg') : '' ;
+        $wlp_minus_svg = (get_sub_field('witlandingpages_accordion_minus_svg')) ? get_sub_field('witlandingpages_accordion_minus_svg') : '' ;
+    
+        endwhile;
+    endif; 
 ?>
 <div class="servicesContent">
     <div class="flex flex-wrap justify-between px-2 mx-auto servicesContentInner max-w-1150">
