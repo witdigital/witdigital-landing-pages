@@ -20,12 +20,12 @@ foreach ($parentFields as $field) {
     $wlp_minus_style = 'background: url(' . $wlp_minus_icon . ') center / cover;';
     $wlp_show_coupon = (get_field('witlandingpages_show_coupon')) ? get_field('witlandingpages_show_coupon') : '' ;
 
-    // Accordion Variables:
-    $if( have_rows('witlandingpages_accordion_styling') ):
+    
+    if( have_rows('witlandingpages_accordion_styling') ) :
         while( have_rows('witlandingpages_accordion_styling') ): the_row();
     
-        $wlp_ac_background = (get_sub_field('witlandingpages_accordion_background_color')) ? get_sub_field('witlandingpages_accordion_background_color') : '' ;
-        $wlp_ac_border_radius = (get_sub_field('witlandingpages_accordion_border_radius')) ? get_sub_field('witlandingpages_accordion_border_radius') : '' ;
+        $wlp_ac_background = (get_sub_field('witlandingpages_accordion_background_color')) ? get_sub_field('witlandingpages_accordion_background_color') : 'lightgray' ;
+        $wlp_ac_border_radius = (get_sub_field('witlandingpages_accordion_border_radius')) ? get_sub_field('witlandingpages_accordion_border_radius') : '16px' ;
         $wlp_ac_if_custom = (get_sub_field('witlandingpages_accordion_custom_icon')) == '1' ? 'customIcon' : 'defaultIcon' ;
         $wlp_ac_default_filter = (get_sub_field('witlandingpages_accordion_default_icon_filter')) ? get_sub_field('witlandingpages_accordion_default_icon_filter') : '' ;
         $wlp_ac_png_svg = (get_sub_field('witlandingpages_accordion_png_svg')) == 'PNG' ? 'pngIcon' : 'svgIcon' ;
@@ -40,9 +40,14 @@ foreach ($parentFields as $field) {
 
     // Accordion Styling Variables:
     $wlp_styles_ac_bkgnd = "background-color: " . $wlp_ac_background . ";";
-    $wlp_styles_ac_rad = "border-radius: " . $wlp_ac_border_radius . ";";
+    $wlp_styles_ac_rad = "border-radius: " . $wlp_ac_border_radius . "rem;";
     $wlp_styles_std_filter = "filter: " . $wlp_ac_default_filter; // DO NOT include extra semi-colon here. Field value brings it over.
     $wlp_styles_custom_filter = "filter: " . $wlp_ac_svg_filter; // DO NOT include extra semi-colon here. Field value brings it over.
+
+    $wlp_plus_style_png = 'background: url(' . $wlp_plus_png . ') center / cover;';
+    $wlp_minus_style_png = 'background: url(' . $wlp_minus_png . ') center / cover;';
+    $wlp_plus_style_svg = 'background: url(' . $wlp_plus_svg . ') center / cover;';
+    $wlp_minus_style_svg = 'background: url(' . $wlp_minus_svg . ') center / cover;';
 ?>
 <div class="servicesContent">
     <div class="flex flex-wrap justify-between px-2 mx-auto servicesContentInner max-w-1150">
@@ -57,12 +62,13 @@ foreach ($parentFields as $field) {
 
                 <style>
                     .accordionitem:not(:first-of-type) .accordionTitle {
-                        background: lightgray;
-                        border-radius: 16px;
+                        <?php echo $wlp_styles_ac_bkgnd; ?>
+                        <?php echo $wlp_styles_ac_rad; ?>
                         padding: 16px 30px;
                         font-size: 24px;
                         cursor: pointer;
                     }
+                    /* default plus icon and corresponding filter */
                     .accordionitem:not(:first-of-type) .accordionTitle::after {
                         content: "";
                         <?php echo $wlp_plus_style ?>
@@ -72,15 +78,36 @@ foreach ($parentFields as $field) {
                         right: 15px;
                         width: 24px;
                         height: 24px;
-                        filter: invert(70%) sepia(41%) saturate(7359%) hue-rotate(160deg) brightness(95%) contrast(103%);
+                        <?php echo $wlp_styles_std_filter ?>
+                    }
+                    /* custom PNG plus icon */
+                    .accordionitem:not(:first-of-type) .pngIcon.accordionTitle::after {
+                        <?php echo $wlp_plus_style_png ?>
+                        filter: unset;
+                    }
+                    /* custom SVG plus icon */
+                    .accordionitem:not(:first-of-type) .svgIcon.accordionTitle::after {
+                        <?php echo $wlp_plus_style_svg ?>
+                        <?php echo $wlp_styles_custom_filter ?>
                     }
                     .accordionitem:not(:first-of-type) .accordionContent {
                         max-height: 0;
                         opacity: 0;
                         overflow: hidden
                     }
+                    /* default minus icon */
                     .active.accordionitem:not(:first-of-type) .accordionTitle::after {
                         <?php echo $wlp_minus_style ?>
+                    }
+                    /* custom PNG minus icon */
+                    .active.accordionitem:not(:first-of-type) .pngIcon.accordionTitle::after {
+                        <?php echo $wlp_minus_style_png ?>
+                        filter: unset;
+                    }
+                    /* custom SVG minus icon */
+                    .active.accordionitem:not(:first-of-type) .svgIcon.accordionTitle::after {
+                        <?php echo $wlp_minus_style_svg ?>
+                        <?php echo $wlp_styles_custom_filter ?>
                     }
                     .active.accordionitem:not(:first-of-type) .accordionContent {
                         max-height: 1000px;
@@ -88,8 +115,19 @@ foreach ($parentFields as $field) {
                     }
                 </style>
                 
-                    <div class="servicesContentItem accordionitem text-base mb-4 <?php echo $i < 2 ? 'desktopNoAccordion' : ''; ?>">
+                    <!-- for custom icon: -->
+                    <?php if($wlp_ac_if_custom == 'customIcon'): ?>
+
+                        <div class="servicesContentItem accordionitem text-base mb-4 customIcon <?php echo $i < 2 ? 'desktopNoAccordion' : ''; ?>">
+                        <h2 class="relative servicesContentTitle accordionTitle <?php echo $wlp_ac_png_svg ?>"><?php echo $wlp_ac_title ?></h2>
+                    <?php else: ?>
+                        <!-- for default icon: -->
+
+                        <div class="servicesContentItem accordionitem text-base mb-4 defaultIcon <?php echo $i < 2 ? 'desktopNoAccordion' : ''; ?>">
                         <h2 class="relative servicesContentTitle accordionTitle"><?php echo $wlp_ac_title ?></h2>
+
+                    <?php endif; ?>
+                    <!-- this stays the same, regardless of above logic: -->
                         <div class="m-2 servicesContentText accordionContent"><?php echo $wlp_ac_content ?></div>
                     </div>
                 <?php endwhile;
