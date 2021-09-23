@@ -19,11 +19,11 @@
             "endpoint": 0
         },
         {
-            "key": "field_6145009eacd84",
-            "label": "Accordion Icon (Plus)",
-            "name": "witlandingpages_accordion_plus",
-            "type": "image",
-            "instructions": "Will use default icon if one is not supplied",
+            "key": "field_614cbde6ca96f",
+            "label": "Accordion Styling (Optional)",
+            "name": "witlandingpages_accordion_styling",
+            "type": "group",
+            "instructions": "This styling applies to all the accordion tabs. Defaults will be applied wherever choices are not made.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -31,40 +31,280 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_6145012dacd85",
-            "label": "Accordion Icon (Minus)",
-            "name": "witlandingpages_accordion_minus",
-            "type": "image",
-            "instructions": "Will use default icon if one is not supplied",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_614cc0c2ca970",
+                    "label": "Background Color",
+                    "name": "witlandingpages_accordion_background_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 1,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_614cc109ca971",
+                    "label": "Border Radius",
+                    "name": "witlandingpages_accordion_border_radius",
+                    "type": "number",
+                    "instructions": "Value in rems. Use <a href=\"https:\/\/nekocalc.com\/px-to-rem-converter\" target=\"_blank\">this tool<\/a> to convert from px to rem.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "rem",
+                    "min": "",
+                    "max": "",
+                    "step": 1
+                },
+                {
+                    "key": "field_614cc149ca972",
+                    "label": "Custom Icons?",
+                    "name": "witlandingpages_accordion_custom_icon",
+                    "type": "true_false",
+                    "instructions": "Will you be uploading custom plus\/minus icons?",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_614cc1bbca973",
+                    "label": "Icon Filter",
+                    "name": "witlandingpages_accordion_default_icon_filter",
+                    "type": "text",
+                    "instructions": "Generate filter <a href=\"https:\/\/codepen.io\/sosuke\/pen\/Pjoqqp\" target=\"_blank\">here<\/a>. \r\n<br>\r\n<strong>IMPORTANT:<\/strong> do not include 'filter:', just what comes after it (including the semi-colon). \r\n<br>\r\nEx: invert(42%) sepia(94%) saturate(738%) hue-rotate(156deg) brightness(98%) contrast(101%);\r\n<br>\r\nPlease reach out to Dev if you are unsure about how to use this tool.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_614cc149ca972",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_614cc326ca974",
+                    "label": "Is icon a PNG or SVG?",
+                    "name": "witlandingpages_accordion_png_svg",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_614cc149ca972",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "PNG": "PNG",
+                        "SVG": "SVG"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_614cc37cca975",
+                    "label": "Accordion Icon (Plus)",
+                    "name": "witlandingpages_accordion_plus_png",
+                    "type": "image",
+                    "instructions": "Upload your plus icon here (png only)",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_614cc326ca974",
+                                "operator": "==",
+                                "value": "PNG"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "png"
+                },
+                {
+                    "key": "field_614cc41dca976",
+                    "label": "Accordion Icon (Minus)",
+                    "name": "witlandingpages_accordion_minus_png",
+                    "type": "image",
+                    "instructions": "Upload your minus icon here (png only)",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_614cc326ca974",
+                                "operator": "==",
+                                "value": "PNG"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "png"
+                },
+                {
+                    "key": "field_614cc4e3ca977",
+                    "label": "Icon Filter",
+                    "name": "witlandingpages_accordion_svg_filter",
+                    "type": "text",
+                    "instructions": "Generate filter <a href=\"https:\/\/codepen.io\/sosuke\/pen\/Pjoqqp\" target=\"_blank\">here<\/a>. \r\n<br>\r\n<strong>IMPORTANT:<\/strong> do not include 'filter:', just what comes after it (including the semi-colon). \r\n<br>\r\nEx: invert(42%) sepia(94%) saturate(738%) hue-rotate(156deg) brightness(98%) contrast(101%);\r\n<br>\r\nPlease reach out to Dev if you are unsure about how to use this tool.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_614cc326ca974",
+                                "operator": "==",
+                                "value": "SVG"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6145009eacd84",
+                    "label": "Accordion Icon (Plus)",
+                    "name": "witlandingpages_accordion_plus_svg",
+                    "type": "image",
+                    "instructions": "Upload your plus icon here (svg only)",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_614cc326ca974",
+                                "operator": "==",
+                                "value": "SVG"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "svg"
+                },
+                {
+                    "key": "field_6145012dacd85",
+                    "label": "Accordion Icon (Minus)",
+                    "name": "witlandingpages_accordion_minus_svg",
+                    "type": "image",
+                    "instructions": "Upload your plus icon here (svg only)",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_614cc326ca974",
+                                "operator": "==",
+                                "value": "SVG"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "svg"
+                }
+            ]
         },
         {
             "key": "field_6141228ae8f2f",
@@ -357,5 +597,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Formerly 'Content'",
-    "modified": 1631915611
+    "modified": 1632421463
 }
