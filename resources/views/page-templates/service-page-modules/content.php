@@ -14,8 +14,8 @@ foreach ($parentFields as $field) {
     $map_icon = (get_field('services_sidebar_pin_image')) ? get_field('services_sidebar_pin_image')['url'] : '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/map-marker-alt-solid.svg';
     $witlandingpages_locations_url = (get_field('witlandingpages_locations_url')) ? get_field('witlandingpages_locations_url') : '' ;
     $witlandingpages_locations_button = (get_field('witlandingpages_locations_button')) ? get_field('witlandingpages_locations_button') : '' ;
-    $wlp_plus_icon = (get_field('witlandingpages_accordion_plus')) ? get_field('witlandingpages_accordion_plus')['url'] : '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/plus-circle-solid.svg';
-    $wlp_minus_icon = (get_field('witlandingpages_accordion_minus')) ? get_field('witlandingpages_accordion_minus')['url'] : '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/minus-circle-solid.svg';
+    $wlp_plus_icon = '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/plus-circle-solid.svg';
+    $wlp_minus_icon = '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/minus-circle-solid.svg';
     $wlp_plus_style = 'background: url(' . $wlp_plus_icon . ') center / cover;';
     $wlp_minus_style = 'background: url(' . $wlp_minus_icon . ') center / cover;';
     $wlp_show_coupon = (get_field('witlandingpages_show_coupon')) ? get_field('witlandingpages_show_coupon') : '' ;
