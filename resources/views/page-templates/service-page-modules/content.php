@@ -29,16 +29,20 @@ foreach ($parentFields as $field) {
         $wlp_ac_if_custom = (get_sub_field('witlandingpages_accordion_custom_icon')) == '1' ? 'customIcon' : 'defaultIcon' ;
         $wlp_ac_default_filter = (get_sub_field('witlandingpages_accordion_default_icon_filter')) ? get_sub_field('witlandingpages_accordion_default_icon_filter') : '' ;
         $wlp_ac_png_svg = (get_sub_field('witlandingpages_accordion_png_svg')) == 'PNG' ? 'pngIcon' : 'svgIcon' ;
-        $wlp_plus_png = (get_sub_field('witlandingpages_accordion_plus_png')) ? get_sub_field('witlandingpages_accordion_plus_png') : '' ;
-        $wlp_minus_png = (get_sub_field('witlandingpages_accordion_minus_png')) ? get_sub_field('witlandingpages_accordion_minus_png') : '' ;
+        $wlp_plus_png = (get_sub_field('witlandingpages_accordion_plus_png')) ? get_sub_field('witlandingpages_accordion_plus_png')['url'] : '' ;
+        $wlp_minus_png = (get_sub_field('witlandingpages_accordion_minus_png')) ? get_sub_field('witlandingpages_accordion_minus_png')['url'] : '' ;
         $wlp_ac_svg_filter = (get_sub_field('witlandingpages_accordion_svg_filter')) ? get_sub_field('witlandingpages_accordion_svg_filter') : '' ;
-        $wlp_plus_svg = (get_sub_field('witlandingpages_accordion_plus_svg')) ? get_sub_field('witlandingpages_accordion_plus_svg') : '' ;
-        $wlp_minus_svg = (get_sub_field('witlandingpages_accordion_minus_svg')) ? get_sub_field('witlandingpages_accordion_minus_svg') : '' ;
+        $wlp_plus_svg = (get_sub_field('witlandingpages_accordion_plus_svg')) ? get_sub_field('witlandingpages_accordion_plus_svg')['url'] : '' ;
+        $wlp_minus_svg = (get_sub_field('witlandingpages_accordion_minus_svg')) ? get_sub_field('witlandingpages_accordion_minus_svg')['url'] : '' ;
     
         endwhile;
     endif; 
 
     // Accordion Styling Variables:
+    $wlp_styles_ac_bkgnd = "background-color: " . $wlp_ac_background . ";";
+    $wlp_styles_ac_rad = "border-radius: " . $wlp_ac_border_radius . ";";
+    $wlp_styles_std_filter = "filter: " . $wlp_ac_default_filter; // DO NOT include extra semi-colon here. Field value brings it over.
+    $wlp_styles_custom_filter = "filter: " . $wlp_ac_svg_filter; // DO NOT include extra semi-colon here. Field value brings it over.
 ?>
 <div class="servicesContent">
     <div class="flex flex-wrap justify-between px-2 mx-auto servicesContentInner max-w-1150">
