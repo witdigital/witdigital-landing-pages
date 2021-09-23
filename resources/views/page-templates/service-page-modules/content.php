@@ -37,6 +37,8 @@ foreach ($parentFields as $field) {
     
         endwhile;
     endif; 
+
+    // Accordion Styling Variables:
 ?>
 <div class="servicesContent">
     <div class="flex flex-wrap justify-between px-2 mx-auto servicesContentInner max-w-1150">
