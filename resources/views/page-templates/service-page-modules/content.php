@@ -49,6 +49,20 @@ foreach ($parentFields as $field) {
     $wlp_plus_style_svg = 'background: url(' . $wlp_plus_svg . ') center / cover;';
     $wlp_minus_style_svg = 'background: url(' . $wlp_minus_svg . ') center / cover;';
 
+    // Coupon Variables:
+    if( have_rows('witlandingpages_coupon_styling') ) :
+        while( have_rows('witlandingpages_coupon_styling') ): the_row();
+
+        $wlp_coupon_background = (get_sub_field('witlandingpages_coupon_background')) ? get_sub_field('witlandingpages_coupon_background') : '' ;
+        $wlp_coupon_border_radius = (get_sub_field('witlandingpages_coupon_border_radius')) ? get_sub_field('witlandingpages_coupon_border_radius') : '1' ;
+    
+        endwhile;
+    endif;
+
+    // Coupon Styling Variables:
+    $wlp_styles_coupon_bkgnd = "background-color: " . $wlp_coupon_background . ";";
+    $wlp_styles_coupon_rad = "border-radius: " . $wlp_coupon_border_radius . "rem;";
+
     // Map Pin Variables:
     if( have_rows('witlandingpages_map_pin_styling') ) :
         while( have_rows('witlandingpages_map_pin_styling') ): the_row();
