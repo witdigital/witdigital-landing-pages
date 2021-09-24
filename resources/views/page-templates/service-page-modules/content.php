@@ -85,7 +85,7 @@ foreach ($parentFields as $field) {
                         <?php echo $wlp_plus_style_png ?>
                         filter: unset;
                     }
-                    /* custom SVG plus icon */
+                    /* custom SVG plus icon and corresponding filter */
                     .accordionitem:not(:first-of-type) .svgIcon.accordionTitle::after {
                         <?php echo $wlp_plus_style_svg ?>
                         <?php echo $wlp_styles_custom_filter ?>
