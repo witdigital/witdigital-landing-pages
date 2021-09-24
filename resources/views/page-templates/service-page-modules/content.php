@@ -63,6 +63,22 @@ foreach ($parentFields as $field) {
     $wlp_styles_coupon_bkgnd = "background-color: " . $wlp_coupon_background . ";";
     $wlp_styles_coupon_rad = "border-radius: " . $wlp_coupon_border_radius . "rem;";
 
+
+    // Location Block Variables:
+    if( have_rows('witlandingpages_locations_styling') ) :
+        while( have_rows('witlandingpages_locations_styling') ): the_row();
+
+        $wlp_locations_background = (get_sub_field('witlandingpages_locations_background')) ? get_sub_field('witlandingpages_locations_background') : '' ;
+        $wlp_locations_border_radius = (get_sub_field('witlandingpages_locations_border_radius')) ? get_sub_field('witlandingpages_locations_border_radius') : '1' ;
+    
+        endwhile;
+    endif;
+
+    // Location Block Styling Variables:
+    $wlp_styles_locations_bkgnd = "background-color: " . $wlp_locations_background . ";";
+    $wlp_styles_locations_rad = "border-radius: " . $wlp_locations_border_radius . "rem;";
+
+
     // Map Pin Variables:
     if( have_rows('witlandingpages_map_pin_styling') ) :
         while( have_rows('witlandingpages_map_pin_styling') ): the_row();
