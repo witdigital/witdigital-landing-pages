@@ -146,6 +146,12 @@ foreach ($parentFields as $field) {
                         opacity: 1;
                     }
 
+                    /* Coupon Styling */
+                    .sidebarCouponSectionInner {
+                        <?php echo $wlp_styles_coupon_bkgnd ?>
+                        <?php echo $wlp_styles_coupon_rad ?>
+                    }
+
                     /* Map Pin styling */
                     .locationItem img, .moreLocations img {
                         <?php echo $wlp_styles_std_pin_filter ?>
