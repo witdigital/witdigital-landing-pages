@@ -11,7 +11,7 @@ foreach ($parentFields as $field) {
     $witlandingpages_coupon_subtitle = (get_field('witlandingpages_coupon_subtitle')) ? get_field('witlandingpages_coupon_subtitle') : '' ;
     $witlandingpages_coupon_image = (get_field('witlandingpages_coupon_image')) ? get_field('witlandingpages_coupon_image')['url'] : '' ;
     $wlp_location_title = (get_field('witlandingpages_locations_title')) ? get_field('witlandingpages_locations_title') : '' ;
-    $map_icon = (get_field('services_sidebar_pin_image')) ? get_field('services_sidebar_pin_image')['url'] : '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/map-marker-alt-solid.svg';
+    $map_icon = '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/map-marker-alt-solid.svg';
     $witlandingpages_locations_url = (get_field('witlandingpages_locations_url')) ? get_field('witlandingpages_locations_url') : '' ;
     $witlandingpages_locations_button = (get_field('witlandingpages_locations_button')) ? get_field('witlandingpages_locations_button') : '' ;
     $wlp_plus_icon = '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/plus-circle-solid.svg';
@@ -62,6 +62,10 @@ foreach ($parentFields as $field) {
     
         endwhile;
     endif; 
+
+    // Map Pin Styling Variables:
+    $wlp_styles_std_pin_filter = "filter: " . $wlp_map_default_filter; // DO NOT include extra semi-colon here. Field value brings it over.
+    $wlp_styles_custom_pin_filter = "filter: " . $wlp_map_svg_filter; // DO NOT include extra semi-colon here. Field value brings it over.
 ?>
 <div class="servicesContent">
     <div class="flex flex-wrap justify-between px-2 mx-auto servicesContentInner max-w-1150">
@@ -126,6 +130,17 @@ foreach ($parentFields as $field) {
                     .active.accordionitem:not(:first-of-type) .accordionContent {
                         max-height: 1000px;
                         opacity: 1;
+                    }
+
+                    /* Map Pin styling */
+                    .locationItem img, .moreLocations img {
+                        <?php echo $wlp_styles_std_pin_filter ?>
+                    }
+                    img.pngPin {
+                        filter: unset;
+                    }
+                    img.svgPin {
+                        <?php echo $wlp_styles_custom_pin_filter ?>
                     }
                 </style>
                 
@@ -197,8 +212,23 @@ foreach ($parentFields as $field) {
 
                                 $wlp_location_item = (get_sub_field('witlandingpages_location')) ? get_sub_field('witlandingpages_location') : '' ;
                                 ?>
+                                    
                                     <div class="text-base tracking-wide text-white locationItem">
-                                        <img class="inline-block w-3 mr-1 align-text-bottom iconImageFilter" src=<?php echo $map_icon ?> /> <span class="absolute"><?php echo $wlp_location_item ?></span>
+                                        <!-- for custom map pin: -->
+                                        <?php if( ($wlp_map_if_custom == 'customPin') && ($wlp_map_png_svg == 'pngPin') ): ?>
+
+                                            <img class="inline-block w-3 mr-1 align-text-bottom iconImageFilter pngPin" src=<?php echo $wlp_map_png ?> /> 
+                                        <?php elseif( ($wlp_map_if_custom == 'customPin') && ($wlp_map_png_svg == 'svgPin') ): ?>
+
+                                            <img class="inline-block w-3 mr-1 align-text-bottom iconImageFilter svgPin" src=<?php echo $wlp_map_svg ?> /> 
+                                        <?php else: ?>
+
+                                        <!-- for default map pin: -->
+                                        <img class="inline-block w-3 mr-1 align-text-bottom iconImageFilter" src=<?php echo $map_icon ?> />
+                                        <?php endif; ?>
+
+                                        <!-- this stays the same, regardless of above logic: -->
+                                        <span class="absolute"><?php echo $wlp_location_item ?></span>
                                        
                                     </div>
                                 <?php endwhile;
@@ -208,13 +238,42 @@ foreach ($parentFields as $field) {
                                 $wlp_location_item = (get_sub_field('witlandingpages_location')) ? get_sub_field('witlandingpages_location') : '' ;
                                 ?>
                                     <div class="text-white locationItem">
-                                       <img class="inline-block w-3 mr-1 align-text-bottom iconImageFilter" src=<?php echo $map_icon ?> /> <span class="absolute"><?php echo $wlp_location_item ?></span>
+                                       <!-- for custom map pin: -->
+                                       <?php if( ($wlp_map_if_custom == 'customPin') && ($wlp_map_png_svg == 'pngPin') ): ?>
+
+                                            <img class="inline-block w-3 mr-1 align-text-bottom iconImageFilter pngPin" src=<?php echo $wlp_map_png ?> /> 
+                                        <?php elseif( ($wlp_map_if_custom == 'customPin') && ($wlp_map_png_svg == 'svgPin') ): ?>
+
+                                            <img class="inline-block w-3 mr-1 align-text-bottom iconImageFilter svgPin" src=<?php echo $wlp_map_svg ?> /> 
+                                        <?php else: ?>
+
+                                        <!-- for default map pin: -->
+                                            <img class="inline-block w-3 mr-1 align-text-bottom iconImageFilter" src=<?php echo $map_icon ?> />
+                                        <?php endif; ?>
+
+                                       <!-- this stays the same, regardless of above logic: -->
+                                       <span class="absolute"><?php echo $wlp_location_item ?></span>
                                     </div>
                                 <?php endwhile;
                             endif;
                             ?>
                         </div>
-                        <a class="block px-3 py-2 mx-auto my-0 text-base font-bold text-center text-white uppercase border border-white rounded-md focus:bg-darkblue focus:text-green btn moreLocations" href="<?php echo $witlandingpages_locations_url; ?>"><img class="inline-block w-3 mr-1 align-text-bottom iconImageFilter" src=<?php echo $map_icon ?> /><?php echo $witlandingpages_locations_button; ?></a>
+                        <a class="block px-3 py-2 mx-auto my-0 text-base font-bold text-center text-white uppercase border border-white rounded-md focus:bg-darkblue focus:text-green btn moreLocations" href="<?php echo $witlandingpages_locations_url; ?>">
+                        <!-- for custom map pin: -->
+                        <?php if( ($wlp_map_if_custom == 'customPin') && ($wlp_map_png_svg == 'pngPin') ):  ?>
+
+                            <img class="inline-block w-3 mr-1 align-text-bottom iconImageFilter pngPin" src=<?php echo $wlp_map_png ?> />
+                        <?php elseif( ($wlp_map_if_custom == 'customPin') && ($wlp_map_png_svg == 'svgPin') ): ?>
+
+                            <img class="inline-block w-3 mr-1 align-text-bottom iconImageFilter svgPin" src=<?php echo $wlp_map_svg ?> />
+                        <?php else: ?>
+
+                        <!-- for default map pin: -->
+                            <img class="inline-block w-3 mr-1 align-text-bottom iconImageFilter" src=<?php echo $map_icon ?> />
+                        <?php endif; ?>
+
+                        <!-- this stays the same, regardless of above logic: -->
+                        <?php echo $witlandingpages_locations_button; ?></a>
                     </div>
                 </div>
             </div>
