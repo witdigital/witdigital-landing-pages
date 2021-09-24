@@ -72,6 +72,23 @@
                     "step": 1
                 },
                 {
+                    "key": "field_614e37d849942",
+                    "label": "Title Color",
+                    "name": "witlandingpages_accordion_title_color",
+                    "type": "color_picker",
+                    "instructions": "This controls the color for the accordion title, as it may need to be changed due to the accordion background color.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": "string"
+                },
+                {
                     "key": "field_614cc149ca972",
                     "label": "Custom Icons?",
                     "name": "witlandingpages_accordion_custom_icon",
@@ -909,5 +926,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Formerly 'Content'",
-    "modified": 1632513116
+    "modified": 1632516319
 }

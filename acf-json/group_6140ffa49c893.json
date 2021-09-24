@@ -42,7 +42,7 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -99,7 +99,7 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -243,5 +243,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632514495
+    "modified": 1632515242
 }
