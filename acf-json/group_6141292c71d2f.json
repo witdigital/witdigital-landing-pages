@@ -65,6 +65,89 @@
             "mime_types": ""
         },
         {
+            "key": "field_614e2fd6d27fe",
+            "label": "Is the overlay a color or a gradient?",
+            "name": "witlandingpages_overlay_testimonials",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61412a51dd87b",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Color": "Color",
+                "Gradient": "Gradient"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_614e3038d27ff",
+            "label": "Overlay Color",
+            "name": "witlandingpages_overlay_color_testimonials",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_614e2fd6d27fe",
+                        "operator": "==",
+                        "value": "Color"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 1,
+            "return_format": "string"
+        },
+        {
+            "key": "field_614e307ad2800",
+            "label": "Overlay Gradient",
+            "name": "witlandingpages_overlay_gradient_testimonials",
+            "type": "text",
+            "instructions": "Enter the entire string, except for the semicolon. Ex: 'linear-gradient(-108deg, rgba(0, 41, 93, .84) 0%, rgba(0, 174, 239, .84) 100%)'",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_614e2fd6d27fe",
+                        "operator": "==",
+                        "value": "Gradient"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_614256beb55e8",
             "label": "Button Link",
             "name": "witlandingpages_testimonials_link",
@@ -116,5 +199,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631737639
+    "modified": 1632514279
 }
