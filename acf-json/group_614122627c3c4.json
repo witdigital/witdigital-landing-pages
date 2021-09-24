@@ -404,7 +404,7 @@
             "key": "field_614123f9e8f32",
             "label": "Coupon Title",
             "name": "witlandingpages_coupon_title",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "Will pull from parent if nothing is here.",
             "required": 0,
             "conditional_logic": 0,
@@ -414,16 +414,16 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
         },
         {
             "key": "field_61412414e8f33",
             "label": "Coupon Subtitle",
             "name": "witlandingpages_coupon_subtitle",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "Will pull from parent if nothing is here.",
             "required": 0,
             "conditional_logic": 0,
@@ -433,10 +433,10 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
         },
         {
             "key": "field_61412430e8f34",
@@ -466,7 +466,7 @@
             "key": "field_61423fff9b012",
             "label": "Locations Title",
             "name": "witlandingpages_locations_title",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -476,10 +476,10 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
         },
         {
             "key": "field_614124aae8f37",
@@ -597,5 +597,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Formerly 'Content'",
-    "modified": 1632421463
+    "modified": 1632505331
 }
