@@ -401,13 +401,84 @@
             "ui_off_text": ""
         },
         {
+            "key": "field_614e27e2213d6",
+            "label": "Coupon Styling (Optional)",
+            "name": "witlandingpages_coupon_styling",
+            "type": "group",
+            "instructions": "Optional. Will use default styling for options not customized here.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61450ca91998a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_614e282f213d7",
+                    "label": "Background Color",
+                    "name": "witlandingpages_coupon_background",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 1,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_614e285c213d8",
+                    "label": "Border Radius",
+                    "name": "witlandingpages_coupon_border_radius",
+                    "type": "number",
+                    "instructions": "Value in rems. Use <a href=\"https:\/\/nekocalc.com\/px-to-rem-converter\" target=\"_blank\">this tool<\/a> to convert from px to rem.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "rem",
+                    "min": "",
+                    "max": "",
+                    "step": 1
+                }
+            ]
+        },
+        {
             "key": "field_614123f9e8f32",
             "label": "Coupon Title",
             "name": "witlandingpages_coupon_title",
             "type": "wysiwyg",
             "instructions": "Will pull from parent if nothing is here.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61450ca91998a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -426,7 +497,15 @@
             "type": "wysiwyg",
             "instructions": "Will pull from parent if nothing is here.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61450ca91998a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -445,7 +524,15 @@
             "type": "image",
             "instructions": "Will pull from parent if nothing is here.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61450ca91998a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -759,5 +846,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Formerly 'Content'",
-    "modified": 1632506435
+    "modified": 1632512247
 }
