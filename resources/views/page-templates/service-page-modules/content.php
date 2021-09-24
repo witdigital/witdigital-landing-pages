@@ -25,7 +25,7 @@ foreach ($parentFields as $field) {
         while( have_rows('witlandingpages_accordion_styling') ): the_row();
     
         $wlp_ac_background = (get_sub_field('witlandingpages_accordion_background_color')) ? get_sub_field('witlandingpages_accordion_background_color') : 'lightgray' ;
-        $wlp_ac_border_radius = (get_sub_field('witlandingpages_accordion_border_radius')) ? get_sub_field('witlandingpages_accordion_border_radius') : '16px' ;
+        $wlp_ac_border_radius = (get_sub_field('witlandingpages_accordion_border_radius')) ? get_sub_field('witlandingpages_accordion_border_radius') : '1' ;
         $wlp_ac_if_custom = (get_sub_field('witlandingpages_accordion_custom_icon')) == '1' ? 'customIcon' : 'defaultIcon' ;
         $wlp_ac_default_filter = (get_sub_field('witlandingpages_accordion_default_icon_filter')) ? get_sub_field('witlandingpages_accordion_default_icon_filter') : '' ;
         $wlp_ac_png_svg = (get_sub_field('witlandingpages_accordion_png_svg')) == 'PNG' ? 'pngIcon' : 'svgIcon' ;
@@ -119,12 +119,12 @@ foreach ($parentFields as $field) {
                     <?php if($wlp_ac_if_custom == 'customIcon'): ?>
 
                         <div class="servicesContentItem accordionitem text-base mb-4 customIcon <?php echo $i < 2 ? 'desktopNoAccordion' : ''; ?>">
-                        <h2 class="relative servicesContentTitle accordionTitle <?php echo $wlp_ac_png_svg ?>"><?php echo $wlp_ac_title ?></h2>
+                        <h3 class="relative servicesContentTitle accordionTitle <?php echo $wlp_ac_png_svg ?>"><?php echo $wlp_ac_title ?></h3>
                     <?php else: ?>
                         <!-- for default icon: -->
 
                         <div class="servicesContentItem accordionitem text-base mb-4 defaultIcon <?php echo $i < 2 ? 'desktopNoAccordion' : ''; ?>">
-                        <h2 class="relative servicesContentTitle accordionTitle"><?php echo $wlp_ac_title ?></h2>
+                        <h3 class="relative servicesContentTitle accordionTitle"><?php echo $wlp_ac_title ?></h3>
 
                     <?php endif; ?>
                     <!-- this stays the same, regardless of above logic: -->
