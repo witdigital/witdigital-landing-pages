@@ -26,6 +26,7 @@ foreach ($parentFields as $field) {
     
         $wlp_ac_background = (get_sub_field('witlandingpages_accordion_background_color')) ? get_sub_field('witlandingpages_accordion_background_color') : 'lightgray' ;
         $wlp_ac_border_radius = (get_sub_field('witlandingpages_accordion_border_radius')) ? get_sub_field('witlandingpages_accordion_border_radius') : '1' ;
+        $wlp_ac_title_color = (get_sub_field('witlandingpages_accordion_title_color')) ? get_sub_field('witlandingpages_accordion_title_color') : '' ;
         $wlp_ac_if_custom = (get_sub_field('witlandingpages_accordion_custom_icon')) == '1' ? 'customIcon' : 'defaultIcon' ;
         $wlp_ac_default_filter = (get_sub_field('witlandingpages_accordion_default_icon_filter')) ? get_sub_field('witlandingpages_accordion_default_icon_filter') : '' ;
         $wlp_ac_png_svg = (get_sub_field('witlandingpages_accordion_png_svg')) == 'PNG' ? 'pngIcon' : 'svgIcon' ;
@@ -41,6 +42,7 @@ foreach ($parentFields as $field) {
     // Accordion Styling Variables:
     $wlp_styles_ac_bkgnd = "background-color: " . $wlp_ac_background . ";";
     $wlp_styles_ac_rad = "border-radius: " . $wlp_ac_border_radius . "rem;";
+    $wlp_styles_ac_title_color = "color: " . $wlp_ac_title_color . ";";
     $wlp_styles_std_filter = "filter: " . $wlp_ac_default_filter; // DO NOT include extra semi-colon here. Field value brings it over.
     $wlp_styles_custom_filter = "filter: " . $wlp_ac_svg_filter; // DO NOT include extra semi-colon here. Field value brings it over.
 
@@ -104,6 +106,7 @@ foreach ($parentFields as $field) {
         .accordionitem:not(:first-of-type) .accordionTitle {
             <?php echo $wlp_styles_ac_bkgnd; ?>
             <?php echo $wlp_styles_ac_rad; ?>
+            <?php echo $wlp_styles_ac_title_color; ?>
             padding: 16px 30px;
             font-size: 24px;
             cursor: pointer;
