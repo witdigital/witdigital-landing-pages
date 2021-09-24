@@ -20,7 +20,7 @@ foreach ($parentFields as $field) {
     $wlp_minus_style = 'background: url(' . $wlp_minus_icon . ') center / cover;';
     $wlp_show_coupon = (get_field('witlandingpages_show_coupon')) ? get_field('witlandingpages_show_coupon') : '' ;
 
-    
+    // Accordion Variables:
     if( have_rows('witlandingpages_accordion_styling') ) :
         while( have_rows('witlandingpages_accordion_styling') ): the_row();
     
@@ -48,6 +48,20 @@ foreach ($parentFields as $field) {
     $wlp_minus_style_png = 'background: url(' . $wlp_minus_png . ') center / cover;';
     $wlp_plus_style_svg = 'background: url(' . $wlp_plus_svg . ') center / cover;';
     $wlp_minus_style_svg = 'background: url(' . $wlp_minus_svg . ') center / cover;';
+
+    // Map Pin Variables:
+    if( have_rows('witlandingpages_map_pin_styling') ) :
+        while( have_rows('witlandingpages_map_pin_styling') ): the_row();
+    
+        $wlp_map_if_custom = (get_sub_field('witlandingpages_custom_map_pin')) == '1' ? 'customPin' : 'defaultPin' ;
+        $wlp_map_default_filter = (get_sub_field('witlandingpages_default_pin_filter')) ? get_sub_field('witlandingpages_default_pin_filter') : '' ;
+        $wlp_map_png_svg = (get_sub_field('witlandingpages_pin_png_svg')) == 'PNG' ? 'pngPin' : 'svgPin' ;
+        $wlp_map_png = (get_sub_field('witlandingpages_pin_png')) ? get_sub_field('witlandingpages_pin_png')['url'] : '' ;
+        $wlp_map_svg_filter = (get_sub_field('witlandingpages_pin_svg_filter')) ? get_sub_field('witlandingpages_pin_svg_filter') : '' ;
+        $wlp_map_svg = (get_sub_field('witlandingpages_pin_svg')) ? get_sub_field('witlandingpages_pin_svg')['url'] : '' ;
+    
+        endwhile;
+    endif; 
 ?>
 <div class="servicesContent">
     <div class="flex flex-wrap justify-between px-2 mx-auto servicesContentInner max-w-1150">
