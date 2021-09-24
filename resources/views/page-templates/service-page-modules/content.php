@@ -97,6 +97,91 @@ foreach ($parentFields as $field) {
     $wlp_styles_std_pin_filter = "filter: " . $wlp_map_default_filter; // DO NOT include extra semi-colon here. Field value brings it over.
     $wlp_styles_custom_pin_filter = "filter: " . $wlp_map_svg_filter; // DO NOT include extra semi-colon here. Field value brings it over.
 ?>
+<!--  ==========================================================================
+                BEGIN STYLING FOR MODULE
+    ==========================================================================  -->
+    <style>
+        .accordionitem:not(:first-of-type) .accordionTitle {
+            <?php echo $wlp_styles_ac_bkgnd; ?>
+            <?php echo $wlp_styles_ac_rad; ?>
+            padding: 16px 30px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        /* default plus icon and corresponding filter */
+        .accordionitem:not(:first-of-type) .accordionTitle::after {
+            content: "";
+            <?php echo $wlp_plus_style ?>
+            position: absolute;
+            top: 43%;
+            transform: translateY(-50%);
+            right: 15px;
+            width: 24px;
+            height: 24px;
+            <?php echo $wlp_styles_std_filter ?>
+        }
+        /* custom PNG plus icon */
+        .accordionitem:not(:first-of-type) .pngIcon.accordionTitle::after {
+            <?php echo $wlp_plus_style_png ?>
+            filter: unset;
+        }
+        /* custom SVG plus icon and corresponding filter */
+        .accordionitem:not(:first-of-type) .svgIcon.accordionTitle::after {
+            <?php echo $wlp_plus_style_svg ?>
+            <?php echo $wlp_styles_custom_filter ?>
+        }
+        .accordionitem:not(:first-of-type) .accordionContent {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden
+        }
+        /* default minus icon */
+        .active.accordionitem:not(:first-of-type) .accordionTitle::after {
+            <?php echo $wlp_minus_style ?>
+        }
+        /* custom PNG minus icon */
+        .active.accordionitem:not(:first-of-type) .pngIcon.accordionTitle::after {
+            <?php echo $wlp_minus_style_png ?>
+            filter: unset;
+        }
+        /* custom SVG minus icon */
+        .active.accordionitem:not(:first-of-type) .svgIcon.accordionTitle::after {
+            <?php echo $wlp_minus_style_svg ?>
+            <?php echo $wlp_styles_custom_filter ?>
+        }
+        .active.accordionitem:not(:first-of-type) .accordionContent {
+            max-height: 1000px;
+            opacity: 1;
+        }
+
+        /* Coupon Styling */
+        .sidebarCouponSectionInner {
+            <?php echo $wlp_styles_coupon_bkgnd ?>
+            <?php echo $wlp_styles_coupon_rad ?>
+        }
+
+        /* Location Block Styling */
+        .sidebarSectionLocations {
+            <?php echo $wlp_styles_locations_bkgnd ?>
+            <?php echo $wlp_styles_locations_rad ?>
+        }
+
+        /* Map Pin styling */
+        .locationItem img, .moreLocations img {
+            <?php echo $wlp_styles_std_pin_filter ?>
+        }
+        img.pngPin {
+            filter: unset;
+        }
+        img.svgPin {
+            <?php echo $wlp_styles_custom_pin_filter ?>
+        }
+    </style>
+
+<!--  ==========================================================================
+                BEGIN TEMPLATE FOR MODULE
+    ==========================================================================  -->
+
 <div class="servicesContent">
     <div class="flex flex-wrap justify-between px-2 mx-auto servicesContentInner max-w-1150">
         <div class="flex-grow order-2 px-2 pt-0 pb-1 servicesContentLeft laptop:flex-1 max-w-650 laptop:pt-0 laptop:px-0 laptop:pb-10 laptop:order-none">
@@ -107,78 +192,6 @@ foreach ($parentFields as $field) {
                 <?php 
                 $wlp_ac_title = (get_sub_field('witlandingpages_accordion_title')) ? get_sub_field('witlandingpages_accordion_title') : '' ; 
                 $wlp_ac_content = (get_sub_field('witlandingpages_accordion_content')) ? get_sub_field('witlandingpages_accordion_content') : '' ; ?>
-
-                <style>
-                    .accordionitem:not(:first-of-type) .accordionTitle {
-                        <?php echo $wlp_styles_ac_bkgnd; ?>
-                        <?php echo $wlp_styles_ac_rad; ?>
-                        padding: 16px 30px;
-                        font-size: 24px;
-                        cursor: pointer;
-                    }
-                    /* default plus icon and corresponding filter */
-                    .accordionitem:not(:first-of-type) .accordionTitle::after {
-                        content: "";
-                        <?php echo $wlp_plus_style ?>
-                        position: absolute;
-                        top: 43%;
-                        transform: translateY(-50%);
-                        right: 15px;
-                        width: 24px;
-                        height: 24px;
-                        <?php echo $wlp_styles_std_filter ?>
-                    }
-                    /* custom PNG plus icon */
-                    .accordionitem:not(:first-of-type) .pngIcon.accordionTitle::after {
-                        <?php echo $wlp_plus_style_png ?>
-                        filter: unset;
-                    }
-                    /* custom SVG plus icon and corresponding filter */
-                    .accordionitem:not(:first-of-type) .svgIcon.accordionTitle::after {
-                        <?php echo $wlp_plus_style_svg ?>
-                        <?php echo $wlp_styles_custom_filter ?>
-                    }
-                    .accordionitem:not(:first-of-type) .accordionContent {
-                        max-height: 0;
-                        opacity: 0;
-                        overflow: hidden
-                    }
-                    /* default minus icon */
-                    .active.accordionitem:not(:first-of-type) .accordionTitle::after {
-                        <?php echo $wlp_minus_style ?>
-                    }
-                    /* custom PNG minus icon */
-                    .active.accordionitem:not(:first-of-type) .pngIcon.accordionTitle::after {
-                        <?php echo $wlp_minus_style_png ?>
-                        filter: unset;
-                    }
-                    /* custom SVG minus icon */
-                    .active.accordionitem:not(:first-of-type) .svgIcon.accordionTitle::after {
-                        <?php echo $wlp_minus_style_svg ?>
-                        <?php echo $wlp_styles_custom_filter ?>
-                    }
-                    .active.accordionitem:not(:first-of-type) .accordionContent {
-                        max-height: 1000px;
-                        opacity: 1;
-                    }
-
-                    /* Coupon Styling */
-                    .sidebarCouponSectionInner {
-                        <?php echo $wlp_styles_coupon_bkgnd ?>
-                        <?php echo $wlp_styles_coupon_rad ?>
-                    }
-
-                    /* Map Pin styling */
-                    .locationItem img, .moreLocations img {
-                        <?php echo $wlp_styles_std_pin_filter ?>
-                    }
-                    img.pngPin {
-                        filter: unset;
-                    }
-                    img.svgPin {
-                        <?php echo $wlp_styles_custom_pin_filter ?>
-                    }
-                </style>
                 
                     <!-- for custom icon: -->
                     <?php if($wlp_ac_if_custom == 'customIcon'): ?>
@@ -239,7 +252,7 @@ foreach ($parentFields as $field) {
                 <?php endif; ?>
 
                 <div class="servicesContentSidebarSection serviceAreaSection">
-                    <div class="p-5 serviceAreaSectionInner sidebarSectionInner bg-blue rounded-2xl">
+                    <div class="p-5 serviceAreaSectionInner sidebarSectionInner sidebarSectionLocations bg-blue rounded-2xl">
                         <h3 class="text-center text-white couponSidebarTitle text-26 laptop:text-30"><?php echo $wlp_location_title; ?></h3>
                         <div class="flex flex-wrap items-center justify-between px-3 mt-4 mb-8 couponSidebarLocations">
                             <?php
