@@ -550,6 +550,69 @@
             "mime_types": ""
         },
         {
+            "key": "field_614e2c1c4845a",
+            "label": "Locations Block Styling (Optional)",
+            "name": "witlandingpages_locations_styling",
+            "type": "group",
+            "instructions": "Optional. Will use default styling for options not customized here.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61450ca91998a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_614e2c1c4845b",
+                    "label": "Background Color",
+                    "name": "witlandingpages_locations_background",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 1,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_614e2c1c4845c",
+                    "label": "Border Radius",
+                    "name": "witlandingpages_locations_border_radius",
+                    "type": "number",
+                    "instructions": "Value in rems. Use <a href=\"https:\/\/nekocalc.com\/px-to-rem-converter\" target=\"_blank\">this tool<\/a> to convert from px to rem.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "rem",
+                    "min": "",
+                    "max": "",
+                    "step": 1
+                }
+            ]
+        },
+        {
             "key": "field_61423fff9b012",
             "label": "Locations Title",
             "name": "witlandingpages_locations_title",
@@ -846,5 +909,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Formerly 'Content'",
-    "modified": 1632512247
+    "modified": 1632513116
 }
