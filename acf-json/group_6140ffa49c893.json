@@ -172,6 +172,25 @@
             "return_format": "string"
         },
         {
+            "key": "field_615218b16467d",
+            "label": "Buttons Shortcode",
+            "name": "witlandingpages_hero_shortcode",
+            "type": "text",
+            "instructions": "Input shortcode here, be sure to include the brackets.\r\n<br>\r\n<strong>Single Phone Number:<\/strong> <em>[witlandingpages_phone_button]<\/em>\r\n<br>\r\n<strong>Two Phone Numbers:<\/strong> <em>[witlandingpages_twophones_button]<\/em>\r\n<br>\r\n<strong>Request Service:<\/strong> <em>[witlandingpages_request_button]<\/em>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_6148ed58272ca",
             "label": "Hero Height",
             "name": "",
@@ -243,5 +262,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632515242
+    "modified": 1632770438
 }
