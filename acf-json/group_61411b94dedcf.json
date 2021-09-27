@@ -150,40 +150,6 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
-        },
-        {
-            "key": "field_61411d25fce2d",
-            "label": "Request Service Link",
-            "name": "witlandingpages_request_url",
-            "type": "link",
-            "instructions": "Link to the page Client uses for service requests. \r\nIf client uses Schedule Engine: you cannot use this field, you need to reach out to the Dev Team.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url"
-        },
-        {
-            "key": "field_61411dc7fce2e",
-            "label": "Request Service Text",
-            "name": "witlandingpages_request_display",
-            "type": "text",
-            "instructions": "ex: 'Schedule Service' or 'Contact Us!'",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
         }
     ],
     "location": [
@@ -203,5 +169,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632176638
+    "modified": 1632770038
 }

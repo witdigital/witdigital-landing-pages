@@ -3,6 +3,22 @@
     "title": "LP Contact Info",
     "fields": [
         {
+            "key": "field_615216eac0a37",
+            "label": "Main Phone Button",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_614102b870cd8",
             "label": "Phone Link",
             "name": "witlandingpages_phone_link",
@@ -155,6 +171,56 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_615216be1b1df",
+            "label": "Request Service Button",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_615217522a168",
+            "label": "Request Service Link",
+            "name": "witlandingpages_request_url",
+            "type": "link",
+            "instructions": "Link to the page Client uses for service requests. \r\nIf client uses Schedule Engine: you cannot use this field, you need to reach out to the Dev Team.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url"
+        },
+        {
+            "key": "field_6152177f2a169",
+            "label": "Request Service Text",
+            "name": "witlandingpages_request_display",
+            "type": "text",
+            "instructions": "ex: 'Schedule Service' or 'Contact Us!'",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -174,5 +240,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631732529
+    "modified": 1632769938
 }
