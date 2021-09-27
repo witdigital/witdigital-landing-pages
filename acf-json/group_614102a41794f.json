@@ -3,6 +3,340 @@
     "title": "LP Contact Info",
     "fields": [
         {
+            "key": "field_61522ab8c34e9",
+            "label": "Button Styling (Optional)",
+            "name": "witlandingpages_phone_styling",
+            "type": "group",
+            "instructions": "This styling applies to all the phone buttons on this page. Defaults will be applied wherever choices are not made.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_61522afbc34ea",
+                    "label": "Background Color",
+                    "name": "witlandingpages_phone_background_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 1,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_61522b2dc34eb",
+                    "label": "Border Radius",
+                    "name": "witlandingpages_phone_border_radius",
+                    "type": "number",
+                    "instructions": "Value in rems. Use <a href=\"https:\/\/nekocalc.com\/px-to-rem-converter\" target=\"_blank\">this tool<\/a> to convert from px to rem.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "rem",
+                    "min": "",
+                    "max": "",
+                    "step": 1
+                },
+                {
+                    "key": "field_61522b68c34ec",
+                    "label": "Location Color",
+                    "name": "witlandingpages_phone_location_color",
+                    "type": "color_picker",
+                    "instructions": "Styles the location names when using two phone numbers.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_61522bb3c34ed",
+                    "label": "Color",
+                    "name": "witlandingpages_phone_body_color",
+                    "type": "color_picker",
+                    "instructions": "Controls the color for the phone number.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_61522bfec34ee",
+                    "label": "Color (Hover)",
+                    "name": "witlandingpages_phone_body_color_hover",
+                    "type": "color_picker",
+                    "instructions": "Controls the color for the phone number on hover.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_61522c36c34ef",
+                    "label": "Custom Icon?",
+                    "name": "witlandingpages_phone_custom_icon",
+                    "type": "true_false",
+                    "instructions": "Will you be uploading a custom phone icon?",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_61522c71c34f0",
+                    "label": "Icon Filter",
+                    "name": "witlandingpages_phone_default_icon_filter",
+                    "type": "text",
+                    "instructions": "Generate filter <a href=\"https:\/\/codepen.io\/sosuke\/pen\/Pjoqqp\" target=\"_blank\">here<\/a>. \r\n<br>\r\n<strong>IMPORTANT:<\/strong> do not include 'filter:', just what comes after it (including the semi-colon). \r\n<br>\r\nEx: invert(42%) sepia(94%) saturate(738%) hue-rotate(156deg) brightness(98%) contrast(101%);\r\n<br>\r\nPlease reach out to Dev if you are unsure about how to use this tool.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_61522c36c34ef",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_61522cb7c34f1",
+                    "label": "Is icon a PNG or SVG?",
+                    "name": "witlandingpages_phone_png_svg",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_61522c36c34ef",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "PNG": "PNG",
+                        "SVG": "SVG"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_61522d0dc34f2",
+                    "label": "Phone Icon",
+                    "name": "witlandingpages_phone_png",
+                    "type": "image",
+                    "instructions": "Upload your phone icon here",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_61522cb7c34f1",
+                                "operator": "==",
+                                "value": "PNG"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "png"
+                },
+                {
+                    "key": "field_61522d55c34f3",
+                    "label": "Phone Icon (Hover)",
+                    "name": "witlandingpages_phone_png_hover",
+                    "type": "image",
+                    "instructions": "Upload your phone icon(hover) here",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_61522cb7c34f1",
+                                "operator": "==",
+                                "value": "PNG"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "png"
+                },
+                {
+                    "key": "field_61522d8ac34f4",
+                    "label": "Icon Filter",
+                    "name": "witlandingpages_phone_custom_icon_filter",
+                    "type": "text",
+                    "instructions": "<strong>NOTE:<\/strong> if a filter value already exists for the default icon, and no value is used here, that previous filter will apply here. TL;DR: if this filter doesn't work as expected, check to see if anything is in the other Icon Filter field.\r\n<br>\r\nGenerate filter <a href=\"https:\/\/codepen.io\/sosuke\/pen\/Pjoqqp\" target=\"_blank\">here<\/a>. \r\n<br>\r\n<strong>IMPORTANT:<\/strong> do not include 'filter:', just what comes after it (including the semi-colon). \r\n<br>\r\nEx: invert(42%) sepia(94%) saturate(738%) hue-rotate(156deg) brightness(98%) contrast(101%);\r\n<br>\r\nPlease reach out to Dev if you are unsure about how to use this tool.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_61522cb7c34f1",
+                                "operator": "==",
+                                "value": "SVG"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_61522debc34f5",
+                    "label": "Icon Filter (Hover)",
+                    "name": "witlandingpages_phone_custom_icon_filter_hover",
+                    "type": "text",
+                    "instructions": "<strong>NOTE:<\/strong> if a filter value already exists for the default icon, and no value is used here, that previous filter will apply here. TL;DR: if this filter doesn't work as expected, check to see if anything is in the other Icon Filter field.\r\n<br>\r\nGenerate filter <a href=\"https:\/\/codepen.io\/sosuke\/pen\/Pjoqqp\" target=\"_blank\">here<\/a>. \r\n<br>\r\n<strong>IMPORTANT:<\/strong> do not include 'filter:', just what comes after it (including the semi-colon). \r\n<br>\r\nEx: invert(42%) sepia(94%) saturate(738%) hue-rotate(156deg) brightness(98%) contrast(101%);\r\n<br>\r\nPlease reach out to Dev if you are unsure about how to use this tool.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_61522cb7c34f1",
+                                "operator": "==",
+                                "value": "SVG"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_61522e0ec34f6",
+                    "label": "Phone Icon",
+                    "name": "witlandingpages_phone_svg",
+                    "type": "image",
+                    "instructions": "Upload your phone icon here",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_61522cb7c34f1",
+                                "operator": "==",
+                                "value": "SVG"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "svg"
+                }
+            ]
+        },
+        {
             "key": "field_615216eac0a37",
             "label": "Main Phone Button",
             "name": "",
@@ -74,30 +408,6 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
-        },
-        {
-            "key": "field_614119f21723f",
-            "label": "Phone Icon",
-            "name": "witlandingpages_phone_icon",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
         },
         {
             "key": "field_614119c91723e",
@@ -189,6 +499,323 @@
             "endpoint": 0
         },
         {
+            "key": "field_61522ef898105",
+            "label": "Button Styling (Optional)",
+            "name": "witlandingpages_request_styling",
+            "type": "group",
+            "instructions": "This styling applies to all the Request Service buttons on this page. Defaults will be applied wherever choices are not made.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_61522ef898106",
+                    "label": "Background Color",
+                    "name": "witlandingpages_req_background_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 1,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_61522ef898107",
+                    "label": "Border Radius",
+                    "name": "witlandingpages_req_border_radius",
+                    "type": "number",
+                    "instructions": "Value in rems. Use <a href=\"https:\/\/nekocalc.com\/px-to-rem-converter\" target=\"_blank\">this tool<\/a> to convert from px to rem.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "rem",
+                    "min": "",
+                    "max": "",
+                    "step": 1
+                },
+                {
+                    "key": "field_61522ef898109",
+                    "label": "Color",
+                    "name": "witlandingpages_req_body_color",
+                    "type": "color_picker",
+                    "instructions": "Controls the color for the button text.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_61522ef89810a",
+                    "label": "Color (Hover)",
+                    "name": "witlandingpages_req_body_color_hover",
+                    "type": "color_picker",
+                    "instructions": "Controls the color for the button text on hover.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_61522ef89810b",
+                    "label": "Custom Icon?",
+                    "name": "witlandingpages_req_custom_icon",
+                    "type": "true_false",
+                    "instructions": "Will you be uploading a custom icon?",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_61522ef89810c",
+                    "label": "Icon Filter",
+                    "name": "witlandingpages_req_default_icon_filter",
+                    "type": "text",
+                    "instructions": "Generate filter <a href=\"https:\/\/codepen.io\/sosuke\/pen\/Pjoqqp\" target=\"_blank\">here<\/a>. \r\n<br>\r\n<strong>IMPORTANT:<\/strong> do not include 'filter:', just what comes after it (including the semi-colon). \r\n<br>\r\nEx: invert(42%) sepia(94%) saturate(738%) hue-rotate(156deg) brightness(98%) contrast(101%);\r\n<br>\r\nPlease reach out to Dev if you are unsure about how to use this tool.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_61522ef89810b",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_61522ef89810d",
+                    "label": "Is icon a PNG or SVG?",
+                    "name": "witlandingpages_req_png_svg",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_61522ef89810b",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "PNG": "PNG",
+                        "SVG": "SVG"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_61522ef89810e",
+                    "label": "Icon",
+                    "name": "witlandingpages_req_png",
+                    "type": "image",
+                    "instructions": "Upload your icon here",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_61522ef89810d",
+                                "operator": "==",
+                                "value": "PNG"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "png"
+                },
+                {
+                    "key": "field_61522ef89810f",
+                    "label": "Icon (Hover)",
+                    "name": "witlandingpages_req_png_hover",
+                    "type": "image",
+                    "instructions": "Upload your icon(hover) here",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_61522ef89810d",
+                                "operator": "==",
+                                "value": "PNG"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "png"
+                },
+                {
+                    "key": "field_61522ef898110",
+                    "label": "Icon Filter",
+                    "name": "witlandingpages_req_custom_icon_filter",
+                    "type": "text",
+                    "instructions": "<strong>NOTE:<\/strong> if a filter value already exists for the default icon, and no value is used here, that previous filter will apply here. TL;DR: if this filter doesn't work as expected, check to see if anything is in the other Icon Filter field.\r\n<br>\r\nGenerate filter <a href=\"https:\/\/codepen.io\/sosuke\/pen\/Pjoqqp\" target=\"_blank\">here<\/a>. \r\n<br>\r\n<strong>IMPORTANT:<\/strong> do not include 'filter:', just what comes after it (including the semi-colon). \r\n<br>\r\nEx: invert(42%) sepia(94%) saturate(738%) hue-rotate(156deg) brightness(98%) contrast(101%);\r\n<br>\r\nPlease reach out to Dev if you are unsure about how to use this tool.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_61522ef89810d",
+                                "operator": "==",
+                                "value": "SVG"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_61522ef898111",
+                    "label": "Icon Filter (Hover)",
+                    "name": "witlandingpages_req_custom_icon_filter_hover",
+                    "type": "text",
+                    "instructions": "<strong>NOTE:<\/strong> if a filter value already exists for the default icon, and no value is used here, that previous filter will apply here. TL;DR: if this filter doesn't work as expected, check to see if anything is in the other Icon Filter field.\r\n<br>\r\nGenerate filter <a href=\"https:\/\/codepen.io\/sosuke\/pen\/Pjoqqp\" target=\"_blank\">here<\/a>. \r\n<br>\r\n<strong>IMPORTANT:<\/strong> do not include 'filter:', just what comes after it (including the semi-colon). \r\n<br>\r\nEx: invert(42%) sepia(94%) saturate(738%) hue-rotate(156deg) brightness(98%) contrast(101%);\r\n<br>\r\nPlease reach out to Dev if you are unsure about how to use this tool.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_61522ef89810d",
+                                "operator": "==",
+                                "value": "SVG"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_61522ef898112",
+                    "label": "Icon",
+                    "name": "witlandingpages_req_svg",
+                    "type": "image",
+                    "instructions": "Upload your icon here",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_61522ef89810d",
+                                "operator": "==",
+                                "value": "SVG"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "svg"
+                }
+            ]
+        },
+        {
             "key": "field_615217522a168",
             "label": "Request Service Link",
             "name": "witlandingpages_request_url",
@@ -240,5 +867,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632769938
+    "modified": 1632776225
 }
