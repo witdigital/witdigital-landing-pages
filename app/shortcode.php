@@ -78,5 +78,26 @@ function witlandingpages_twophones_button( $atts ) {
 };
 add_shortcode('witlandingpages_twophones_button', 'witlandingpages_twophones_button');
 
+// Request Service button:
+
+function witlandingpages_request_button( $atts ) {
+    extract(shortcode_atts(array(
+        'class' => '',
+      ), $atts));
+
+    // declare variables:
+    $wlp_request_url = (get_field('witlandingpages_request_url')) ? get_field('witlandingpages_request_url') : '' ;
+    $wlp_request_display = (get_field('witlandingpages_request_display')) ? get_field('witlandingpages_request_display') : '' ;
+
+    $wlp_request_button_div = '
+        <div class="requestButton">
+        <a class="px-3 py-2 text-base font-bold uppercase bg-white rounded-md phoneBtn btn" href=" ' . $wlp_request_url . ' ">' . $wlp_request_display . '</a>
+        </div>' ;
+
+        return $wlp_request_button_div;
+
+};
+add_shortcode('witlandingpages_request_button', 'witlandingpages_request_button');
+
 
 
