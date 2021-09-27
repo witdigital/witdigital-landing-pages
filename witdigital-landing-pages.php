@@ -83,6 +83,14 @@ if( file_exists(plugin_dir_path(__FILE__) . 'app/include-page-templates.php') ) 
 	include plugin_dir_path(__FILE__) . 'app/include-page-templates.php';
 }
 
+/* ==========================================================================
+   Bring in Shortcodes
+   ========================================================================== */
+
+if( file_exists(plugin_dir_path(__FILE__) . 'app/shortcode.php') ) {
+	include plugin_dir_path(__FILE__) . 'app/shortcode.php';
+}
+
 
 
 
