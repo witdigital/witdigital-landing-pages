@@ -5,8 +5,7 @@ $wlp_intro_image = (get_field('witlandingpages_intro_image')) ? get_field('witla
 $wlp_intro_b_rad = (get_field('witlandingpages_intro_border_rad')) ? get_field('witlandingpages_intro_border_rad') : '' ;
 $wlp_intro_title = (get_field('witlandingpages_intro_title')) ? get_field('witlandingpages_intro_title') : '' ;
 $wlp_intro_text = (get_field('witlandingpages_intro_text')) ? get_field('witlandingpages_intro_text') : '' ;
-$wlp_request_url = (get_field('witlandingpages_request_url')) ? get_field('witlandingpages_request_url') : '' ;
-$wlp_request_display = (get_field('witlandingpages_request_display')) ? get_field('witlandingpages_request_display') : '' ;
+$wlp_intro_sc = (get_field('witlandingpages_intro_shortcode')) ? do_shortcode (get_field('witlandingpages_intro_shortcode')) : '' ;
 
 
 $wlp_intro_radius = "border-radius: " . $wlp_intro_b_rad . "rem;";
@@ -32,9 +31,7 @@ $wlp_intro_radius = "border-radius: " . $wlp_intro_b_rad . "rem;";
         <div class="w-full mt-3 text-center servicesIntroContent max-w-500 laptop:mt-0 laptop:text-left">
             <h2 class="mb-3 servicesIntroTitle text-32 laptop:text-42"><?php echo $wlp_intro_title ?></h2>
             <div class="mb-6 servicesIntroText"><?php echo $wlp_intro_text ?></div>
-            <div class="requestButton">
-                <a class="px-3 py-2 text-base font-bold uppercase bg-white rounded-md phoneBtn btn" href="<?php echo $wlp_request_url ?>"><?php echo $wlp_request_display ?></a>
-            </div>
+            <?php echo $wlp_intro_sc ?>
         </div>
     </div>
 </div>
