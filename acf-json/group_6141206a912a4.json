@@ -136,7 +136,9 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": ""
+                    "default_value": "",
+                    "enable_opacity": false,
+                    "return_format": "string"
                 },
                 {
                     "key": "field_614a2fa8af85c",
@@ -237,7 +239,7 @@
             "label": "Right Sidebar Content",
             "name": "witlandingpages_about_content",
             "type": "wysiwyg",
-            "instructions": "",
+            "instructions": "Will pull from parent if nothing is here.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -245,7 +247,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Will pull from parent if nothing is here.",
+            "default_value": "",
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 1,
@@ -271,7 +273,9 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": ""
+            "default_value": "",
+            "enable_opacity": false,
+            "return_format": "string"
         }
     ],
     "location": [
@@ -291,5 +295,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Formerly 'About'",
-    "modified": 1632252055
+    "modified": 1632782468
 }
