@@ -1,10 +1,10 @@
 {
     "key": "group_614102a41794f",
-    "title": "LP Contact Info",
+    "title": "Landing Page Button Settings",
     "fields": [
         {
-            "key": "field_61522ab8c34e9",
-            "label": "Button Styling (Optional)",
+            "key": "field_6154a29ff2da3",
+            "label": "Phone Button Styling (Optional)",
             "name": "witlandingpages_phone_styling",
             "type": "group",
             "instructions": "This styling applies to all the phone buttons on this page. Defaults will be applied wherever choices are not made.",
@@ -18,7 +18,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_61522afbc34ea",
+                    "key": "field_6154a29ff2da4",
                     "label": "Background Color",
                     "name": "witlandingpages_phone_background_color",
                     "type": "color_picker",
@@ -35,7 +35,7 @@
                     "return_format": "string"
                 },
                 {
-                    "key": "field_61522b2dc34eb",
+                    "key": "field_6154a29ff2da5",
                     "label": "Border Radius",
                     "name": "witlandingpages_phone_border_radius",
                     "type": "number",
@@ -56,7 +56,7 @@
                     "step": 1
                 },
                 {
-                    "key": "field_61522b68c34ec",
+                    "key": "field_6154a29ff2da6",
                     "label": "Location Color",
                     "name": "witlandingpages_phone_location_color",
                     "type": "color_picker",
@@ -73,7 +73,7 @@
                     "return_format": "string"
                 },
                 {
-                    "key": "field_61522bb3c34ed",
+                    "key": "field_6154a29ff2da7",
                     "label": "Color",
                     "name": "witlandingpages_phone_body_color",
                     "type": "color_picker",
@@ -90,7 +90,7 @@
                     "return_format": "string"
                 },
                 {
-                    "key": "field_61522bfec34ee",
+                    "key": "field_6154a29ff2da8",
                     "label": "Color (Hover)",
                     "name": "witlandingpages_phone_body_color_hover",
                     "type": "color_picker",
@@ -107,7 +107,7 @@
                     "return_format": "string"
                 },
                 {
-                    "key": "field_61522c36c34ef",
+                    "key": "field_6154a29ff2da9",
                     "label": "Custom Icon?",
                     "name": "witlandingpages_phone_custom_icon",
                     "type": "true_false",
@@ -126,7 +126,7 @@
                     "ui_off_text": ""
                 },
                 {
-                    "key": "field_61522c71c34f0",
+                    "key": "field_6154a29ff2daa",
                     "label": "Icon Filter",
                     "name": "witlandingpages_phone_default_icon_filter",
                     "type": "text",
@@ -135,7 +135,7 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_61522c36c34ef",
+                                "field": "field_6154a29ff2da9",
                                 "operator": "!=",
                                 "value": "1"
                             }
@@ -153,7 +153,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_61522cb7c34f1",
+                    "key": "field_6154a29ff2dab",
                     "label": "Is icon a PNG or SVG?",
                     "name": "witlandingpages_phone_png_svg",
                     "type": "radio",
@@ -162,7 +162,7 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_61522c36c34ef",
+                                "field": "field_6154a29ff2da9",
                                 "operator": "==",
                                 "value": "1"
                             }
@@ -179,13 +179,13 @@
                     },
                     "allow_null": 0,
                     "other_choice": 0,
+                    "save_other_choice": 0,
                     "default_value": "",
                     "layout": "horizontal",
-                    "return_format": "value",
-                    "save_other_choice": 0
+                    "return_format": "value"
                 },
                 {
-                    "key": "field_61522d0dc34f2",
+                    "key": "field_6154a29ff2dac",
                     "label": "Phone Icon",
                     "name": "witlandingpages_phone_png",
                     "type": "image",
@@ -194,7 +194,7 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_61522cb7c34f1",
+                                "field": "field_6154a29ff2dab",
                                 "operator": "==",
                                 "value": "PNG"
                             }
@@ -217,7 +217,7 @@
                     "mime_types": "png"
                 },
                 {
-                    "key": "field_61522d55c34f3",
+                    "key": "field_6154a29ff2dad",
                     "label": "Phone Icon (Hover)",
                     "name": "witlandingpages_phone_png_hover",
                     "type": "image",
@@ -226,7 +226,7 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_61522cb7c34f1",
+                                "field": "field_6154a29ff2dab",
                                 "operator": "==",
                                 "value": "PNG"
                             }
@@ -249,7 +249,7 @@
                     "mime_types": "png"
                 },
                 {
-                    "key": "field_61522d8ac34f4",
+                    "key": "field_6154a29ff2dae",
                     "label": "Icon Filter",
                     "name": "witlandingpages_phone_custom_icon_filter",
                     "type": "text",
@@ -258,7 +258,7 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_61522cb7c34f1",
+                                "field": "field_6154a29ff2dab",
                                 "operator": "==",
                                 "value": "SVG"
                             }
@@ -276,7 +276,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_61522debc34f5",
+                    "key": "field_6154a29ff2daf",
                     "label": "Icon Filter (Hover)",
                     "name": "witlandingpages_phone_custom_icon_filter_hover",
                     "type": "text",
@@ -285,7 +285,7 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_61522cb7c34f1",
+                                "field": "field_6154a29ff2dab",
                                 "operator": "==",
                                 "value": "SVG"
                             }
@@ -303,7 +303,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_61522e0ec34f6",
+                    "key": "field_6154a29ff2db0",
                     "label": "Phone Icon",
                     "name": "witlandingpages_phone_svg",
                     "type": "image",
@@ -312,7 +312,7 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_61522cb7c34f1",
+                                "field": "field_6154a29ff2dab",
                                 "operator": "==",
                                 "value": "SVG"
                             }
@@ -337,170 +337,8 @@
             ]
         },
         {
-            "key": "field_615216eac0a37",
-            "label": "Main Phone Button",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_614102b870cd8",
-            "label": "Phone Link",
-            "name": "witlandingpages_phone_link",
-            "type": "text",
-            "instructions": "Enter as one string with no spaces. Ex: 9995551212",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_6141035470cd9",
-            "label": "Phone Number Format",
-            "name": "witlandingpages_phone_format",
-            "type": "text",
-            "instructions": "Ex: (999) 555-1212 or 999-555-1212",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_614103b870cda",
-            "label": "Location (optional)",
-            "name": "witlandingpages_phone_location",
-            "type": "text",
-            "instructions": "Use if client has multiple phone numbers.\r\nEx: Denver",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_614119c91723e",
-            "label": "Second Phone Number (optional)",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_61411a5f17241",
-            "label": "Phone Link",
-            "name": "witlandingpages_phone_2_link",
-            "type": "text",
-            "instructions": "Enter as one string with no spaces. Ex: 9995551212",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_61411a8217242",
-            "label": "Phone Number Format",
-            "name": "witlandingpages_phone_2_format",
-            "type": "text",
-            "instructions": "Ex: (999) 555-1212 or 999-555-1212",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_61411a9817243",
-            "label": "Location (optional)",
-            "name": "witlandingpages_phone_2_location",
-            "type": "text",
-            "instructions": "Use if client has multiple phone numbers.\r\nEx: Denver",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_615216be1b1df",
-            "label": "Request Service Button",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
             "key": "field_61522ef898105",
-            "label": "Button Styling (Optional)",
+            "label": "Request Button Styling (Optional)",
             "name": "witlandingpages_request_styling",
             "type": "group",
             "instructions": "This styling applies to all the Request Service buttons on this page. Defaults will be applied wherever choices are not made.",
@@ -816,6 +654,168 @@
             ]
         },
         {
+            "key": "field_615216eac0a37",
+            "label": "Main Phone Button",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_614102b870cd8",
+            "label": "Phone Link",
+            "name": "witlandingpages_phone_link",
+            "type": "text",
+            "instructions": "Enter as one string with no spaces. Ex: 9995551212",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6141035470cd9",
+            "label": "Phone Number Format",
+            "name": "witlandingpages_phone_format",
+            "type": "text",
+            "instructions": "Ex: (999) 555-1212 or 999-555-1212",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_614103b870cda",
+            "label": "Location (optional)",
+            "name": "witlandingpages_phone_location",
+            "type": "text",
+            "instructions": "Use if client has multiple phone numbers.\r\nEx: Denver",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_614119c91723e",
+            "label": "Second Phone Number (optional)",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_61411a5f17241",
+            "label": "Phone Link",
+            "name": "witlandingpages_phone_2_link",
+            "type": "text",
+            "instructions": "Enter as one string with no spaces. Ex: 9995551212",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61411a8217242",
+            "label": "Phone Number Format",
+            "name": "witlandingpages_phone_2_format",
+            "type": "text",
+            "instructions": "Ex: (999) 555-1212 or 999-555-1212",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61411a9817243",
+            "label": "Location (optional)",
+            "name": "witlandingpages_phone_2_location",
+            "type": "text",
+            "instructions": "Use if client has multiple phone numbers.\r\nEx: Denver",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_615216be1b1df",
+            "label": "Request Service Button",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_615217522a168",
             "label": "Request Service Link",
             "name": "witlandingpages_request_url",
@@ -853,13 +853,13 @@
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "options_page",
                 "operator": "==",
-                "value": "landing-page-template.php"
+                "value": "acf-options"
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 1,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -867,5 +867,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632776225
+    "modified": 1632936645
 }

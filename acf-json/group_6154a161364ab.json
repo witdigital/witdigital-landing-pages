@@ -1,0 +1,41 @@
+{
+    "key": "group_6154a161364ab",
+    "title": "About This Page",
+    "fields": [
+        {
+            "key": "field_6154a16f164e8",
+            "label": "Please Read:",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "The following fields set the details for the following buttons on the Wit Landing Pages:\r\nPhone button when client has one phone number\r\nPhone button when client has two phone numbers\r\nRequest Service button",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1632936421
+}
