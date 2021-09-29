@@ -307,3 +307,141 @@ add_shortcode('witlandingpages_one_phone', 'witlandingpages_one_phone'); ?>
 };
 add_shortcode('witlandingpages_two_phones', 'witlandingpages_two_phones'); ?>
 
+<?php
+/* ==========================================================================
+   REQUEST SERVICE
+   ========================================================================== */
+
+
+   function witlandingpages_schedule_btn( $atts ) {
+    ob_start(); //start buffer to output after the_content()
+
+    extract(shortcode_atts(array(
+        'class' => '',
+      ), $atts));
+
+    // declare phone button variables:
+
+    $wlp_req_btn_url = (get_field('witlandingpages_request_url')) ? get_field('witlandingpages_request_url') : '' ;
+    $wlp_req_btn_display = (get_field('witlandingpages_request_display')) ? get_field('witlandingpages_request_display') : '' ;
+    $wlp_req_btn_icon = '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/calendar-alt-regular.svg' ;
+    $wlp_style_req_btn = 'background: url(' . $wlp_req_btn_icon . ') center / cover;';
+
+       // Style Variables:
+       if( have_rows('witlandingpages_request_styling', 'option') ) :
+        while( have_rows('witlandingpages_request_styling', 'option') ): the_row();
+    
+        $wlp_req_background = (get_sub_field('witlandingpages_req_background_color')) ? get_sub_field('witlandingpages_req_background_color') : 'white' ;
+        $wlp_req_background_hvr = (get_sub_field('witlandingpages_req_background_color_hover')) ? get_sub_field('witlandingpages_req_background_color_hover') : '' ;
+        $wlp_req_border_radius = (get_sub_field('witlandingpages_req_border_radius')) ? get_sub_field('witlandingpages_req_border_radius') : '1' ;
+        $wlp_req_body_color = (get_sub_field('witlandingpages_req_body_color')) ? get_sub_field('witlandingpages_req_body_color') : 'black' ;
+        $wlp_req_body_color_hover = (get_sub_field('witlandingpages_req_body_color_hover')) ? get_sub_field('witlandingpages_req_body_color_hover') : '' ;
+        $wlp_req_default_filter = (get_sub_field('witlandingpages_req_default_icon_filter')) ? get_sub_field('witlandingpages_req_default_icon_filter') : '' ;
+        $wlp_req_default_filter_hvr = (get_sub_field('witlandingpages_req_default_filter_hover')) ? get_sub_field('witlandingpages_req_default_filter_hover') : '' ;
+        $wlp_req_if_custom = (get_sub_field('witlandingpages_req_custom_icon')) == '1' ? 'customReq' : 'defaultReq' ;
+        $wlp_req_png_svg = (get_sub_field('witlandingpages_req_png_svg')) == 'PNG' ? 'pngReq' : 'svgReq' ;
+        $wlp_req_png_icon = (get_sub_field('witlandingpages_req_png')) ? get_sub_field('witlandingpages_req_png')['url'] : '' ;
+        $wlp_req_png_icon_hvr = (get_sub_field('witlandingpages_req_png_hover')) ? get_sub_field('witlandingpages_req_png_hover')['url'] : '' ;
+        $wlp_req_svg_icon = (get_sub_field('witlandingpages_req_svg')) ? get_sub_field('witlandingpages_req_svg')['url'] : '' ;
+        $wlp_req_svg_filter = (get_sub_field('witlandingpages_req_custom_icon_filter')) ? get_sub_field('witlandingpages_req_custom_icon_filter') : '' ;
+        $wlp_req_svg_filter_hvr = (get_sub_field('witlandingpages_req_custom_icon_filter_hover')) ? get_sub_field('witlandingpages_req_custom_icon_filter_hover') : '' ;
+    
+        endwhile;
+     endif; 
+
+     // <style> variables:
+        $wlp_styles_req_bkgnd = "background-color: " . $wlp_req_background . ";";
+        $wlp_styles_req_bkgnd_hvr = "background-color: " . $wlp_req_background_hvr . ";";
+        $wlp_styles_req_rad = "border-radius: " . $wlp_req_border_radius . "rem;";
+        $wlp_styles_req_body_color = "color: " . $wlp_req_body_color . ";";
+        $wlp_styles_rbc_hover = "color: " . $wlp_req_body_color_hover . ";";
+        $wlp_styles_req_std_filter = "filter: " . $wlp_req_default_filter; // DO NOT include extra semi-colon here. Field value brings it over.
+        $wlp_styles_req_std_hvr = "filter: " . $wlp_req_default_filter_hvr; // DO NOT include extra semi-colon here. Field value brings it over.
+        $wlp_styles_req_png = 'background: url(' . $wlp_req_png_icon . ') center / cover;';
+        $wlp_styles_req_png_hvr = 'background: url(' . $wlp_req_png_icon_hvr . ') center / cover;';
+        $wlp_styles_req_svg = 'background: url(' . $wlp_req_svg_icon . ') center / cover;';
+        $wlp_styles_req_custom_filter = "filter: " . $wlp_req_svg_filter; // DO NOT include extra semi-colon here. Field value brings it over.
+        $wlp_styles_req_custom_hvr = "filter: " . $wlp_req_svg_filter_hvr; // DO NOT include extra semi-colon here. Field value brings it over.
+
+        ?>
+
+        <style>
+        .reqBtn {
+            <?php echo $wlp_styles_req_bkgnd ?>
+            <?php echo $wlp_styles_req_rad ?>
+        }
+        /* default calendar icon */
+        .reqBtn:before {
+            content: "";
+            <?php echo $wlp_style_req_btn ?>
+            position: absolute;
+            transform: translateY(59%);
+            left: 94px;
+            width: 17px;
+            height: 17px;
+            <?php echo $wlp_styles_req_std_filter ?>
+        }
+        .reqBtn:before {
+            <?php $wlp_styles_req_std_hvr ?>
+        }
+        /* custom calendar PNG */
+        .pngReq.reqBtn:before {
+            <?php echo $wlp_styles_req_png ?>
+            filter: unset;
+        }
+        .pngReq.reqBtn:hover:before {
+            <?php echo $wlp_styles_req_png_hvr ?>
+            filter: unset;
+        }
+        /* custom calendar SVG */
+        .svgReq.reqBtn:before {
+            <?php echo $wlp_styles_req_svg ?>
+            <?php echo $wlp_styles_req_custom_filter ?>
+        }
+        .svgReq.reqBtn:hover:before {
+            <?php echo $wlp_styles_req_svg_hvr ?>
+            <?php echo $wlp_styles_req_custom_hvr ?>
+        }
+
+        .reqBtn:hover {
+            <?php echo $wlp_styles_req_bkgnd_hvr ?>
+        }
+
+        .reqBtnBody {
+            margin-left: 1.5rem;
+            <?php echo $wlp_styles_req_body_color ?>
+        }
+        .reqBtnBody:hover {
+            <?php echo $wlp_styles_rbc_hover ?>
+        }
+        @media all and (min-width: 1024px) {
+            .reqBtn:before {
+                left: 14px;
+            }
+        }
+        </style>
+
+        <div class="requestButton">
+                <!-- for custom icon: -->
+                <?php if($wlp_req_if_custom == 'customReq'): ?>
+                    <a class="px-6 py-2 text-base font-bold uppercase bg-white rounded-md laptop:px-8 reqBtn btn customReq" href="<?php echo $wlp_req_btn_url ?>">
+
+
+                <?php else: ?>
+                <!-- for default icon: -->
+
+                <a class="px-6 py-2 text-base font-bold uppercase bg-white rounded-md laptop:px-8 reqBtn btn defaultReq" href="<?php echo $wlp_req_btn_url ?>">
+
+                <?php endif; ?>
+                
+                <!-- this stays the same, regardless of above logic: -->
+                    <span class="reqBtnBody"><?php echo $wlp_req_btn_display ?></span>
+                </a>
+            
+        </div>
+
+        <?php return ob_get_clean(); // stop buffer
+        
+};
+add_shortcode('witlandingpages_schedule_btn', 'witlandingpages_schedule_btn'); ?>
+
