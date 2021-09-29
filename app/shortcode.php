@@ -312,7 +312,6 @@ add_shortcode('witlandingpages_two_phones', 'witlandingpages_two_phones'); ?>
    REQUEST SERVICE
    ========================================================================== */
 
-
    function witlandingpages_schedule_btn( $atts ) {
     ob_start(); //start buffer to output after the_content()
 
