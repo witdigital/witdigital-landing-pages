@@ -167,6 +167,7 @@ add_shortcode('witlandingpages_one_phone', 'witlandingpages_one_phone'); ?>
         $wlp_phone_background = (get_sub_field('witlandingpages_phone_background_color')) ? get_sub_field('witlandingpages_phone_background_color') : 'white' ;
         $wlp_phone_background_hvr = (get_sub_field('witlandingpages_phone_background_color_hover')) ? get_sub_field('witlandingpages_phone_background_color_hover') : '' ;
         $wlp_phone_border_radius = (get_sub_field('witlandingpages_phone_border_radius')) ? get_sub_field('witlandingpages_phone_border_radius') : '1' ;
+        $wlp_phone_location_color = (get_sub_field('witlandingpages_phone_location_color')) ? get_sub_field('witlandingpages_phone_location_color') : 'black' ;
         $wlp_phone_body_color = (get_sub_field('witlandingpages_phone_body_color')) ? get_sub_field('witlandingpages_phone_body_color') : 'black' ;
         $wlp_phone_body_color_hover = (get_sub_field('witlandingpages_phone_body_color_hover')) ? get_sub_field('witlandingpages_phone_body_color_hover') : '' ;
         $wlp_phone_default_filter = (get_sub_field('witlandingpages_phone_default_icon_filter')) ? get_sub_field('witlandingpages_phone_default_icon_filter') : '' ;
@@ -186,6 +187,7 @@ add_shortcode('witlandingpages_one_phone', 'witlandingpages_one_phone'); ?>
         $wlp_styles_phone_bkgnd = "background-color: " . $wlp_phone_background . ";";
         $wlp_styles_phone_bkgnd_hvr = "background-color: " . $wlp_phone_background_hvr . ";";
         $wlp_styles_phone_rad = "border-radius: " . $wlp_phone_border_radius . "rem;";
+        $wlp_styles_phone_location_color = "color: " . $wlp_phone_location_color . ";";
         $wlp_styles_phone_body_color = "color: " . $wlp_phone_body_color . ";";
         $wlp_styles_pbc_hover = "color: " . $wlp_phone_body_color_hover . ";";
         $wlp_styles_phone_std_filter = "filter: " . $wlp_phone_default_filter; // DO NOT include extra semi-colon here. Field value brings it over.
@@ -199,44 +201,47 @@ add_shortcode('witlandingpages_one_phone', 'witlandingpages_one_phone'); ?>
         ?>
 
         <style>
-        .phoneBtn {
+        .phoneBtnItemLocation {
+            <?php echo $wlp_styles_phone_location_color ?>
+        }
+        .phoneBtnTwo {
             <?php echo $wlp_styles_phone_bkgnd ?>
             <?php echo $wlp_styles_phone_rad ?>
         }
         /* default phone icon */
-        .phoneBtn:before {
+        .phoneBtnTwo:before {
             content: "";
             <?php echo $wlp_style_call_btn ?>
             position: absolute;
             transform: translateY(65%);
-            left: 36px;
+            left: 18px;
             width: 17px;
             height: 17px;
             <?php echo $wlp_styles_phone_std_filter ?>
         }
-        .phoneBtn:before {
+        .phoneBtnTwo:before {
             <?php $wlp_styles_phone_std_hvr ?>
         }
         /* custom phone PNG */
-        .pngPhone.phoneBtn:before {
+        .pngPhone.phoneBtnTwo:before {
             <?php echo $wlp_styles_phone_png ?>
             filter: unset;
         }
-        .pngPhone.phoneBtn:hover:before {
+        .pngPhone.phoneBtnTwo:hover:before {
             <?php echo $wlp_styles_phone_png_hvr ?>
             filter: unset;
         }
         /* custom phone SVG */
-        .svgPhone.phoneBtn:before {
+        .svgPhone.phoneBtnTwo:before {
             <?php echo $wlp_styles_phone_svg ?>
             <?php echo $wlp_styles_phone_custom_filter ?>
         }
-        .svgPhone.phoneBtn:hover:before {
+        .svgPhone.phoneBtnTwo:hover:before {
             <?php echo $wlp_styles_phone_svg_hvr ?>
             <?php echo $wlp_styles_phone_custom_hvr ?>
         }
 
-        .phoneBtn:hover {
+        .phoneBtnTwo:hover {
             <?php echo $wlp_styles_phone_bkgnd_hvr ?>
         }
 
@@ -247,6 +252,11 @@ add_shortcode('witlandingpages_one_phone', 'witlandingpages_one_phone'); ?>
         .phoneBtnBody:hover {
             <?php echo $wlp_styles_pbc_hover ?>
         }
+        @media all and (min-width: 1024px) {
+            .phoneBtnTwo:before {
+                left: 36px;
+            }
+        }
         </style>
 
         <div class="flex items-center justify-between mx-auto my-0 phoneBtns flex-nowrap max-w-450">
@@ -256,12 +266,12 @@ add_shortcode('witlandingpages_one_phone', 'witlandingpages_one_phone'); ?>
                 <!-- for custom icon: -->
                 <?php if($wlp_phone_if_custom == 'customPhone'): ?>
 
-                    <a href="tel:<?php echo $wlp_phone_1_href ?>" class="px-8 py-2 text-base font-bold phoneBtn btn customPhone <?php echo $wlp_phone_png_svg ?> ">
+                    <a href="tel:<?php echo $wlp_phone_1_href ?>" class="px-4 laptop:px-8 py-2 text-base font-bold phoneBtnTwo btn customPhone <?php echo $wlp_phone_png_svg ?> ">
 
                 <?php else: ?>
                     <!-- for default icon: -->
 
-                    <a href="tel:<?php echo $wlp_phone_1_href ?>" class="px-8 py-2 text-base font-bold phoneBtn btn defaultPhone">
+                    <a href="tel:<?php echo $wlp_phone_1_href ?>" class="px-4 py-2 text-base font-bold laptop:px-8 phoneBtnTwo btn defaultPhone">
 
                 <?php endif; ?>
                 
@@ -276,12 +286,12 @@ add_shortcode('witlandingpages_one_phone', 'witlandingpages_one_phone'); ?>
                 <!-- for custom icon: -->
                 <?php if($wlp_phone_if_custom == 'customPhone'): ?>
 
-                    <a href="tel:<?php echo $wlp_phone_2_href ?>" class="px-8 py-2 text-base font-bold phoneBtn btn customPhone <?php echo $wlp_phone_png_svg ?> ">
+                    <a href="tel:<?php echo $wlp_phone_2_href ?>" class="px-4 laptop:px-8 py-2 text-base font-bold phoneBtnTwo btn customPhone <?php echo $wlp_phone_png_svg ?> ">
 
                 <?php else: ?>
                     <!-- for default icon: -->
 
-                    <a href="tel:<?php echo $wlp_phone_2_href ?>" class="px-8 py-2 text-base font-bold phoneBtn btn defaultPhone">
+                    <a href="tel:<?php echo $wlp_phone_2_href ?>" class="px-4 py-2 text-base font-bold laptop:px-8 phoneBtnTwo btn defaultPhone">
 
                 <?php endif; ?>
                 
