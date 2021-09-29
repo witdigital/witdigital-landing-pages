@@ -35,6 +35,23 @@
                     "return_format": "string"
                 },
                 {
+                    "key": "field_6154b804a7e96",
+                    "label": "Background Color (Hover)",
+                    "name": "witlandingpages_phone_background_color_hover",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 1,
+                    "return_format": "string"
+                },
+                {
                     "key": "field_6154a29ff2da5",
                     "label": "Border Radius",
                     "name": "witlandingpages_phone_border_radius",
@@ -129,6 +146,33 @@
                     "key": "field_6154a29ff2daa",
                     "label": "Icon Filter",
                     "name": "witlandingpages_phone_default_icon_filter",
+                    "type": "text",
+                    "instructions": "Generate filter <a href=\"https:\/\/codepen.io\/sosuke\/pen\/Pjoqqp\" target=\"_blank\">here<\/a>. \r\n<br>\r\n<strong>IMPORTANT:<\/strong> do not include 'filter:', just what comes after it (including the semi-colon). \r\n<br>\r\nEx: invert(42%) sepia(94%) saturate(738%) hue-rotate(156deg) brightness(98%) contrast(101%);\r\n<br>\r\nPlease reach out to Dev if you are unsure about how to use this tool.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6154a29ff2da9",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6154b82ea7e97",
+                    "label": "Icon Filter (Hover)",
+                    "name": "witlandingpages_phone_default_filter_hover",
                     "type": "text",
                     "instructions": "Generate filter <a href=\"https:\/\/codepen.io\/sosuke\/pen\/Pjoqqp\" target=\"_blank\">here<\/a>. \r\n<br>\r\n<strong>IMPORTANT:<\/strong> do not include 'filter:', just what comes after it (including the semi-colon). \r\n<br>\r\nEx: invert(42%) sepia(94%) saturate(738%) hue-rotate(156deg) brightness(98%) contrast(101%);\r\n<br>\r\nPlease reach out to Dev if you are unsure about how to use this tool.",
                     "required": 0,
@@ -369,6 +413,23 @@
                     "return_format": "string"
                 },
                 {
+                    "key": "field_6154b85ba7e98",
+                    "label": "Background Color (Hover)",
+                    "name": "witlandingpages_req_background_color_hover",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 1,
+                    "return_format": "string"
+                },
+                {
                     "key": "field_61522ef898107",
                     "label": "Border Radius",
                     "name": "witlandingpages_req_border_radius",
@@ -446,6 +507,33 @@
                     "key": "field_61522ef89810c",
                     "label": "Icon Filter",
                     "name": "witlandingpages_req_default_icon_filter",
+                    "type": "text",
+                    "instructions": "Generate filter <a href=\"https:\/\/codepen.io\/sosuke\/pen\/Pjoqqp\" target=\"_blank\">here<\/a>. \r\n<br>\r\n<strong>IMPORTANT:<\/strong> do not include 'filter:', just what comes after it (including the semi-colon). \r\n<br>\r\nEx: invert(42%) sepia(94%) saturate(738%) hue-rotate(156deg) brightness(98%) contrast(101%);\r\n<br>\r\nPlease reach out to Dev if you are unsure about how to use this tool.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_61522ef89810b",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6154b869a7e99",
+                    "label": "Icon Filter (Hover)",
+                    "name": "witlandingpages_req_default_filter_hover",
                     "type": "text",
                     "instructions": "Generate filter <a href=\"https:\/\/codepen.io\/sosuke\/pen\/Pjoqqp\" target=\"_blank\">here<\/a>. \r\n<br>\r\n<strong>IMPORTANT:<\/strong> do not include 'filter:', just what comes after it (including the semi-colon). \r\n<br>\r\nEx: invert(42%) sepia(94%) saturate(738%) hue-rotate(156deg) brightness(98%) contrast(101%);\r\n<br>\r\nPlease reach out to Dev if you are unsure about how to use this tool.",
                     "required": 0,
@@ -867,5 +955,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632937935
+    "modified": 1632942205
 }
