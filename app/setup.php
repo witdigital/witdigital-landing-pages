@@ -25,6 +25,16 @@ function custom_style_adding_function() {
 	);
 }
 
+// set up Options Page:
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' => 'Wit Landing Page Global Settings',
+		'menu_title' => 'Landing Pages',
+	));
+	
+}
+
 
 /* ==========================================================================
    Enqueue scripts and styles only for specific page template(s)
