@@ -70,7 +70,7 @@
                     "append": "rem",
                     "min": "",
                     "max": "",
-                    "step": 1
+                    "step": ""
                 },
                 {
                     "key": "field_6154a29ff2da6",
@@ -955,5 +955,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632942489
+    "modified": 1632953018
 }
