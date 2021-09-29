@@ -42,7 +42,7 @@
             "label": "Buttons Shortcode",
             "name": "witlandingpages_panels_shortcode",
             "type": "text",
-            "instructions": "Input shortcode here, be sure to include the brackets.\r\n<br>\r\n<strong>Single Phone Number:<\/strong> <em>[witlandingpages_phone_button]<\/em>\r\n<br>\r\n<strong>Two Phone Numbers:<\/strong> <em>[witlandingpages_twophones_button]<\/em>\r\n<br>\r\n<strong>Request Service:<\/strong> <em>[witlandingpages_request_button]<\/em>",
+            "instructions": "Input shortcode here, be sure to include the brackets.\r\n<br>\r\n<strong>Single Phone Number:<\/strong> <em>[witlandingpages_one_phone]<\/em>\r\n<br>\r\n<strong>Two Phone Numbers:<\/strong> <em>[witlandingpages_two_phones]<\/em>\r\n<br>\r\n<strong>Request Service:<\/strong> <em>[witlandingpages_schedule_btn]<\/em>",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -330,7 +330,7 @@
             }
         ]
     ],
-    "menu_order": 6,
+    "menu_order": 5,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -338,5 +338,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Formerly 'Guarantees'",
-    "modified": 1632771483
+    "modified": 1632957301
 }

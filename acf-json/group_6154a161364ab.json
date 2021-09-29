@@ -15,7 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "message": "The following fields set the details for the following buttons on the Wit Landing Pages:\r\nPhone button when client has one phone number\r\nPhone button when client has two phone numbers\r\nRequest Service button",
+            "message": "These fields set the details for the following buttons on the Wit Landing Pages:\r\n<br>\r\n<ol>\r\n<li>Phone button when client has one phone number<\/li>\r\n<li>Phone button when client has two phone numbers<\/li>\r\n<li>Request Service button<\/li>\r\n<\/ol>\r\n<br>\r\nThe corresponding shortcodes are:\r\n<br>\r\n<ol>\r\n<li>[witlandingpages_one_phone]<\/li>\r\n<li>[witlandingpages_two_phones]<\/li>\r\n<li>[witlandingpages_schedule_btn]<\/li>\r\n<\/ol>\r\n<br>\r\nPlease reach out to Dev if you have any questions.",
             "new_lines": "wpautop",
             "esc_html": 0
         }
@@ -37,5 +37,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632937920
+    "modified": 1632957075
 }
