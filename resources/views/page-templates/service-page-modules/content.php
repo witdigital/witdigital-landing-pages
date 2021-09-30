@@ -216,7 +216,7 @@ foreach ($parentFields as $field) {
             ?>
         </div>
         
-        <div class="flex-1 order-1 px-0 py-2 mt-5 servicesContentRight laptop:-right-8 max-w-400 laptop:pl-6 laptop:pb-10 laptop:order-none laptop:mt-auto">
+        <div class="flex-1 order-1 w-full px-0 py-2 mt-5 servicesContentRight laptop:-right-8 max-w-400 laptop:pl-6 laptop:pb-10 laptop:order-none laptop:mt-auto">
             <div class="mb-4 servicesContentRightInner sidebar">
 
             <?php if($wlp_show_coupon == '1'): ?>
