@@ -7,7 +7,7 @@
             "label": "Phone Button Styling (Optional)",
             "name": "witlandingpages_phone_styling",
             "type": "group",
-            "instructions": "This styling applies to all the phone buttons on this page. Defaults will be applied wherever choices are not made.",
+            "instructions": "This styling applies to all the phone buttons on this page.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -385,7 +385,7 @@
             "label": "Request Button Styling (Optional)",
             "name": "witlandingpages_request_styling",
             "type": "group",
-            "instructions": "This styling applies to all the Request Service buttons on this page. Defaults will be applied wherever choices are not made.",
+            "instructions": "This styling applies to all the Request Service buttons on this page.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -955,5 +955,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632953018
+    "modified": 1633548450
 }
