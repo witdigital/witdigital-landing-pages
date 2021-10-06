@@ -17,8 +17,8 @@ function witlandingpages_one_phone( $atts ) {
 
     // declare phone button variables:
 
-    $wlp_phone_1_href = (get_field('witlandingpages_phone_link')) ? get_field('witlandingpages_phone_link') : '' ;
-    $wlp_phone_1_display = (get_field('witlandingpages_phone_format')) ? get_field('witlandingpages_phone_format') : '' ;
+    $wlp_phone_1_href = (get_field('witlandingpages_phone_link', 'option')) ? get_field('witlandingpages_phone_link', 'option') : '' ;
+    $wlp_phone_1_display = (get_field('witlandingpages_phone_format', 'option')) ? get_field('witlandingpages_phone_format', 'option') : '' ;
     $wlp_call_button_icon = '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/phone-alt-solid.svg' ;
     $wlp_style_call_btn = 'background: url(' . $wlp_call_button_icon . ') center / cover;';
 
@@ -152,12 +152,12 @@ add_shortcode('witlandingpages_one_phone', 'witlandingpages_one_phone'); ?>
 
     // declare phone button variables:
 
-    $wlp_phone_1_href = (get_field('witlandingpages_phone_link')) ? get_field('witlandingpages_phone_link') : '' ;
-    $wlp_phone_2_href = (get_field('witlandingpages_phone_2_link')) ? get_field('witlandingpages_phone_2_link') : '' ;
-    $wlp_phone_1_display = (get_field('witlandingpages_phone_format')) ? get_field('witlandingpages_phone_format') : '' ;
-    $wlp_phone_2_display = (get_field('witlandingpages_phone_2_format')) ? get_field('witlandingpages_phone_2_format') : '' ;
-    $wlp_phone_1_location = (get_field('witlandingpages_phone_location')) ? get_field('witlandingpages_phone_location') : '' ;
-    $wlp_phone_2_location = (get_field('witlandingpages_phone_2_location')) ? get_field('witlandingpages_phone_2_location') : '' ;
+    $wlp_phone_1_href = (get_field('witlandingpages_phone_link', 'option')) ? get_field('witlandingpages_phone_link', 'option') : '' ;
+    $wlp_phone_2_href = (get_field('witlandingpages_phone_2_link', 'option')) ? get_field('witlandingpages_phone_2_link', 'option') : '' ;
+    $wlp_phone_1_display = (get_field('witlandingpages_phone_format', 'option')) ? get_field('witlandingpages_phone_format', 'option') : '' ;
+    $wlp_phone_2_display = (get_field('witlandingpages_phone_2_format', 'option')) ? get_field('witlandingpages_phone_2_format', 'option') : '' ;
+    $wlp_phone_1_location = (get_field('witlandingpages_phone_location', 'option')) ? get_field('witlandingpages_phone_location', 'option') : '' ;
+    $wlp_phone_2_location = (get_field('witlandingpages_phone_2_location', 'option')) ? get_field('witlandingpages_phone_2_location', 'option') : '' ;
     $wlp_call_button_icon = '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/phone-alt-solid.svg' ;
     $wlp_style_call_btn = 'background: url(' . $wlp_call_button_icon . ') center / cover;';
 
@@ -321,8 +321,8 @@ add_shortcode('witlandingpages_two_phones', 'witlandingpages_two_phones'); ?>
 
     // declare phone button variables:
 
-    $wlp_req_btn_url = (get_field('witlandingpages_request_url')) ? get_field('witlandingpages_request_url') : '' ;
-    $wlp_req_btn_display = (get_field('witlandingpages_request_display')) ? get_field('witlandingpages_request_display') : '' ;
+    $wlp_req_btn_url = (get_field('witlandingpages_request_url', 'option')) ? get_field('witlandingpages_request_url', 'option') : '' ;
+    $wlp_req_btn_display = (get_field('witlandingpages_request_display', 'option')) ? get_field('witlandingpages_request_display', 'option') : '' ;
     $wlp_req_btn_icon = '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/calendar-alt-regular.svg' ;
     $wlp_style_req_btn = 'background: url(' . $wlp_req_btn_icon . ') center / cover;';
 
