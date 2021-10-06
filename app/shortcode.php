@@ -66,35 +66,35 @@ function witlandingpages_one_phone( $atts ) {
             <?php echo $wlp_styles_phone_rad ?>
         }
         /* default phone icon */
-        .phoneBtn:before {
+        .phoneBtnBody:before {
             content: "";
             <?php echo $wlp_style_call_btn ?>
             position: absolute;
-            transform: translateY(65%);
             left: 94px;
             width: 17px;
             height: 17px;
             <?php echo $wlp_styles_phone_std_filter ?>
         }
-        .phoneBtn:before {
-            <?php $wlp_styles_phone_std_hvr ?>
+        .phoneBtnBody:hover:before {
+            <?php echo $wlp_styles_phone_std_hvr ?>
         }
+
         /* custom phone PNG */
-        .pngPhone.phoneBtn:before {
-            <?php echo $wlp_styles_phone_png ?>
+        .pngPhone .phoneBtnBody:before {
             filter: unset;
+            <?php echo $wlp_styles_phone_png ?> 
         }
-        .pngPhone.phoneBtn:hover:before {
+        .pngPhone .phoneBtnBody:hover:before {
+            filter: unset;
             <?php echo $wlp_styles_phone_png_hvr ?>
-            filter: unset;
         }
+        
         /* custom phone SVG */
-        .svgPhone.phoneBtn:before {
+        .svgPhone .phoneBtnBody:before {
             <?php echo $wlp_styles_phone_svg ?>
             <?php echo $wlp_styles_phone_custom_filter ?>
         }
-        .svgPhone.phoneBtn:hover:before {
-            <?php echo $wlp_styles_phone_svg_hvr ?>
+        .svgPhone .phoneBtnBody:hover:before {
             <?php echo $wlp_styles_phone_custom_hvr ?>
         }
 
@@ -109,6 +109,7 @@ function witlandingpages_one_phone( $atts ) {
         .phoneBtnBody:hover {
             <?php echo $wlp_styles_pbc_hover ?>
         }
+
         </style>
 
         <div class="flex items-center justify-center mx-auto my-0 phoneBtns flex-nowrap max-w-340">
@@ -126,7 +127,7 @@ function witlandingpages_one_phone( $atts ) {
                 <?php endif; ?>
                 
                 <!-- this stays the same, regardless of above logic: -->
-                    <span class="phoneBtnBody"><?php echo $wlp_phone_1_display ?></span>
+                    <span class="inline-flex items-center phoneBtnBody"><?php echo $wlp_phone_1_display ?></span>
                 </a>
             </div>
 
@@ -213,7 +214,6 @@ add_shortcode('witlandingpages_one_phone', 'witlandingpages_one_phone'); ?>
             content: "";
             <?php echo $wlp_style_call_btn ?>
             position: absolute;
-            transform: translateY(65%);
             left: 18px;
             width: 17px;
             height: 17px;
@@ -276,7 +276,7 @@ add_shortcode('witlandingpages_one_phone', 'witlandingpages_one_phone'); ?>
                 <?php endif; ?>
                 
                 <!-- this stays the same, regardless of above logic: -->
-                    <span class="phoneBtnBody"><?php echo $wlp_phone_1_display ?></span>
+                    <span class="inline-flex items-center phoneBtnBody"><?php echo $wlp_phone_1_display ?></span>
                 </a>
             </div> <!-- end First Phone Number -->
 
