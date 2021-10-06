@@ -210,7 +210,7 @@ add_shortcode('witlandingpages_one_phone', 'witlandingpages_one_phone'); ?>
             <?php echo $wlp_styles_phone_rad ?>
         }
         /* default phone icon */
-        .phoneBtnTwo:before {
+        .phoneBtnTwo .phoneBtnBody:before {
             content: "";
             <?php echo $wlp_style_call_btn ?>
             position: absolute;
@@ -219,24 +219,24 @@ add_shortcode('witlandingpages_one_phone', 'witlandingpages_one_phone'); ?>
             height: 17px;
             <?php echo $wlp_styles_phone_std_filter ?>
         }
-        .phoneBtnTwo:before {
+        .phoneBtnTwo .phoneBtnBody:before {
             <?php $wlp_styles_phone_std_hvr ?>
         }
         /* custom phone PNG */
-        .pngPhone.phoneBtnTwo:before {
+        .pngPhone.phoneBtnTwo .phoneBtnBody:before {
             <?php echo $wlp_styles_phone_png ?>
             filter: unset;
         }
-        .pngPhone.phoneBtnTwo:hover:before {
+        .pngPhone.phoneBtnTwo .phoneBtnBody:hover:before {
             <?php echo $wlp_styles_phone_png_hvr ?>
             filter: unset;
         }
         /* custom phone SVG */
-        .svgPhone.phoneBtnTwo:before {
+        .svgPhone.phoneBtnTwo .phoneBtnBody:before {
             <?php echo $wlp_styles_phone_svg ?>
             <?php echo $wlp_styles_phone_custom_filter ?>
         }
-        .svgPhone.phoneBtnTwo:hover:before {
+        .svgPhone.phoneBtnTwo .phoneBtnBody:hover:before {
             <?php echo $wlp_styles_phone_svg_hvr ?>
             <?php echo $wlp_styles_phone_custom_hvr ?>
         }
@@ -253,7 +253,7 @@ add_shortcode('witlandingpages_one_phone', 'witlandingpages_one_phone'); ?>
             <?php echo $wlp_styles_pbc_hover ?>
         }
         @media all and (min-width: 1024px) {
-            .phoneBtnTwo:before {
+            .phoneBtnTwo .phoneBtnBody:before {
                 left: 36px;
             }
         }
