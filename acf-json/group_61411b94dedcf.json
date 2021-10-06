@@ -122,7 +122,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -131,6 +131,23 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_615e20dc00ff8",
+            "label": "Title Color (optional)",
+            "name": "witlandingpages_intro_title_color",
+            "type": "color_picker",
+            "instructions": "Will default to theme color for h2 if nothing selected.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
         },
         {
             "key": "field_61411d06fce2c",
@@ -188,5 +205,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632770835
+    "modified": 1633558973
 }
