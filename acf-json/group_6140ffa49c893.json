@@ -118,7 +118,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -127,6 +127,23 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_615e1f9a1df08",
+            "label": "Title Color (optional)",
+            "name": "witlandingpages_hero_title_color",
+            "type": "color_picker",
+            "instructions": "Will default to theme color for the site's hero if nothing selected.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
         },
         {
             "key": "field_6141006b15753",
@@ -262,5 +279,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632957236
+    "modified": 1633558494
 }
