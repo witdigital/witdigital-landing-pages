@@ -296,7 +296,7 @@ add_shortcode('witlandingpages_one_phone', 'witlandingpages_one_phone'); ?>
                 <?php endif; ?>
                 
                 <!-- this stays the same, regardless of above logic: -->
-                    <span class="phoneBtnBody"><?php echo $wlp_phone_2_display ?></span>
+                    <span class="inline-flex items-center phoneBtnBody"><?php echo $wlp_phone_2_display ?></span>
                 </a>
             </div> <!-- end Second Phone Number -->
 
@@ -370,34 +370,33 @@ add_shortcode('witlandingpages_two_phones', 'witlandingpages_two_phones'); ?>
             <?php echo $wlp_styles_req_rad ?>
         }
         /* default calendar icon */
-        .reqBtn:before {
+        .reqBtnBody:before {
             content: "";
             <?php echo $wlp_style_req_btn ?>
             position: absolute;
-            transform: translateY(59%);
             left: 94px;
             width: 17px;
             height: 17px;
             <?php echo $wlp_styles_req_std_filter ?>
         }
-        .reqBtn:before {
+        .reqBtnBody:before {
             <?php $wlp_styles_req_std_hvr ?>
         }
         /* custom calendar PNG */
-        .pngReq.reqBtn:before {
+        .pngReq .reqBtnBody:before {
             <?php echo $wlp_styles_req_png ?>
             filter: unset;
         }
-        .pngReq.reqBtn:hover:before {
+        .pngReq .reqBtnBody:hover:before {
             <?php echo $wlp_styles_req_png_hvr ?>
             filter: unset;
         }
         /* custom calendar SVG */
-        .svgReq.reqBtn:before {
+        .svgReq .reqBtnBody:before {
             <?php echo $wlp_styles_req_svg ?>
             <?php echo $wlp_styles_req_custom_filter ?>
         }
-        .svgReq.reqBtn:hover:before {
+        .svgReq .reqBtnBody:hover:before {
             <?php echo $wlp_styles_req_svg_hvr ?>
             <?php echo $wlp_styles_req_custom_hvr ?>
         }
@@ -414,8 +413,8 @@ add_shortcode('witlandingpages_two_phones', 'witlandingpages_two_phones'); ?>
             <?php echo $wlp_styles_rbc_hover ?>
         }
         @media all and (min-width: 1024px) {
-            .reqBtn:before {
-                left: 14px;
+            .reqBtnBody:before {
+                left: 9.75rem;
             }
         }
         </style>
@@ -423,7 +422,7 @@ add_shortcode('witlandingpages_two_phones', 'witlandingpages_two_phones'); ?>
         <div class="requestButton">
                 <!-- for custom icon: -->
                 <?php if($wlp_req_if_custom == 'customReq'): ?>
-                    <a class="px-6 py-2 text-base font-bold uppercase bg-white rounded-md laptop:px-8 reqBtn btn customReq" href="<?php echo $wlp_req_btn_url ?>">
+                    <a class="px-6 py-2 text-base font-bold uppercase bg-white rounded-md laptop:px-8 reqBtn btn customReq <?php echo $wlp_req_png_svg ?>" href="<?php echo $wlp_req_btn_url ?>">
 
 
                 <?php else: ?>
@@ -434,7 +433,7 @@ add_shortcode('witlandingpages_two_phones', 'witlandingpages_two_phones'); ?>
                 <?php endif; ?>
                 
                 <!-- this stays the same, regardless of above logic: -->
-                    <span class="reqBtnBody"><?php echo $wlp_req_btn_display ?></span>
+                    <span class="inline-flex items-center reqBtnBody"><?php echo $wlp_req_btn_display ?></span>
                 </a>
             
         </div>
