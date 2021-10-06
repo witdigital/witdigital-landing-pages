@@ -17,7 +17,7 @@ $wlp_hero_subtitle_color = (get_field('witlandingpages_hero_subtitle_color')) ? 
 $wlp_overlay_class = (get_field('witlandingpages_overlay')) == 'Color' ? 'colorOverlay' : 'gradientOverlay' ;
 $wlp_overlay_color = (get_field('witlandingpages_overlay_color')) ? get_field('witlandingpages_overlay_color') : '' ;
 $wlp_overlay_gradient = (get_field('witlandingpages_overlay_gradient')) ? get_field('witlandingpages_overlay_gradient') : '' ;
-$wlp_htc = "color: " . $wlp_hero_title_color .';';
+$wlp_htc = "color: " . $wlp_hero_title_color .'!important;';
 $wlp_hstc = "color: " . $wlp_hero_subtitle_color .';';
 $wlp_over_color = "background: " . $wlp_overlay_color . '!important;';
 $wlp_gradient = "background: " . $wlp_overlay_gradient . '!important;';
