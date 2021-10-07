@@ -502,7 +502,7 @@
             "label": "Coupon Title",
             "name": "witlandingpages_coupon_title",
             "type": "wysiwyg",
-            "instructions": "Will pull from parent if nothing is here.",
+            "instructions": "Will pull from parent if nothing is here.\r\n<br>\r\nColor can be controlled by expanding the toolbar. Color will default to theme settings for your chosen header element.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -529,7 +529,7 @@
             "label": "Coupon Subtitle",
             "name": "witlandingpages_coupon_subtitle",
             "type": "wysiwyg",
-            "instructions": "Will pull from parent if nothing is here.",
+            "instructions": "Will pull from parent if nothing is here.<br>\r\nColor can be controlled by expanding the toolbar. Color will default to theme settings for your chosen header element.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -590,15 +590,7 @@
             "type": "group",
             "instructions": "Optional. Will use default styling for options not customized here.",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_61450ca91998a",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -651,7 +643,7 @@
             "label": "Locations Title",
             "name": "witlandingpages_locations_title",
             "type": "wysiwyg",
-            "instructions": "",
+            "instructions": "Color can be controlled by expanding the toolbar. Color will default to theme settings for your chosen header element.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -664,6 +656,23 @@
             "toolbar": "full",
             "media_upload": 0,
             "delay": 0
+        },
+        {
+            "key": "field_615f281024c84",
+            "label": "Locations Color (Optional)",
+            "name": "witlandingpages_locations_list_color",
+            "type": "color_picker",
+            "instructions": "This <strong>only<\/strong> controls the color of the <strong>individually-listed locations<\/strong>. Will default to white if nothing selected.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
         },
         {
             "key": "field_614124aae8f37",
@@ -943,5 +952,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Formerly 'Content'",
-    "modified": 1633624572
+    "modified": 1633626293
 }

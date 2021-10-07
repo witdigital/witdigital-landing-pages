@@ -78,9 +78,12 @@ foreach ($parentFields as $field) {
         endwhile;
     endif;
 
+    $wlp_indiv_locations_color = (get_field('witlandingpages_locations_list_color')) ? get_field('witlandingpages_locations_list_color') : '' ;
+
     // Location Block Styling Variables:
     $wlp_styles_locations_bkgnd = "background-color: " . $wlp_locations_background . ";";
     $wlp_styles_locations_rad = "border-radius: " . $wlp_locations_border_radius . "rem;";
+    $wlp_styles_indiv_loc_color = "color: " . $wlp_indiv_locations_color . ";";
 
 
     // Map Pin Variables:
@@ -172,6 +175,9 @@ foreach ($parentFields as $field) {
         .sidebarSectionLocations {
             <?php echo $wlp_styles_locations_bkgnd ?>
             <?php echo $wlp_styles_locations_rad ?>
+        }
+        .locationItem span {
+            <?php echo $wlp_styles_indiv_loc_color ?>
         }
 
         /* Map Pin styling */
