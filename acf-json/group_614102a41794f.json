@@ -377,6 +377,25 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": "svg"
+                },
+                {
+                    "key": "field_615f4fd05c196",
+                    "label": "Additional CSS",
+                    "name": "witlandingpages_phone_btn_additional_css",
+                    "type": "textarea",
+                    "instructions": "Use this area for any additional CSS. Be sure to use proper formatting; reach out to Dev with any questions.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
                 }
             ]
         },
@@ -738,27 +757,27 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": "svg"
+                },
+                {
+                    "key": "field_615f663998e5e",
+                    "label": "Additional CSS",
+                    "name": "witlandingpages_req_btn_additional_css",
+                    "type": "textarea",
+                    "instructions": "Use this area for any additional CSS. Be sure to use proper formatting; reach out to Dev with any questions.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
                 }
             ]
-        },
-        {
-            "key": "field_615f4fd05c196",
-            "label": "Additional CSS",
-            "name": "witlandingpages_buttons_additional_css",
-            "type": "textarea",
-            "instructions": "Use this area for any additional CSS. Be sure to use proper formatting; reach out to Dev with any questions.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
         },
         {
             "key": "field_615216eac0a37",
@@ -974,5 +993,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1633636354
+    "modified": 1633642125
 }

@@ -40,6 +40,7 @@ function witlandingpages_one_phone( $atts ) {
         $wlp_phone_svg_icon = (get_sub_field('witlandingpages_phone_svg')) ? get_sub_field('witlandingpages_phone_svg')['url'] : '' ;
         $wlp_phone_svg_filter = (get_sub_field('witlandingpages_phone_custom_icon_filter')) ? get_sub_field('witlandingpages_phone_custom_icon_filter') : '' ;
         $wlp_phone_svg_filter_hvr = (get_sub_field('witlandingpages_phone_custom_icon_filter_hover')) ? get_sub_field('witlandingpages_phone_custom_icon_filter_hover') : '' ;
+        $wlp_phone_css = (get_sub_field('witlandingpages_phone_btn_additional_css')) ? get_sub_field('witlandingpages_phone_btn_additional_css') : '' ;
     
         endwhile;
      endif; 
@@ -61,6 +62,8 @@ function witlandingpages_one_phone( $atts ) {
         ?>
 
         <style>
+        <?php echo $wlp_phone_css ?>
+
         .phoneBtn {
             <?php echo $wlp_styles_phone_bkgnd ?>
             <?php echo $wlp_styles_phone_rad ?>
@@ -180,6 +183,7 @@ add_shortcode('witlandingpages_one_phone', 'witlandingpages_one_phone'); ?>
         $wlp_phone_svg_icon = (get_sub_field('witlandingpages_phone_svg')) ? get_sub_field('witlandingpages_phone_svg')['url'] : '' ;
         $wlp_phone_svg_filter = (get_sub_field('witlandingpages_phone_custom_icon_filter')) ? get_sub_field('witlandingpages_phone_custom_icon_filter') : '' ;
         $wlp_phone_svg_filter_hvr = (get_sub_field('witlandingpages_phone_custom_icon_filter_hover')) ? get_sub_field('witlandingpages_phone_custom_icon_filter_hover') : '' ;
+        $wlp_phone_css = (get_sub_field('witlandingpages_phone_btn_additional_css')) ? get_sub_field('witlandingpages_phone_btn_additional_css') : '' ;
     
         endwhile;
      endif; 
@@ -202,6 +206,8 @@ add_shortcode('witlandingpages_one_phone', 'witlandingpages_one_phone'); ?>
         ?>
 
         <style>
+        <?php echo $wlp_phone_css ?>
+
         .phoneBtnItemLocation {
             <?php echo $wlp_styles_phone_location_color ?>
         }
@@ -344,6 +350,7 @@ add_shortcode('witlandingpages_two_phones', 'witlandingpages_two_phones'); ?>
         $wlp_req_svg_icon = (get_sub_field('witlandingpages_req_svg')) ? get_sub_field('witlandingpages_req_svg')['url'] : '' ;
         $wlp_req_svg_filter = (get_sub_field('witlandingpages_req_custom_icon_filter')) ? get_sub_field('witlandingpages_req_custom_icon_filter') : '' ;
         $wlp_req_svg_filter_hvr = (get_sub_field('witlandingpages_req_custom_icon_filter_hover')) ? get_sub_field('witlandingpages_req_custom_icon_filter_hover') : '' ;
+        $wlp_req_css = (get_sub_field('witlandingpages_req_btn_additional_css')) ? get_sub_field('witlandingpages_req_btn_additional_css') : '' ;
     
         endwhile;
      endif; 
@@ -365,6 +372,8 @@ add_shortcode('witlandingpages_two_phones', 'witlandingpages_two_phones'); ?>
         ?>
 
         <style>
+        <?php echo $wlp_req_css ?>
+        
         .reqBtn {
             <?php echo $wlp_styles_req_bkgnd ?>
             <?php echo $wlp_styles_req_rad ?>
