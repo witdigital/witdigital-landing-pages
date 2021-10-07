@@ -36,7 +36,7 @@ $wlp_cta_gradient = "background: " . $wlp_cta_background_gradient . '!important;
             <img class="max-w-full" src="<?php echo $witlandingpages_cta_image; ?>" alt="<?php echo $services_cta_image_alt; ?>" />
         </div>
         <div class="w-full text-center servicesCTARight max-w-650 laptop:pl-1">
-            <h3 class="servicesCTATitle"><?php echo $witlandingpages_cta_title; ?></h3>
+            <div class="servicesCTATitle"><?php echo $witlandingpages_cta_title; ?></div>
             <div class="my-5 servicesCTAText">
                 <?php echo $witlandingpages_cta_content; ?>
             </div>
