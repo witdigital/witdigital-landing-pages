@@ -64,6 +64,10 @@ function witlandingpages_one_phone( $atts ) {
         <style>
         <?php echo $wlp_phone_css ?>
 
+        .phoneBtnItem {
+            position: absolute !important;
+        }
+
         .phoneBtn {
             <?php echo $wlp_styles_phone_bkgnd ?>
             <?php echo $wlp_styles_phone_rad ?>
@@ -73,7 +77,8 @@ function witlandingpages_one_phone( $atts ) {
             content: "";
             <?php echo $wlp_style_call_btn ?>
             position: absolute;
-            left: 94px;
+            left: 22px;
+            /* left: 94px; */
             width: 17px;
             height: 17px;
             <?php echo $wlp_styles_phone_std_filter ?>
@@ -116,7 +121,7 @@ function witlandingpages_one_phone( $atts ) {
         </style>
 
         <div class="flex items-center justify-center mx-auto my-0 phoneBtns flex-nowrap max-w-340">
-            <div class="phoneBtnItem mb-2.5">
+            <div class="phoneBtnItem mb-2.5 mt-8">
                 <!-- for custom icon: -->
                 <?php if($wlp_phone_if_custom == 'customPhone'): ?>
 
@@ -208,8 +213,13 @@ add_shortcode('witlandingpages_one_phone', 'witlandingpages_one_phone'); ?>
         <style>
         <?php echo $wlp_phone_css ?>
 
+        .phoneBtnItemTwo {
+            
+        }
+
         .phoneBtnItemLocation {
             <?php echo $wlp_styles_phone_location_color ?>
+            margin-bottom: 0.375rem;
         }
         .phoneBtnTwo {
             <?php echo $wlp_styles_phone_bkgnd ?>
@@ -220,7 +230,7 @@ add_shortcode('witlandingpages_one_phone', 'witlandingpages_one_phone'); ?>
             content: "";
             <?php echo $wlp_style_call_btn ?>
             position: absolute;
-            left: 18px;
+            left: 10px;
             width: 17px;
             height: 17px;
             <?php echo $wlp_styles_phone_std_filter ?>
@@ -258,17 +268,13 @@ add_shortcode('witlandingpages_one_phone', 'witlandingpages_one_phone'); ?>
         .phoneBtnBody:hover {
             <?php echo $wlp_styles_pbc_hover ?>
         }
-        @media all and (min-width: 1024px) {
-            .phoneBtnTwo .phoneBtnBody:before {
-                left: 36px;
-            }
-        }
+
         </style>
 
         <div class="flex items-center justify-between mx-auto my-0 phoneBtns flex-nowrap max-w-450">
             <!-- First Phone Number -->
-            <div class="phoneBtnItem mb-2.5">
-                <span class="phoneBtnItemLocation block mb-1.5 font-bold"><?php echo $wlp_phone_1_location ?></span>
+            <div class="phoneBtnItemTwo mb-2.5">
+                <span class="block font-bold phoneBtnItemLocation"><?php echo $wlp_phone_1_location ?></span>
                 <!-- for custom icon: -->
                 <?php if($wlp_phone_if_custom == 'customPhone'): ?>
 
@@ -287,8 +293,8 @@ add_shortcode('witlandingpages_one_phone', 'witlandingpages_one_phone'); ?>
             </div> <!-- end First Phone Number -->
 
             <!-- Second Phone Number -->
-            <div class="phoneBtnItem mb-2.5">
-                <span class="phoneBtnItemLocation block mb-1.5 font-bold"><?php echo $wlp_phone_2_location ?></span>
+            <div class="phoneBtnItemTwo mb-2.5">
+                <span class="block font-bold phoneBtnItemLocation"><?php echo $wlp_phone_2_location ?></span>
                 <!-- for custom icon: -->
                 <?php if($wlp_phone_if_custom == 'customPhone'): ?>
 
@@ -383,7 +389,8 @@ add_shortcode('witlandingpages_two_phones', 'witlandingpages_two_phones'); ?>
             content: "";
             <?php echo $wlp_style_req_btn ?>
             position: absolute;
-            left: 94px;
+            left: 25px;
+            /* left: 94px; */
             width: 17px;
             height: 17px;
             <?php echo $wlp_styles_req_std_filter ?>
@@ -421,30 +428,27 @@ add_shortcode('witlandingpages_two_phones', 'witlandingpages_two_phones'); ?>
         .reqBtnBody:hover {
             <?php echo $wlp_styles_rbc_hover ?>
         }
-        @media all and (min-width: 1024px) {
-            .reqBtnBody:before {
-                left: 9.75rem;
-            }
-        }
+
         </style>
+        <div class="flex items-center justify-center mx-auto my-0 phoneBtns flex-nowrap max-w-340">
+            <div class="requestButton">
+                    <!-- for custom icon: -->
+                    <?php if($wlp_req_if_custom == 'customReq'): ?>
+                        <a class="px-6 py-2 text-base font-bold uppercase bg-white rounded-md laptop:px-8 reqBtn btn customReq <?php echo $wlp_req_png_svg ?>" href="<?php echo $wlp_req_btn_url ?>">
 
-        <div class="requestButton">
-                <!-- for custom icon: -->
-                <?php if($wlp_req_if_custom == 'customReq'): ?>
-                    <a class="px-6 py-2 text-base font-bold uppercase bg-white rounded-md laptop:px-8 reqBtn btn customReq <?php echo $wlp_req_png_svg ?>" href="<?php echo $wlp_req_btn_url ?>">
 
+                    <?php else: ?>
+                    <!-- for default icon: -->
 
-                <?php else: ?>
-                <!-- for default icon: -->
+                    <a class="px-6 py-2 text-base font-bold uppercase bg-white rounded-md laptop:px-8 reqBtn btn defaultReq" href="<?php echo $wlp_req_btn_url ?>">
 
-                <a class="px-6 py-2 text-base font-bold uppercase bg-white rounded-md laptop:px-8 reqBtn btn defaultReq" href="<?php echo $wlp_req_btn_url ?>">
-
-                <?php endif; ?>
+                    <?php endif; ?>
+                    
+                    <!-- this stays the same, regardless of above logic: -->
+                        <span class="inline-flex items-center reqBtnBody"><?php echo $wlp_req_btn_display ?></span>
+                    </a>
                 
-                <!-- this stays the same, regardless of above logic: -->
-                    <span class="inline-flex items-center reqBtnBody"><?php echo $wlp_req_btn_display ?></span>
-                </a>
-            
+            </div>
         </div>
 
         <?php return ob_get_clean(); // stop buffer
