@@ -901,6 +901,95 @@
             ]
         },
         {
+            "key": "field_615f2d4198cc1",
+            "label": "Button Styling (Optional)",
+            "name": "witlandingpages_locations_button_styling",
+            "type": "group",
+            "instructions": "Styling for button that links to Service Area page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_615f2d4198cc2",
+                    "label": "Background Color",
+                    "name": "witlandingpages_all_locations_background",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 1,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_615f2d4198cc3",
+                    "label": "Border Radius",
+                    "name": "witlandingpages_all_locations_border_radius",
+                    "type": "number",
+                    "instructions": "Value in rems. Use <a href=\"https:\/\/nekocalc.com\/px-to-rem-converter\" target=\"_blank\">this tool<\/a> to convert from px to rem.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "rem",
+                    "min": "",
+                    "max": "",
+                    "step": 1
+                },
+                {
+                    "key": "field_615f34c162de3",
+                    "label": "Border Color",
+                    "name": "witlandingpages_all_locations_border_color",
+                    "type": "color_picker",
+                    "instructions": "Defaults to white.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_615f2e0d98cc5",
+                    "label": "Link Color",
+                    "name": "witlandingpages_all_locations_color",
+                    "type": "color_picker",
+                    "instructions": "Will default to theme's link color if nothing selected.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": "string"
+                }
+            ]
+        },
+        {
             "key": "field_6141255de8f3a",
             "label": "Button Link",
             "name": "witlandingpages_locations_url",
@@ -952,5 +1041,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Formerly 'Content'",
-    "modified": 1633626293
+    "modified": 1633629432
 }

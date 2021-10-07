@@ -103,6 +103,25 @@ foreach ($parentFields as $field) {
     // Map Pin Styling Variables:
     $wlp_styles_std_pin_filter = "filter: " . $wlp_map_default_filter; // DO NOT include extra semi-colon here. Field value brings it over.
     $wlp_styles_custom_pin_filter = "filter: " . $wlp_map_svg_filter; // DO NOT include extra semi-colon here. Field value brings it over.
+
+
+    // All Locations Button Variables:
+    if( have_rows('witlandingpages_locations_button_styling') ) :
+        while( have_rows('witlandingpages_locations_button_styling') ): the_row();
+    
+        $wlp_loc_btn_background = (get_sub_field('witlandingpages_all_locations_background')) ? get_sub_field('witlandingpages_all_locations_background') : '' ;
+        $wlp_loc_btn_border_radius = (get_sub_field('witlandingpages_all_locations_border_radius')) ? get_sub_field('witlandingpages_all_locations_border_radius') : '1' ;
+        $wlp_loc_btn_border_color = (get_sub_field('witlandingpages_all_locations_border_color')) ? get_sub_field('witlandingpages_all_locations_border_color') : 'white' ;
+        $wlp_loc_btn_color = (get_sub_field('witlandingpages_all_locations_color')) ? get_sub_field('witlandingpages_all_locations_color') : '' ;
+    
+        endwhile;
+    endif; 
+
+    // All Locations Button Styling Variables:
+    $wlp_styles_loc_btn_bkgrnd = "background-color: " . $wlp_loc_btn_background . ";";
+    $wlp_styles_loc_btn_rad = "border-radius: " . $wlp_loc_btn_border_radius . "rem;";
+    $wlp_styles_loc_btn_border_color = "border-color: " . $wlp_loc_btn_border_color . "!important;";
+    $wlp_styles_loc_btn_color = "color: " . $wlp_loc_btn_color . "!important;";
 ?>
 <!--  ==========================================================================
                 BEGIN STYLING FOR MODULE
@@ -190,6 +209,18 @@ foreach ($parentFields as $field) {
         img.svgPin {
             <?php echo $wlp_styles_custom_pin_filter ?>
         }
+
+        /* More Locations button styling */
+        .moreLocations {
+            <?php echo $wlp_styles_loc_btn_bkgrnd ?>
+            <?php echo $wlp_styles_loc_btn_rad ?>
+            <?php echo $wlp_styles_loc_btn_border_color ?>
+            <?php echo $wlp_styles_loc_btn_color ?>
+        }
+        .moreLocations:hover {
+            cursor: pointer;
+        }
+
     </style>
 
 <!--  ==========================================================================
@@ -321,7 +352,7 @@ foreach ($parentFields as $field) {
                             endif;
                             ?>
                         </div>
-                        <a class="block px-3 py-2 mx-auto my-0 text-base font-bold text-center text-white uppercase border border-white rounded-md focus:bg-darkblue focus:text-green btn moreLocations" href="<?php echo $witlandingpages_locations_url; ?>">
+                        <a class="block px-3 py-2 mx-auto my-0 text-base font-bold text-center text-white uppercase border border-white rounded-md btn moreLocations" href="<?php echo $witlandingpages_locations_url; ?>">
                         <!-- for custom map pin: -->
                         <?php if( ($wlp_map_if_custom == 'customPin') && ($wlp_map_png_svg == 'pngPin') ):  ?>
 
