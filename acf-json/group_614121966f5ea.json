@@ -115,7 +115,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "Color can be controlled by expanding the toolbar. Color will default to theme settings for your chosen header element.",
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 0,
@@ -126,7 +126,7 @@
             "label": "Content",
             "name": "witlandingpages_cta_content",
             "type": "wysiwyg",
-            "instructions": "Will pull from parent if nothing is here.\r\nDo not add phone number buttons. They will come in automatically.",
+            "instructions": "Will pull from parent if nothing is here.\r\nDo not add phone number buttons. They will come in via the below shortcode.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -177,5 +177,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632957259
+    "modified": 1633623522
 }
