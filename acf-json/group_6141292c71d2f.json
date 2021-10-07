@@ -22,6 +22,23 @@
             "maxlength": ""
         },
         {
+            "key": "field_615f38c82e1cb",
+            "label": "Title Color (Optional)",
+            "name": "witlandingpages_testimonials_title_color",
+            "type": "color_picker",
+            "instructions": "Will default to theme color for h2 if nothing selected.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
             "key": "field_614129fadd87a",
             "label": "Shortcode",
             "name": "witlandingpages_testimonials_shortcode",
@@ -148,6 +165,95 @@
             "maxlength": ""
         },
         {
+            "key": "field_615f394c2e1cc",
+            "label": "Button Styling (Optional)",
+            "name": "witlandingpages_testimonials_button_styling",
+            "type": "group",
+            "instructions": "Styling for button that links to the Reviews page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_615f39872e1cd",
+                    "label": "Background Color",
+                    "name": "witlandingpages_testimonial_button_background",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 1,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_615f39fb2e1ce",
+                    "label": "Border Radius",
+                    "name": "witlandingpages_testimonial_button_border_radius",
+                    "type": "number",
+                    "instructions": "Value in rems. Use <a href=\"https:\/\/nekocalc.com\/px-to-rem-converter\" target=\"_blank\">this tool<\/a> to convert from px to rem.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "rem",
+                    "min": "",
+                    "max": "",
+                    "step": 1
+                },
+                {
+                    "key": "field_615f3a2d2e1cf",
+                    "label": "Border Color",
+                    "name": "witlandingpages_testimonial_button_border_color",
+                    "type": "color_picker",
+                    "instructions": "Defaults to white.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_615f3a632e1d0",
+                    "label": "Link Color",
+                    "name": "witlandingpages_testimonial_button_link_color",
+                    "type": "color_picker",
+                    "instructions": "Defaults to black.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": "string"
+                }
+            ]
+        },
+        {
             "key": "field_614256beb55e8",
             "label": "Button Link",
             "name": "witlandingpages_testimonials_link",
@@ -199,5 +305,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632515191
+    "modified": 1633630860
 }
