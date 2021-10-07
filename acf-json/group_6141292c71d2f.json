@@ -239,7 +239,7 @@
                     "label": "Link Color",
                     "name": "witlandingpages_testimonial_button_link_color",
                     "type": "color_picker",
-                    "instructions": "Defaults to black.",
+                    "instructions": "Defaults to theme color for links.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -305,5 +305,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1633630860
+    "modified": 1633630989
 }
