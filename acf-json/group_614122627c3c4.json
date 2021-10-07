@@ -72,6 +72,23 @@
                     "step": 1
                 },
                 {
+                    "key": "field_615f21aa22149",
+                    "label": "Section Title Color",
+                    "name": "witlandingpages_accordion_section_title_color",
+                    "type": "color_picker",
+                    "instructions": "This controls the color for the <strong>only<\/strong> the first accordion item (which is displayed as the section title). Will default to the theme color for h3 if nothing is selected.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": "string"
+                },
+                {
                     "key": "field_614e37d849942",
                     "label": "Title Color",
                     "name": "witlandingpages_accordion_title_color",
@@ -926,5 +943,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Formerly 'Content'",
-    "modified": 1632957313
+    "modified": 1633624572
 }
