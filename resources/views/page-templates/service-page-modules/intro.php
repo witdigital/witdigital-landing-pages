@@ -7,6 +7,7 @@ $wlp_intro_title = (get_field('witlandingpages_intro_title')) ? get_field('witla
 $wlp_intro_title_color = (get_field('witlandingpages_intro_title_color')) ? get_field('witlandingpages_intro_title_color') : '' ;
 $wlp_intro_text = (get_field('witlandingpages_intro_text')) ? get_field('witlandingpages_intro_text') : '' ;
 $wlp_intro_sc = (get_field('witlandingpages_intro_shortcode')) ? do_shortcode (get_field('witlandingpages_intro_shortcode')) : '' ;
+$wlp_intro_css = (get_field('witlandingpages_intro_additional_css')) ? get_field('witlandingpages_intro_additional_css') : '' ;
 
 
 $wlp_intro_radius = "border-radius: " . $wlp_intro_b_rad . "rem;";
@@ -14,6 +15,8 @@ $wlp_styles_intro_title = "color: " . $wlp_intro_title_color ."!important;";
 ?>
 
 <style>
+    <?php echo $wlp_intro_css ?>
+
     .servicesIntroImage {
         <?php echo $wlp_intro_radius ?>
     }
