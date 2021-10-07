@@ -319,6 +319,41 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_615f4f0e470db",
+            "label": "Additional CSS",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_615f4f1f470dc",
+            "label": "Additional CSS",
+            "name": "witlandingpages_panels_additional_css",
+            "type": "textarea",
+            "instructions": "Use this area for any additional CSS. Be sure to use proper formatting; reach out to Dev with any questions.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -338,5 +373,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Formerly 'Guarantees'",
-    "modified": 1633623761
+    "modified": 1633636159
 }

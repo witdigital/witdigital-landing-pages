@@ -293,6 +293,41 @@
             "default_value": "",
             "enable_opacity": false,
             "return_format": "string"
+        },
+        {
+            "key": "field_615f4e6b7c47a",
+            "label": "Additional CSS",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_615f4e817c47b",
+            "label": "Additional CSS",
+            "name": "witlandingpages_about_additional_css",
+            "type": "textarea",
+            "instructions": "Use this area for any additional CSS. Be sure to use proper formatting; reach out to Dev with any questions.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -312,5 +347,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Formerly 'About'",
-    "modified": 1633623674
+    "modified": 1633636036
 }

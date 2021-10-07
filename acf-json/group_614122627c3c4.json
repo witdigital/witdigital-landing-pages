@@ -1022,6 +1022,41 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_615f4f54d22fe",
+            "label": "Additional CSS",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_615f4f6ad22ff",
+            "label": "Additional CSS",
+            "name": "witlandingpages_ac_additional_css",
+            "type": "textarea",
+            "instructions": "Use this area for any additional CSS. Be sure to use proper formatting; reach out to Dev with any questions.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -1041,5 +1076,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Formerly 'Content'",
-    "modified": 1633629432
+    "modified": 1633636231
 }

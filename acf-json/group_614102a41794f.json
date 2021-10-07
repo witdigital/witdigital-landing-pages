@@ -742,6 +742,25 @@
             ]
         },
         {
+            "key": "field_615f4fd05c196",
+            "label": "Additional CSS",
+            "name": "witlandingpages_buttons_additional_css",
+            "type": "textarea",
+            "instructions": "Use this area for any additional CSS. Be sure to use proper formatting; reach out to Dev with any questions.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_615216eac0a37",
             "label": "Main Phone Button",
             "name": "",
@@ -955,5 +974,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1633548450
+    "modified": 1633636354
 }

@@ -158,6 +158,25 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_615f4ee037e32",
+            "label": "Additional CSS",
+            "name": "witlandingpages_cta_additional_css",
+            "type": "textarea",
+            "instructions": "Use this area for any additional CSS. Be sure to use proper formatting; reach out to Dev with any questions.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -177,5 +196,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1633623522
+    "modified": 1633636095
 }
