@@ -208,27 +208,11 @@
             "maxlength": ""
         },
         {
-            "key": "field_6148ed58272ca",
-            "label": "Hero Height",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_6148ed7e272cb",
-            "label": "Desktop Hero Height (optional)",
-            "name": "witlandingpages_desktop_height",
-            "type": "text",
-            "instructions": "Use this field to customize the height of the hero area on mobile devices.\r\nUse px, %, em, or rem (rem is encouraged, but not required)",
+            "key": "field_615f4b62bb21c",
+            "label": "Additional CSS",
+            "name": "witlandingpages_hero_additional_css",
+            "type": "textarea",
+            "instructions": "Use this area for any additional CSS. Be sure to use proper formatting; reach out to Dev with any questions.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -238,28 +222,9 @@
             },
             "default_value": "",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_6148ee35272cc",
-            "label": "Mobile Hero Height (optional)",
-            "name": "witlandingpages_mobile_height",
-            "type": "text",
-            "instructions": "Use this field to customize the height of the hero area on mobile devices.\r\nUse px, %, em, or rem (rem is encouraged, but not required)",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -279,5 +244,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1633558494
+    "modified": 1633635252
 }
