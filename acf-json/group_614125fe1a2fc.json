@@ -23,7 +23,7 @@
             "label": "Section Header",
             "name": "witlandingpages_panel_section_main",
             "type": "wysiwyg",
-            "instructions": "",
+            "instructions": "Color can be controlled by expanding the toolbar. Color will default to theme settings for your chosen header element.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -114,7 +114,7 @@
                     "label": "Title Color",
                     "name": "witlandingpages_panel_title_color",
                     "type": "color_picker",
-                    "instructions": "",
+                    "instructions": "Will default to theme color for h4 if nothing is selected.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -123,7 +123,7 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "enable_opacity": false,
+                    "enable_opacity": 0,
                     "return_format": "string"
                 },
                 {
@@ -338,5 +338,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Formerly 'Guarantees'",
-    "modified": 1632957301
+    "modified": 1633623761
 }
