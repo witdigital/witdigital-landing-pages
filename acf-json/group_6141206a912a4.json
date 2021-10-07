@@ -40,7 +40,7 @@
             "label": "Left Content (Top)",
             "name": "witlandingpages_about_left_top",
             "type": "wysiwyg",
-            "instructions": "",
+            "instructions": "Color can be controlled by expanding the toolbar. Color will default to theme settings for your chosen header element.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -312,5 +312,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Formerly 'About'",
-    "modified": 1633622767
+    "modified": 1633623674
 }
