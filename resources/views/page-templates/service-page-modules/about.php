@@ -14,6 +14,7 @@ $wlp_aleft_middle = (get_field('witlandingpages_about_left_middle')) ? get_field
 $wlp_aleft_bottom = (get_field('witlandingpages_about_left_bottom')) ? get_field('witlandingpages_about_left_bottom') : '' ;
 // Right Side vars:
 $witlandingpages_about_title = (get_field('witlandingpages_about_title')) ? get_field('witlandingpages_about_title') : '' ;
+$witlandingpages_about_title_color = (get_field('witlandingpages_about_title_color')) ? get_field('witlandingpages_about_title_color') : '' ;
 $witlandingpages_about_content = (get_field('witlandingpages_about_content')) ? get_field('witlandingpages_about_content') : '' ;
 $wlp_marker = (get_field('witlandingpages_marker_color')) ? get_field('witlandingpages_marker_color') : 'inherit' ;
 
@@ -27,6 +28,7 @@ if( have_rows('witlandingpages_about_sidebar_style') ):
     endwhile;
 endif;  
 
+$wlp_styles_abt_title = "color: " . $witlandingpages_about_title_color . "!important;";
 $wlp_styles_sidebar_background = "background-color: " . $wlp_sidebar_background . ";";
 $wlp_styles_sidebar_border_radius = "border-radius: " . $wlp_sidebar_border_radius . "rem;";
 $wlp_styles_sidebar_box_shadow = "box-shadow: " . $wlp_sidebar_box_shadow . ";";
@@ -46,7 +48,7 @@ if (get_field('witlandingpages_right_title_alignment') == 'Left') {
 } 
 
 // declare marker variable:
-$wlp_li_color = "color: " . $wlp_marker . ";";
+$wlp_li_color = "color: " . $wlp_marker . "!important;";
 ?>
 
 <style>
@@ -57,8 +59,13 @@ $wlp_li_color = "color: " . $wlp_marker . ";";
     }
     .servicesRightTitle {
         <?php echo $wlp_align; ?>
+        <?php echo $wlp_styles_abt_title; ?>
     }
+    /* using both marker and before pseudo-elements accounts for different possibilites in targeting */
     .servicesRightContentText ul li::marker {
+        <?php echo $wlp_li_color; ?>
+    }
+    .servicesRightContentText ul li::before {
         <?php echo $wlp_li_color; ?>
     }
 </style>

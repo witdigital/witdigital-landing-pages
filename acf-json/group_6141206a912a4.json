@@ -191,7 +191,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -200,6 +200,23 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_615f1ab656849",
+            "label": "Title Color (optional)",
+            "name": "witlandingpages_about_title_color",
+            "type": "color_picker",
+            "instructions": "Will use theme's default for h3 if nothing selected.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
         },
         {
             "key": "field_61490dfa639ed",
@@ -295,5 +312,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Formerly 'About'",
-    "modified": 1632782468
+    "modified": 1633622767
 }
