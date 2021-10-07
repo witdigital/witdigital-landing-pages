@@ -122,11 +122,16 @@ foreach ($parentFields as $field) {
     $wlp_styles_loc_btn_rad = "border-radius: " . $wlp_loc_btn_border_radius . "rem;";
     $wlp_styles_loc_btn_border_color = "border-color: " . $wlp_loc_btn_border_color . "!important;";
     $wlp_styles_loc_btn_color = "color: " . $wlp_loc_btn_color . "!important;";
+
+    // Additional CSS:
+    $wlp_ac_css = (get_field('witlandingpages_ac_additional_css')) ? get_field('witlandingpages_ac_additional_css') : '' ;
 ?>
 <!--  ==========================================================================
                 BEGIN STYLING FOR MODULE
     ==========================================================================  -->
     <style>
+        <?php echo $wlp_ac_css ?>
+        
         .accordionitem:first-of-type .accordionTitle {
             <?php echo $wlp_styles_ac_section_title_color; ?>
         }

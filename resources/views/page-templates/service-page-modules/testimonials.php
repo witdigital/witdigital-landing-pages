@@ -33,9 +33,14 @@ $wlp_styles_test_btn_rad = "border-radius: " . $wlp_test_btn_border_radius . "re
 $wlp_styles_test_btn_border_color = "border-color: " . $wlp_test_btn_border_color . "!important;";
 $wlp_styles_test_btn_color = "color: " . $wlp_test_btn_color . "!important;";
 
+// Additional CSS:
+$wlp_test_css = (get_field('witlandingpages_test_additional_css')) ? get_field('witlandingpages_test_additional_css') : '' ;
+
 ?>
 
 <style>
+	<?php echo $wlp_test_css ?>
+	
 	.testColorOverlay {
 		<?php echo $wlp_styles_test_over_color ?>
 	}

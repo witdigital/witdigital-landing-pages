@@ -16,11 +16,15 @@ $wlp_cta_sc = (get_field('witlandingpages_cta_shortcode')) ? do_shortcode (get_f
 $wlp_cta_background_class = (get_field('witlandingpages_cta_background')) == 'Color' ? 'ctaColorOverlay' : 'ctaGradientOverlay' ;
 $wlp_cta_background_color = (get_field('witlandingpages_cta_background_color')) ? get_field('witlandingpages_cta_background_color') : '' ;
 $wlp_cta_background_gradient = (get_field('witlandingpages_cta_background_gradient')) ? get_field('witlandingpages_cta_background_gradient') : '' ;
+$wlp_cta_css = (get_field('witlandingpages_cta_additional_css')) ? get_field('witlandingpages_cta_additional_css') : '' ;
+
 $wlp_cta_bkgnd_color = "background: " . $wlp_cta_background_color . '!important;';
 $wlp_cta_gradient = "background: " . $wlp_cta_background_gradient . '!important;';
 ?>
 
 <style>
+    <?php echo $wlp_cta_css ?>
+    
 	.ctaColorOverlay {
 		<?php echo $wlp_cta_bkgnd_color ?>
 	}

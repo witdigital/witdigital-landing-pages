@@ -17,6 +17,8 @@ $witlandingpages_about_title = (get_field('witlandingpages_about_title')) ? get_
 $witlandingpages_about_title_color = (get_field('witlandingpages_about_title_color')) ? get_field('witlandingpages_about_title_color') : '' ;
 $witlandingpages_about_content = (get_field('witlandingpages_about_content')) ? get_field('witlandingpages_about_content') : '' ;
 $wlp_marker = (get_field('witlandingpages_marker_color')) ? get_field('witlandingpages_marker_color') : 'inherit' ;
+// Additional CSS:
+$wlp_about_css = (get_field('witlandingpages_about_additional_css')) ? get_field('witlandingpages_about_additional_css') : '' ;
 
 if( have_rows('witlandingpages_about_sidebar_style') ):
     while( have_rows('witlandingpages_about_sidebar_style') ): the_row();
@@ -52,6 +54,8 @@ $wlp_li_color = "color: " . $wlp_marker . "!important;";
 ?>
 
 <style>
+    <?php echo $wlp_about_css ?>
+    
     .servicesAboutRightInner {
         <?php echo $wlp_styles_sidebar_background; ?>
         <?php echo $wlp_styles_sidebar_border_radius; ?>

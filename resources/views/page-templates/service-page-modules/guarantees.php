@@ -6,6 +6,7 @@ $wlp_panels_section_img = (get_field('witlandingpages_p_desk')) ? get_field('wit
 $wlp_panels_mobile_img = (get_field('witlandingpages_p_mobile')) ? get_field('witlandingpages_p_mobile')['url'] : get_field('witlandingpages_p_desk')['url'] ;
 $wlp_panels_rad_desk_img = (get_field('witlandingpages_pdesk_border_radius')) ? get_field('witlandingpages_pdesk_border_radius') : '' ;
 $wlp_panels_sc = (get_field('witlandingpages_panels_shortcode')) ? do_shortcode (get_field('witlandingpages_panels_shortcode')) : '' ;
+$wlp_panels_css = (get_field('witlandingpages_panels_additional_css')) ? get_field('witlandingpages_panels_additional_css') : '' ;
 
 if( have_rows('witlandingpages_panel_styles') ):
     while( have_rows('witlandingpages_panel_styles') ): the_row();
@@ -28,6 +29,8 @@ $wlp_styles_rad_desk_img = "border-radius: " . $wlp_panels_rad_desk_img . "rem;"
 ?>
 
 <style>
+	<?php echo $wlp_panels_css ?>
+	
 	.guaranteeItemInner {
 		<?php echo $wlp_styles_panel_background; ?>
 		<?php echo $wlp_styles_panel_border_radius; ?>
