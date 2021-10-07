@@ -20,7 +20,7 @@ endif;
 
 $wlp_styles_panel_background = "background-color: " . $wlp_panel_background . ";";
 $wlp_styles_panel_border_radius = "border-radius: " . $wlp_panel_border_radius . "rem;";
-$wlp_styles_panel_title = "color: " . $wlp_panel_title_color . ";";
+$wlp_styles_panel_title = "color: " . $wlp_panel_title_color . "!important;";
 $wlp_styles_panel_body = "color: " . $wlp_panel_body_color . ";";
 $wlp_styles_rad_desk_img = "border-radius: " . $wlp_panels_rad_desk_img . "rem;";
 
