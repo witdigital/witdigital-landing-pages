@@ -34,7 +34,7 @@ $wlp_cta_gradient = "background: " . $wlp_cta_background_gradient . '!important;
 </style>
 
 
-<div class="mt-24 servicesCTA bg-grey laptop:mt-auto <?php echo $wlp_cta_background_class ?>">
+<div class="mt-24 servicesCTA bg-grey laptop:mt-auto pb-10 laptop:pb-0 <?php echo $wlp_cta_background_class ?>">
     <div class="flex-wrap justify-between w-full px-4 py-8 mx-auto servicesCTAInner max-w-1300 laptop:flex ">
         <div class="flex-1 w-full servicesCTALeft max-w-600 laptop:pr-5">
             <img class="max-w-full" src="<?php echo $witlandingpages_cta_image; ?>" alt="<?php echo $services_cta_image_alt; ?>" />

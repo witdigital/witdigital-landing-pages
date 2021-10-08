@@ -74,7 +74,7 @@ $wlp_li_color = "color: " . $wlp_marker . "!important;";
     }
 </style>
 
-<div class="my-6 servicesAbout laptop:my-12">
+<div class="my-8 servicesAbout laptop:my-12">
     <div class="flex flex-wrap justify-between w-full mx-auto servicesAboutInner max-w-1300 laptop:px-4">
         <div class="flex-1 w-full px-4 mb-4 servicesAboutLeft max-w-650 laptop:px-0 laptop:mb-0 ">
             <div class="px-4 mb-4 servicesAboutLeft aboutLeftTop"><?php echo $wlp_aleft_top ?></div>

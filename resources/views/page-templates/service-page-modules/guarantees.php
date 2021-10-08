@@ -46,12 +46,12 @@ $wlp_styles_rad_desk_img = "border-radius: " . $wlp_panels_rad_desk_img . "rem;"
 	}
 </style>
 
-<div class="guaranteesInner laptop:my-20">
+<div class="pb-12 guaranteesInner laptop:my-20">
 	<div class="z-10 w-full mx-auto guaranteesLeft max-w-1440">
 	<div class="guaranteesMobileImage mobileOnly" style="background: url(<?php echo $wlp_panels_mobile_img; ?>) center / cover;"></div>
 		<div class="w-full text-center guaranteesLeftInner max-w-900 laptop:ml-10">
 			<div class="pt-8 mb-10 guaranteesTitle laptop:pt-0"><?php echo $wlp_panels_main_body; ?></div>
-			<div class="flex-wrap justify-between guaranteesItems laptop:flex laptop:mb-10">
+			<div class="flex-wrap justify-between mb-8 guaranteesItems laptop:flex laptop:mb-12">
 				<?php if( have_rows('witlandingpages_panels') ):
 						while( have_rows('witlandingpages_panels') ): the_row(); 
 
@@ -75,7 +75,7 @@ $wlp_styles_rad_desk_img = "border-radius: " . $wlp_panels_rad_desk_img . "rem;"
 					endif;
 				?>
 			</div>
-			<div class="mb-3 laptop:mb-0">
+			<div class="mb-3 laptop:mb-0 panelsButton">
 
 				<?php echo $wlp_panels_sc ?>
 

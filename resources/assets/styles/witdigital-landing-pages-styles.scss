@@ -23,9 +23,123 @@ div {
 }
 @media screen and (max-width: 1024px) {
     .desktopOnly {
-        display: none;;
+        display: none;
     }
 }
+// START LAPTOP STYLING that's overridden by theme TW utilities
+// everything here is wrapped in @screen laptop per module class
+.servicesHero {
+
+    @screen laptop {
+        padding-top: 10rem;
+        padding-bottom: 6rem;
+
+        .servicesHeroCall {
+            margin-top: 1.5rem;
+        }
+    }
+
+} // end .servicesHero
+
+.servicesIntro {
+
+    @screen laptop {
+        margin-top: 3rem;
+        margin-bottom: 4rem;
+
+        .servicesIntroContent {
+            margin-top: 0;
+            text-align: left;
+
+            .reqBtns {
+                margin-left: -3.5rem;
+
+                .reqBtn {
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                }
+            }
+        } // end .servicesIntroContent
+
+    }
+
+} // end .servicesIntro
+
+.servicesAbout {
+    @screen laptop {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+
+        .servicesAboutLeft {
+            padding-left: 0;
+            padding-right: 0;
+            margin-bottom: 0;
+        }
+
+        .servicesAboutRightInner {
+            padding: 2rem 2.5rem;
+        }
+    }
+
+} // end .servicesAbout
+
+.servicesCTA {
+    @screen laptop {
+        margin-top: auto;
+        padding-bottom: 0;
+    }
+
+} // end .servicesCTA
+
+.guaranteesInner {
+    @screen laptop {
+
+        padding-bottom: 6rem;
+
+        .guaranteesTitle {
+            padding-top: 0;
+        }
+
+        .guaranteesItems {
+            margin-bottom: 3rem;
+
+            .guaranteeItemInner {
+                padding-top: 1.5rem;
+                padding-bottom: 2rem;
+                margin-bottom: 0;
+    
+                .guaranteeItemTitle {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
+        .panelsButton {
+            margin-bottom: 0;
+        }
+    }
+} // end .guaranteesInner
+
+.servicesContent {
+    @screen laptop {
+
+        .servicesContentLeft {
+            padding: 0 0 2.5rem 0;
+            order: 0;
+        }
+        .servicesContentRight {
+            order: 0;
+            margin-top: auto;
+            padding-left: 1.5rem;
+            padding-bottom: 2.5rem;
+        }
+
+    }
+} // end .servicesContent
+
+// END LAPTOP STYLING
+
+
 
 
 } /* End of .wit-landing-page */

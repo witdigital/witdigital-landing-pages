@@ -430,7 +430,7 @@ add_shortcode('witlandingpages_two_phones', 'witlandingpages_two_phones'); ?>
         }
 
         </style>
-        <div class="flex items-center justify-center mx-auto my-0 phoneBtns flex-nowrap max-w-340">
+        <div class="flex items-center justify-center mx-auto my-0 phoneBtns reqBtns flex-nowrap max-w-340">
             <div class="requestButton">
                     <!-- for custom icon: -->
                     <?php if($wlp_req_if_custom == 'customReq'): ?>
