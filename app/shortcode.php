@@ -392,7 +392,8 @@ add_shortcode('witlandingpages_two_phones', 'witlandingpages_two_phones'); ?>
             left: 25px;
             /* left: 94px; */
             width: 17px;
-            height: 17px;
+            height: 19px;
+            top: 2px;
             <?php echo $wlp_styles_req_std_filter ?>
         }
         .reqBtnBody:before {
@@ -430,7 +431,7 @@ add_shortcode('witlandingpages_two_phones', 'witlandingpages_two_phones'); ?>
         }
 
         </style>
-        <div class="flex items-center justify-center mx-auto my-0 phoneBtns reqBtns flex-nowrap max-w-340">
+        <div class="flex items-center justify-start mx-auto my-0 phoneBtns reqBtns flex-nowrap max-w-340">
             <div class="requestButton">
                     <!-- for custom icon: -->
                     <?php if($wlp_req_if_custom == 'customReq'): ?>
