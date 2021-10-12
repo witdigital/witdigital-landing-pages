@@ -13,11 +13,6 @@
 
 get_header(); ?>
 
-<!-- can be commented out,renders the editor content -->
-<!-- <?php while ( have_posts() ) : the_post(); ?> 
-    <?php the_content() ?>
-	<?php endwhile;  ?> -->
-
 <!-- Must wrap div in element 'main' to pull in typography-main.scss from theme -->    
 <main class="main">
 
