@@ -335,7 +335,7 @@ add_shortcode('witlandingpages_two_phones', 'witlandingpages_two_phones'); ?>
 
     $wlp_req_btn_url = (get_field('witlandingpages_request_url', 'option')) ? get_field('witlandingpages_request_url', 'option') : '' ;
     $wlp_req_btn_display = (get_field('witlandingpages_request_display', 'option')) ? get_field('witlandingpages_request_display', 'option') : '' ;
-    $wlp_req_btn_icon = '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/calendar-alt-regular.svg' ;
+    $wlp_req_btn_icon = '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/calendar_icon.svg' ;
     $wlp_style_req_btn = 'background: url(' . $wlp_req_btn_icon . ') center / cover;';
 
        // Style Variables:
