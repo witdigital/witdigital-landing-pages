@@ -1,11 +1,11 @@
 {
-    "key": "group_61684b8b675a7",
-    "title": "Page Options - LP Hero",
+    "key": "group_6168acec797fa",
+    "title": "Page Options - LP Intro",
     "fields": [
         {
-            "key": "field_61684c03dad4b",
-            "label": "Show Landing Page Hero?",
-            "name": "witlandingpages_show_landing_page_hero",
+            "key": "field_6168ad57f425f",
+            "label": "Show Landing Page Intro?",
+            "name": "witlandingpages_show_landing_page_intro",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -22,13 +22,45 @@
             "ui_off_text": ""
         },
         {
-            "key": "field_61684b8b6d29d",
-            "label": "Hero Background Image",
-            "name": "witlandingpages_hero_image",
-            "type": "image",
-            "instructions": "Will pull from parent if an image is not selected.",
+            "key": "field_6168acec7e211",
+            "label": "Use image or video embed?",
+            "name": "witlandingpages_image_video",
+            "type": "radio",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Image": "Image",
+                "Embed": "Embed"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "Image",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_6168acec7e22e",
+            "label": "Intro Image",
+            "name": "witlandingpages_intro_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168acec7e211",
+                        "operator": "==",
+                        "value": "Image"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -46,92 +78,64 @@
             "mime_types": ""
         },
         {
-            "key": "field_61684b8b6d2a7",
-            "label": "Is the overlay a color or a gradient?",
-            "name": "witlandingpages_overlay",
-            "type": "radio",
-            "instructions": "",
+            "key": "field_6168acec7e237",
+            "label": "Border Radius (Optional)",
+            "name": "witlandingpages_intro_border_rad",
+            "type": "number",
+            "instructions": "Value in rem. Use <a href=\"https:\/\/nekocalc.com\/px-to-rem-converter\" target=\"_blank\">this tool<\/a> to convert from pixels.",
             "required": 0,
             "conditional_logic": [
                 [
                     {
-                        "field": "field_61684b8b6d29d",
+                        "field": "field_6168acec7e22e",
                         "operator": "!=empty"
                     }
                 ]
             ],
             "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "Color": "Color",
-                "Gradient": "Gradient"
-            },
-            "allow_null": 0,
-            "other_choice": 0,
-            "default_value": "",
-            "layout": "vertical",
-            "return_format": "value",
-            "save_other_choice": 0
-        },
-        {
-            "key": "field_61684b8b6d2af",
-            "label": "Overlay Color",
-            "name": "witlandingpages_overlay_color",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_61684b8b6d2a7",
-                        "operator": "==",
-                        "value": "Color"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "enable_opacity": 1,
-            "return_format": "string"
-        },
-        {
-            "key": "field_61684b8b6d2b7",
-            "label": "Overlay Gradient",
-            "name": "witlandingpages_overlay_gradient",
-            "type": "text",
-            "instructions": "Enter the entire string, except for the semicolon. Ex: 'linear-gradient(-108deg, rgba(0, 41, 93, .84) 0%, rgba(0, 174, 239, .84) 100%)'",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_61684b8b6d2a7",
-                        "operator": "==",
-                        "value": "Gradient"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
             "placeholder": "",
             "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "append": "rem",
+            "min": "",
+            "max": "",
+            "step": 1
         },
         {
-            "key": "field_61684b8b6d2bf",
-            "label": "Hero Title",
-            "name": "witlandingpages_hero_title",
+            "key": "field_6168acec7e23f",
+            "label": "Intro Embed",
+            "name": "witlandingpages_intro_embed",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168acec7e211",
+                        "operator": "==",
+                        "value": "Embed"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_6168acec7e245",
+            "label": "Intro Title",
+            "name": "witlandingpages_intro_title",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -148,11 +152,11 @@
             "maxlength": ""
         },
         {
-            "key": "field_61684b8b6d2cf",
+            "key": "field_6168acec7e24a",
             "label": "Title Color (optional)",
-            "name": "witlandingpages_hero_title_color",
+            "name": "witlandingpages_intro_title_color",
             "type": "color_picker",
-            "instructions": "Will default to theme color for the site's hero if nothing selected.",
+            "instructions": "Will default to theme color for h2 if nothing selected.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -165,11 +169,11 @@
             "return_format": "string"
         },
         {
-            "key": "field_61684b8b6d2db",
-            "label": "Hero Subtitle",
-            "name": "witlandingpages_hero_subtitle",
-            "type": "text",
-            "instructions": "Will pull from parent if not filled out.",
+            "key": "field_6168acec7e251",
+            "label": "Intro Text",
+            "name": "witlandingpages_intro_text",
+            "type": "wysiwyg",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -178,39 +182,15 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
-            "key": "field_61684b8b6d2e3",
-            "label": "Title Color (optional)",
-            "name": "witlandingpages_hero_subtitle_color",
-            "type": "color_picker",
-            "instructions": "Will default to theme color for span if nothing selected.",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_61684b8b6d2db",
-                        "operator": "!=empty"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "enable_opacity": false,
-            "return_format": "string"
-        },
-        {
-            "key": "field_61684b8b6d2eb",
+            "key": "field_6168acec7e257",
             "label": "Buttons Shortcode",
-            "name": "witlandingpages_hero_shortcode",
+            "name": "witlandingpages_intro_shortcode",
             "type": "text",
             "instructions": "Input shortcode here, be sure to include the brackets.\r\n<br>\r\n<strong>Single Phone Number:<\/strong> <em>[witlandingpages_one_phone]<\/em>\r\n<br>\r\n<strong>Two Phone Numbers:<\/strong> <em>[witlandingpages_two_phones]<\/em>\r\n<br>\r\n<strong>Request Service:<\/strong> <em>[witlandingpages_schedule_btn]<\/em>",
             "required": 0,
@@ -227,9 +207,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_61684b8b6d2fd",
+            "key": "field_6168acec7e25e",
             "label": "Additional CSS",
-            "name": "witlandingpages_hero_additional_css",
+            "name": "witlandingpages_intro_additional_css",
             "type": "textarea",
             "instructions": "Use this area for any additional CSS. Be sure to use proper formatting; reach out to Dev with any questions.",
             "required": 0,
@@ -255,7 +235,7 @@
             }
         ]
     ],
-    "menu_order": 1,
+    "menu_order": 2,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -263,5 +243,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1634250232
+    "modified": 1634250253
 }

@@ -1,0 +1,1099 @@
+{
+    "key": "group_6168aeb5d0a54",
+    "title": "Page Options - LP Accordion, Coupon, Locations",
+    "fields": [
+        {
+            "key": "field_6168aed08d108",
+            "label": "Show Accordion, Coupon, Locations?",
+            "name": "witlandingpages_show_accordion_section",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_6168aeb5d4cc7",
+            "label": "Left Side",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6168aeb5d4cd0",
+            "label": "Accordion Styling (Optional)",
+            "name": "witlandingpages_accordion_styling",
+            "type": "group",
+            "instructions": "This styling applies to all the accordion tabs. Defaults will be applied wherever choices are not made.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6168aeb5d7e1e",
+                    "label": "Background Color",
+                    "name": "witlandingpages_accordion_background_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 1,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_6168aeb5d7e28",
+                    "label": "Border Radius",
+                    "name": "witlandingpages_accordion_border_radius",
+                    "type": "number",
+                    "instructions": "Value in rems. Use <a href=\"https:\/\/nekocalc.com\/px-to-rem-converter\" target=\"_blank\">this tool<\/a> to convert from px to rem.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "rem",
+                    "min": "",
+                    "max": "",
+                    "step": 1
+                },
+                {
+                    "key": "field_6168aeb5d7e31",
+                    "label": "Section Title Color",
+                    "name": "witlandingpages_accordion_section_title_color",
+                    "type": "color_picker",
+                    "instructions": "This controls the color for the <strong>only<\/strong> the first accordion item (which is displayed as the section title). Will default to the theme color for h3 if nothing is selected.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_6168aeb5d7e39",
+                    "label": "Title Color",
+                    "name": "witlandingpages_accordion_title_color",
+                    "type": "color_picker",
+                    "instructions": "This controls the color for the accordion title, as it may need to be changed due to the accordion background color.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_6168aeb5d7e42",
+                    "label": "Custom Icons?",
+                    "name": "witlandingpages_accordion_custom_icon",
+                    "type": "true_false",
+                    "instructions": "Will you be uploading custom plus\/minus icons?",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_6168aeb5d7e4a",
+                    "label": "Icon Filter",
+                    "name": "witlandingpages_accordion_default_icon_filter",
+                    "type": "text",
+                    "instructions": "Generate filter <a href=\"https:\/\/codepen.io\/sosuke\/pen\/Pjoqqp\" target=\"_blank\">here<\/a>. \r\n<br>\r\n<strong>IMPORTANT:<\/strong> do not include 'filter:', just what comes after it (including the semi-colon). \r\n<br>\r\nEx: invert(42%) sepia(94%) saturate(738%) hue-rotate(156deg) brightness(98%) contrast(101%);\r\n<br>\r\nPlease reach out to Dev if you are unsure about how to use this tool.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6168aeb5d7e42",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6168aeb5d7e52",
+                    "label": "Is icon a PNG or SVG?",
+                    "name": "witlandingpages_accordion_png_svg",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6168aeb5d7e42",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "PNG": "PNG",
+                        "SVG": "SVG"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_6168aeb5d7e5a",
+                    "label": "Accordion Icon (Plus)",
+                    "name": "witlandingpages_accordion_plus_png",
+                    "type": "image",
+                    "instructions": "Upload your plus icon here (png only)",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6168aeb5d7e52",
+                                "operator": "==",
+                                "value": "PNG"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "png"
+                },
+                {
+                    "key": "field_6168aeb5d7e60",
+                    "label": "Accordion Icon (Minus)",
+                    "name": "witlandingpages_accordion_minus_png",
+                    "type": "image",
+                    "instructions": "Upload your minus icon here (png only)",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6168aeb5d7e52",
+                                "operator": "==",
+                                "value": "PNG"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "png"
+                },
+                {
+                    "key": "field_6168aeb5d7e7b",
+                    "label": "Icon Filter",
+                    "name": "witlandingpages_accordion_svg_filter",
+                    "type": "text",
+                    "instructions": "<strong>NOTE:<\/strong> if a filter value already exists for the default icon, and no value is used here, that previous filter will apply here. TL;DR: if this filter doesn't work as expected, check to see if anything is in the other Icon Filter field.\r\n<br>\r\nGenerate filter <a href=\"https:\/\/codepen.io\/sosuke\/pen\/Pjoqqp\" target=\"_blank\">here<\/a>. \r\n<br>\r\n<strong>IMPORTANT:<\/strong> do not include 'filter:', just what comes after it (including the semi-colon). \r\n<br>\r\nEx: invert(42%) sepia(94%) saturate(738%) hue-rotate(156deg) brightness(98%) contrast(101%);\r\n<br>\r\nPlease reach out to Dev if you are unsure about how to use this tool.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6168aeb5d7e52",
+                                "operator": "==",
+                                "value": "SVG"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6168aeb5d7e9b",
+                    "label": "Accordion Icon (Plus)",
+                    "name": "witlandingpages_accordion_plus_svg",
+                    "type": "image",
+                    "instructions": "Upload your plus icon here (svg only)",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6168aeb5d7e52",
+                                "operator": "==",
+                                "value": "SVG"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "svg"
+                },
+                {
+                    "key": "field_6168aeb5d7ea1",
+                    "label": "Accordion Icon (Minus)",
+                    "name": "witlandingpages_accordion_minus_svg",
+                    "type": "image",
+                    "instructions": "Upload your plus icon here (svg only)",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6168aeb5d7e52",
+                                "operator": "==",
+                                "value": "SVG"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "svg"
+                }
+            ]
+        },
+        {
+            "key": "field_6168aeb5d4cd6",
+            "label": "Accordion",
+            "name": "witlandingpages_accordion",
+            "type": "repeater",
+            "instructions": "Note: Accordion requires more than two rows to work. Two rows or less will result be styled as normal text.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_6168aeb5ed5c0",
+                    "label": "Title",
+                    "name": "witlandingpages_accordion_title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6168aeb5ed5d2",
+                    "label": "Content",
+                    "name": "witlandingpages_accordion_content",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                }
+            ]
+        },
+        {
+            "key": "field_6168aeb5d4cdb",
+            "label": "Right Side",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6168aeb5d4ce1",
+            "label": "Show Coupon?",
+            "name": "witlandingpages_show_coupon",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_6168aeb5d4ce7",
+            "label": "Coupon Styling (Optional)",
+            "name": "witlandingpages_coupon_styling",
+            "type": "group",
+            "instructions": "Optional. Will use default styling for options not customized here.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168aeb5d4ce1",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6168aeb602143",
+                    "label": "Background Color",
+                    "name": "witlandingpages_coupon_background",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 1,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_6168aeb60214c",
+                    "label": "Border Radius",
+                    "name": "witlandingpages_coupon_border_radius",
+                    "type": "number",
+                    "instructions": "Value in rems. Use <a href=\"https:\/\/nekocalc.com\/px-to-rem-converter\" target=\"_blank\">this tool<\/a> to convert from px to rem.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "rem",
+                    "min": "",
+                    "max": "",
+                    "step": 1
+                }
+            ]
+        },
+        {
+            "key": "field_6168aeb5d4cee",
+            "label": "Coupon Title",
+            "name": "witlandingpages_coupon_title",
+            "type": "wysiwyg",
+            "instructions": "Will pull from parent if nothing is here.\r\n<br>\r\nColor can be controlled by expanding the toolbar. Color will default to theme settings for your chosen header element.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168aeb5d4ce1",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_6168aeb5d4cf4",
+            "label": "Coupon Subtitle",
+            "name": "witlandingpages_coupon_subtitle",
+            "type": "wysiwyg",
+            "instructions": "Will pull from parent if nothing is here.<br>\r\nColor can be controlled by expanding the toolbar. Color will default to theme settings for your chosen header element.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168aeb5d4ce1",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_6168aeb5d4cfa",
+            "label": "Coupon Image",
+            "name": "witlandingpages_coupon_image",
+            "type": "image",
+            "instructions": "Will pull from parent if nothing is here.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168aeb5d4ce1",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_6168aeb5d4cff",
+            "label": "Locations Block Styling (Optional)",
+            "name": "witlandingpages_locations_styling",
+            "type": "group",
+            "instructions": "Optional. Will use default styling for options not customized here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6168aeb60c5ca",
+                    "label": "Background Color",
+                    "name": "witlandingpages_locations_background",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 1,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_6168aeb60c5d3",
+                    "label": "Border Radius",
+                    "name": "witlandingpages_locations_border_radius",
+                    "type": "number",
+                    "instructions": "Value in rems. Use <a href=\"https:\/\/nekocalc.com\/px-to-rem-converter\" target=\"_blank\">this tool<\/a> to convert from px to rem.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "rem",
+                    "min": "",
+                    "max": "",
+                    "step": 1
+                }
+            ]
+        },
+        {
+            "key": "field_6168aeb5d4d06",
+            "label": "Locations Title",
+            "name": "witlandingpages_locations_title",
+            "type": "wysiwyg",
+            "instructions": "Color can be controlled by expanding the toolbar. Color will default to theme settings for your chosen header element.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_6168aeb5d4d0c",
+            "label": "Locations Color (Optional)",
+            "name": "witlandingpages_locations_list_color",
+            "type": "color_picker",
+            "instructions": "This <strong>only<\/strong> controls the color of the <strong>individually-listed locations<\/strong>. Will default to white if nothing selected.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_6168aeb5d4d12",
+            "label": "Locations",
+            "name": "witlandingpages_sidebar_locations",
+            "type": "repeater",
+            "instructions": "Will pull from parent if not filled in.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_6168aeb614fe5",
+                    "label": "Location",
+                    "name": "witlandingpages_location",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_6168aeb5d4d17",
+            "label": "Map Pin (Optional)",
+            "name": "witlandingpages_map_pin_styling",
+            "type": "group",
+            "instructions": "The following is all optional. Defaults will be applied wherever choices are not made.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6168aeb619462",
+                    "label": "Custom Map Pin?",
+                    "name": "witlandingpages_custom_map_pin",
+                    "type": "true_false",
+                    "instructions": "Will you be uploading a custom map pin?",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_6168aeb61946b",
+                    "label": "Map Pin Filter",
+                    "name": "witlandingpages_default_pin_filter",
+                    "type": "text",
+                    "instructions": "Generate filter <a href=\"https:\/\/codepen.io\/sosuke\/pen\/Pjoqqp\" target=\"_blank\">here<\/a>. \r\n<br>\r\n<strong>IMPORTANT:<\/strong> do not include 'filter:', just what comes after it (including the semi-colon). \r\n<br>\r\nEx: invert(42%) sepia(94%) saturate(738%) hue-rotate(156deg) brightness(98%) contrast(101%);\r\n<br>\r\nPlease reach out to Dev if you are unsure about how to use this tool.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6168aeb619462",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6168aeb619471",
+                    "label": "Is pin a PNG or SVG?",
+                    "name": "witlandingpages_pin_png_svg",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6168aeb619462",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "PNG": "PNG",
+                        "SVG": "SVG"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_6168aeb61947c",
+                    "label": "Map Pin",
+                    "name": "witlandingpages_pin_png",
+                    "type": "image",
+                    "instructions": "Upload your map pin here (png only)",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6168aeb619471",
+                                "operator": "==",
+                                "value": "PNG"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "png"
+                },
+                {
+                    "key": "field_6168aeb619486",
+                    "label": "Map Pin Filter",
+                    "name": "witlandingpages_pin_svg_filter",
+                    "type": "text",
+                    "instructions": "<strong>NOTE:<\/strong> if a filter value already exists for the default pin, and no value is used here, that previous filter will apply here. TL;DR: if this filter doesn't work as expected, check to see if anything is in the other Map Pin Filter field.\r\n<br>\r\nGenerate filter <a href=\"https:\/\/codepen.io\/sosuke\/pen\/Pjoqqp\" target=\"_blank\">here<\/a>. \r\n<br>\r\n<strong>IMPORTANT:<\/strong> do not include 'filter:', just what comes after it (including the semi-colon). \r\n<br>\r\nEx: invert(42%) sepia(94%) saturate(738%) hue-rotate(156deg) brightness(98%) contrast(101%);\r\n<br>\r\nPlease reach out to Dev if you are unsure about how to use this tool.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6168aeb619471",
+                                "operator": "==",
+                                "value": "SVG"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6168aeb61948e",
+                    "label": "Map Pin",
+                    "name": "witlandingpages_pin_svg",
+                    "type": "image",
+                    "instructions": "Upload your map pin here (svg only)",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6168aeb619471",
+                                "operator": "==",
+                                "value": "SVG"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "svg"
+                }
+            ]
+        },
+        {
+            "key": "field_6168aeb5d4d1d",
+            "label": "Button Styling (Optional)",
+            "name": "witlandingpages_locations_button_styling",
+            "type": "group",
+            "instructions": "Styling for button that links to Service Area page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6168aeb625153",
+                    "label": "Background Color",
+                    "name": "witlandingpages_all_locations_background",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 1,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_6168aeb625160",
+                    "label": "Border Radius",
+                    "name": "witlandingpages_all_locations_border_radius",
+                    "type": "number",
+                    "instructions": "Value in rems. Use <a href=\"https:\/\/nekocalc.com\/px-to-rem-converter\" target=\"_blank\">this tool<\/a> to convert from px to rem.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "rem",
+                    "min": "",
+                    "max": "",
+                    "step": 1
+                },
+                {
+                    "key": "field_6168aeb625169",
+                    "label": "Border Color",
+                    "name": "witlandingpages_all_locations_border_color",
+                    "type": "color_picker",
+                    "instructions": "Defaults to white.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_6168aeb62516f",
+                    "label": "Link Color",
+                    "name": "witlandingpages_all_locations_color",
+                    "type": "color_picker",
+                    "instructions": "Will default to theme's link color if nothing selected.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": "string"
+                }
+            ]
+        },
+        {
+            "key": "field_6168aeb5d4d24",
+            "label": "Button Link",
+            "name": "witlandingpages_locations_url",
+            "type": "link",
+            "instructions": "Link to Client's Service Area page.\r\nWill pull from parent if nothing is here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url"
+        },
+        {
+            "key": "field_6168aeb5d4d2b",
+            "label": "Button Text",
+            "name": "witlandingpages_locations_button",
+            "type": "text",
+            "instructions": "ex: 'View All'\r\nWill pull from parent if nothing is here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6168aeb5d4d31",
+            "label": "Additional CSS",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6168aeb5d4d36",
+            "label": "Additional CSS",
+            "name": "witlandingpages_ac_additional_css",
+            "type": "textarea",
+            "instructions": "Use this area for any additional CSS. Be sure to use proper formatting; reach out to Dev with any questions.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "landing-page-template.php"
+            }
+        ]
+    ],
+    "menu_order": 6,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Formerly 'Content'",
+    "modified": 1634250496
+}

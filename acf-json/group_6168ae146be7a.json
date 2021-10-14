@@ -1,0 +1,219 @@
+{
+    "key": "group_6168ae146be7a",
+    "title": "Page Options - LP CTA",
+    "fields": [
+        {
+            "key": "field_6168ae2457b2d",
+            "label": "Show CTA?",
+            "name": "witlandingpages_show_cta_section",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_6168ae147012e",
+            "label": "Is the background a color or a gradient?",
+            "name": "witlandingpages_cta_background",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Color": "Color",
+                "Gradient": "Gradient"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_6168ae1470158",
+            "label": "Background Color",
+            "name": "witlandingpages_cta_background_color",
+            "type": "color_picker",
+            "instructions": "Background color will pull from parent if nothing is selected.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168ae147012e",
+                        "operator": "==",
+                        "value": "Color"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": false,
+            "return_format": "string"
+        },
+        {
+            "key": "field_6168ae1470171",
+            "label": "Background Gradient",
+            "name": "witlandingpages_cta_background_gradient",
+            "type": "text",
+            "instructions": "Enter the entire string, except for the semicolon. Ex: 'linear-gradient(-108deg, rgba(0, 41, 93, .84) 0%, rgba(0, 174, 239, .84) 100%);'\r\n\r\nWill pull from parent if nothing is entered.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168ae147012e",
+                        "operator": "==",
+                        "value": "Gradient"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6168ae1470177",
+            "label": "Image",
+            "name": "witlandingpages_cta_image",
+            "type": "image",
+            "instructions": "Will pull from parent if no image selected.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_6168ae147018a",
+            "label": "Title",
+            "name": "witlandingpages_cta_title",
+            "type": "wysiwyg",
+            "instructions": "Will pull from parent if nothing is here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Color can be controlled by expanding the toolbar. Color will default to theme settings for your chosen header element.",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_6168ae147018f",
+            "label": "Content",
+            "name": "witlandingpages_cta_content",
+            "type": "wysiwyg",
+            "instructions": "Will pull from parent if nothing is here.\r\nDo not add phone number buttons. They will come in via the below shortcode.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_6168ae1470195",
+            "label": "Buttons Shortcode",
+            "name": "witlandingpages_cta_shortcode",
+            "type": "text",
+            "instructions": "Input shortcode here, be sure to include the brackets.\r\n<br>\r\n<strong>Single Phone Number:<\/strong> <em>[witlandingpages_one_phone]<\/em>\r\n<br>\r\n<strong>Two Phone Numbers:<\/strong> <em>[witlandingpages_two_phones]<\/em>\r\n<br>\r\n<strong>Request Service:<\/strong> <em>[witlandingpages_schedule_btn]<\/em>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6168ae147019a",
+            "label": "Additional CSS",
+            "name": "witlandingpages_cta_additional_css",
+            "type": "textarea",
+            "instructions": "Use this area for any additional CSS. Be sure to use proper formatting; reach out to Dev with any questions.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "landing-page-template.php"
+            }
+        ]
+    ],
+    "menu_order": 4,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1634250319
+}
