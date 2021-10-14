@@ -92,7 +92,20 @@ if( file_exists(plugin_dir_path(__FILE__) . 'app/shortcode.php') ) {
 }
 
 
+// content filter for service page template:
 
+add_filter( 'the_content', 'witlandingpages\insert_service_content' );
+
+function insert_service_content($content) {
+	$wlp_is_service_page = (get_field('witlandingpages_is_service_page')) ? get_field('witlandingpages_is_service_page') : '' ;
+
+	if( $wlp_is_service_page && in_the_loop() && is_main_query() ) {
+		include_once('resources/views/page-templates/service-page-modules/hidden-elements.php');
+	} else {
+		return $content;
+	}
+    
+}
 
 
 
