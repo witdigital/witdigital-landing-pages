@@ -1,0 +1,81 @@
+{
+    "key": "group_61687f1db0dd7",
+    "title": "Page Options - Hide Elements",
+    "fields": [
+        {
+            "key": "field_61687f28d57c4",
+            "label": "Instructions",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "In many instances, these pages will have some pre-existing elements that need to be hidden (like sidebars, for example). Use the below field to list out any elements that need to be hidden from view.\r\n\r\nList each element to be hidden on a new line.\r\n\r\nBe sure to include the selector along with the name ('#' for ids and '.' for classes). \r\n\r\nFor example:\r\nIf we want to hide <div class=\"sidebar-a\">, we write '.sidebar-a' (without the quotes).\r\nFor a a div with id='sidebar-a', we would write #sidebar-a\r\n\r\n\r\nPlease reach out to Dev with any questions.",
+            "new_lines": "wpautop",
+            "esc_html": 1
+        },
+        {
+            "key": "field_61687fe1d57c5",
+            "label": "Elements To Hide",
+            "name": "witlandingpages_elements_to_hide",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Element",
+            "sub_fields": [
+                {
+                    "key": "field_616886152055b",
+                    "label": "Element",
+                    "name": "witlandingpages_hidden_element",
+                    "type": "text",
+                    "instructions": "Be sure to include the selector with the name.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1634248690
+}
