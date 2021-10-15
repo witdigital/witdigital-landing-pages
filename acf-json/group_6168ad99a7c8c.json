@@ -1,11 +1,11 @@
 {
     "key": "group_6168ad99a7c8c",
-    "title": "Page Options - LP Content with Sidebar",
+    "title": "Page Options - Landing Page Content with Sidebar",
     "fields": [
         {
             "key": "field_6168adb0cd812",
             "label": "Show Content with Sidebar?",
-            "name": "witlandingpages_show_content_with_sidebar",
+            "name": "witlandingpages_show_lp_content_with_sidebar",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -28,7 +28,15 @@
             "type": "tab",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168adb0cd812",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -118,7 +126,15 @@
             "type": "tab",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168adb0cd812",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -156,7 +172,7 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "enable_opacity": false,
+                    "enable_opacity": 0,
                     "return_format": "string"
                 },
                 {
@@ -320,7 +336,15 @@
             "type": "tab",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168adb0cd812",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -352,9 +376,9 @@
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "post_type",
                 "operator": "==",
-                "value": "landing-page-template.php"
+                "value": "page"
             }
         ]
     ],
@@ -366,5 +390,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Formerly 'About'",
-    "modified": 1634250212
+    "modified": 1634320400
 }

@@ -1,6 +1,6 @@
 {
     "key": "group_6168ae146be7a",
-    "title": "Page Options - LP CTA",
+    "title": "Page Options - Landing Page CTA",
     "fields": [
         {
             "key": "field_6168ae2457b2d",
@@ -28,7 +28,15 @@
             "type": "radio",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168ae2457b2d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -104,7 +112,15 @@
             "type": "image",
             "instructions": "Will pull from parent if no image selected.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168ae2457b2d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -128,7 +144,15 @@
             "type": "wysiwyg",
             "instructions": "Will pull from parent if nothing is here.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168ae2457b2d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -147,7 +171,15 @@
             "type": "wysiwyg",
             "instructions": "Will pull from parent if nothing is here.\r\nDo not add phone number buttons. They will come in via the below shortcode.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168ae2457b2d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -166,7 +198,15 @@
             "type": "text",
             "instructions": "Input shortcode here, be sure to include the brackets.\r\n<br>\r\n<strong>Single Phone Number:<\/strong> <em>[witlandingpages_one_phone]<\/em>\r\n<br>\r\n<strong>Two Phone Numbers:<\/strong> <em>[witlandingpages_two_phones]<\/em>\r\n<br>\r\n<strong>Request Service:<\/strong> <em>[witlandingpages_schedule_btn]<\/em>",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168ae2457b2d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -185,7 +225,15 @@
             "type": "textarea",
             "instructions": "Use this area for any additional CSS. Be sure to use proper formatting; reach out to Dev with any questions.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168ae2457b2d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -201,9 +249,9 @@
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "post_type",
                 "operator": "==",
-                "value": "landing-page-template.php"
+                "value": "page"
             }
         ]
     ],
@@ -215,5 +263,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1634250319
+    "modified": 1634320565
 }

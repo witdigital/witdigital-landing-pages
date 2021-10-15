@@ -1,6 +1,6 @@
 {
     "key": "group_6168af07b55df",
-    "title": "Page Options - LP Testimonials",
+    "title": "Page Options - Landing Page Testimonials",
     "fields": [
         {
             "key": "field_6168af20468da",
@@ -28,7 +28,15 @@
             "type": "text",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168af20468da",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -47,7 +55,15 @@
             "type": "color_picker",
             "instructions": "Will default to theme color for h2 if nothing selected.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168af20468da",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "50",
                 "class": "",
@@ -64,7 +80,15 @@
             "type": "text",
             "instructions": "Input shortcode here, be sure to include the brackets.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168af20468da",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -83,7 +107,15 @@
             "type": "image",
             "instructions": "Select the background image.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168af20468da",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -190,7 +222,15 @@
             "type": "group",
             "instructions": "Styling for button that links to the Reviews page",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168af20468da",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -279,7 +319,15 @@
             "type": "link",
             "instructions": "Link to Client's Reviews page",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168af20468da",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -294,7 +342,15 @@
             "type": "text",
             "instructions": "ex: Read Reviews",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168af20468da",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -313,7 +369,15 @@
             "type": "textarea",
             "instructions": "Use this area for any additional CSS. Be sure to use proper formatting; reach out to Dev with any questions.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168af20468da",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -329,9 +393,9 @@
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "post_type",
                 "operator": "==",
-                "value": "landing-page-template.php"
+                "value": "page"
             }
         ]
     ],
@@ -343,5 +407,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1634250568
+    "modified": 1634321510
 }

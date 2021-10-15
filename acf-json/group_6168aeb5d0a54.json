@@ -1,6 +1,6 @@
 {
     "key": "group_6168aeb5d0a54",
-    "title": "Page Options - LP Accordion, Coupon, Locations",
+    "title": "Page Options - Landing Page Accordion, Coupon, Locations",
     "fields": [
         {
             "key": "field_6168aed08d108",
@@ -28,7 +28,15 @@
             "type": "tab",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168aed08d108",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -215,6 +223,11 @@
                                 "field": "field_6168aeb5d7e52",
                                 "operator": "==",
                                 "value": "PNG"
+                            },
+                            {
+                                "field": "field_6168aeb5d7e42",
+                                "operator": "==",
+                                "value": "1"
                             }
                         ]
                     ],
@@ -247,6 +260,11 @@
                                 "field": "field_6168aeb5d7e52",
                                 "operator": "==",
                                 "value": "PNG"
+                            },
+                            {
+                                "field": "field_6168aeb5d7e42",
+                                "operator": "==",
+                                "value": "1"
                             }
                         ]
                     ],
@@ -279,6 +297,11 @@
                                 "field": "field_6168aeb5d7e52",
                                 "operator": "==",
                                 "value": "SVG"
+                            },
+                            {
+                                "field": "field_6168aeb5d7e42",
+                                "operator": "==",
+                                "value": "1"
                             }
                         ]
                     ],
@@ -306,6 +329,11 @@
                                 "field": "field_6168aeb5d7e52",
                                 "operator": "==",
                                 "value": "SVG"
+                            },
+                            {
+                                "field": "field_6168aeb5d7e42",
+                                "operator": "==",
+                                "value": "1"
                             }
                         ]
                     ],
@@ -338,6 +366,11 @@
                                 "field": "field_6168aeb5d7e52",
                                 "operator": "==",
                                 "value": "SVG"
+                            },
+                            {
+                                "field": "field_6168aeb5d7e42",
+                                "operator": "==",
+                                "value": "1"
                             }
                         ]
                     ],
@@ -425,7 +458,15 @@
             "type": "tab",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168aed08d108",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -839,6 +880,11 @@
                                 "field": "field_6168aeb619471",
                                 "operator": "==",
                                 "value": "PNG"
+                            },
+                            {
+                                "field": "field_6168aeb619462",
+                                "operator": "==",
+                                "value": "1"
                             }
                         ]
                     ],
@@ -871,6 +917,11 @@
                                 "field": "field_6168aeb619471",
                                 "operator": "==",
                                 "value": "SVG"
+                            },
+                            {
+                                "field": "field_6168aeb619462",
+                                "operator": "==",
+                                "value": "1"
                             }
                         ]
                     ],
@@ -898,6 +949,11 @@
                                 "field": "field_6168aeb619471",
                                 "operator": "==",
                                 "value": "SVG"
+                            },
+                            {
+                                "field": "field_6168aeb619462",
+                                "operator": "==",
+                                "value": "1"
                             }
                         ]
                     ],
@@ -1049,7 +1105,15 @@
             "type": "tab",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168aed08d108",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -1081,9 +1145,9 @@
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "post_type",
                 "operator": "==",
-                "value": "landing-page-template.php"
+                "value": "page"
             }
         ]
     ],
@@ -1095,5 +1159,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Formerly 'Content'",
-    "modified": 1634250496
+    "modified": 1634321272
 }
