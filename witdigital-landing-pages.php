@@ -105,14 +105,15 @@ function insert_service_content($content) {
 	$wlp_show_panels = (get_field('witlandingpages_show_panels_section')) ? get_field('witlandingpages_show_panels_section') : '' ;
 	$wlp_show_accordions = (get_field('witlandingpages_show_accordion_section')) ? get_field('witlandingpages_show_accordion_section') : '' ;
 	$wlp_show_testimonials = (get_field('witlandingpages_show_testimonials')) ? get_field('witlandingpages_show_testimonials') : '' ;
+	$wlp_hide_elements = (get_field('witlandingpages_hide_page_elements')) ? get_field('witlandingpages_hide_page_elements') : '' ;
 
-	// have to use conditional statement in order to have this load after jQuery loads for WP (otherwise fires way up in the head and throws an error)
-	if( $wlp_show_hero && in_the_loop() && is_main_query() ) {
-		include_once('resources/views/page-templates/service-page-modules/hero.php');
+	// have to use conditional statement in order to have the hidden-elements.php script fire after jQuery has loaded for the site. it does not appear to matter which priority is given to the hook (re: script firing)
+	if( in_the_loop() && is_main_query() && $wlp_show_hero || $wlp_show_intro ) {
 		include_once('resources/views/page-templates/service-page-modules/hidden-elements.php');
 	} else {
 		return $content;
 	}
+
     
 }
 
