@@ -98,6 +98,7 @@ add_filter( 'the_content', 'witlandingpages\insert_service_content' );
 
 function insert_service_content($content) {
 	// define variables:
+	$wlp_is_landing_page = (get_field('witlandingpages_is_landing_page')) ? get_field('witlandingpages_is_landing_page') : '' ;
 	$wlp_show_hero = (get_field('witlandingpages_show_landing_page_hero')) ? get_field('witlandingpages_show_landing_page_hero') : '' ;
 	$wlp_show_intro = (get_field('witlandingpages_show_landing_page_intro')) ? get_field('witlandingpages_show_landing_page_intro') : '' ;
 	$wlp_show_content_sidebar = (get_field('witlandingpages_show_lp_content_with_sidebar')) ? get_field('witlandingpages_show_lp_content_with_sidebar') : '' ;
@@ -108,14 +109,60 @@ function insert_service_content($content) {
 	$wlp_hide_elements = (get_field('witlandingpages_hide_page_elements')) ? get_field('witlandingpages_hide_page_elements') : '' ;
 
 	// have to use conditional statement in order to have the hidden-elements.php script fire after jQuery has loaded for the site. it does not appear to matter which priority is given to the hook (re: script firing)
-	if( in_the_loop() && is_main_query() && $wlp_show_hero || $wlp_show_intro ) {
-		include_once('resources/views/page-templates/service-page-modules/hidden-elements.php');
+	if( in_the_loop() && is_main_query() && $wlp_is_landing_page ) {
+		echo '<div class="wlp-landing-page">';
+		if( $wlp_show_hero ) {
+			include_once('resources/views/page-templates/service-page-modules/hero.php');
+		}
+		if( $wlp_show_intro ) {
+			include_once('resources/views/page-templates/service-page-modules/intro.php');
+		}
+		if( $wlp_show_content_sidebar ) {
+			include_once('resources/views/page-templates/service-page-modules/about.php');
+		}
+		if( $wlp_show_cta ) {
+			include_once('resources/views/page-templates/service-page-modules/cta.php');
+		}
+		if( $wlp_show_panels ) {
+			include_once('resources/views/page-templates/service-page-modules/guarantees.php');
+		}
+		if( $wlp_show_accordions ) {
+			include_once('resources/views/page-templates/service-page-modules/content.php');
+		}
+		if( $wlp_show_testimonials ) {
+			include_once('resources/views/page-templates/service-page-modules/testimonials.php');
+		}
+		if( $wlp_hide_elements ) {
+			include_once('resources/views/page-templates/service-page-modules/hidden-elements.php');
+		}
+		echo '</div>';
 	} else {
 		return $content;
 	}
-
-    
+	
 }
+
+// add class to body of each page that is using Landing Page fields
+
+function add_landingpage_class( $classes ) {
+	$include = array(
+		'wlp-landing-page' => 'wlp-landing-page',
+	);
+
+	if(get_field('witlandingpages_is_landing_page')) {
+		foreach ( $include as $class => $do_include ) 
+		{
+			if ( $do_include ) $classes[ $class ] = $class;
+		}
+
+		return $classes;
+	} else {
+		return $classes;
+	}
+}
+
+add_filter( 'body_class', 'witlandingpages\add_landingpage_class' );
+
 
 
 
