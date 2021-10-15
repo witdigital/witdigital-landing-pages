@@ -1,0 +1,60 @@
+{
+    "key": "group_6169d7afd770b",
+    "title": "READ THIS FIRST",
+    "fields": [
+        {
+            "key": "field_6169d7bec3ec1",
+            "label": "How to use the Landing Page fields:",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "In order for any of the below Landing Page fields to work, you must first select \"<strong>Yes, use Landing Page fields<\/strong>\".\r\nPlease reach out to Dev with any questions.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_6169d846c3ec2",
+            "label": "Use Landing Page Fields?",
+            "name": "witlandingpages_is_landing_page",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Yes, use Landing Page fields",
+            "ui_off_text": "No"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Required for hook",
+    "modified": 1634326674
+}
