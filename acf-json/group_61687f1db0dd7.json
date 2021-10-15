@@ -3,13 +3,40 @@
     "title": "Page Options - Hide Elements",
     "fields": [
         {
+            "key": "field_6169d63b8ddf1",
+            "label": "Hide Page Elements?",
+            "name": "witlandingpages_hide_page_elements",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_61687f28d57c4",
             "label": "Instructions",
             "name": "",
             "type": "message",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6169d63b8ddf1",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -26,7 +53,15 @@
             "type": "repeater",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6169d63b8ddf1",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -69,7 +104,7 @@
             }
         ]
     ],
-    "menu_order": 7,
+    "menu_order": 8,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -77,5 +112,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1634248690
+    "modified": 1634326281
 }
