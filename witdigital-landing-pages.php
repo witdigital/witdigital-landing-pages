@@ -101,6 +101,10 @@ function insert_service_content($content) {
 	$wlp_show_hero = (get_field('witlandingpages_show_landing_page_hero')) ? get_field('witlandingpages_show_landing_page_hero') : '' ;
 	$wlp_show_intro = (get_field('witlandingpages_show_landing_page_intro')) ? get_field('witlandingpages_show_landing_page_intro') : '' ;
 	$wlp_show_content_sidebar = (get_field('witlandingpages_show_lp_content_with_sidebar')) ? get_field('witlandingpages_show_lp_content_with_sidebar') : '' ;
+	$wlp_show_cta = (get_field('witlandingpages_show_cta_section')) ? get_field('witlandingpages_show_cta_section') : '' ;
+	$wlp_show_panels = (get_field('witlandingpages_show_panels_section')) ? get_field('witlandingpages_show_panels_section') : '' ;
+	$wlp_show_accordions = (get_field('witlandingpages_show_accordion_section')) ? get_field('witlandingpages_show_accordion_section') : '' ;
+	$wlp_show_testimonials = (get_field('witlandingpages_show_testimonials')) ? get_field('witlandingpages_show_testimonials') : '' ;
 
 	// have to use conditional statement in order to have this load after jQuery loads for WP (otherwise fires way up in the head and throws an error)
 	if( $wlp_show_hero && in_the_loop() && is_main_query() ) {
