@@ -142,7 +142,7 @@
             "label": "Title",
             "name": "witlandingpages_cta_title",
             "type": "wysiwyg",
-            "instructions": "Will pull from parent if nothing is here.",
+            "instructions": "Will pull from parent if nothing is here.<br>\r\nColor can be controlled by expanding the toolbar. Color will default to theme settings for your chosen header element.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -158,7 +158,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Color can be controlled by expanding the toolbar. Color will default to theme settings for your chosen header element.",
+            "default_value": "",
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 0,
@@ -263,5 +263,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1634320565
+    "modified": 1634340927
 }
