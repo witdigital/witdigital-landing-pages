@@ -97,9 +97,14 @@ if( file_exists(plugin_dir_path(__FILE__) . 'app/shortcode.php') ) {
 add_filter( 'the_content', 'witlandingpages\insert_service_content' );
 
 function insert_service_content($content) {
-	$wlp_is_service_page = (get_field('witlandingpages_is_service_page')) ? get_field('witlandingpages_is_service_page') : '' ;
+	// define variables:
+	$wlp_show_hero = (get_field('witlandingpages_show_landing_page_hero')) ? get_field('witlandingpages_show_landing_page_hero') : '' ;
+	$wlp_show_intro = (get_field('witlandingpages_show_landing_page_intro')) ? get_field('witlandingpages_show_landing_page_intro') : '' ;
+	$wlp_show_content_sidebar = (get_field('witlandingpages_show_lp_content_with_sidebar')) ? get_field('witlandingpages_show_lp_content_with_sidebar') : '' ;
 
-	if( $wlp_is_service_page && in_the_loop() && is_main_query() ) {
+	// have to use conditional statement in order to have this load after jQuery loads for WP (otherwise fires way up in the head and throws an error)
+	if( $wlp_show_hero && in_the_loop() && is_main_query() ) {
+		include_once('resources/views/page-templates/service-page-modules/hero.php');
 		include_once('resources/views/page-templates/service-page-modules/hidden-elements.php');
 	} else {
 		return $content;
