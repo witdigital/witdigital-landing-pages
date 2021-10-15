@@ -20,6 +20,622 @@
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
+        },
+        {
+            "key": "field_61699d4e7881b",
+            "label": "Hero Section",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168a9b7a3d13",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_61699d737881c",
+            "label": "Show Landing Page Hero?",
+            "name": "witlandingpages_show_landing_page_hero",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_61699e537881d",
+            "label": "Hero Background Image",
+            "name": "witlandingpages_hero_image",
+            "type": "image",
+            "instructions": "Will pull from parent if an image is not selected.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61699d737881c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_61699ea77881e",
+            "label": "Is the overlay a color or a gradient?",
+            "name": "witlandingpages_overlay",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61699d737881c",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_61699e537881d",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Color": "Color",
+                "Gradient": "Gradient"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_61699f1278820",
+            "label": "Overlay Color",
+            "name": "witlandingpages_overlay_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61699ea77881e",
+                        "operator": "==",
+                        "value": "Color"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 1,
+            "return_format": "string"
+        },
+        {
+            "key": "field_61699fabd9712",
+            "label": "Overlay Gradient",
+            "name": "witlandingpages_overlay_gradient",
+            "type": "text",
+            "instructions": "Enter the entire string, except for the semicolon. Ex: 'linear-gradient(-108deg, rgba(0, 41, 93, .84) 0%, rgba(0, 174, 239, .84) 100%)'",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61699ea77881e",
+                        "operator": "==",
+                        "value": "Gradient"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6169a02299214",
+            "label": "Hero Title",
+            "name": "witlandingpages_hero_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61699d737881c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6169a066ecee0",
+            "label": "Title Color (optional)",
+            "name": "witlandingpages_hero_title_color",
+            "type": "color_picker",
+            "instructions": "Will default to theme color for the site's hero if nothing selected.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61699d737881c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_6169a221790ea",
+            "label": "Hero Subtitle",
+            "name": "witlandingpages_hero_subtitle",
+            "type": "text",
+            "instructions": "Will pull from parent if not filled out.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61699d737881c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6169a3ab790eb",
+            "label": "Title Color (optional)",
+            "name": "witlandingpages_hero_subtitle_color",
+            "type": "color_picker",
+            "instructions": "Will default to theme color for span if nothing selected.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61699d737881c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_6169a3de790ec",
+            "label": "Buttons Shortcode",
+            "name": "witlandingpages_hero_shortcode",
+            "type": "text",
+            "instructions": "Input shortcode here, be sure to include the brackets.\r\n<br>\r\n<strong>Single Phone Number:<\/strong> <em>[witlandingpages_one_phone]<\/em>\r\n<br>\r\n<strong>Two Phone Numbers:<\/strong> <em>[witlandingpages_two_phones]<\/em>\r\n<br>\r\n<strong>Request Service:<\/strong> <em>[witlandingpages_schedule_btn]<\/em>",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61699d737881c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6169a403790ed",
+            "label": "Additional CSS",
+            "name": "witlandingpages_hero_additional_css",
+            "type": "textarea",
+            "instructions": "Use this area for any additional CSS. Be sure to use proper formatting; reach out to Dev with any questions.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61699d737881c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_6169a57321c9e",
+            "label": "Intro Section",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6168a9b7a3d13",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6169a5de7a206",
+            "label": "Show Landing Page Intro?",
+            "name": "witlandingpages_show_landing_page_intro",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_6169a613419e6",
+            "label": "Use image or video embed?",
+            "name": "witlandingpages_image_video",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6169a5de7a206",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Image": "Image",
+                "Embed": "Embed"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "Image",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_6169a64c419e7",
+            "label": "Intro Image",
+            "name": "witlandingpages_intro_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6169a613419e6",
+                        "operator": "==",
+                        "value": "Image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_6169a8f12aea4",
+            "label": "Border Radius (Optional)",
+            "name": "witlandingpages_intro_border_rad",
+            "type": "number",
+            "instructions": "Value in rem. Use <a href=\"https:\/\/nekocalc.com\/px-to-rem-converter\" target=\"_blank\">this tool<\/a> to convert from pixels.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6169a64c419e7",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "rem",
+            "min": "",
+            "max": "",
+            "step": 1
+        },
+        {
+            "key": "field_6169a9292aea5",
+            "label": "Intro Embed",
+            "name": "witlandingpages_intro_embed",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6169a613419e6",
+                        "operator": "==",
+                        "value": "Embed"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_6169a9622aea6",
+            "label": "Intro Title",
+            "name": "witlandingpages_intro_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6169a5de7a206",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6169a9862aea7",
+            "label": "Title Color (optional)",
+            "name": "witlandingpages_intro_title_color",
+            "type": "color_picker",
+            "instructions": "Will default to theme color for h2 if nothing selected.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6169a5de7a206",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_6169a9bc2aea8",
+            "label": "Intro Text",
+            "name": "witlandingpages_intro_text",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6169a5de7a206",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_6169a9df2aea9",
+            "label": "Buttons Shortcode",
+            "name": "witlandingpages_intro_shortcode",
+            "type": "text",
+            "instructions": "Input shortcode here, be sure to include the brackets.\r\n<br>\r\n<strong>Single Phone Number:<\/strong> <em>[witlandingpages_one_phone]<\/em>\r\n<br>\r\n<strong>Two Phone Numbers:<\/strong> <em>[witlandingpages_two_phones]<\/em>\r\n<br>\r\n<strong>Request Service:<\/strong> <em>[witlandingpages_schedule_btn]<\/em>",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6169a5de7a206",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6169a9fc2aeaa",
+            "label": "Additional CSS",
+            "name": "witlandingpages_intro_additional_css",
+            "type": "textarea",
+            "instructions": "Use this area for any additional CSS. Be sure to use proper formatting; reach out to Dev with any questions.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6169a5de7a206",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -39,5 +655,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1634249183
+    "modified": 1634314791
 }
