@@ -110,7 +110,7 @@ function insert_service_content($content) {
 
 	// have to use conditional statement in order to have the hidden-elements.php script fire after jQuery has loaded for the site. it does not appear to matter which priority is given to the hook (re: script firing)
 	if( in_the_loop() && is_main_query() && $wlp_is_landing_page ) {
-		echo '<div class="wlp-landing-page">';
+		echo '<div class="wlp-landing-page-inner">';
 		if( $wlp_show_hero ) {
 			include_once('resources/views/page-templates/service-page-modules/hero.php');
 		}
