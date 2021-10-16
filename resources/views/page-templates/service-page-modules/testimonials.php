@@ -62,7 +62,7 @@ $wlp_test_css = (get_field('witlandingpages_test_additional_css')) ? get_field('
 </style>
 
 <div class="py-12 testimonialsInner laptop:mt-64" style="background: url(<?php echo $wlp_testimonials_img ?>) center / cover;">
-	<div class="overlay altOverlay <?php echo $wlp_test_overlay_class ?>"></div>
+	<!-- <div class="overlay altOverlay <?php echo $wlp_test_overlay_class ?>"></div> -->
 	<div class="px-4 mx-auto testimonialContent max-w-1150">
 		<h2 class="text-center text-white testimonialsTitle"><?php echo $wlp_testimonials_title ?></h2>
 		<div class="my-10 text-center text-white testimonialShortcode">

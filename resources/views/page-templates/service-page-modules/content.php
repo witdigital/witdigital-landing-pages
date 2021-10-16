@@ -7,13 +7,13 @@ foreach ($parentFields as $field) {
 }
 ?>
 <?php 
-    $witlandingpages_coupon_title = (get_field('witlandingpages_coupon_title')) ? get_field('witlandingpages_coupon_title') : '' ;
-    $witlandingpages_coupon_subtitle = (get_field('witlandingpages_coupon_subtitle')) ? get_field('witlandingpages_coupon_subtitle') : '' ;
-    $witlandingpages_coupon_image = (get_field('witlandingpages_coupon_image')) ? get_field('witlandingpages_coupon_image')['url'] : '' ;
+    // $witlandingpages_coupon_title = (get_field('witlandingpages_coupon_title')) ? get_field('witlandingpages_coupon_title') : '' ;
+    // $witlandingpages_coupon_subtitle = (get_field('witlandingpages_coupon_subtitle')) ? get_field('witlandingpages_coupon_subtitle') : '' ;
+    // $witlandingpages_coupon_image = (get_field('witlandingpages_coupon_image')) ? get_field('witlandingpages_coupon_image')['url'] : '' ;
     $wlp_location_title = (get_field('witlandingpages_locations_title')) ? get_field('witlandingpages_locations_title') : '' ;
     $map_icon = '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/map-marker-alt-solid.svg';
-    $witlandingpages_locations_url = (get_field('witlandingpages_locations_url')) ? get_field('witlandingpages_locations_url') : '' ;
-    $witlandingpages_locations_button = (get_field('witlandingpages_locations_button')) ? get_field('witlandingpages_locations_button') : '' ;
+    // $witlandingpages_locations_url = (get_field('witlandingpages_locations_url')) ? get_field('witlandingpages_locations_url') : '' ;
+    // $witlandingpages_locations_button = (get_field('witlandingpages_locations_button')) ? get_field('witlandingpages_locations_button') : '' ;
     $wlp_plus_icon = '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/plus-circle-solid.svg';
     $wlp_minus_icon = '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/minus-circle-solid.svg';
     $wlp_plus_style = 'background: url(' . $wlp_plus_icon . ') center / cover;';
@@ -271,7 +271,7 @@ foreach ($parentFields as $field) {
                 <div class="mb-5 servicesContentSidebarSection sidebarCouponSection">
                     <div class="text-center sidebarCouponSectionInner sidebarSectionInner bg-blue rounded-2xl">
                         <div class="absolute z-10 couponBorder rounded-2xl"></div>
-                            <div class="h-48 rounded-tr-2xl rounded-tl-2xl" style="background: url(<?php echo $witlandingpages_coupon_image; ?>) center / cover;"></div>
+                            <div class="h-48 rounded-tr-2xl rounded-tl-2xl" style="background: url(<?php echo $witlandingpages_coupon_image['url']; ?>) center / cover;"></div>
                             <div class="z-20 p-4 rounded-br-2xl rounded-bl-2xl">
                                 <h3 class="text-white couponSidebarTitle"><?php echo $witlandingpages_coupon_title; ?></h3>
                                 <div class="text-white couponSidebarText"><?php echo $witlandingpages_coupon_subtitle; ?></div>
@@ -309,7 +309,7 @@ foreach ($parentFields as $field) {
                             if(have_rows('witlandingpages_sidebar_locations')):
                                 while(have_rows('witlandingpages_sidebar_locations')):the_row(); 
 
-                                $wlp_location_item = (get_sub_field('witlandingpages_location')) ? get_sub_field('witlandingpages_location') : '' ;
+                                // $wlp_location_item = (get_sub_field('witlandingpages_location')) ? get_sub_field('witlandingpages_location') : '' ;
                                 ?>
                                     
                                     <div class="text-base tracking-wide text-white locationItem">
