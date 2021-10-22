@@ -162,8 +162,6 @@ function insert_service_content($content) {
 function add_landingpage_class( $classes ) {
 	$include = array(
 		'wlp-landing-page' => 'wlp-landing-page',
-		// have to add the below class here, as it was initially only set to come over with the actual page template. If actual page template is used, will have to remove this class.
-		'wit-landing-page' => 'wit-landing-page',
 	);
 
 	if(get_field('witlandingpages_is_landing_page')) {
