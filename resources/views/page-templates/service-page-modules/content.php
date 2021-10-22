@@ -264,7 +264,7 @@ foreach ($parentFields as $field) {
 
             <?php if($wlp_show_coupon == '1'): ?>
 
-                <div class="mb-5 servicesContentSidebarSection sidebarCouponSection">
+                <div class="relative mb-5 servicesContentSidebarSection sidebarCouponSection">
                     <div class="text-center sidebarCouponSectionInner sidebarSectionInner bg-blue rounded-2xl">
                         <div class="absolute z-10 couponBorder rounded-2xl"></div>
                             <div class="h-48 rounded-tr-2xl rounded-tl-2xl" style="background: url(<?php echo $witlandingpages_coupon_image['url']; ?>) center / cover;"></div>
