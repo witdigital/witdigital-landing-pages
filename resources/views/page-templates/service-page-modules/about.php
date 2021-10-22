@@ -14,9 +14,7 @@ $wlp_aleft_top = (get_field('witlandingpages_about_left_top')) ? get_field('witl
 $wlp_aleft_middle = (get_field('witlandingpages_about_left_middle')) ? get_field('witlandingpages_about_left_middle') : '' ;
 $wlp_aleft_bottom = (get_field('witlandingpages_about_left_bottom')) ? get_field('witlandingpages_about_left_bottom') : '' ;
 // Right Side vars:
-// $witlandingpages_about_title = (get_field('witlandingpages_about_title')) ? get_field('witlandingpages_about_title') : '' ;
 $witlandingpages_about_title_color = (get_field('witlandingpages_about_title_color')) ? get_field('witlandingpages_about_title_color') : '' ;
-// $witlandingpages_about_content = (get_field('witlandingpages_about_content')) ? get_field('witlandingpages_about_content') : '' ;
 $wlp_marker = (get_field('witlandingpages_marker_color')) ? get_field('witlandingpages_marker_color') : 'inherit' ;
 // Additional CSS:
 $wlp_about_css = (get_field('witlandingpages_about_additional_css')) ? get_field('witlandingpages_about_additional_css') : '' ;
