@@ -3,6 +3,7 @@
 $parent = $post->post_parent; ?>
 <?php $parentFields = array('witlandingpages_about_title', 'witlandingpages_about_content');
 foreach ($parentFields as $field) {
+    // conditional translation: If the field has a value, use that value. If that field is empty, use the value of the same field on the page's parent. If that doesn't exist, then this statement evaluates to false and nothing is displayed.
 	$$field = get_field($field) ? get_field($field) : get_field($field, $parent);
 }
 ?>
