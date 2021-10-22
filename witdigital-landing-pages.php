@@ -90,9 +90,23 @@ if( file_exists(plugin_dir_path(__FILE__) . 'app/include-page-templates.php') ) 
 if( file_exists(plugin_dir_path(__FILE__) . 'app/shortcode.php') ) {
 	include plugin_dir_path(__FILE__) . 'app/shortcode.php';
 }
+// Flickers the least so far:
+// add_action('get_footer', 'witlandingpages\wlp_hidden_elements');
+
+// function wlp_hidden_elements() {
+// 	// $wlp_hide_elements = (get_field('witlandingpages_hide_page_elements')) ? get_field('witlandingpages_hide_page_elements') : '' ;
+// 	$classes = get_body_class();
+// 	if(in_array('wlp-landing-page', $classes)) {
+	
+// 			include_once('resources/views/page-templates/service-page-modules/hidden-elements.php');
+
+// 	};
+	
+
+// }
 
 
-// content filter for service page template:
+// content filter for service page 'template' (default template using service page fields):
 
 add_filter( 'the_content', 'witlandingpages\insert_service_content' );
 
@@ -109,8 +123,12 @@ function insert_service_content($content) {
 	$wlp_hide_elements = (get_field('witlandingpages_hide_page_elements')) ? get_field('witlandingpages_hide_page_elements') : '' ;
 
 	// have to use conditional statement in order to have the hidden-elements.php script fire after jQuery has loaded for the site. it does not appear to matter which priority is given to the hook (re: script firing)
+
 	if( in_the_loop() && is_main_query() && $wlp_is_landing_page ) {
 		echo '<div class="wlp-landing-page-inner">';
+		if( $wlp_hide_elements ) {
+			include_once('resources/views/page-templates/service-page-modules/hidden-elements.php');
+		}
 		if( $wlp_show_hero ) {
 			include_once('resources/views/page-templates/service-page-modules/hero.php');
 		}
@@ -131,9 +149,6 @@ function insert_service_content($content) {
 		}
 		if( $wlp_show_testimonials ) {
 			include_once('resources/views/page-templates/service-page-modules/testimonials.php');
-		}
-		if( $wlp_hide_elements ) {
-			include_once('resources/views/page-templates/service-page-modules/hidden-elements.php');
 		}
 		echo '</div>';
 	} else {
