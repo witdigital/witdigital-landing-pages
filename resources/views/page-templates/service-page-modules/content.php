@@ -229,7 +229,7 @@ foreach ($parentFields as $field) {
     ==========================================================================  -->
 
 <div class="servicesContent">
-    <div class="flex flex-wrap justify-between px-2 mx-auto servicesContentInner max-w-1150">
+    <div class="flex flex-col flex-wrap justify-between px-2 mx-auto servicesContentInner max-w-1150">
         <div class="flex-grow order-2 px-2 pt-0 pb-1 servicesContentLeft laptop:flex-1 max-w-650 laptop:pt-0 laptop:px-0 laptop:pb-10 laptop:order-none">
             <?php
             if(have_rows('witlandingpages_accordion')):
