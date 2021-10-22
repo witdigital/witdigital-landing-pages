@@ -3,6 +3,7 @@
 $parent = $post->post_parent; ?>
 <?php $parentFields = array('witlandingpages_coupon_title', 'witlandingpages_coupon_subtitle', 'witlandingpages_coupon_image', 'witlandingpages_location', 'witlandingpages_locations_url', 'witlandingpages_locations_button');
 foreach ($parentFields as $field) {
+     // conditional translation: If the field has a value, use that value. If that field is empty, use the value of the same field on the page's parent. If that doesn't exist, then this statement evaluates to false and nothing is displayed.
 	$$field = get_field($field) ? get_field($field) : get_field($field, $parent);
 }
 ?>
