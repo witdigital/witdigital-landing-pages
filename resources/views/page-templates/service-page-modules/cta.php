@@ -8,21 +8,15 @@ foreach ($parentFields as $field) {
 }
 ?>
 <?php 
-// $witlandingpages_cta_image = (get_field('witlandingpages_cta_image')) ? get_field('witlandingpages_cta_image')['url'] : '' ;
 $services_cta_image_alt = (get_field('witlandingpages_cta_image')) ? get_field('witlandingpages_cta_image')['alt'] : '' ;
-// $witlandingpages_cta_title = (get_field('witlandingpages_cta_title')) ? get_field('witlandingpages_cta_title') : '' ;
-// $witlandingpages_cta_content = (get_field('witlandingpages_cta_content')) ? get_field('witlandingpages_cta_content') : '' ;
 $wlp_cta_sc = (get_field('witlandingpages_cta_shortcode')) ? do_shortcode (get_field('witlandingpages_cta_shortcode')) : '' ;
 
 $wlp_cta_background_class = (get_field('witlandingpages_cta_background')) == 'Color' ? 'ctaColorOverlay' : 'ctaGradientOverlay' ;
-// $wlp_cta_background_color = (get_field('witlandingpages_cta_background_color')) ? get_field('witlandingpages_cta_background_color') : '' ;
 $wlp_cta_background_gradient = (get_field('witlandingpages_cta_background_gradient')) ? get_field('witlandingpages_cta_background_gradient') : '' ;
 $wlp_cta_css = (get_field('witlandingpages_cta_additional_css')) ? get_field('witlandingpages_cta_additional_css') : '' ;
 
 $wlp_cta_bkgnd_color = "background: " . $witlandingpages_cta_background_color . '!important;';
-// $wlp_cta_bkgnd_color = "background: " . $wlp_cta_background_color . '!important;';
 $wlp_cta_gradient = "background: " . $witlandingpages_cta_background_gradient . '!important;';
-// $wlp_cta_gradient = "background: " . $wlp_cta_background_gradient . '!important;';
 ?>
 
 <style>
