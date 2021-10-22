@@ -305,7 +305,7 @@ foreach ($parentFields as $field) {
                             if(have_rows('witlandingpages_sidebar_locations')):
                                 while(have_rows('witlandingpages_sidebar_locations')):the_row(); 
 
-                                // $wlp_location_item = (get_sub_field('witlandingpages_location')) ? get_sub_field('witlandingpages_location') : '' ;
+                                $wlp_location_item = (get_sub_field('witlandingpages_location')) ? get_sub_field('witlandingpages_location') : '' ;
                                 ?>
                                     
                                     <div class="text-base tracking-wide text-white locationItem">
