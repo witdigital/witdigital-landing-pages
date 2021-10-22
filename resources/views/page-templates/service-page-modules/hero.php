@@ -3,14 +3,13 @@
 $parent = $post->post_parent; ?>
 <?php $parentFields = array('witlandingpages_hero_image', 'witlandingpages_hero_subtitle');
 foreach ($parentFields as $field) {
+	// conditional translation: If the field has a value, use that value. If that field is empty, use the value of the same field on the page's parent. If that doesn't exist, then this statement evaluates to false and nothing is displayed.
 	$$field = get_field($field) ? get_field($field) : get_field($field, $parent);
 }
 ?>
 <!-- declare variables -->
 <?php 
 $wlp_hero_title = (get_field('witlandingpages_hero_title')) ? get_field('witlandingpages_hero_title') : '' ;
-// $witlandingpages_hero_subtitle = (get_field('witlandingpages_hero_subtitle')) ? get_field('witlandingpages_hero_subtitle') : '' ;
-// $witlandingpages_hero_image = (get_field('witlandingpages_hero_image')) ? get_field('witlandingpages_hero_image')['url'] : '' ;
 $wlp_hero_sc = (get_field('witlandingpages_hero_shortcode')) ? do_shortcode (get_field('witlandingpages_hero_shortcode')) : '' ;
 $wlp_hero_title_color = (get_field('witlandingpages_hero_title_color')) ? get_field('witlandingpages_hero_title_color') : '' ;
 $wlp_hero_subtitle_color = (get_field('witlandingpages_hero_subtitle_color')) ? get_field('witlandingpages_hero_subtitle_color') : '' ;
