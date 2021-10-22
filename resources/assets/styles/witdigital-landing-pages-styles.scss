@@ -10,10 +10,13 @@
 @import "components/content.scss";
 @import "components/testimonials.scss";
 
-.wit-landing-page {
+// the following class when using the page template needs to be switched to .wit-landing-page
+.wlp-landing-page-inner {
 
 div {
+     
     position: relative;
+    
 }
 
 @media screen and (min-width: 1024px) {
