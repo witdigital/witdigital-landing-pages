@@ -1,19 +1,12 @@
 <?php
-
 /*
  * Template Name: Wit Landing Page
  * Description: Wit Landing Page Template
  */
 
-
-/* ==========================================================================
-   Super basic template to get you started :)
-   ========================================================================== */
-
-
 get_header(); ?>
 
-<!-- Must wrap div in element 'main' to pull in typography-main.scss from theme -->    
+<!-- Must wrap div in element 'main' to pull in typography-main.scss from theme -->
 <main class="main">
 
     <div class="container max-w-full py-4 mx-auto wit-landing-page"> <!-- Start of .wit-landing-page -->
@@ -27,14 +20,12 @@ get_header(); ?>
     <?php include_once('service-page-modules/content.php') ?>
 
 
-    <?php include('service-page-modules/testimonials.php') ?>      
+    <?php include('service-page-modules/testimonials.php') ?>
 
 
-    
+
 
     </div> <!-- End of .wit-landing-page -->
 
 </main>
-
-
 <?php get_footer(); ?>
