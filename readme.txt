@@ -14,6 +14,9 @@ Provides page templates and building blocks for landing pages.
 
 == Changelog ==
 
+== 0.9.0 ==
+functioning plugin
+
 = 0.0.2 =
 added php namespaces
 
