@@ -32,10 +32,11 @@ $wlp_styles_rad_desk_img = "border-radius: " . $wlp_panels_rad_desk_img . "rem;"
 	<?php echo $wlp_panels_css ?>
 	
 	.guaranteeItem {
-		<?php echo $wlp_styles_panel_background; ?>
+		
 	}
 	
 	.guaranteeItemInner {
+		<?php echo $wlp_styles_panel_background; ?>
 		<?php echo $wlp_styles_panel_border_radius; ?>
 	}
 	.guaranteeItemTitle {
