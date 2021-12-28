@@ -14,40 +14,12 @@
             'title' => 'Hero Block',
             'fields' => array(
                 array(
-                    'key' => 'field_61cb8bf7d813d',
-                    'label' => 'Show Landing Page Hero?',
-                    'name' => 'witlandingpages_show_landing_page_hero',
-                    'type' => 'true_false',
-                    'instructions' => '',
-                    'required' => 0,
-                    'conditional_logic' => 0,
-                    'wrapper' => array(
-                        'width' => '',
-                        'class' => '',
-                        'id' => '',
-                    ),
-                    'message' => '',
-                    'default_value' => 0,
-                    'ui' => 1,
-                    'ui_on_text' => '',
-                    'ui_off_text' => '',
-                ),
-                array(
                     'key' => 'field_61cb8bf7d8145',
                     'label' => 'Hero Background Image',
                     'name' => 'witlandingpages_hero_image',
                     'type' => 'image',
-                    'instructions' => 'Will pull from parent if an image is not selected.',
                     'required' => 0,
-                    'conditional_logic' => array(
-                        array(
-                            array(
-                                'field' => 'field_61cb8bf7d813d',
-                                'operator' => '==',
-                                'value' => '1',
-                            ),
-                        ),
-                    ),
+                    'conditional_logic' => 0,
                     'wrapper' => array(
                         'width' => '',
                         'class' => '',
@@ -154,15 +126,7 @@
                     'type' => 'text',
                     'instructions' => '',
                     'required' => 0,
-                    'conditional_logic' => array(
-                        array(
-                            array(
-                                'field' => 'field_61cb8bf7d813d',
-                                'operator' => '==',
-                                'value' => '1',
-                            ),
-                        ),
-                    ),
+                    'conditional_logic' => 0,
                     'wrapper' => array(
                         'width' => '50',
                         'class' => '',
@@ -181,15 +145,7 @@
                     'type' => 'color_picker',
                     'instructions' => 'Will default to theme color for the site\'s hero if nothing selected.',
                     'required' => 0,
-                    'conditional_logic' => array(
-                        array(
-                            array(
-                                'field' => 'field_61cb8bf7d813d',
-                                'operator' => '==',
-                                'value' => '1',
-                            ),
-                        ),
-                    ),
+                    'conditional_logic' => 0,
                     'wrapper' => array(
                         'width' => '50',
                         'class' => '',
@@ -206,15 +162,7 @@
                     'type' => 'text',
                     'instructions' => 'Will pull from parent if not filled out.',
                     'required' => 0,
-                    'conditional_logic' => array(
-                        array(
-                            array(
-                                'field' => 'field_61cb8bf7d813d',
-                                'operator' => '==',
-                                'value' => '1',
-                            ),
-                        ),
-                    ),
+                    'conditional_logic' => 0,
                     'wrapper' => array(
                         'width' => '50',
                         'class' => '',
@@ -233,15 +181,7 @@
                     'type' => 'color_picker',
                     'instructions' => 'Will default to theme color for span if nothing selected.',
                     'required' => 0,
-                    'conditional_logic' => array(
-                        array(
-                            array(
-                                'field' => 'field_61cb8bf7d813d',
-                                'operator' => '==',
-                                'value' => '1',
-                            ),
-                        ),
-                    ),
+                    'conditional_logic' => 0,
                     'wrapper' => array(
                         'width' => '50',
                         'class' => '',
@@ -264,15 +204,7 @@
         <br>
         <strong>Request Service:</strong> <em>[witlandingpages_schedule_btn]</em>',
                     'required' => 0,
-                    'conditional_logic' => array(
-                        array(
-                            array(
-                                'field' => 'field_61cb8bf7d813d',
-                                'operator' => '==',
-                                'value' => '1',
-                            ),
-                        ),
-                    ),
+                    'conditional_logic' => 0,
                     'wrapper' => array(
                         'width' => '',
                         'class' => '',
@@ -291,15 +223,7 @@
                     'type' => 'textarea',
                     'instructions' => 'Use this area for any additional CSS. Be sure to use proper formatting; reach out to Dev with any questions.',
                     'required' => 0,
-                    'conditional_logic' => array(
-                        array(
-                            array(
-                                'field' => 'field_61cb8bf7d813d',
-                                'operator' => '==',
-                                'value' => '1',
-                            ),
-                        ),
-                    ),
+                    'conditional_logic' => 0,
                     'wrapper' => array(
                         'width' => '',
                         'class' => '',

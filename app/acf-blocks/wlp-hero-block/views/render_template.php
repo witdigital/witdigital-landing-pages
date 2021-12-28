@@ -59,6 +59,10 @@ else :
 	$wlp_hero_block_header_content = 'WLP Hero Block Header Section';
 endif;
 
+$wlp_hero_title = (get_field('witlandingpages_hero_title')) ? get_field('witlandingpages_hero_title') : '' ;
+$wlp_hero_image = (get_field('witlandingpages_hero_image')) ? get_field('witlandingpages_hero_image')['url'] : '' ;
+
+
 if ( get_field( 'wlp_hero_block_content' ) ) :
 	$wlp_hero_block_content = get_field( 'wlp_hero_block_content' );
 else :
@@ -74,15 +78,15 @@ endif;
 /*  ==========================================================================
     Define InnerBLocks Template
     ========================================================================== */
-$wlp_hero_block_template = array(
-	array('core/heading', array(
-		'level' => 2,
-		'placeholder' => 'Title Goes Here',
-	)),
-	array( 'core/paragraph', array(
-		'placeholder' => 'Paragraph Copy',
-	) )
-);
+// $wlp_hero_block_template = array(
+// 	array('core/heading', array(
+// 		'level' => 2,
+// 		'placeholder' => 'Title Goes Here',
+// 	)),
+// 	array( 'core/paragraph', array(
+// 		'placeholder' => 'Paragraph Copy',
+// 	) )
+// );
 
 
 
@@ -98,15 +102,19 @@ $wlp_hero_block_template = array(
 
         <div class="wlpHeroBlock_wrapper">
 
-            <div class="wlpHeroBlock_inner flex flex-col lg:flex-row justify-between items-center">
-                <section class="col1 lg:w-1/2">
+            <div class="flex flex-col items-center justify-between wlpHeroBlock_inner lg:flex-row">
+                <!-- <section class="col1 lg:w-1/2">
 
                     <div class="innerBlocks">
                         <?php echo '<InnerBlocks template="' . esc_attr( wp_json_encode( $wlp_hero_block_template ) ) . '" />';?>
                     </div>
 
-                </section>
-                <aside class="col2 flex flex-col lg:px-0 max-w-full lg:w-1/2 self-start">
+                </section> -->
+                <aside class="flex flex-col self-start max-w-full col2 lg:px-0 lg:w-1/2">
+
+                <div class="hero" style="background: url( <?php echo $wlp_hero_image; ?>) 100% 20% / cover;">
+                    <?php echo $wlp_hero_title ?>
+                </div>
 
                     <?php if ( $wlp_hero_block_header_content ): ?>
                     <div class="wlpHeroBlock_heading">
@@ -126,6 +134,8 @@ $wlp_hero_block_template = array(
                         <?php echo $wlp_hero_block_content ?>
                     </div>
 	            <?php endif; ?>
+
+               
 
 
 	            <?php if ( $wlp_hero_block_footer_content ): ?>

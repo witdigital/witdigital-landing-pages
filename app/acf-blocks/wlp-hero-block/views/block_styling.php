@@ -115,25 +115,26 @@ $wlp_hero_block_scss = /** @lang SCSS */
 	Compile SCSS
 	========================================================================== */
 
-$scss = new Compiler();
+// $scss = new Compiler();
 
 // Option to Crunch SCSS from Wit Commander Settings
-if ( get_field( 'crunch_witcom_scss', 'option' ) ):
-	$scss->setFormatter( 'ScssPhp\ScssPhp\Formatter\Crunched' );
-else:
-//	$scss->setFormatter( 'ScssPhp\ScssPhp\Formatter\Expanded' );
+// if ( get_field( 'crunch_witcom_scss', 'option' ) ):
+// 	$scss->setFormatter( 'ScssPhp\ScssPhp\Formatter\Crunched' );
+// else:
+	// $scss->setFormatter( 'ScssPhp\ScssPhp\Formatter\Expanded' );
 
 // Override Wit Commander
-	$scss->setFormatter( 'ScssPhp\ScssPhp\Formatter\Crunched' );
-endif;
+// 	$scss->setFormatter( 'ScssPhp\ScssPhp\Formatter\Crunched' );
+// endif;
 
 
-$compiledCssCode = $scss->compile( $wlp_hero_block_scss );
+// $compiledCssCode = $scss->compile( $wlp_hero_block_scss );
 
 /*  ==========================================================================
 	Write CSS to the browser
 	========================================================================== */
 
 echo( "<style id='$blockID-style'>\r\n" );
-echo $compiledCssCode;
+echo $wlp_hero_block_scss;
+// echo $compiledCssCode;
 echo( '</style>' );
