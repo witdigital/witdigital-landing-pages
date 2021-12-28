@@ -71,9 +71,9 @@ if( file_exists(plugin_dir_path(__FILE__) . 'app/setup.php') ) {
 /* ==========================================================================
    Bring in Blocks
    ========================================================================== */
-// if( file_exists(plugin_dir_path(__FILE__) . 'app/acf-blocks/acf_blocks.php') ) {
-// 	include plugin_dir_path(__FILE__) . 'app/acf-blocks/acf_blocks.php';
-// }
+if( file_exists(plugin_dir_path(__FILE__) . 'app/acf-blocks/acf_blocks.php') ) {
+	include plugin_dir_path(__FILE__) . 'app/acf-blocks/acf_blocks.php';
+}
 
 /* ==========================================================================
    Bring in Page Templates
