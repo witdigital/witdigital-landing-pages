@@ -160,7 +160,6 @@
                     'label' => 'Hero Subtitle',
                     'name' => 'witlandingpages_hero_subtitle',
                     'type' => 'text',
-                    'instructions' => 'Will pull from parent if not filled out.',
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
@@ -197,12 +196,12 @@
                     'name' => 'witlandingpages_hero_shortcode',
                     'type' => 'text',
                     'instructions' => 'Input shortcode here, be sure to include the brackets.
-        <br>
-        <strong>Single Phone Number:</strong> <em>[witlandingpages_one_phone]</em>
-        <br>
-        <strong>Two Phone Numbers:</strong> <em>[witlandingpages_two_phones]</em>
-        <br>
-        <strong>Request Service:</strong> <em>[witlandingpages_schedule_btn]</em>',
+                        <br>
+                        <strong>Single Phone Number:</strong> <em>[witlandingpages_one_phone]</em>
+                        <br>
+                        <strong>Two Phone Numbers:</strong> <em>[witlandingpages_two_phones]</em>
+                        <br>
+                        <strong>Request Service:</strong> <em>[witlandingpages_schedule_btn]</em>',
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
