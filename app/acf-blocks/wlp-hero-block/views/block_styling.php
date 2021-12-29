@@ -137,6 +137,6 @@ $wlp_hero_block_scss = /** @lang SCSS */
 	========================================================================== */
 
 echo( "<style id='$blockID-style'>\r\n" );
-// echo $wlp_hero_block_scss;
-echo $compiledCssCode;
+echo $wlp_hero_block_scss;
+// echo $compiledCssCode;
 echo( '</style>' );
