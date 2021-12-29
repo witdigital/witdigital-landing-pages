@@ -13,7 +13,7 @@
 	Ref: https://scssphp.github.io/scssphp/
 	========================================================================== */
 
-use ScssPhp\ScssPhp\Compiler;
+// use ScssPhp\ScssPhp\Compiler;
 global $witcom_breakpoint_md;
 /*  ==========================================================================
 	Get Wit Commander fields and set vars
@@ -39,7 +39,8 @@ endif;
 if ( get_field( 'wlp_hero_block_desktop_background_color' ) ) :
 	$wlp_hero_block_desktop_background_color = get_field( 'wlp_hero_block_desktop_background_color' );
 else :
-	$wlp_hero_block_desktop_background_color = '#CCFF00';
+	$wlp_hero_block_desktop_background_color = '#000000';
+	// $wlp_hero_block_desktop_background_color = '#CCFF00';
 endif;
 
 
@@ -76,7 +77,7 @@ $wlp_hero_block_scss = /** @lang SCSS */
 	                 padding: $wlp_hero_block_wrapper_padding;
 	               
 		                @media (min-width: $witcom_breakpoint_md) {
-		                  background-color: $wlp_hero_block_desktop_background_color;
+		                  background-color: #000;
 		                } //end medium breakpoint
 	               
 	               }
@@ -90,6 +91,7 @@ $wlp_hero_block_scss = /** @lang SCSS */
 	               }
                
                }
+			   
                
 				/* ===========================  Styling for in the editor ONLY  ========================== */
                
@@ -135,6 +137,6 @@ $wlp_hero_block_scss = /** @lang SCSS */
 	========================================================================== */
 
 echo( "<style id='$blockID-style'>\r\n" );
-echo $wlp_hero_block_scss;
-// echo $compiledCssCode;
+// echo $wlp_hero_block_scss;
+echo $compiledCssCode;
 echo( '</style>' );
