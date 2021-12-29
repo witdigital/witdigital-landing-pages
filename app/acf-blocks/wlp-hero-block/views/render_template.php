@@ -96,9 +96,22 @@ endif;
 
 ?>
 
-<style>
-
-</style>
+        <style>
+			<?php echo $wlp_hero_css ?>
+			
+			.colorOverlay {
+				<?php echo $wlp_over_color ?>
+			}
+			.gradientOverlay {
+				<?php echo $wlp_gradient ?>
+			}
+			.servicesHeroSubtitle {
+				<?php echo $wlp_hstc ?>
+			}
+			.servicesHeroTitle {
+				<?php echo $wlp_htc ?>
+			}
+		</style>
 
     <div id="<?php echo $blockID ?>" class="<?php echo esc_attr( $className ); ?>">
 
@@ -106,48 +119,20 @@ endif;
 
         <div class="wlpHeroBlock_wrapper">
 
-            <div class="flex flex-col items-center justify-between wlpHeroBlock_inner lg:flex-row">
-                <!-- <section class="col1 lg:w-1/2">
+            <div class="wlpHeroBlock_inner">
 
-                    <div class="innerBlocks">
-                        <?php echo '<InnerBlocks template="' . esc_attr( wp_json_encode( $wlp_hero_block_template ) ) . '" />';?>
+                <div class="px-4 py-10 servicesHero hero laptop:pt-40 laptop:pb-24" style="background: url( <?php echo $witlandingpages_hero_image['url']; ?>) 100% 20% / cover;">
+	            <div class="altOverlay overlay <?php echo $wlp_overlay_class ?>"></div>
+                    <div class="mx-auto text-center servicesHeroInner max-w-1000 laptop:pb-16 laptop:pt-6">
+                        <span class="mx-auto servicesHeroSubtitle max-w-450 laptop:px-3 laptop:mb-3 text-20 laptop:text-20 text-green"><?php echo $witlandingpages_hero_subtitle; ?></span>
+                        <h1 class="leading-tight text-white servicesHeroTitle text-34 laptop:text-52 laptop:leading-none"><?php echo $wlp_hero_title ?></h1>
+
+                        <div class="mt-3 text-center text-white servicesHeroCall laptop:mt-6">
+                            <?php echo $wlp_hero_sc ?>
+                        </div>
+            
                     </div>
-
-                </section> -->
-                <aside class="flex flex-col self-start max-w-full col2 lg:px-0 lg:w-1/2">
-
-                <div class="hero" style="background: url( <?php echo $wlp_hero_image; ?>) 100% 20% / cover;">
-                    <?php echo $wlp_hero_title ?>
-                </div>
-
-                    <?php if ( $wlp_hero_block_header_content ): ?>
-                    <div class="wlpHeroBlock_heading">
-
-                        <h3><?php echo $wlp_hero_block_header_content ?></h3>
-                    </div>
-	                <?php endif; ?>
-
-
-
-	            <?php if ( $wlp_hero_block_content ): ?>
-                    <div class="wlpHeroBlock_content">
-
-
-
-
-                        <?php echo $wlp_hero_block_content ?>
-                    </div>
-	            <?php endif; ?>
-
-               
-
-
-	            <?php if ( $wlp_hero_block_footer_content ): ?>
-                    <div class="wlpHeroBlock_footer">
-			            <?php echo $wlp_hero_block_footer_content ?>
-                    </div>
-	            <?php endif; ?>
-                </aside>
+                </div> <!-- End of .servicesHero -->
 
             </div> <!-- End of .wlpHeroBlock_inner -->
 
