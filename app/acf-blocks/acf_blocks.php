@@ -26,3 +26,7 @@ if( file_exists(plugin_dir_path(__FILE__) . 'wlp-cta-block/register_block.php') 
 if( file_exists(plugin_dir_path(__FILE__) . 'wlp-panels-and-photo/register_block.php') ) {
 	include plugin_dir_path(__FILE__) . 'wlp-panels-and-photo/register_block.php';
 }
+
+if( file_exists(plugin_dir_path(__FILE__) . 'wlp-bottom-content/register_block.php') ) {
+	include plugin_dir_path(__FILE__) . 'wlp-bottom-content/register_block.php';
+}
