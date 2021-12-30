@@ -290,13 +290,13 @@ $wlp_ac_css = (get_field('witlandingpages_ac_additional_css')) ? get_field('witl
 
     </style>
 
-    <div id="<?php echo $blockID ?>" class="<?php echo esc_attr( $className ); ?>">
+    <div id="<?php echo $blockID ?>" class="<?php echo esc_attr( $className ); ?> alignfull">
 
 
 
         <div class="wlpBottomContent_wrapper">
 
-            <div class="wlpBottomContent_inner alignfull">
+            <div class="wlpBottomContent_inner">
 
                 <div class="servicesContent">
                     <div class="flex flex-col flex-wrap justify-between px-2 mx-auto servicesContentInner max-w-1150">
