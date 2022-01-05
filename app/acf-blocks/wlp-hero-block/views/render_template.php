@@ -83,12 +83,17 @@ $wlp_gradient = "background: " . $wlp_overlay_gradient . '!important;';
 // );
 
 
+// echo '<InnerBlocks template="' . esc_attr( wp_json_encode( $wlp_hero_block_template ) ) . '" templateLock="all" />';
+if( isset( $block['data']['hero_preview_image'] )  ) :    /* rendering in inserter preview  */
 
+    echo '<img src="'. $block['data']['hero_preview_image'] .'" style="width:100%; height:auto;">';
+endif;
 /*  ==========================================================================
     Render the front end
     ========================================================================== */
 
 ?>
+
 
         <style>
 			<?php echo $wlp_hero_css ?>
@@ -109,7 +114,7 @@ $wlp_gradient = "background: " . $wlp_overlay_gradient . '!important;';
 
     <div id="<?php echo $blockID ?>" class="<?php echo esc_attr( $className ); ?>">
 
-
+            
 
         <div class="wlpHeroBlock_wrapper">
 

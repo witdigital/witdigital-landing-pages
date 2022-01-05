@@ -33,13 +33,22 @@ function wlp_hero_block_register_blocks() {
 		'category'        => 'wit-blocks',
 		'icon'            => file_get_contents( plugin_dir_path( __FILE__ ) . '/assets/icon.svg' ),
 		'align'           => 'center',
-		'mode'            => 'auto',
+		'description'     => 'A hero image with a header and optional phone number',
 		'keywords'        => array( '', '', '' ),
 		'supports'        => array(
-			'mode'     => true,
+			'mode'     => false,
 			'align'    => array( 'wide', 'full', 'center' ),
 			'multiple' => true,
 			'jsx'     => true
+		),
+		'example'           => array(
+			'attributes' => array(
+				'mode' => 'preview',
+				'data' => array(
+					'hero_preview_image' => '/wp-content/plugins/witdigital-landing-pages/app/acf-blocks/wlp-hero-block/assets/images/hero-preview.png',
+					
+				)
+			)
 		)
 	) );
 }
