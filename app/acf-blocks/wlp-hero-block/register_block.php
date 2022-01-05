@@ -33,7 +33,7 @@ function wlp_hero_block_register_blocks() {
 		'category'        => 'wit-blocks',
 		'icon'            => file_get_contents( plugin_dir_path( __FILE__ ) . '/assets/icon.svg' ),
 		'align'           => 'center',
-		'mode'            => 'preview',
+		'mode'            => 'auto',
 		'keywords'        => array( '', '', '' ),
 		'supports'        => array(
 			'mode'     => true,
