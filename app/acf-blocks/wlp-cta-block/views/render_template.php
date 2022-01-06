@@ -80,7 +80,11 @@ $wlp_cta_gradient = "background: " . $wlp_cta_background_gradient . '!important;
 // 	) )
 // );
 
+// Show Preview Image:
+if( isset( $block['data']['cta_preview_image'] )  ) :    /* rendering in inserter preview  */
 
+    echo '<img src="'. $block['data']['cta_preview_image'] .'" style="width:100%; height:auto;">';
+endif;
 
 /*  ==========================================================================
     Render the front end
