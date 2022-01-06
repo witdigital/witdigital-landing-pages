@@ -73,13 +73,16 @@ $wlp_gradient = "background: " . $wlp_overlay_gradient . '!important;';
     Define InnerBLocks Template
     ========================================================================== */
 // $wlp_hero_block_template = array(
-// 	array('core/heading', array(
-// 		'level' => 2,
+// 	array( 'core/paragraph', array(
+// 		'placeholder' => 'Enter optional subtitle',
+// 	) ),
+//     array('core/heading', array(
+// 		'level' => 1,
 // 		'placeholder' => 'Title Goes Here',
 // 	)),
-// 	array( 'core/paragraph', array(
-// 		'placeholder' => 'Paragraph Copy',
-// 	) )
+//     array('core/shortcode', array(
+// 		'placeholder' => 'Button Shortcode',
+// 	))
 // );
 
 
@@ -122,7 +125,7 @@ endif;
 
                 <div class="px-4 py-10 servicesHero hero laptop:pt-40 laptop:pb-24" style="background: url( <?php echo $wlp_hero_image; ?>) 100% 20% / cover;">
 	            <div class="altOverlay overlay <?php echo $wlp_overlay_class ?>"></div>
-                    <div class="mx-auto text-center servicesHeroInner max-w-1000 laptop:pb-16 laptop:pt-6">
+                    <div class="relative mx-auto text-center servicesHeroInner max-w-1000 laptop:pb-16 laptop:pt-6">
                         <span class="mx-auto servicesHeroSubtitle max-w-450 laptop:px-3 laptop:mb-3 text-20 laptop:text-20 text-green"><?php echo $wlp_hero_subtitle; ?></span>
                         <h1 class="leading-tight text-white servicesHeroTitle text-34 laptop:text-52 laptop:leading-none"><?php echo $wlp_hero_title ?></h1>
 
