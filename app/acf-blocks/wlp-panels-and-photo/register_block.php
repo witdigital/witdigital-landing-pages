@@ -33,13 +33,22 @@ function wlp_panels_and_photo_register_blocks() {
 		'category'        => 'wit-blocks',
 		'icon'            => file_get_contents( plugin_dir_path( __FILE__ ) . '/assets/icon.svg' ),
 		'align'           => 'center',
-		'mode'            => 'auto',
+		'description'     => 'Left side is content area with three callout panels. Right side is a prominent image.',
 		'keywords'        => array( '', '', '' ),
 		'supports'        => array(
 			'mode'     => true,
 			'align'    => array( 'wide', 'full', 'center' ),
 			'multiple' => true,
 			'jsx'     => true
+		),
+		'example'		=> array(
+			'attributes' => array(
+				'mode'	=> 'preview',
+				'data'	=> array(
+					'panels_preview_image' => '/wp-content/plugins/witdigital-landing-pages/app/acf-blocks/wlp-panels-and-photo/assets/images/panels-and-photo-preview.png',
+				)
+			)
+
 		)
 	) );
 }

@@ -92,7 +92,11 @@ $wlp_styles_rad_desk_img = "border-radius: " . $wlp_panels_rad_desk_img . "rem;"
 // );
 
 
+// Show Preview Image:
+if( isset( $block['data']['panels_preview_image'] )  ) :    /* rendering in inserter preview  */
 
+    echo '<img src="'. $block['data']['panels_preview_image'] .'" style="width:100%; height:auto;">';
+endif;
 /*  ==========================================================================
     Render the front end
     ========================================================================== */
