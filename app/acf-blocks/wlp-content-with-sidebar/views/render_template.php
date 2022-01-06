@@ -110,7 +110,11 @@ $wlp_li_color = "color: " . $wlp_marker . "!important;";
 // );
 
 
+// Show Preview Image:
+if( isset( $block['data']['content_sidebar_preview'] )  ) :    /* rendering in inserter preview  */
 
+    echo '<img src="'. $block['data']['content_sidebar_preview'] .'" style="width:100%; height:auto;">';
+endif;
 /*  ==========================================================================
     Render the front end
     ========================================================================== */

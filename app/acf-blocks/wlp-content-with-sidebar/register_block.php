@@ -33,13 +33,22 @@ function wlp_content_with_sidebar_register_blocks() {
 		'category'        => 'wit-blocks',
 		'icon'            => file_get_contents( plugin_dir_path( __FILE__ ) . '/assets/icon.svg' ),
 		'align'           => 'center',
-		'mode'            => 'auto',
+		'description'     => 'Left side is content comprised of (up to) three distinct sections. Right side is an editable sidebar area.',
 		'keywords'        => array( '', '', '' ),
 		'supports'        => array(
 			'mode'     => true,
 			'align'    => array( 'wide', 'full', 'center' ),
 			'multiple' => true,
 			'jsx'     => true
+		),
+		'example'		=> array(
+			'attributes' => array(
+				'mode'	=> 'preview',
+				'data'	=> array(
+					'content_sidebar_preview' => '/wp-content/plugins/witdigital-landing-pages/app/acf-blocks/wlp-content-with-sidebar/assets/images/content-sidebar-preview.png',
+				)
+			)
+
 		)
 	) );
 }
