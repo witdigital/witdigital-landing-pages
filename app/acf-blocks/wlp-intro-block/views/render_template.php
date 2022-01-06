@@ -79,7 +79,11 @@ $wlp_styles_intro_title = "color: " . $wlp_intro_title_color ."!important;";
 // 	) )
 // );
 
+// Show Preview Image:
+if( isset( $block['data']['intro_preview_image'] )  ) :    /* rendering in inserter preview  */
 
+    echo '<img src="'. $block['data']['intro_preview_image'] .'" style="width:100%; height:auto;">';
+endif;
 
 /*  ==========================================================================
     Render the front end

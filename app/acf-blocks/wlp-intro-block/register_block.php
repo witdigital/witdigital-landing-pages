@@ -33,13 +33,22 @@ function wlp_intro_block_register_blocks() {
 		'category'        => 'wit-blocks',
 		'icon'            => file_get_contents( plugin_dir_path( __FILE__ ) . '/assets/icon.svg' ),
 		'align'           => 'center',
-		'mode'            => 'auto',
+		'description'     => 'Intro section. Accepts image or video on left, content and optional button on the right.',
 		'keywords'        => array( '', '', '' ),
 		'supports'        => array(
 			'mode'     => true,
 			'align'    => array( 'wide', 'full', 'center' ),
 			'multiple' => true,
 			'jsx'     => true
+		),
+		'example'		=> array(
+			'attributes' => array(
+				'mode'	=> 'preview',
+				'data'	=> array(
+					'intro_preview_image' => '/wp-content/plugins/witdigital-landing-pages/app/acf-blocks/wlp-intro-block/assets/images/intro-preview.png',
+				)
+			)
+
 		)
 	) );
 }
