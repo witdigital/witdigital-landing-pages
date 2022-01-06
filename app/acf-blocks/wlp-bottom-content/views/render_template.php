@@ -172,6 +172,7 @@ $wlp_ac_css = (get_field('witlandingpages_ac_additional_css')) ? get_field('witl
 
 /*  ==========================================================================
     Define InnerBLocks Template
+    *** InnerBlocks only useful if main block is comprised of other blocks (not ACF fields) ***
     ========================================================================== */
 // $wlp_bottom_content_template = array(
 // 	array('core/heading', array(
@@ -183,7 +184,11 @@ $wlp_ac_css = (get_field('witlandingpages_ac_additional_css')) ? get_field('witl
 // 	) )
 // );
 
+// Show Preview Image:
+if( isset( $block['data']['bottom_preview_image'] )  ) :    /* rendering in inserter preview  */
 
+    echo '<img src="'. $block['data']['bottom_preview_image'] .'" style="width:100%; height:auto;">';
+endif;
 
 /*  ==========================================================================
     Render the front end
@@ -365,7 +370,7 @@ $wlp_ac_css = (get_field('witlandingpages_ac_additional_css')) ? get_field('witl
                                         
                                     </div>
                                 </div><!-- end .sidebarCouponSection -->
-                                <?php endif; ?>
+                            <?php endif; ?>
 
                                 <div class="servicesContentSidebarSection serviceAreaSection">
                                     <div class="p-5 serviceAreaSectionInner sidebarSectionInner sidebarSectionLocations bg-blue rounded-2xl">
@@ -397,31 +402,8 @@ $wlp_ac_css = (get_field('witlandingpages_ac_additional_css')) ? get_field('witl
                                                     
                                                     </div>
                                                 <?php endwhile;
-                                            elseif(have_rows('witlandingpages_sidebar_locations', $parent)):
-                                                while(have_rows('witlandingpages_sidebar_locations', $parent)):the_row();
-                                                
-                                                $wlp_location_item = (get_sub_field('witlandingpages_location')) ? get_sub_field('witlandingpages_location') : '' ;
-                                                ?>
-                                                    <div class="text-white locationItem">
-                                                    <!-- for custom map pin: -->
-                                                    <?php if( ($wlp_map_if_custom == 'customPin') && ($wlp_map_png_svg == 'pngPin') ): ?>
+                                                endif; ?>
 
-                                                            <img class="inline-block w-3 mr-1 align-text-bottom iconImageFilter pngPin" src=<?php echo $wlp_map_png ?> /> 
-                                                        <?php elseif( ($wlp_map_if_custom == 'customPin') && ($wlp_map_png_svg == 'svgPin') ): ?>
-
-                                                            <img class="inline-block w-3 mr-1 align-text-bottom iconImageFilter svgPin" src=<?php echo $wlp_map_svg ?> /> 
-                                                        <?php else: ?>
-
-                                                        <!-- for default map pin: -->
-                                                            <img class="inline-block w-3 mr-1 align-text-bottom iconImageFilter" src=<?php echo $map_icon ?> />
-                                                        <?php endif; ?>
-
-                                                    <!-- this stays the same, regardless of above logic: -->
-                                                    <span class="absolute"><?php echo $wlp_location_item ?></span>
-                                                    </div>
-                                                <?php endwhile;
-                                            endif;
-                                            ?>
                                         </div> <!-- end .couponSidebarLocations -->
 
                                         <a class="block px-3 py-2 mx-auto my-0 text-base font-bold text-center text-white uppercase border border-white rounded-md btn moreLocations" href="<?php echo $wlp_locations_url; ?>">

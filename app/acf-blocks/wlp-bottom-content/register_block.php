@@ -33,14 +33,23 @@ function wlp_bottom_content_register_blocks() {
 		'category'        => 'wit-blocks',
 		'icon'            => file_get_contents( plugin_dir_path( __FILE__ ) . '/assets/icon.svg' ),
 		'align'           => 'center',
-		'mode'            => 'auto',
+		'description'     => 'Accordion content on the left, Sidebar for locations and (optional) coupon on the right',
 		'keywords'        => array( '', '', '' ),
 		'supports'        => array(
 			'mode'     => true,
 			'align'    => array( 'wide', 'full', 'center' ),
 			'multiple' => true,
 			'jsx'     => true
+		),
+		'example'           => array(
+			'attributes' => array(
+				'mode' => 'preview',
+				'data' => array(
+					'bottom_preview_image' => '/wp-content/plugins/witdigital-landing-pages/app/acf-blocks/wlp-bottom-content/assets/images/bottom-content-preview.png',
+				)
+			)
 		)
+
 	) );
 }
 
