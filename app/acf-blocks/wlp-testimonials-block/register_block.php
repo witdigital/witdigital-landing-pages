@@ -33,13 +33,22 @@ function wlp_testimonials_block_register_blocks() {
 		'category'        => 'wit-blocks',
 		'icon'            => file_get_contents( plugin_dir_path( __FILE__ ) . '/assets/icon.svg' ),
 		'align'           => 'center',
-		'mode'            => 'auto',
+		'description'     => 'Standard testimonials area. Accepts a shortcode.',
 		'keywords'        => array( '', '', '' ),
 		'supports'        => array(
 			'mode'     => true,
 			'align'    => array( 'wide', 'full', 'center' ),
 			'multiple' => true,
 			'jsx'     => true
+		),
+		'example'		=> array(
+			'attributes' => array(
+				'mode'	=> 'preview',
+				'data'	=> array(
+					'testimonials_preview_image' => '/wp-content/plugins/witdigital-landing-pages/app/acf-blocks/wlp-testimonials-block/assets/images/testimonials-preview.png',
+				)
+			)
+
 		)
 	) );
 }

@@ -104,7 +104,11 @@ $wlp_test_css = (get_field('witlandingpages_test_additional_css')) ? get_field('
 // );
 
 
+// Show Preview Image:
+if( isset( $block['data']['testimonials_preview_image'] )  ) :    /* rendering in inserter preview  */
 
+    echo '<img src="'. $block['data']['testimonials_preview_image'] .'" style="width:100%; height:auto;">';
+endif;
 /*  ==========================================================================
     Render the front end
     ========================================================================== */
