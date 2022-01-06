@@ -71,6 +71,7 @@ $wlp_gradient = "background: " . $wlp_overlay_gradient . '!important;';
 
 /*  ==========================================================================
     Define InnerBLocks Template
+    *** InnerBlocks only useful if main block is comprised of other blocks (not ACF fields) ***
     ========================================================================== */
 // $wlp_hero_block_template = array(
 // 	array( 'core/paragraph', array(
@@ -87,6 +88,8 @@ $wlp_gradient = "background: " . $wlp_overlay_gradient . '!important;';
 
 
 // echo '<InnerBlocks template="' . esc_attr( wp_json_encode( $wlp_hero_block_template ) ) . '" templateLock="all" />';
+
+// Show Preview Image:
 if( isset( $block['data']['hero_preview_image'] )  ) :    /* rendering in inserter preview  */
 
     echo '<img src="'. $block['data']['hero_preview_image'] .'" style="width:100%; height:auto;">';
