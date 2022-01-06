@@ -421,7 +421,8 @@ endif;
                                         <?php endif; ?>
 
                                         <!-- this stays the same, regardless of above logic: -->
-                                        <?php echo $wlp_locations_button; ?></a>
+                                        <?php echo $wlp_locations_button; ?>
+                                        </a>
                                     </div> <!-- End .sidebarSectionLocations -->
                                 </div><!-- End .serviceAreaSection -->
                             </div><!-- End .servicesContentRightInner -->
