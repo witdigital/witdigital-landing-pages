@@ -58,8 +58,8 @@ $wlp_testimonials_title = (get_field('witlandingpages_testimonials_title')) ? ge
 $wlp_testimonials_title_color = (get_field('witlandingpages_testimonials_title_color')) ? get_field('witlandingpages_testimonials_title_color') : '' ;
 $wlp_testBtn_href = (get_field('witlandingpages_testimonials_link')) ? get_field('witlandingpages_testimonials_link') : '' ;
 $wlp_testBtn_text = (get_field('witlandingpages_testimonials_btn_text')) ? get_field('witlandingpages_testimonials_btn_text') : '' ;
-$wlp_testimonials_sc = (get_field('witlandingpages_testimonials_shortcode')) ? do_shortcode (get_field('witlandingpages_testimonials_shortcode')) : get_field('witlandingpages_testimonials_shortcode') ;
-// $wlp_testimonials_sc = (get_field('witlandingpages_testimonials_shortcode')) ? do_shortcode (get_field('witlandingpages_testimonials_shortcode')) : 'words GO HERE.' ;
+$wlp_testimonials_sc = (get_field('witlandingpages_testimonials_shortcode')) ? do_shortcode (get_field('witlandingpages_testimonials_shortcode')) : '' ;
+
 
 $wlp_test_overlay_class = (get_field('witlandingpages_overlay_testimonials')) == 'Color' ? 'testColorOverlay' : 'testGradientOverlay' ;
 $wlp_test_overlay_color = (get_field('witlandingpages_overlay_color_testimonials')) ? get_field('witlandingpages_overlay_color_testimonials') : '' ;
