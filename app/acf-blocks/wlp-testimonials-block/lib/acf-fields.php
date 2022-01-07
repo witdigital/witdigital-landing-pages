@@ -61,7 +61,7 @@
                         'class' => '',
                         'id' => '',
                     ),
-                    'default_value' => '',
+                    'default_value' => 'WORDS WORDS (default value)',
                     'placeholder' => '',
                     'prepend' => '',
                     'append' => '',
