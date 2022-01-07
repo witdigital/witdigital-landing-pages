@@ -973,6 +973,7 @@
                             'max_height' => '',
                             'max_size' => '',
                             'mime_types' => 'svg',
+                            'default_value' => '/wp-content/plugins/witdigital-landing-pages/app/acf-blocks/wlp-bottom-content/assets/icon.svg',
                         ),
                     ),
                 ),
@@ -1155,3 +1156,4 @@
         ));
         
         endif;		
+
