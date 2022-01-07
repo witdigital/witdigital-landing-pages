@@ -973,6 +973,7 @@
                             'max_height' => '',
                             'max_size' => '',
                             'mime_types' => 'svg',
+                            //The below doesn't normally go here, you've manually entered it:
                             'default_value' => '/wp-content/plugins/witdigital-landing-pages/app/acf-blocks/wlp-bottom-content/assets/icon.svg',
                         ),
                     ),
