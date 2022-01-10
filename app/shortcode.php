@@ -15,7 +15,7 @@ function witlandingpages_one_phone( $atts ) {
 
 	$wlp_phone_1_href     = ( get_field( 'witlandingpages_phone_link', 'option' ) ) ? get_field( 'witlandingpages_phone_link', 'option' ) : '';
 	$wlp_phone_1_display  = ( get_field( 'witlandingpages_phone_format', 'option' ) ) ? get_field( 'witlandingpages_phone_format', 'option' ) : '';
-	$wlp_call_button_icon = '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/phone-alt-solid.svg';
+	$wlp_call_button_icon = '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/phone-alt-solid.svg/';
 	$wlp_style_call_btn   = 'background: url(' . $wlp_call_button_icon . ') center / cover;';
 
 	// Style Variables:
