@@ -15,14 +15,14 @@ function wit_landing_pages_enqueue_script() {
 }
 
 // Styles
-function custom_style_adding_function() {
-	wp_enqueue_style(
-		'wit_landing_pages_styles', plugins_url( '../dist/css/witdigital-landing-pages-styles.css', __FILE__ ),
-		array(),
-		false,
-		'all'
-	);
-}
+// function custom_style_adding_function() {
+// 	wp_enqueue_style(
+// 		'wit_landing_pages_styles', plugins_url( '../dist/css/witdigital-landing-pages-styles.css', __FILE__ ),
+// 		array(),
+// 		false,
+// 		'all'
+// 	);
+// }
 
 // set up Options Page:
 if( function_exists('acf_add_options_page') ) {
