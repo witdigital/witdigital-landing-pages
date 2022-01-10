@@ -49,7 +49,7 @@ if( file_exists(plugin_dir_path(__FILE__) . 'wlp-testimonials-block/register_blo
   }
 
  // render default image out front:
-  
+
 add_filter('acf/load_value/type=image', 'reset_default_image', 10, 3);
 function reset_default_image($value, $post_id, $field) {
   if (!$value) {
@@ -57,3 +57,5 @@ function reset_default_image($value, $post_id, $field) {
   }
   return $value;
 }
+
+// testing
