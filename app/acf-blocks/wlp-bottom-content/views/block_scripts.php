@@ -12,16 +12,16 @@
 
 <script id='<?php echo $blockID ?>-script'>
 
-    document.addEventListener("DOMContentLoaded", function() {
+        jQuery(document).ready(function($){
 
+            $('.accordionTitle').click(function() {
+                $( this ).parent().toggleClass('active');
+            } );
+        
 
-        $('.accordionTitle').click(function() {
-            $( this ).parent().toggleClass('active');
-        } );
+            
 
-
-    });
-
+        });
 
 
 </script>
