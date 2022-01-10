@@ -54,7 +54,7 @@ if ( ! empty( $block['align'] ) ) {
 //$id = get_the_id();
 
 $wlp_location_title = (get_field('witlandingpages_locations_title')) ? get_field('witlandingpages_locations_title') : '' ;
-$map_icon = '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/map-marker-alt-solid.svg';
+// $map_icon = '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/map-marker-alt-solid.svg';
 $wlp_plus_icon = '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/plus-circle-solid.svg';
 $wlp_minus_icon = '/wp-content/plugins/witdigital-landing-pages/resources/assets/images/minus-circle-solid.svg';
 $wlp_plus_style = 'background: url(' . $wlp_plus_icon . ') center / cover;';
