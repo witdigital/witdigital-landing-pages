@@ -43,7 +43,7 @@ function wlp_bottom_content_register_blocks() {
 		),
 		'example'           => array(
 			'attributes' => array(
-				'mode' => 'preview',
+				'mode' => 'auto',
 				'data' => array(
 					'bottom_preview_image' => '/wp-content/plugins/witdigital-landing-pages/app/acf-blocks/wlp-bottom-content/assets/images/bottom-content-preview.png',
 				)
