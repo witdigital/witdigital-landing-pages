@@ -41,14 +41,7 @@ function wlp_bottom_content_register_blocks() {
 			'multiple' => true,
 			'jsx'     => true
 		),
-		'example'           => array(
-			'attributes' => array(
-				'mode' => 'edit',
-				'data' => array(
-					'bottom_preview_image' => '/wp-content/plugins/witdigital-landing-pages/app/acf-blocks/wlp-bottom-content/assets/images/bottom-content-preview.png',
-				)
-			)
-		)
+
 
 	) );
 }
