@@ -44,7 +44,7 @@ if ( ! empty( $block['align'] ) ) {
 	Include block specific styling
 	========================================================================== */
 
-include_once 'block_styling.php';
+// include_once 'block_styling.php';
 
 /*  ==========================================================================
     Get ACF Values for Content
