@@ -14,6 +14,9 @@ Provides page templates and building blocks for landing pages.
 
 == Changelog ==
 
+== 1.0.1 ==
+removed unused code
+
 == 1.0.0 ==
 Converted to WP blocks by @edawson1980
 

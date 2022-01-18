@@ -4,7 +4,7 @@
 Plugin Name: Wit Digital Landing Pages
 Plugin URI: https://witdelivers.com
 Description: Provides pages templates and building blocks for landing pages.
-Version: 1.0.0
+Version: 1.0.1
 Author: @WitDigital
 Text Domain: witlandingpages
 */
