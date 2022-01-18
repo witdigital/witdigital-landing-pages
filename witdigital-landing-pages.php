@@ -45,11 +45,11 @@ endif;
    Plugin Updater
    ========================================================================== */
 
-$MyUpdateChecker = \Puc_v4_Factory::buildUpdateChecker(
-	'https://plugins.witdigital.com/wp-update-server/?action=get_metadata&slug=witdigital-landing-pages', //Metadata URL.
-	__FILE__, //Full path to the main plugin file.
-	'witdigital-landing-pages' //Plugin slug. Usually it's the same as the name of the directory.
-);
+// $MyUpdateChecker = \Puc_v4_Factory::buildUpdateChecker(
+// 	'https://plugins.witdigital.com/wp-update-server/?action=get_metadata&slug=witdigital-landing-pages', //Metadata URL.
+// 	__FILE__, //Full path to the main plugin file.
+// 	'witdigital-landing-pages' //Plugin slug. Usually it's the same as the name of the directory.
+// );
 
 // pull in ACF JSON
 if( file_exists(plugin_dir_path(__FILE__) . 'app/acf_json.php') ) {
@@ -71,9 +71,9 @@ if( file_exists(plugin_dir_path(__FILE__) . 'app/setup.php') ) {
 /* ==========================================================================
    Bring in Blocks
    ========================================================================== */
-// if( file_exists(plugin_dir_path(__FILE__) . 'app/acf-blocks/acf_blocks.php') ) {
-// 	include plugin_dir_path(__FILE__) . 'app/acf-blocks/acf_blocks.php';
-// }
+if( file_exists(plugin_dir_path(__FILE__) . 'app/acf-blocks/acf_blocks.php') ) {
+	include plugin_dir_path(__FILE__) . 'app/acf-blocks/acf_blocks.php';
+}
 
 /* ==========================================================================
    Bring in Page Templates

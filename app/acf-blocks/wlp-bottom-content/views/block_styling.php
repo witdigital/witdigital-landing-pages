@@ -14,7 +14,7 @@
 	========================================================================== */
 
 use ScssPhp\ScssPhp\Compiler;
-
+global $witcom_breakpoint_md;
 /*  ==========================================================================
 	Get Wit Commander fields and set vars
 	========================================================================== */
@@ -27,32 +27,36 @@ use ScssPhp\ScssPhp\Compiler;
 
 /* === Layout ==== */
 
-
-
-
-/* ===  Colors === */
-
-if ( get_field( 'acf_starter_block_desktop_background_color' ) ) :
-	$acf_starter_block_desktop_background_color = get_field( 'acf_starter_block_desktop_background_color' );
+if ( get_field( 'wlp_bottom_content_wrapper_padding' ) ) :
+	$wlp_bottom_content_wrapper_padding = get_field( 'wlp_bottom_content_wrapper_padding' ) . "px";
 else :
-	$acf_starter_block_desktop_background_color = '#ffffff';
+	$wlp_bottom_content_wrapper_padding = '0';
+endif;
+
+
+/* ===  ACF Fields to Variables === */
+
+if ( get_field( 'wlp_bottom_content_desktop_background_color' ) ) :
+	$wlp_bottom_content_desktop_background_color = get_field( 'wlp_bottom_content_desktop_background_color' );
+else :
+	$wlp_bottom_content_desktop_background_color = '#CCFF00';
 endif;
 
 
 
-if ( get_field( 'acf_starter_block_mobile_background_color' ) ) :
-	$acf_starter_block_mobile_background_color = get_field( 'acf_starter_block_mobile_background_color' );
+if ( get_field( 'wlp_bottom_content_mobile_background_color' ) ) :
+	$wlp_bottom_content_mobile_background_color = get_field( 'wlp_bottom_content_mobile_background_color' );
 else :
-	$acf_starter_block_mobile_background_color = '#ffffff';
+	$wlp_bottom_content_mobile_background_color = '#FF00CC';
 endif;
 
 
 /* === Additional SCSS === */
 
-if ( get_field( 'acf_starter_block_additional_scss' ) ) :
-	$acf_starter_block_additional_scss = get_field( 'acf_starter_block_additional_scss' );
+if ( get_field( 'wlp_bottom_content_additional_scss' ) ) :
+	$wlp_bottom_content_additional_scss = get_field( 'wlp_bottom_content_additional_scss' );
 else :
-	$acf_starter_block_additional_scss = '';
+	$wlp_bottom_content_additional_scss = '';
 endif;
 
 
@@ -60,32 +64,47 @@ endif;
 	Create Block Dynamic SCSS
 	========================================================================== */
 
-$wit_acf_starter_block_scss = /** @lang SCSS */
+$wlp_bottom_content_scss = /** @lang SCSS */
 	"
 
             #$blockID {
          
-               .starterBlock {
+               .wlpBottomContent {
                
 	               &_wrapper {
-	                 background-color: $acf_starter_block_mobile_background_color;
+	                 background-color: $wlp_bottom_content_mobile_background_color;
+	                 padding: $wlp_bottom_content_wrapper_padding;
 	               
-		                @media (min-width: 1024px) {
-		                  background-color: $acf_starter_block_desktop_background_color;
+		                @media (min-width: $witcom_breakpoint_md) {
+		                  background-color: $wlp_bottom_content_desktop_background_color;
 		                } //end medium breakpoint
 	               
 	               }
 
 					&_inner {
-	                 display: grid;
-	                 grid-template-columns: auto; 
+	                 display: flex;
+	                 flex-direction: column;
+					 align-items: center;
 	                 justify-items: center; 
 	               
 	               }
                
                }
+               
+				/* ===========================  Styling for in the editor ONLY  ========================== */
+               
+				@at-root {
+				  .wp-admin {
+				    #$blockID {
+				      border: 1px solid red;
+				    }
+				  }
+				}
 
-               $acf_starter_block_additional_scss
+               /* ===========================  End editor ONLY Styling ========================== */
+               
+
+               $wlp_bottom_content_additional_scss
 
             } /* End of .$blockID */
 
@@ -109,7 +128,7 @@ else:
 endif;
 
 
-$compiledCssCode = $scss->compile( $wit_acf_starter_block_scss );
+$compiledCssCode = $scss->compile( $wlp_bottom_content_scss );
 
 /*  ==========================================================================
 	Write CSS to the browser
