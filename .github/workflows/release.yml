@@ -82,6 +82,8 @@ jobs:
           mkdir build
       - name: Remove .git files
         run : "rm -rf .git"
+      - name: Remove development files
+        run : "rm -rf build composer.* LATE.md composer.* build** webpack.mix.js package.json package-lock.json mix-manifest.json tailwind.config.js acf-json**"
       #       - name: Create artifact
       #         uses: montudor/action-zip@v0.1.0
       #         with:
