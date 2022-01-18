@@ -4,7 +4,8 @@
   "type": "wordpress-plugin",
   "require": {
     "advanced-custom-fields/advanced-custom-fields-pro": "^5.9",
-    "yahnis-elsts/plugin-update-checker": "^4.11"
+    "yahnis-elsts/plugin-update-checker": "^4.11",
+    "scssphp/scssphp": "^1.10.0"
   },
   "repositories": [
     {
