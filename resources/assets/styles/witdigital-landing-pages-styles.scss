@@ -10,24 +10,6 @@
 @import "components/content.scss";
 @import "components/testimonials.scss";
 
-//the following rules apply when there's not a page template switch:
-div {
-     
-    position: relative;
-    
-}
-
-@media screen and (min-width: 1024px) {
-    .mobileOnly {
-        display: none;
-    }
-}
-@media screen and (max-width: 1024px) {
-    .desktopOnly {
-        display: none;
-    }
-}
-
 // the following class when using the page template needs to be switched to .wit-landing-page
 .wlp-landing-page-inner {
 

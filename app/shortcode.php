@@ -65,20 +65,18 @@ function witlandingpages_one_phone( $atts ) {
         }
 
         .phoneBtn {
-        <?php echo $wlp_styles_phone_bkgnd ?>
-        <?php echo $wlp_styles_phone_rad ?>
+        <?php echo $wlp_styles_phone_bkgnd ?><?php echo $wlp_styles_phone_rad ?>
         }
 
         /* default phone icon */
         .phoneBtnBody:before {
             content: "";
-            <?php echo $wlp_style_call_btn ?> 
-            position: absolute;
+        <?php echo $wlp_style_call_btn ?> position: absolute;
             left: 22px;
             /* left: 94px; */
             width: 17px;
             height: 17px;
-            <?php echo $wlp_styles_phone_std_filter ?>
+        <?php echo $wlp_styles_phone_std_filter ?>
         }
 
         .phoneBtnBody:hover:before {
@@ -98,8 +96,7 @@ function witlandingpages_one_phone( $atts ) {
 
         /* custom phone SVG */
         .svgPhone .phoneBtnBody:before {
-        <?php echo $wlp_styles_phone_svg ?>
-        <?php echo $wlp_styles_phone_custom_filter ?>
+        <?php echo $wlp_styles_phone_svg ?><?php echo $wlp_styles_phone_custom_filter ?>
         }
 
         .svgPhone .phoneBtnBody:hover:before {
@@ -302,7 +299,8 @@ function witlandingpages_two_phones( $atts ) {
             <!-- for custom icon: -->
 			<?php if ( $wlp_phone_if_custom == 'customPhone' ): ?>
 
-            <a href="tel:<?php echo $wlp_phone_2_href ?>" class="px-4 laptop:px-8 py-2 text-base font-bold phoneBtnTwo btn customPhone <?php echo $wlp_phone_png_svg ?> ">
+            <a href="tel:<?php echo $wlp_phone_2_href ?>"
+               class="px-4 laptop:px-8 py-2 text-base font-bold phoneBtnTwo btn customPhone <?php echo $wlp_phone_png_svg ?> ">
 
 				<?php else: ?>
                 <!-- for default icon: -->

@@ -253,11 +253,11 @@ foreach ($parentFields as $field) {
                     <?php endif; ?>
                     <!-- this stays the same, regardless of above logic: -->
                         <div class="m-2 servicesContentText accordionContent"><?php echo $wlp_ac_content ?></div>
-                    </div><!-- end accordionitem -->
+                    </div>
                 <?php endwhile;
             endif;
             ?>
-        </div><!-- end servicesContentLeft -->
+        </div>
         
         <div class="flex-1 order-1 w-full px-0 py-2 mt-5 servicesContentRight laptop:-right-8 max-w-400 laptop:pl-6 laptop:pb-10 laptop:order-none laptop:mt-auto">
             <div class="mb-4 servicesContentRightInner sidebar">
@@ -294,7 +294,7 @@ foreach ($parentFields as $field) {
                             </div> <!-- end .couponSidebarBottom -->
                         
                     </div>
-                </div><!-- end .sidebarCouponSection -->
+                </div>
                 <?php endif; ?>
 
                 <div class="servicesContentSidebarSection serviceAreaSection">
@@ -352,8 +352,7 @@ foreach ($parentFields as $field) {
                                 <?php endwhile;
                             endif;
                             ?>
-                        </div> <!-- end .couponSidebarLocations -->
-
+                        </div>
                         <a class="block px-3 py-2 mx-auto my-0 text-base font-bold text-center text-white uppercase border border-white rounded-md btn moreLocations" href="<?php echo $witlandingpages_locations_url; ?>">
                         <!-- for custom map pin: -->
                         <?php if( ($wlp_map_if_custom == 'customPin') && ($wlp_map_png_svg == 'pngPin') ):  ?>
@@ -370,10 +369,9 @@ foreach ($parentFields as $field) {
 
                         <!-- this stays the same, regardless of above logic: -->
                         <?php echo $witlandingpages_locations_button; ?></a>
-                    </div> <!-- End .sidebarSectionLocations -->
-                </div><!-- End .serviceAreaSection -->
-            </div><!-- End .servicesContentRightInner -->
-        </div><!-- End .servicesContentRight -->
-
-    </div><!-- end .servicesContentInner -->
-</div><!-- end .servicesContent -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

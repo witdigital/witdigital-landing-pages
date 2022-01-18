@@ -14,9 +14,9 @@
 
     document.addEventListener("DOMContentLoaded", function() {
 
-        // document.getElementById('<?php echo $blockID ?>').addEventListener('click', function () {
-        //     window.alert('You clicked <?php echo $blockID ?>. Have a cookie 🍪')
-        // });
+        document.getElementById('<?php echo $blockID ?>').addEventListener('click', function () {
+            window.alert('\r\n You clicked <?php echo $blockID ?>. \r\n\r\n Have a cookie 🍪')
+        });
 
 
     });
