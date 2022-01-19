@@ -34,3 +34,7 @@ if( file_exists(plugin_dir_path(__FILE__) . 'wlp-bottom-content/register_block.p
 if( file_exists(plugin_dir_path(__FILE__) . 'wlp-testimonials-block/register_block.php') ) {
 	include plugin_dir_path(__FILE__) . 'wlp-testimonials-block/register_block.php';
 }
+
+if( file_exists(plugin_dir_path(__FILE__) . 'options-fields.php') ) {
+	include plugin_dir_path(__FILE__) . 'options-fields.php';
+}
