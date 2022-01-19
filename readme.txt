@@ -14,6 +14,9 @@ Provides page templates and building blocks for landing pages.
 
 == Changelog ==
 
+== 1.1.0 ==
+include global button settings
+
 == 0.9.0 ==
 functioning plugin
 
