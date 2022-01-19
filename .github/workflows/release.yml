@@ -77,11 +77,10 @@ jobs:
         run: "rm -rf .git"
       - name: Remove NODE packages from release
         run: "rm -rf node_modules/"
-      - name: Build project
-        run: |
-          mkdir build
       - name: Remove .git files
         run : "rm -rf .git"
+      - name: Remove development files
+        run : "rm -rf composer.* LATE.md composer.* build** webpack.mix.js package.json package-lock.json mix-manifest.json tailwind.config.js acf-json**"
       #       - name: Create artifact
       #         uses: montudor/action-zip@v0.1.0
       #         with:
@@ -93,6 +92,8 @@ jobs:
       #           path: './*'
       #           filename: 'build/${{ env.ZIP_FILE_NAME}}'
       #           exclusions: '*.git* /*node_modules/* .editorconfig'
+      - name: Create build directory for zipping
+        run: mkdir build
       - name: manual zip - necessary to create the propper container
         run: cd .. && zip -r ${{ env.ZIP_FILE_NAME}} ${{ env.PLUGIN_SLUG}}/ -x *.git* LATE.md *.dist composer.* dev-helpers** build** node_modules** webpack.mix.js package.json package-lock.json mix-manifest.json src .git .github .gitignore**
       - name: move the zip
