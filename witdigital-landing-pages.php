@@ -79,9 +79,9 @@ if( file_exists(plugin_dir_path(__FILE__) . 'app/acf-blocks/acf_blocks.php') ) {
    Bring in Page Templates
    ========================================================================== */
 
-if( file_exists(plugin_dir_path(__FILE__) . 'app/include-page-templates.php') ) {
-	include plugin_dir_path(__FILE__) . 'app/include-page-templates.php';
-}
+// if( file_exists(plugin_dir_path(__FILE__) . 'app/include-page-templates.php') ) {
+// 	include plugin_dir_path(__FILE__) . 'app/include-page-templates.php';
+// }
 
 /* ==========================================================================
    Bring in Shortcodes
