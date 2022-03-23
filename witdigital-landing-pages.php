@@ -79,9 +79,9 @@ if( file_exists(plugin_dir_path(__FILE__) . 'app/acf-blocks/acf_blocks.php') ) {
    Bring in Page Templates
    ========================================================================== */
 
-// if( file_exists(plugin_dir_path(__FILE__) . 'app/include-page-templates.php') ) {
-// 	include plugin_dir_path(__FILE__) . 'app/include-page-templates.php';
-// }
+if( file_exists(plugin_dir_path(__FILE__) . 'app/include-page-templates.php') ) {
+	include plugin_dir_path(__FILE__) . 'app/include-page-templates.php';
+}
 
 /* ==========================================================================
    Bring in Shortcodes
@@ -126,30 +126,30 @@ function insert_service_content($content) {
 
 	if( in_the_loop() && is_main_query() && $wlp_is_landing_page ) {
 		echo '<div class="wlp-landing-page-inner">';
-		// if( $wlp_hide_elements ) {
-		// 	include_once('resources/views/page-templates/service-page-modules/hidden-elements.php');
-		// }
-		// if( $wlp_show_hero ) {
-		// 	include_once('resources/views/page-templates/service-page-modules/hero.php');
-		// }
-		// if( $wlp_show_intro ) {
-		// 	include_once('resources/views/page-templates/service-page-modules/intro.php');
-		// }
-		// if( $wlp_show_content_sidebar ) {
-		// 	include_once('resources/views/page-templates/service-page-modules/about.php');
-		// }
-		// if( $wlp_show_cta ) {
-		// 	include_once('resources/views/page-templates/service-page-modules/cta.php');
-		// }
-		// if( $wlp_show_panels ) {
-		// 	include_once('resources/views/page-templates/service-page-modules/guarantees.php');
-		// }
-		// if( $wlp_show_accordions ) {
-		// 	include_once('resources/views/page-templates/service-page-modules/content.php');
-		// }
-		// if( $wlp_show_testimonials ) {
-		// 	include_once('resources/views/page-templates/service-page-modules/testimonials.php');
-		// }
+		if( $wlp_hide_elements ) {
+			include_once('resources/views/page-templates/service-page-modules/hidden-elements.php');
+		}
+		if( $wlp_show_hero ) {
+			include_once('resources/views/page-templates/service-page-modules/hero.php');
+		}
+		if( $wlp_show_intro ) {
+			include_once('resources/views/page-templates/service-page-modules/intro.php');
+		}
+		if( $wlp_show_content_sidebar ) {
+			include_once('resources/views/page-templates/service-page-modules/about.php');
+		}
+		if( $wlp_show_cta ) {
+			include_once('resources/views/page-templates/service-page-modules/cta.php');
+		}
+		if( $wlp_show_panels ) {
+			include_once('resources/views/page-templates/service-page-modules/guarantees.php');
+		}
+		if( $wlp_show_accordions ) {
+			include_once('resources/views/page-templates/service-page-modules/content.php');
+		}
+		if( $wlp_show_testimonials ) {
+			include_once('resources/views/page-templates/service-page-modules/testimonials.php');
+		}
 		echo '</div>';
 	} else {
 		return $content;
