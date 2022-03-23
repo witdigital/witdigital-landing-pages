@@ -4,7 +4,7 @@
 Plugin Name: Wit Digital Landing Pages
 Plugin URI: https://witdelivers.com
 Description: Provides pages templates and building blocks for landing pages.
-Version: 1.1.2
+Version: 1.1.3
 Author: @WitDigital
 Text Domain: witlandingpages
 */
@@ -126,30 +126,30 @@ function insert_service_content($content) {
 
 	if( in_the_loop() && is_main_query() && $wlp_is_landing_page ) {
 		echo '<div class="wlp-landing-page-inner">';
-		if( $wlp_hide_elements ) {
-			include_once('resources/views/page-templates/service-page-modules/hidden-elements.php');
-		}
-		if( $wlp_show_hero ) {
-			include_once('resources/views/page-templates/service-page-modules/hero.php');
-		}
-		if( $wlp_show_intro ) {
-			include_once('resources/views/page-templates/service-page-modules/intro.php');
-		}
-		if( $wlp_show_content_sidebar ) {
-			include_once('resources/views/page-templates/service-page-modules/about.php');
-		}
-		if( $wlp_show_cta ) {
-			include_once('resources/views/page-templates/service-page-modules/cta.php');
-		}
-		if( $wlp_show_panels ) {
-			include_once('resources/views/page-templates/service-page-modules/guarantees.php');
-		}
-		if( $wlp_show_accordions ) {
-			include_once('resources/views/page-templates/service-page-modules/content.php');
-		}
-		if( $wlp_show_testimonials ) {
-			include_once('resources/views/page-templates/service-page-modules/testimonials.php');
-		}
+		// if( $wlp_hide_elements ) {
+		// 	include_once('resources/views/page-templates/service-page-modules/hidden-elements.php');
+		// }
+		// if( $wlp_show_hero ) {
+		// 	include_once('resources/views/page-templates/service-page-modules/hero.php');
+		// }
+		// if( $wlp_show_intro ) {
+		// 	include_once('resources/views/page-templates/service-page-modules/intro.php');
+		// }
+		// if( $wlp_show_content_sidebar ) {
+		// 	include_once('resources/views/page-templates/service-page-modules/about.php');
+		// }
+		// if( $wlp_show_cta ) {
+		// 	include_once('resources/views/page-templates/service-page-modules/cta.php');
+		// }
+		// if( $wlp_show_panels ) {
+		// 	include_once('resources/views/page-templates/service-page-modules/guarantees.php');
+		// }
+		// if( $wlp_show_accordions ) {
+		// 	include_once('resources/views/page-templates/service-page-modules/content.php');
+		// }
+		// if( $wlp_show_testimonials ) {
+		// 	include_once('resources/views/page-templates/service-page-modules/testimonials.php');
+		// }
 		echo '</div>';
 	} else {
 		return $content;

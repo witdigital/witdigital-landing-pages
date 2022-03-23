@@ -14,6 +14,9 @@ Provides page templates and building blocks for landing pages.
 
 == Changelog ==
 
+== 1.1.3 ==
+remove all calls to page templates
+
 == 1.1.2 ==
 remove call to page templates
 
